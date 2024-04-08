@@ -31,7 +31,7 @@ export const HomePageText = {
   //  ---------------------------------------------------------------------------------------------------------------------------
   //ABCEDFGHIJKL
   heading_1: "Elevate Your Tech Capabilities: 10X",
-  heading_2:"Faster Talent Matching with 95% Precision Across SAP AND Specialized Tech",
+  heading_2:"Faster Matching with 95% Precision across SAP and Specialized Tech",
   heading_3:"",
   heading1Bold: "Skills Capital",
   heading2:
@@ -71,7 +71,7 @@ export const HomePageText = {
     "https://s3-alpha-sig.figma.com/img/d7cd/4bcd/997f9951c8e56f513a894eb83a574665?Expires=1702252800&Signature=GSeinVxiJjBHd6hCnk5-4eA0xmEtq29s-XSTk2wl29TPxdjWd~p~g8MFbQzZdmNn8gfX2FOe6criIh9aGVRh5ZpdNHNGhe446wyQNNsfHyt4mlzqA5SxHb-N7TZpQ4NTaulA~r1Wava4CoeOZb~dlZV4aUamEDRWPc8co1pPgfPwtP1mYBWWqXGKyb6onXnKKCxpR9Rj1Si9lzhxVGnO3TBqIQLI4G6Kth3sTBybOrZnhdUMC6CITkv-C3vZCJSvLry~pryWQXIJPTAdGyV3vA0m4~Yq8imiX2IoAluh3JKnoley0xjefXCgJUQXPadA0ZoZJwjxGJr3GW6JMU7PmA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
 
   Cloud_number: `1800+`,
-  Cloud_heading: `Specialized Combinations SAP Expertise Spectrum`,
+  Cloud_heading: `Specialized SAP Expertise Spectrum`,
   Cloud_content: `Explore a diverse array of SAP skills and expertise with over 1800+ unique combinations spanning across SAP modules, solutions, and specializations. From SAP FICO to SAP HANA, it encompasses a wide spectrum of expertise to cater to specific project requirements.`,
 
   Legacy_imgUrl:
@@ -167,8 +167,9 @@ export const HomePageText = {
 
   whyOurDevelopersKeyPoint:`Our elite developers stand out for their unparalleled expertise, dedication, and commitment to delivering exceptional results. That's why businesses trust our consultants to drive their projects to success`,
 
-  paraPoints: ["Our developers undergo rigorous vetting processes powered by cutting-edge AI technology, ensuring only the most qualified and capable consultants are selected. By leveraging AI, we guarantee unmatched quality and expertise, giving you peace of mind and confidence in the capabilities of our talent.", "With our streamlined processes and agile deployment, our developers can be onboarded and productive in record time. Whether you need support for urgent initiatives or want to kickstart new implementation, our talent cloud ensure you can harness expertise of our developers precisely when you need it.",
-  "Equipped with a versatile skill set, our talent pool is primed to tackle a wide range of technical challenges. Whether you require specialized SAP consulting, seamless integration of Cloud technologies, or modernization of legacy systems, our developers bring the expertise and agility needed."
+  paraPoints: ["Our developers undergo rigorous vetting processes powered by cutting-edge AI, ensuring only most qualified and capable consultants are selected. By leveraging AI, we guarantee unmatched quality, expertise and confidence in our Talent capabilities.", 
+  "With our agile and streamlined processes, our developers can be onboarded in record time. Whether you need support for urgent initiatives or want to kickstart new implementation, you can harness expertise of our developers precisely when you need it.",
+  "Our talent pool is primed to tackle a wide range of technical challenges. Whether you require specialized SAP consulting, seamless integration of Cloud technologies, or modernization of legacy systems, our developers bring the expertise and agility needed."
   ],
 
   pointsIcons: [`https://cdn-icons-png.flaticon.com/512/5554/5554495.png`, `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnWDBm2vLn9Ij3UJ4I9n4X1v7O4_sEbk6PB1x368ia7MetDmUeFIOZGczVt7jWnO6bWYs&usqp=CAU`,
@@ -235,7 +236,7 @@ export const HomePageText = {
 
   whyUsCard1Heading: `Client-Centric Approach`,
   whyUsCard1Points: [
-    "SAP & Specialized Tech Focus",
+    "SAP & niche Tech Focus",
     "AI-Powered Precision",
     "Proven Track Record",
     "24/7 Dedicated Support",
@@ -252,7 +253,7 @@ export const HomePageText = {
   whyUsCard2ImgUrl: "https://img.freepik.com/premium-vector/time-zones-flat-style-illustration-design_538610-653.jpg",
 
 
-  whyUsMainCardHeading: `Talent Cloud Our Platform Facilitates`,
+  whyUsMainCardHeading: `Our Talent Cloud Facilitates`,
   whyUsMainCardPoints: [
     "Intellegent Vetting",
     "Extensive Matching",

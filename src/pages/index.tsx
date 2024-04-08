@@ -523,12 +523,12 @@ export default function Home({ allData }: { allData: any }) {
               {HomePageText.whyUsHeading}
             </h2>{" "}
           </center>
-
+ 
           <div className={homePageStyle.threeCardStyle} >
             <StructureCard
-              imageUrl={"/HomePageImages/deeply-vetted1.jpg"}
-              imageHeight={300}
-              imageWidth={350}
+              imageUrl={"/HomePageImages/clientapproach.jpg"}
+              imageHeight={280}
+              imageWidth={300}
               cardHeading={HomePageText.whyUsCard1Heading}
               altText="skillsCapital"
               bulletPoints={HomePageText.whyUsCard1Points}
@@ -540,7 +540,7 @@ export default function Home({ allData }: { allData: any }) {
               btnLabel={HomePageText.whyUsMainCardButton}
             />
             <StructureCard
-              imageUrl={"/HomePageImages/whychoose-2.png"}
+              imageUrl={"/HomePageImages/clientsuccess.jpg"}
               imageHeight={280}
               imageWidth={280}
               cardHeading={HomePageText.whyUsCard2Heading}
@@ -555,17 +555,17 @@ export default function Home({ allData }: { allData: any }) {
             <SpeedQualityCard
               title={HomePageText.speedHeading}
               subheading={HomePageText.speedSubHeading}
-              imageSrc={"/HomePageImages/5-SpeedImage.png"}
+              imageSrc={"/HomePageImages/fastwork2.avif"}
               imageHeight={250}
-              imageWidth={300}
+              imageWidth={380}
               paragraph={HomePageText.speedPara}
             />
             <SpeedQualityCard
               title={HomePageText.QualityHeading}
               subheading={HomePageText.QualitySubHeading}
-              imageSrc={"/HomePageImages/6-QualityImage.png"}
+              imageSrc={"/HomePageImages/qulitywork.jpg"}
               imageHeight={230}
-              imageWidth={300}
+              imageWidth={340}
               paragraph={HomePageText.qualityPara}
             />
           </div>
