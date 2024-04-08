@@ -21,12 +21,12 @@ const Hire = () => {
             <section id={homePageStyle.avideoContainer} >
           <div className={homePageStyle.flexCenter}>
             <div className={homePageStyle.topContentSection}>
-              <h1 className={homePageStyle.homePageMainHeading}>
+              <h1 className={`${hireDevStyles.mainHeadingHireDev}`}>
               {HireDeveloperPageText.HireDeveloperHeroHeading}
                 {/* <div>{HomePageText.heading_4}</div> */}
               </h1>
 
-              <h2 className={homePageStyle.homePageMainSubHeading}>
+              <h2 className={`${hireDevStyles.mainSubHeadingHireDev}`}>
               {HireDeveloperPageText.HireDeveloperHeroPara}
 
               </h2>
