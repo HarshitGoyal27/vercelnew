@@ -65,21 +65,21 @@ export const HomePageText = {
 
   SAP_number: `14000+`,
   SAP_heading: `Pre-Vetted & Certified SAP Experts`,
-  SAP_content: `Select from over 14,000 SAP experts who are not just certified but also pre-vetted through rigorous evaluation processes. Our commitment to quality means you collaborate with professionals who bring proven expertise and innovative solutions to your SAP projects.`,
+  SAP_content: `Select from over 14,000 SAP experts who are certified and pre-vetted through rigorous evaluation. Our commitment to quality means you collaborate with professionals who bring proven expertise to SAP projects.`,
 
   Cloud_imgUrl:
     "https://s3-alpha-sig.figma.com/img/d7cd/4bcd/997f9951c8e56f513a894eb83a574665?Expires=1702252800&Signature=GSeinVxiJjBHd6hCnk5-4eA0xmEtq29s-XSTk2wl29TPxdjWd~p~g8MFbQzZdmNn8gfX2FOe6criIh9aGVRh5ZpdNHNGhe446wyQNNsfHyt4mlzqA5SxHb-N7TZpQ4NTaulA~r1Wava4CoeOZb~dlZV4aUamEDRWPc8co1pPgfPwtP1mYBWWqXGKyb6onXnKKCxpR9Rj1Si9lzhxVGnO3TBqIQLI4G6Kth3sTBybOrZnhdUMC6CITkv-C3vZCJSvLry~pryWQXIJPTAdGyV3vA0m4~Yq8imiX2IoAluh3JKnoley0xjefXCgJUQXPadA0ZoZJwjxGJr3GW6JMU7PmA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
 
   Cloud_number: `1800+`,
   Cloud_heading: `Specialized SAP Expertise Spectrum`,
-  Cloud_content: `Explore a diverse array of SAP skills and expertise with over 1800+ unique combinations spanning across SAP modules, solutions, and specializations. From SAP FICO to SAP HANA, it encompasses a wide spectrum of expertise to cater to specific project requirements.`,
+  Cloud_content: `Explore a diverse array of SAP skills with over 1800+ unique combinations spanning across SAP modules, solutions, and specializations. From SAP FICO to SAP HANA, it encompasses a wide spectrum of SAP expertise.`,
 
   Legacy_imgUrl:
     "https://s3-alpha-sig.figma.com/img/f02e/2b2a/7b1ddfdf89823f8dfc240cd349720b12?Expires=1702252800&Signature=q1k5N4orLPwAmXqToycW2L6rctWKglfGtbpk7lEk219mFFQqWeB4LUZzX2DSc71pkKORYngZmkxYVHLCL59uv47eprjPrVXLHfUkjr8VJ7wQbo1tb-DF1dUvewbqVZCDwWGbc0CLJNBrb2pOX9Q-AAnqGrtMbfjbdAn32dKVQigzShXQ3L6B-H90suCGlplvju~xyXhMKJP18qGqWRJbkgTdFMtoPUa0eGlY-cUAVATcX~TfjKbxh4lJSJak6D8Z-I4~vstnJ6FmwvswF2E~R0AdVS22j2OEaiWfP6~37doykip3EKiFpaaS2Tb8gLf6lPrPliNySVIWoQNguGuDKA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
 
   Legacy_number: `600+`,
   Legacy_heading: `Ready to Deploy SAP Consultants`,
-  Legacy_content: `Benefit from immediate access to 600 SAP consultants who are ready to deploy and integrate seamlessly into your projects. Accelerate your SAP initiatives with experts who are prepared to hit the ground running, ensuring minimal downtime and maximum productivity.`,
+  Legacy_content: `Benefit from immediate access to 600 SAP consultants who are ready to deploy and integrate seamlessly into your projects. Accelerate your SAP initiatives with experts who are prepared to hit the ground running.`,
 
   varsatile_content:"With diverse expertise and a commitment to excellence, our vast network empowers us to address a myriad of needs and consistently provide high-quality solutions.",
 
@@ -155,7 +155,7 @@ export const HomePageText = {
   // SectionTitle -> Why Choose Our Developers? Sections
   //  ---------------------------------------------------------------------------------------------------------------------------
 
-  whyOurDevelopersHeading: `Deploy Deep Vetted Specialized Tech Talent On Demand`,
+  whyOurDevelopersHeading: `Deploy Deep Vetted Niche Tech Talent On Demand`,
   whyOurDevelopersPara: ``,
 
   whyOurDevelopersSubHeading1: `AI Vetting for Unmatched Quality`,
@@ -236,7 +236,7 @@ export const HomePageText = {
 
   whyUsCard1Heading: `Client-Centric Approach`,
   whyUsCard1Points: [
-    "SAP & niche Tech Focus",
+    "SAP & Niche Tech Focus",
     "AI-Powered Precision",
     "Proven Track Record",
     "24/7 Dedicated Support",
