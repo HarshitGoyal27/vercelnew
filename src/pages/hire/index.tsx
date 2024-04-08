@@ -208,7 +208,9 @@ const Hire = () => {
               </div>
             </div>
           </section>
-          <section id={hireDevStyles.superchargeContainer} >
+          <main>
+          <section id={hireDevStyles.wholeContainer}>
+            <section id={hireDevStyles.superchargeContainer} >
               {/* <div style={{ width: "80vw", margin: "auto" }}> */}
               <HireDevSectionWithImageAndIcon
                 imageUrl={"/HireDevImages/superCharge.png"}
@@ -232,6 +234,30 @@ const Hire = () => {
               />
               {/* </div> */}
             </section>
+            <section id={hireDevStyles.LaserFocusContainer}>
+              <HireDevSectionWithImageAndIcon
+                imageUrl={"/HireDevImages/TeamGood.png"}
+                altText={"WhySkillsCapitalDev"}
+                Imgheight={600}
+                Imgwidth={550}
+                order="imageLeft"
+                pointsIcons={HireDeveloperPageText.perfectMatchPointsIcons}
+                heading={HireDeveloperPageText.perfectMatchHeading}
+                subHeading={HireDeveloperPageText.superchargeHiringSubHeading}
+                noOfPoints={3}
+                points={[
+                  HireDeveloperPageText.perfectMatchPoint1,
+                  HireDeveloperPageText.perfectMatchPoint2,
+                  HireDeveloperPageText.perfectMatchPoint3,
+                ]}
+                paraPoints={HireDeveloperPageText.perfectMatchParaPoints}
+                noOflogoImages={3}
+                logoImagesUrl={[`1`, "2", "3"]}
+                buttonEnable={false}
+              />
+            </section>
+          </section>
+        </main>
             <FotterComponent/>
         </div>
     )
