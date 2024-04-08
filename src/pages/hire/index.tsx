@@ -22,12 +22,12 @@ const Hire = () => {
           <div className={homePageStyle.flexCenter}>
             <div className={homePageStyle.topContentSection}>
               <h1 className={homePageStyle.homePageMainHeading}>
-                <div>Hire Hard-to-Find Skilled Developers: AI-Vetted Expertise, Unmatched Quality for Your Project's Success</div>
+              {HireDeveloperPageText.HireDeveloperHeroHeading}
                 {/* <div>{HomePageText.heading_4}</div> */}
               </h1>
 
               <h2 className={homePageStyle.homePageMainSubHeading}>
-              Swiftly Connect with On-Demand, Top-Tier Talent Tailored to Your Project's Urgent Needs
+              {HireDeveloperPageText.HireDeveloperHeroPara}
 
               </h2>
               
