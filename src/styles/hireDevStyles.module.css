@@ -402,7 +402,7 @@
 
 .LaserFocusContainer {
   @media(1000px<width<=1500px) {
-    margin-left: 150px;
+    /* margin-left: 150px; */
   }
 
   /* @media(768px<width<=1000px) {
@@ -1000,6 +1000,9 @@
   gap: 10.5px;
 }
 .laserImage{
+  @media(1000px<width<=1500px) {
+    margin-left: 150px;
+  }
   display: flex;
   justify-content: center;
   margin-left: 40px;
