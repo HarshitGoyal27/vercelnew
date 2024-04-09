@@ -15,6 +15,7 @@ import FotterComponent from '@/components/molecules/Fotter';
 import PanoramaFishEyeIcon from '@mui/icons-material/PanoramaFishEye';
 import LensIcon from '@mui/icons-material/Lens';
 import CardComponent from '@/components/atoms/card';
+import sapStyle from "../../styles/sapTalentStyle.module.css"
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 const Hire = () => {
   const HireDeveloperClicked = () => {
@@ -692,6 +693,46 @@ const Hire = () => {
           </div>
         </div>
       </section>
+      <section id={sapStyle.secondsection}>
+                <div style={{ fontSize: "32px", fontWeight: "600", marginBottom: "50px" }}>Ensuring Excellence: Assessing SAP Talent</div>
+                <h3 style={{opacity:"0.7"}}>Meticulous assessment to ensure the proficiency, compatibility, and overall suitability of our SAP talent.</h3>
+                <div id={sapStyle.threeimage}>
+                    <div id={sapStyle.threeimagesection}>
+                        <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
+                        <div style={{ fontWeight: "600" }}>Technical Competency</div>
+                        <div style={{ fontSize: "14px" }}>Thorough assessment of SAP skills and knowledge</div>
+                    </div>
+                    <div id={sapStyle.threeimagesection}>
+                        <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
+                        <div style={{ fontWeight: "600" }}>Professional Experience</div>
+                        <div style={{ fontSize: "14px" }}>Verification of past work experience and project achievements.</div>
+                    </div>
+                    <div id={sapStyle.threeimagesection}>
+                        <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
+                        <div style={{ fontWeight: "600" }}>Cultural Fit</div>
+                        <div style={{ fontSize: "14px" }}>Evaluation of alignment with company values and team dynamics.</div>
+                    </div>
+                    
+                </div>
+                <div id={sapStyle.threeimage}>
+                    <div id={sapStyle.threeimagesection}>
+                        <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
+                        <div style={{ fontWeight: "600" }}>Certifications and Credentials</div>
+                        <div style={{ fontSize: "14px" }}>Validation of relevant certifications and qualifications.</div>
+                    </div>
+                    <div id={sapStyle.threeimagesection}>
+                        <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
+                        <div style={{ fontWeight: "600" }}>Background Check</div>
+                        <div style={{ fontSize: "14px" }}>Verification of educational and employment backgrounds.</div>
+                    </div>
+                    <div id={sapStyle.threeimagesection}>
+                        <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
+                        <div style={{ fontWeight: "600" }}>Soft Skills Assessment</div>
+                        <div style={{ fontSize: "14px" }}>Evaluation of communication, teamwork, and adaptability.</div>
+                    </div>
+                    
+                </div>
+            </section>
       <FotterComponent />
     </div>
   )
