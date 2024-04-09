@@ -131,7 +131,7 @@
   @media(width<=320px) {
     width: 1260px;
   }
-
+  font-family: "Poppins", sans-serif;
   margin: 20px 5px 80px 5px;
 }
 

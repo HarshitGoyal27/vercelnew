@@ -400,8 +400,8 @@
 }
 
 #LaserFocusContainer {
-  @media(1000px<width<=1200px) {
-    /* margin-left: 170px; */
+  @media(1000px<width<=1500px) {
+    margin-left: 150px;
   }
 
   /* @media(768px<width<=1000px) {
@@ -427,8 +427,8 @@
   @media(320px>=width) {
     margin-left: 410px;
   } */
-
-  margin: 20px 5px 80px 5px;
+  
+  /* margin: 20px 5px 80px 5px; */
 }
 #wholeContainer{
   @media(width>1600px){
@@ -1267,7 +1267,7 @@
 }
 #scalableGrowth2{
   display: flex;
-  gap:50px;
+  /* gap:50px; */
   justify-content: center;
 }
 #fontpop{
@@ -1281,6 +1281,9 @@
   font-family: Poppins, sans-serif;
 }
 #fontpop2{
+  @media(width<1000px){
+    width:1400px;
+  }
   font-family: Poppins, sans-serif;
   padding: 20px;
   padding-top: 60px;
@@ -1290,14 +1293,15 @@
   flex-direction: column;
   justify-content: center;
   gap:40px;
-  /* border-right: 1px solid grey; */
+  border-right: 1px solid grey;
   padding: 10px;
 }
 #scalableGrowthInner2{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap:40px;
+  
+  /* gap:40px; */
 }
 #scalableGrowthHeading{
   font-size: 22px;
@@ -1306,7 +1310,9 @@
 #mosteinnerContainer{
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid grey;
   gap:20px;
+  padding: 40px;
 }
 
 .scalableSubheading{
@@ -1317,12 +1323,16 @@
 }
 
 #selectbar{
+  
   display: flex;
   /* gap:50px; */
   cursor: pointer;
-  border-bottom: 1px solid grey;
+  /* border-bottom: 1px solid grey; */
 }
 #fontpopBelow{
+  @media(width<=1000px){
+    width:1400px;
+  }
   margin-top: 80px;
   font-family: Poppins, sans-serif;
   display: flex;
@@ -1394,4 +1404,48 @@
   justify-content: center;
   align-items: center;
   margin:50px 0px;
+}
+
+#attributeSection{
+  @media(width<1000px){
+    width:1400px;
+  }
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  margin: 150px 0px;
+}
+
+#innerattributeSection{
+  display: flex;
+  gap:20px;
+}
+
+#eachblock{
+  @media(width<1000px){
+    width:320px;
+  }
+  background-color: #F2EFEA;
+  width:20vw;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  align-items: center;
+  padding:60px 0px;
+}
+
+#smallboxes{
+  background-color: white;
+  width:100%;
+  padding: 5px 5px;
+  text-align: center;
+}
+#smallboxsection{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+align-items: center;
 }

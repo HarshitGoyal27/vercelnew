@@ -8,17 +8,19 @@ import Navbar from '@/components/molecules/navbar';
 import Image from 'next/image';
 import homePageStyle from "../../styles/homePageStyles.module.css";
 import Link from 'next/link';
-import commonStyle from '@/constants/commonStyle';
+import commonStyle, { cardsStyling } from '@/constants/commonStyle';
 import css from "../../styles/sapTalentStyle.module.css"
 import HireDevSectionWithImageAndIcon from '@/components/molecules/HireDevSectionWithImageAndIcon';
 import FotterComponent from '@/components/molecules/Fotter';
 import PanoramaFishEyeIcon from '@mui/icons-material/PanoramaFishEye';
 import LensIcon from '@mui/icons-material/Lens';
+import CardComponent from '@/components/atoms/card';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 const Hire = () => {
   const HireDeveloperClicked = () => {
     // router.push("/search-developers");
   };
-  const [selected, setSelected] = useState("Comprehensive");
+  const [selected, setSelected] = useState("AI-Vetted");
   const [selectedtwo, setSelectedtwo] = useState("AI-Vetted");
   return (
     <div>
@@ -218,9 +220,9 @@ const Hire = () => {
           <section id={hireDevStyles.superchargeContainer} >
             {/* <div style={{ width: "80vw", margin: "auto" }}> */}
             <HireDevSectionWithImageAndIcon
-              imageUrl={"/HireDevImages/superCharge.png"}
+              imageUrl={"/HireDevImages/hiring.jpg"}
               altText={"WhySkillsCapitalDev"}
-              Imgheight={550}
+              Imgheight={500}
               Imgwidth={520}
               order="imageRight"
               pointsIcons={HireDeveloperPageText.superChargePointsIcons}
@@ -241,9 +243,9 @@ const Hire = () => {
           </section>
           <section id={hireDevStyles.LaserFocusContainer}>
             <HireDevSectionWithImageAndIcon
-              imageUrl={"/HireDevImages/TeamGood.png"}
+              imageUrl={"/HireDevImages/matching.jpg"}
               altText={"WhySkillsCapitalDev"}
-              Imgheight={600}
+              Imgheight={500}
               Imgwidth={550}
               order="imageLeft"
               pointsIcons={HireDeveloperPageText.perfectMatchPointsIcons}
@@ -263,7 +265,59 @@ const Hire = () => {
           </section>
         </section>
       </main>
-      <section id={hireDevStyles.fontpop}>
+      <section id={homePageStyle.ourEliteNetwork} >
+        <div
+          style={{ background: "#F1F1F1", padding: "10px 100px 50px 100px" }}
+        >
+          <div style={commonStyle.textCenter}>
+            <br />
+            <br />
+            <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
+            Tailored Solutions for Scalable Growth
+            </h2>
+            <br />
+            <h3 style={cardsStyling.sapCloudLegacySubHeading}>Flexibility and Scalability for Your SAP Projects</h3>
+            <h5 style={{opacity:"0.7"}}>Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</h5>
+            <br />
+          </div>
+          <div className="cards" style={commonStyle.dflex_1}>
+            <CardComponent
+              imageUrl={"/HireDevImages/team.png"}
+              imageHeight={210}
+              imageWidth={250}
+              headingNumber={""}
+              headingText={"Agile Team Composition"}
+              paragraphText={"Whether you're embarking on a small-scale SAP implementation or a large-scale transformation, we offer flexible team compositions to suit your project scope. From solo consultants to cross-functional teams, we adapt to meet your needs."}
+              buttonText="Explore"
+              onButtonClick={HireDeveloperClicked}
+              buttonEnabled={true}
+            />
+            <CardComponent
+              imageUrl={"/HireDevImages/expertise.jpg"}
+              imageHeight={210}
+              imageWidth={250}
+              headingNumber={""}
+              headingText={"On-Demand Expertise"}
+              paragraphText={"Scale your SAP initiatives dynamically with our on-demand talent pool. Need additional resources for a specific phase of your project? We've got you covered. Our flexible hiring model allows you to access expertise precisely when you need it."}
+              buttonText="Explore"
+              onButtonClick={HireDeveloperClicked}
+              buttonEnabled={true}
+            />
+            <CardComponent
+              imageUrl={"/HireDevImages/engagement.jpg"}
+              imageHeight={210}
+              imageWidth={250}
+              headingNumber={""}
+              headingText={"Customized Engagement Models"}
+              paragraphText={"Choose from range of engagement models that align with your project requirements and budget. Whether you prefer project-based engagements, dedicated resources, or outcome-driven model, we offer solutions to ensure project's success."}
+              buttonText="Explore"
+              onButtonClick={HireDeveloperClicked}
+              buttonEnabled={true}
+            />
+          </div>
+        </div>
+      </section>
+      {/* <section id={hireDevStyles.fontpop}>
         <div style={{textAlign:"center"}}> 
           <div id={hireDevStyles.scalableGrowthHeading}>
             Flexibility and Scalability for Your SAP Projects
@@ -303,60 +357,79 @@ const Hire = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <section>
+      <div style={commonStyle.textCenter}>
+            <br />
+            <br />
+            <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
+            Unleashing the Power of SAP Expertise
+            </h2>
+            <br />
+            <h3 style={cardsStyling.sapCloudLegacySubHeading}>Elevate Your Projects with Our SAP Talent Experience, Versatility, and Collaboration at Your Service</h3>
+
+            
+          </div>
       <section id={hireDevStyles.fontpopBelow}>
         <div id={hireDevStyles.selectbar}>
-          <div style={selected === "Comprehensive" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-            <div style={{ padding: "30px" }} onClick={() => setSelected("Comprehensive")}>Comprehensive Onboarding</div>
+          <div style={selected === "AI-Vetted" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+            <div style={{ padding: "30px" }} onClick={() => setSelected("AI-Vetted")}>AI-Vetted</div>
           </div>
-          <div style={selected === "Continuous" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-            <div style={{ padding: "30px" }} onClick={() => setSelected("Continuous")}>Continuous Collaboration</div>
+          <div style={selected === "Certified" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+            <div style={{ padding: "30px" }} onClick={() => setSelected("Certified")}>Certified</div>
           </div>
-          <div style={selected === "Proactive" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-            <div style={{ padding: "30px" }} onClick={() => setSelected("Proactive")}>Proactive Support</div>
+          <div style={selected === "Accomplished" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+            <div style={{ padding: "30px" }} onClick={() => setSelected("Accomplished")}>Accomplished</div>
           </div>
-          <div style={selected === "Knowledge" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-            <div style={{ padding: "30px" }} onClick={() => setSelected("Knowledge")}>Knowledge Transfer</div>
+          <div style={selected === "On-Demand" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+            <div style={{ padding: "30px" }} onClick={() => setSelected("On-Demand")}>On-Demand</div>
+          </div>
+          <div style={selected === "Versatile" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+            <div style={{ padding: "30px" }} onClick={() => setSelected("Versatile")}>Versatile</div>
+          </div>
+          <div style={selected === "Future-Ready" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+            <div style={{ padding: "30px" }} onClick={() => setSelected("Future-Ready")}>Future-Ready</div>
           </div>
         </div>
       </section>
-      {selected === "Comprehensive" && <section id={hireDevStyles.fontpop2}>
+      </section>
+      {selected === "AI-Vetted" && <section id={hireDevStyles.fontpop2}>
         <div id={hireDevStyles.scalableGrowth2}>
           <div id={hireDevStyles.scalableGrowthInner}>
 
-            <Image src="/HireDevImages/onboarding.avif" style={{ padding: "80px" }} alt="" height={200} width={300} />
+            <Image src="/HireDevImages/aivette.jpg" style={{ padding: "80px" }} alt="" height={200} width={250} />
           </div>
           <div id={hireDevStyles.scalableGrowthInner2}>
             <div style={{ display: "flex", gap: "10px" }}>
               <div id={hireDevStyles.mosteinnerContainer}>
                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                <div className={hireDevStyles.scalableSubheading}>Benefit from a streamlined onboarding process that ensures our talent seamlessly integrates into your project environment. From initial setup to knowledge transfer, we handle all aspects to minimize disruptions and maximize productivity.</div>
+                <div className={hireDevStyles.scalableSubheading}>Our SAP professionals undergo rigorous AI-driven vetting processes to ensure their technical proficiency and expertise.</div>
               </div>
             </div>
-
+            <div style={{padding:"40px",marginTop:"30px", display:"flex",alignContent:"center",gap:"5px"}}><AddCircleIcon sx={{color:"darkorange"}}/> <span>Read More</span></div>
 
           </div>
         </div>
       </section>}
-      {selected === "Continuous" && <section id={hireDevStyles.fontpop2}>
+      {selected === "Certified" && <section id={hireDevStyles.fontpop2}>
         <div id={hireDevStyles.scalableGrowth2}>
           <div id={hireDevStyles.scalableGrowthInner}>
-
             <Image src="/HireDevImages/collaburation.avif" style={{ padding: "80px" }} alt="" height={200} width={200} />
           </div>
           <div id={hireDevStyles.scalableGrowthInner2}>
             <div style={{ display: "flex", gap: "10px" }}>
               <div id={hireDevStyles.mosteinnerContainer}>
                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                <div className={hireDevStyles.scalableSubheading}>Experience uninterrupted collaboration with our dedicated project managers and consultants. We maintain open communication channels to address any issues or concerns promptly and ensure alignment with your project goals.</div>
+                <div className={hireDevStyles.scalableSubheading}>Our talent holds relevant certifications from SAP and other recognized institutions, validating their skill set and knowledge.</div>
               </div>
+              
             </div>
-
+            <div style={{padding:"40px",marginTop:"30px", display:"flex",alignContent:"center",gap:"5px"}}><AddCircleIcon sx={{color:"darkorange"}}/> <span>Read More</span></div>
 
           </div>
         </div>
       </section>}
-      {selected === "Proactive" && <section id={hireDevStyles.fontpop2}>
+      {selected === "Accomplished" && <section id={hireDevStyles.fontpop2}>
         <div id={hireDevStyles.scalableGrowth2}>
           <div id={hireDevStyles.scalableGrowthInner}>
 
@@ -366,15 +439,15 @@ const Hire = () => {
             <div style={{ display: "flex", gap: "10px" }}>
               <div id={hireDevStyles.mosteinnerContainer}>
                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                <div className={hireDevStyles.scalableSubheading}>Stay ahead of challenges with proactive support and regular check-ins from our team. We proactively identify potential bottlenecks and offer proactive solutions to keep your project on track and within budget.</div>
+                <div className={hireDevStyles.scalableSubheading}>With years of hands-on experience in SAP implementation, customization, and support, our consultants bring invaluable expertise.</div>
               </div>
             </div>
-
+            <div style={{padding:"40px",marginTop:"30px", display:"flex",alignContent:"center",gap:"5px"}}><AddCircleIcon sx={{color:"darkorange"}}/> <span>Read More</span></div>
 
           </div>
         </div>
       </section>}
-      {selected === "Knowledge" && <section id={hireDevStyles.fontpop2}>
+      {selected === "On-Demand" && <section id={hireDevStyles.fontpop2}>
         <div id={hireDevStyles.scalableGrowth2}>
           <div id={hireDevStyles.scalableGrowthInner}>
 
@@ -384,16 +457,52 @@ const Hire = () => {
             <div style={{ display: "flex", gap: "10px" }}>
               <div id={hireDevStyles.mosteinnerContainer}>
                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                <div className={hireDevStyles.scalableSubheading}>Leverage our expertise not just for the duration of your project but for long-term knowledge transfer. We ensure that insights gained during the project are documented and shared with your internal team to foster ongoing learning and development.</div>
+                <div className={hireDevStyles.scalableSubheading}>Our SAP talent is readily available to meet your project needs, offering flexible engagement models and quick deployment.</div>
               </div>
             </div>
 
+            <div style={{padding:"40px",marginTop:"30px", display:"flex",alignContent:"center",gap:"5px"}}><AddCircleIcon sx={{color:"darkorange"}}/> <span>Read More</span></div>
+          </div>
+        </div>
+      </section>}
+      {selected === "Versatile" && <section id={hireDevStyles.fontpop2}>
+        <div id={hireDevStyles.scalableGrowth2}>
+          <div id={hireDevStyles.scalableGrowthInner}>
 
+            <Image src="/HireDevImages/versatile.jpg" style={{ padding: "80px" }} alt="" height={200} width={200} />
+          </div>
+          <div id={hireDevStyles.scalableGrowthInner2}>
+            <div style={{ display: "flex", gap: "10px" }}>
+              <div id={hireDevStyles.mosteinnerContainer}>
+                {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
+                <div className={hireDevStyles.scalableSubheading}>Equipped with a diverse skill set covering SAP modules and technologies, our talent can adapt to different requirements seamlessly.</div>
+              </div>
+            </div>
+
+            <div style={{padding:"40px",marginTop:"30px", display:"flex",alignContent:"center",gap:"5px"}}><AddCircleIcon sx={{color:"darkorange"}}/> <span>Read More</span></div>
+          </div>
+        </div>
+      </section>}
+      {selected === "Future-Ready" && <section id={hireDevStyles.fontpop2}>
+        <div id={hireDevStyles.scalableGrowth2}>
+          <div id={hireDevStyles.scalableGrowthInner}>
+
+            <Image src="/HireDevImages/futureready.png" style={{ padding: "80px" }} alt="" height={200} width={200} />
+          </div> 
+          <div id={hireDevStyles.scalableGrowthInner2}>
+            <div style={{ display: "flex", gap: "10px" }}>
+              <div id={hireDevStyles.mosteinnerContainer}>
+                {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
+                <div className={hireDevStyles.scalableSubheading}>Our talent stays updated with latest SAP trends and innovations, ensuring they are equipped to handle evolving technology landscapes.</div>
+              </div>
+            </div>
+
+            <div style={{padding:"40px",marginTop:"30px", display:"flex",alignContent:"center",gap:"5px"}}><AddCircleIcon sx={{color:"darkorange"}}/> <span>Read More</span></div>
           </div>
         </div>
       </section>}
 
-      <section id={hireDevStyles.insightsection}>
+      {/* <section id={hireDevStyles.insightsection}>
         <div style={{ fontSize: "23px", fontWeight: "600", marginBottom: "50px" }}>Attributes of Our Elite SAP Talent</div>
         <div id={css.insightOuter}>
           <div id={hireDevStyles.insight}>
@@ -425,7 +534,7 @@ const Hire = () => {
           </div>
 
         </div>
-      </section>
+      </section> */}
       {/* <section id={hireDevStyles.fontpop}>
         <div id={hireDevStyles.scalableGrowth3}>
           <div id={hireDevStyles.scalableGrowthInner2}>
@@ -474,7 +583,7 @@ const Hire = () => {
           </div>
         </div>
       </section> */}
-      <section id={hireDevStyles.fontpop3}>
+      {/* <section id={hireDevStyles.fontpop3}>
 
         <div id={hireDevStyles.OuterContainer}>
           <div id={hireDevStyles.boxSelector}>
@@ -532,6 +641,54 @@ const Hire = () => {
               <div>By staying updated with emerging SAP trends and innovations, our talent cultivates the flexibility and proficiency needed to tackle dynamic technological environments, ensuring our readiness for future challenges.</div>
             </section>}
 
+          </div>
+        </div>
+      </section> */}
+
+      <section>
+        <div id={hireDevStyles.attributeSection}>
+          <div style={{fontSize:"30px",fontWeight:"600"}}>Learn About How We Help You Get to MetaVerse</div>
+          <div id={hireDevStyles.innerattributeSection}>
+            <div id={hireDevStyles.eachblock}>
+              <div style={{color:"#FFA107",fontWeight:"600"}}>build now</div>
+              <div style={{fontWeight:"600"}}>Blockchain Offerings</div>
+              <div id={hireDevStyles.smallboxsection}>
+                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+                <div id={hireDevStyles.smallboxes}>Exchange </div>
+                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+              </div>
+            </div>
+            <div id={hireDevStyles.eachblock}>
+              <div style={{color:"#FFA107",fontWeight:"600"}}>build now</div>
+              <div style={{fontWeight:"600"}}>Blockchain Offerings</div>
+              <div id={hireDevStyles.smallboxsection}>
+                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+                <div id={hireDevStyles.smallboxes}>Exchange </div>
+                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+              </div>
+            </div>
+            <div id={hireDevStyles.eachblock}>
+              <div style={{color:"#FFA107",fontWeight:"600"}}>build now</div>
+              <div style={{fontWeight:"600"}}>Blockchain Offerings</div>
+              <div id={hireDevStyles.smallboxsection}>
+                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+                <div id={hireDevStyles.smallboxes}>Exchange </div>
+                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+              </div>
+            </div>
+            <div id={hireDevStyles.eachblock}>
+              <div style={{color:"#FFA107",fontWeight:"600"}}>build now</div>
+              <div style={{fontWeight:"600"}}>Blockchain Offerings</div>
+              <div id={hireDevStyles.smallboxsection}>
+                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+                <div id={hireDevStyles.smallboxes}>Exchange </div>
+                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
