@@ -1273,6 +1273,9 @@
 #fontpop{
   font-family: Poppins, sans-serif;
   padding: 20px;
+  display: flex;flex-direction: column;
+  align-items: center;
+  gap:30px;
 }
 #fontpop3{
   font-family: Poppins, sans-serif;
@@ -1287,7 +1290,7 @@
   flex-direction: column;
   justify-content: center;
   gap:40px;
-  border-right: 1px solid grey;
+  /* border-right: 1px solid grey; */
   padding: 10px;
 }
 #scalableGrowthInner2{
@@ -1368,4 +1371,27 @@
   justify-content: center;
   align-items: center;
   margin-bottom: -12px;
+}
+
+#insight{
+  display: flex;
+  flex-direction: column;
+  /* align-items:start; */
+  width: 250px;
+  gap:20px;
+  padding:20px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#insightsection{
+  @media(width<1000px){
+      width:1400px;
+  }
+  display: flex;
+  gap:40px;
+  flex-direction: column;
+  font-family: "Poppins";
+  justify-content: center;
+  align-items: center;
+  margin:50px 0px;
 }

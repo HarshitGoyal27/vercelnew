@@ -264,14 +264,14 @@ const Hire = () => {
         </section>
       </main>
       <section id={hireDevStyles.fontpop}>
+        <div style={{textAlign:"center"}}> 
+          <div id={hireDevStyles.scalableGrowthHeading}>
+            Flexibility and Scalability for Your SAP Projects
+          </div>
+          <div className={hireDevStyles.scalableSubheading}>Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</div>
+        </div>
         <div id={hireDevStyles.scalableGrowth}>
           <div id={hireDevStyles.scalableGrowthInner}>
-
-            <div id={hireDevStyles.scalableGrowthHeading}>
-              Flexibility and Scalability for Your SAP Projects
-            </div>
-            <div className={hireDevStyles.scalableSubheading}>Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</div>
-
           </div>
           <div id={hireDevStyles.scalableGrowthInner2}>
             <div style={{ display: "flex", gap: "10px" }}>
@@ -393,33 +393,33 @@ const Hire = () => {
         </div>
       </section>}
 
-      <section id={css.insightsection}>
+      <section id={hireDevStyles.insightsection}>
         <div style={{ fontSize: "23px", fontWeight: "600", marginBottom: "50px" }}>Attributes of Our Elite SAP Talent</div>
         <div id={css.insightOuter}>
-          <div id={css.insight}>
+          <div id={hireDevStyles.insight}>
             <div style={{ fontWeight: "600" }}>Expertise in SAP Modules</div>
             <div>Our talent possesses deep knowledge and hands-on experience in various SAP modules, including but not limited to SAP ECC, S/4HANA, SAP Business One, SAP CRM, SAP SCM, and SAP HR.</div>
           </div>
-          <div id={css.insight}>
+          <div id={hireDevStyles.insight}>
             <div style={{ fontWeight: "600" }}>Technical Proficiency</div>
             <div>Our SAP professionals are skilled in SAP technical areas such as ABAP development, SAP Basis, SAP Fiori/UI5, SAP BW/BI, SAP HANA, and more, ensuring smooth implementation and customization of SAP solutions.</div>
           </div>
-          <div id={css.insight}>
+          <div id={hireDevStyles.insight}>
             <div style={{ fontWeight: "600" }}>Functional Competence</div>
             <div>With expertise in functional areas like finance and controlling (FICO), materials management (MM), sales and distribution (SD), production planning (PP) etc., our talent can address diverse project requirements.</div>
           </div>
 
         </div>
         <div id={css.insightOuter}>
-          <div id={css.insight}>
+          <div id={hireDevStyles.insight}>
             <div style={{ fontWeight: "600" }}>Industry Knowledge</div>
             <div>Our SAP experts bring industry-specific knowledge and experience across sectors such as manufacturing, healthcare, retail, finance, and telecom, enabling tailored SAP solutions aligned with industry best practices.</div>
           </div>
-          <div id={css.insight}>
+          <div id={hireDevStyles.insight}>
             <div style={{ fontWeight: "600" }}>Role Types</div>
             <div>Our SAP talent encompasses wide range of roles, including developers, consultants, architects, project managers, and architects. Each role brings a unique set of skills and experience to cater to diverse project needs.</div>
           </div>
-          <div id={css.insight}>
+          <div id={hireDevStyles.insight}>
             <div style={{ fontWeight: "600" }}>Project Types</div>
             <div>Our professionals have hands-on experience in various types of SAP projects, including design, implementation, enhancements, migration, support etc., ensuring adaptability and proficiency to address varied requirements.</div>
           </div>
@@ -474,62 +474,62 @@ const Hire = () => {
           </div>
         </div>
       </section> */}
-      <section  id={hireDevStyles.fontpop3}>
-      
+      <section id={hireDevStyles.fontpop3}>
+
         <div id={hireDevStyles.OuterContainer}>
           <div id={hireDevStyles.boxSelector}>
-           
+
             <section id={hireDevStyles.fontpopBelow}>
               <div id={hireDevStyles.selectbar}>
                 <div className={hireDevStyles.eachbutton} >
                   <div style={{ padding: "30px" }} onClick={() => setSelectedtwo("AI-Vetted")}>AI-Vetted</div>
-                  <LensIcon style={selectedtwo === "AI-Vetted" ? { color: "yellow" } : { color: "grey" }}/>
+                  <LensIcon style={selectedtwo === "AI-Vetted" ? { color: "yellow" } : { color: "grey" }} />
                 </div>
                 <div className={hireDevStyles.eachbutton} >
                   <div style={{ padding: "30px" }} onClick={() => setSelectedtwo("Certified")}>Certified</div>
-                  <LensIcon style={selectedtwo === "Certified" ? { color: "yellow" } : { color: "grey" }}/>
+                  <LensIcon style={selectedtwo === "Certified" ? { color: "yellow" } : { color: "grey" }} />
                 </div>
                 <div className={hireDevStyles.eachbutton} >
                   <div style={{ padding: "30px" }} onClick={() => setSelectedtwo("Accomplished")}>Accomplished</div>
-                  <LensIcon style={selectedtwo === "Accomplished" ? { color: "yellow" } : { color: "grey" }}/>
+                  <LensIcon style={selectedtwo === "Accomplished" ? { color: "yellow" } : { color: "grey" }} />
                 </div>
                 <div className={hireDevStyles.eachbutton} >
                   <div style={{ padding: "30px" }} onClick={() => setSelectedtwo("On-Demand")}>On-Demand</div>
-                  <LensIcon style={selectedtwo === "On-Demand" ? { color: "yellow" } : { color: "grey" }}/>
+                  <LensIcon style={selectedtwo === "On-Demand" ? { color: "yellow" } : { color: "grey" }} />
                 </div>
                 <div className={hireDevStyles.eachbutton} >
                   <div style={{ padding: "30px" }} onClick={() => setSelectedtwo("Versatile")}>Versatile</div>
-                  <LensIcon style={selectedtwo === "Versatile" ? { color: "yellow" } : { color: "grey" }}/>
+                  <LensIcon style={selectedtwo === "Versatile" ? { color: "yellow" } : { color: "grey" }} />
                 </div>
                 <div className={hireDevStyles.eachbutton} >
                   <div style={{ padding: "30px" }} onClick={() => setSelectedtwo("Future-Ready")}>Future-Ready</div>
-                  <LensIcon style={selectedtwo === "Future-Ready" ? { color: "yellow" } : { color: "grey" }}/>
+                  <LensIcon style={selectedtwo === "Future-Ready" ? { color: "yellow" } : { color: "grey" }} />
                 </div>
               </div>
             </section>
-            { selectedtwo === "AI-Vetted" && <section id={hireDevStyles.selectboxContent}>
-             <div>Our SAP professionals are meticulously vetted through advanced AI-driven processes. These procedures are designed to assess their technical proficiency with precision and thoroughness.</div>
-             <div>We guarantee the expertise of our SAP professionals, ensuring they possess the requisite skills and knowledge to excel in their roles. Through AI-driven evaluations, we ascertain their proficiency and expertise, fostering confidence in their capabilities.</div>
+            {selectedtwo === "AI-Vetted" && <section id={hireDevStyles.selectboxContent}>
+              <div>Our SAP professionals are meticulously vetted through advanced AI-driven processes. These procedures are designed to assess their technical proficiency with precision and thoroughness.</div>
+              <div>We guarantee the expertise of our SAP professionals, ensuring they possess the requisite skills and knowledge to excel in their roles. Through AI-driven evaluations, we ascertain their proficiency and expertise, fostering confidence in their capabilities.</div>
             </section>}
-            { selectedtwo === "Certified" && <section id={hireDevStyles.selectboxContent}>
-             <div>Our talent possesses certifications from SAP, affirming their expertise and proficiency in the relevant domain.</div>
-             <div>Additionally, they hold certifications from other reputable institutions, further substantiating their skill set and knowledge.</div>
+            {selectedtwo === "Certified" && <section id={hireDevStyles.selectboxContent}>
+              <div>Our talent possesses certifications from SAP, affirming their expertise and proficiency in the relevant domain.</div>
+              <div>Additionally, they hold certifications from other reputable institutions, further substantiating their skill set and knowledge.</div>
             </section>}
-            { selectedtwo === "Accomplished" && <section id={hireDevStyles.selectboxContent}>
-             <div>Our consultants possess extensive practical knowledge gained through years of actively implementing, customizing, and supporting SAP systems, ensuring a deep understanding of the platform&apos;s nuances and capabilities.</div>
-             <div>With their seasoned background, our consultants offer invaluable insights and solutions, leveraging their wealth of experience to tackle complex challenges and drive successful SAP implementations and support initiatives.</div>
+            {selectedtwo === "Accomplished" && <section id={hireDevStyles.selectboxContent}>
+              <div>Our consultants possess extensive practical knowledge gained through years of actively implementing, customizing, and supporting SAP systems, ensuring a deep understanding of the platform&apos;s nuances and capabilities.</div>
+              <div>With their seasoned background, our consultants offer invaluable insights and solutions, leveraging their wealth of experience to tackle complex challenges and drive successful SAP implementations and support initiatives.</div>
             </section>}
-            { selectedtwo === "On-Demand" && <section id={hireDevStyles.selectboxContent}>
-             <div>Access our pool of SAP talent tailored to your project requirements. Whether you need short-term assistance or long-term collaboration, we offer customizable engagement models to suit your needs.</div>
-             <div>Benefit from our swift deployment process. Our SAP experts are ready to integrate seamlessly into your project, ensuring timely delivery and efficient utilization of resources.</div>
+            {selectedtwo === "On-Demand" && <section id={hireDevStyles.selectboxContent}>
+              <div>Access our pool of SAP talent tailored to your project requirements. Whether you need short-term assistance or long-term collaboration, we offer customizable engagement models to suit your needs.</div>
+              <div>Benefit from our swift deployment process. Our SAP experts are ready to integrate seamlessly into your project, ensuring timely delivery and efficient utilization of resources.</div>
             </section>}
-            { selectedtwo === "Versatile" && <section id={hireDevStyles.selectboxContent}>
-             <div>Our talent possesses a comprehensive range of skills encompassing various SAP modules and cutting-edge technologies, ensuring versatility in meeting diverse project needs effectively.</div>
-             <div>With the ability to swiftly adapt to different requirements, our talent seamlessly integrates their expertise across various platforms and technologies, guaranteeing optimal performance and success in every endeavor.</div>
+            {selectedtwo === "Versatile" && <section id={hireDevStyles.selectboxContent}>
+              <div>Our talent possesses a comprehensive range of skills encompassing various SAP modules and cutting-edge technologies, ensuring versatility in meeting diverse project needs effectively.</div>
+              <div>With the ability to swiftly adapt to different requirements, our talent seamlessly integrates their expertise across various platforms and technologies, guaranteeing optimal performance and success in every endeavor.</div>
             </section>}
-            { selectedtwo === "Future-Ready" && <section id={hireDevStyles.selectboxContent}>
-             <div>Our team remains abreast of the latest SAP trends and innovations through ongoing education and training, ensuring they possess the skills necessary to navigate evolving technology landscapes effectively.</div>
-             <div>By staying updated with emerging SAP trends and innovations, our talent cultivates the flexibility and proficiency needed to tackle dynamic technological environments, ensuring our readiness for future challenges.</div>
+            {selectedtwo === "Future-Ready" && <section id={hireDevStyles.selectboxContent}>
+              <div>Our team remains abreast of the latest SAP trends and innovations through ongoing education and training, ensuring they possess the skills necessary to navigate evolving technology landscapes effectively.</div>
+              <div>By staying updated with emerging SAP trends and innovations, our talent cultivates the flexibility and proficiency needed to tackle dynamic technological environments, ensuring our readiness for future challenges.</div>
             </section>}
 
           </div>
