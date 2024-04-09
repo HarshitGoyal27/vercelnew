@@ -17,6 +17,7 @@ import LensIcon from '@mui/icons-material/Lens';
 import CardComponent from '@/components/atoms/card';
 import sapStyle from "../../styles/sapTalentStyle.module.css"
 import AddCircleIcon from '@mui/icons-material/AddCircle';
+import { Opacity } from '@mui/icons-material';
 const Hire = () => {
   const HireDeveloperClicked = () => {
     // router.push("/search-developers");
@@ -242,7 +243,7 @@ const Hire = () => {
             />
             {/* </div> */}
           </section>
-          <section id={hireDevStyles.LaserFocusContainer}>
+          <section className={hireDevStyles.LaserFocusContainer}>
             <HireDevSectionWithImageAndIcon
               imageUrl={"/HireDevImages/matching.jpg"}
               altText={"WhySkillsCapitalDev"}
@@ -274,11 +275,11 @@ const Hire = () => {
             <br />
             <br />
             <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
-            Tailored Solutions for Scalable Growth
+              Tailored Solutions for Scalable Growth
             </h2>
             <br />
             <h3 style={cardsStyling.sapCloudLegacySubHeading}>Flexibility and Scalability for Your SAP Projects</h3>
-            <h5 style={{opacity:"0.7"}}>Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</h5>
+            <h5 style={{ opacity: "0.7" }}>Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</h5>
             <br />
           </div>
           <div className="cards" style={commonStyle.dflex_1}>
@@ -359,46 +360,81 @@ const Hire = () => {
           </div>
         </div>
       </section> */}
-      <section>
-      <div style={commonStyle.textCenter}>
+      <section style={{paddingBottom:"50px"}}>
+        <div className={hireDevStyles.onboardingOuter}>
+          <div style={commonStyle.textCenter}>
             <br />
             <br />
             <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
-            Unleashing the Power of SAP Expertise
+              Seamless Integration and Support
             </h2>
             <br />
-            <h3 style={cardsStyling.sapCloudLegacySubHeading}>Elevate Your Projects with Our SAP Talent Experience, Versatility, and Collaboration at Your Service</h3>
-
-            
+            <h3 style={cardsStyling.sapCloudLegacySubHeading}>Smooth Onboarding and Ongoing Support for Hassle-Free Project Execution</h3>
+            <h5 style={{ opacity: "0.7" }}>Expert Guidance Every Step of the Way to Ensure Project Success</h5>
+            <br />
           </div>
-      <section id={hireDevStyles.fontpopBelow}>
-        <div id={hireDevStyles.selectbar}>
-          <div style={selected === "AI-Vetted" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-            <div style={{ padding: "30px" }} onClick={() => setSelected("AI-Vetted")}>AI-Vetted</div>
+          <div className={hireDevStyles.onboarding}>
+            <div style={{display:"flex",flexDirection:"column",gap:"20px"}}>
+              <div style={{fontSize:"22px",fontWeight:"600"}}>Comprehensive Onboarding</div>
+              <div>Benefit from a streamlined onboarding process that ensures our talent seamlessly integrates into your project environment. From initial setup to knowledge transfer, we handle all aspects to minimize disruptions and maximize productivity.</div>
+            </div>
+            <div style={{display:"flex",flexDirection:"column",gap:"20px"}}>
+              <div style={{fontSize:"22px",fontWeight:"600"}}>Comprehensive Onboarding</div>
+              <div>Benefit from a streamlined onboarding process that ensures our talent seamlessly integrates into your project environment. From initial setup to knowledge transfer, we handle all aspects to minimize disruptions and maximize productivity.</div>
+            </div>
           </div>
-          <div style={selected === "Certified" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-            <div style={{ padding: "30px" }} onClick={() => setSelected("Certified")}>Certified</div>
-          </div>
-          <div style={selected === "Accomplished" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-            <div style={{ padding: "30px" }} onClick={() => setSelected("Accomplished")}>Accomplished</div>
-          </div>
-          <div style={selected === "On-Demand" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-            <div style={{ padding: "30px" }} onClick={() => setSelected("On-Demand")}>On-Demand</div>
-          </div>
-          <div style={selected === "Versatile" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-            <div style={{ padding: "30px" }} onClick={() => setSelected("Versatile")}>Versatile</div>
-          </div>
-          <div style={selected === "Future-Ready" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-            <div style={{ padding: "30px" }} onClick={() => setSelected("Future-Ready")}>Future-Ready</div>
+          <div className={hireDevStyles.onboarding}>
+            <div style={{display:"flex",flexDirection:"column",gap:"20px"}}>
+              <div style={{fontSize:"22px",fontWeight:"600"}}>Comprehensive Onboarding</div>
+              <div>Benefit from a streamlined onboarding process that ensures our talent seamlessly integrates into your project environment. From initial setup to knowledge transfer, we handle all aspects to minimize disruptions and maximize productivity.</div>
+            </div>
+            <div style={{display:"flex",flexDirection:"column",gap:"20px"}}>
+              <div style={{fontSize:"22px",fontWeight:"600"}}>Comprehensive Onboarding</div>
+              <div>Benefit from a streamlined onboarding process that ensures our talent seamlessly integrates into your project environment. From initial setup to knowledge transfer, we handle all aspects to minimize disruptions and maximize productivity.</div>
+            </div>
           </div>
         </div>
       </section>
+      <section>
+        <div className={hireDevStyles.headingunleash} >
+          <br />
+          <br />
+          <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
+            Unleashing the Power of SAP Expertise
+          </h2>
+          <br />
+          <h3 style={cardsStyling.sapCloudLegacySubHeading}>Elevate Your Projects with Our SAP Talent Experience, Versatility, and Collaboration at Your Service</h3>
+
+
+        </div>
+        <section id={hireDevStyles.fontpopBelow}>
+          <div id={hireDevStyles.selectbar}>
+            <div style={selected === "AI-Vetted" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+              <div style={{ padding: "30px" }} onClick={() => setSelected("AI-Vetted")}>AI-Vetted</div>
+            </div>
+            <div style={selected === "Certified" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+              <div style={{ padding: "30px" }} onClick={() => setSelected("Certified")}>Certified</div>
+            </div>
+            <div style={selected === "Accomplished" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+              <div style={{ padding: "30px" }} onClick={() => setSelected("Accomplished")}>Accomplished</div>
+            </div>
+            <div style={selected === "On-Demand" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+              <div style={{ padding: "30px" }} onClick={() => setSelected("On-Demand")}>On-Demand</div>
+            </div>
+            <div style={selected === "Versatile" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+              <div style={{ padding: "30px" }} onClick={() => setSelected("Versatile")}>Versatile</div>
+            </div>
+            <div style={selected === "Future-Ready" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+              <div style={{ padding: "30px" }} onClick={() => setSelected("Future-Ready")}>Future-Ready</div>
+            </div>
+          </div>
+        </section>
       </section>
       {selected === "AI-Vetted" && <section id={hireDevStyles.fontpop2}>
         <div id={hireDevStyles.scalableGrowth2}>
           <div id={hireDevStyles.scalableGrowthInner}>
 
-            <Image src="/HireDevImages/aivette.jpg" style={{ padding: "80px" }} alt="" height={200} width={250} />
+            <Image src="/HireDevImages/aivette.jpg" style={{ padding: "0px" }} alt="" height={300} width={350} />
           </div>
           <div id={hireDevStyles.scalableGrowthInner2}>
             <div style={{ display: "flex", gap: "10px" }}>
@@ -407,7 +443,7 @@ const Hire = () => {
                 <div className={hireDevStyles.scalableSubheading}>Our SAP professionals undergo rigorous AI-driven vetting processes to ensure their technical proficiency and expertise.</div>
               </div>
             </div>
-            <div style={{padding:"40px",marginTop:"30px", display:"flex",alignContent:"center",gap:"5px"}}><AddCircleIcon sx={{color:"darkorange"}}/> <span>Read More</span></div>
+            <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
 
           </div>
         </div>
@@ -415,7 +451,7 @@ const Hire = () => {
       {selected === "Certified" && <section id={hireDevStyles.fontpop2}>
         <div id={hireDevStyles.scalableGrowth2}>
           <div id={hireDevStyles.scalableGrowthInner}>
-            <Image src="/HireDevImages/collaburation.avif" style={{ padding: "80px" }} alt="" height={200} width={200} />
+            <Image src="/HireDevImages/collaburation.avif" style={{ padding: "0px" }} alt="" height={300} width={300} />
           </div>
           <div id={hireDevStyles.scalableGrowthInner2}>
             <div style={{ display: "flex", gap: "10px" }}>
@@ -423,9 +459,9 @@ const Hire = () => {
                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
                 <div className={hireDevStyles.scalableSubheading}>Our talent holds relevant certifications from SAP and other recognized institutions, validating their skill set and knowledge.</div>
               </div>
-              
+
             </div>
-            <div style={{padding:"40px",marginTop:"30px", display:"flex",alignContent:"center",gap:"5px"}}><AddCircleIcon sx={{color:"darkorange"}}/> <span>Read More</span></div>
+            <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
 
           </div>
         </div>
@@ -434,7 +470,7 @@ const Hire = () => {
         <div id={hireDevStyles.scalableGrowth2}>
           <div id={hireDevStyles.scalableGrowthInner}>
 
-            <Image src="/HireDevImages/supportHire.jpg" style={{ padding: "80px" }} alt="" height={200} width={200} />
+            <Image src="/HireDevImages/supportHire.jpg" style={{ padding: "0px" }} alt="" height={300} width={300} />
           </div>
           <div id={hireDevStyles.scalableGrowthInner2}>
             <div style={{ display: "flex", gap: "10px" }}>
@@ -443,7 +479,7 @@ const Hire = () => {
                 <div className={hireDevStyles.scalableSubheading}>With years of hands-on experience in SAP implementation, customization, and support, our consultants bring invaluable expertise.</div>
               </div>
             </div>
-            <div style={{padding:"40px",marginTop:"30px", display:"flex",alignContent:"center",gap:"5px"}}><AddCircleIcon sx={{color:"darkorange"}}/> <span>Read More</span></div>
+            <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
 
           </div>
         </div>
@@ -452,7 +488,7 @@ const Hire = () => {
         <div id={hireDevStyles.scalableGrowth2}>
           <div id={hireDevStyles.scalableGrowthInner}>
 
-            <Image src="/HireDevImages/transfer.jpg" style={{ padding: "80px" }} alt="" height={200} width={200} />
+            <Image src="/HireDevImages/transfer.jpg" style={{ padding: "0px" }} alt="" height={300} width={300} />
           </div>
           <div id={hireDevStyles.scalableGrowthInner2}>
             <div style={{ display: "flex", gap: "10px" }}>
@@ -462,7 +498,7 @@ const Hire = () => {
               </div>
             </div>
 
-            <div style={{padding:"40px",marginTop:"30px", display:"flex",alignContent:"center",gap:"5px"}}><AddCircleIcon sx={{color:"darkorange"}}/> <span>Read More</span></div>
+            <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
           </div>
         </div>
       </section>}
@@ -470,7 +506,7 @@ const Hire = () => {
         <div id={hireDevStyles.scalableGrowth2}>
           <div id={hireDevStyles.scalableGrowthInner}>
 
-            <Image src="/HireDevImages/versatile.jpg" style={{ padding: "80px" }} alt="" height={200} width={200} />
+            <Image src="/HireDevImages/versatile.jpg" style={{ padding: "0px" }} alt="" height={300} width={300} />
           </div>
           <div id={hireDevStyles.scalableGrowthInner2}>
             <div style={{ display: "flex", gap: "10px" }}>
@@ -480,7 +516,7 @@ const Hire = () => {
               </div>
             </div>
 
-            <div style={{padding:"40px",marginTop:"30px", display:"flex",alignContent:"center",gap:"5px"}}><AddCircleIcon sx={{color:"darkorange"}}/> <span>Read More</span></div>
+            <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
           </div>
         </div>
       </section>}
@@ -488,8 +524,8 @@ const Hire = () => {
         <div id={hireDevStyles.scalableGrowth2}>
           <div id={hireDevStyles.scalableGrowthInner}>
 
-            <Image src="/HireDevImages/futureready.png" style={{ padding: "80px" }} alt="" height={200} width={200} />
-          </div> 
+            <Image src="/HireDevImages/futureready.png" style={{ padding: "0px" }} alt="" height={300} width={300} />
+          </div>
           <div id={hireDevStyles.scalableGrowthInner2}>
             <div style={{ display: "flex", gap: "10px" }}>
               <div id={hireDevStyles.mosteinnerContainer}>
@@ -498,7 +534,7 @@ const Hire = () => {
               </div>
             </div>
 
-            <div style={{padding:"40px",marginTop:"30px", display:"flex",alignContent:"center",gap:"5px"}}><AddCircleIcon sx={{color:"darkorange"}}/> <span>Read More</span></div>
+            <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
           </div>
         </div>
       </section>}
@@ -648,91 +684,126 @@ const Hire = () => {
 
       <section>
         <div id={hireDevStyles.attributeSection}>
-          <div style={{fontSize:"30px",fontWeight:"600"}}>Learn About How We Help You Get to MetaVerse</div>
+          <div className={hireDevStyles.headingunleash} >
+            <br />
+            <br />
+            <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
+              Discover the Depth and Diversity of Expertise in Our SAP Talent Community
+            </h2>
+            <br />
+            <h3 style={{ opacity: "0.7" }}>We&apos;ve curated a premier SAP talent pool comprising top-tier professionals with diverse skills and expertise. Explore the wealth of talent waiting to elevate your SAP initiatives to new heights of success.</h3>
+
+
+          </div>
           <div id={hireDevStyles.innerattributeSection}>
             <div id={hireDevStyles.eachblock}>
-              <div style={{color:"#FFA107",fontWeight:"600"}}>build now</div>
-              <div style={{fontWeight:"600"}}>Blockchain Offerings</div>
+              <div style={{ color: "#FFA107", fontWeight: "600" }}>Exertise in</div>
+              <div style={{ fontWeight: "600" }}>SAP Solutions</div>
               <div id={hireDevStyles.smallboxsection}>
-                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
-                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
-                <div id={hireDevStyles.smallboxes}>Exchange </div>
-                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+                <div id={hireDevStyles.smallboxes}>SAP S/4HANA</div>
+                <div id={hireDevStyles.smallboxes}>SAP ECC6</div>
+                <div id={hireDevStyles.smallboxes}>SAP Business One</div>
+                <div id={hireDevStyles.smallboxes}>SAP SuccessFactors</div>
+                <div id={hireDevStyles.smallboxes}>SAP Ariba</div>
+                <div id={hireDevStyles.smallboxes}>SAP CRM</div>
+                <div id={hireDevStyles.smallboxes}>SAP Analytics Cloud</div>
+                <div id={hireDevStyles.smallboxes}>SAP BW/4HANA</div>
+                <div id={hireDevStyles.smallboxes}>SAP SCM</div>
+                <div id={hireDevStyles.smallboxes}>SAP HR</div>
               </div>
             </div>
             <div id={hireDevStyles.eachblock}>
-              <div style={{color:"#FFA107",fontWeight:"600"}}>build now</div>
-              <div style={{fontWeight:"600"}}>Blockchain Offerings</div>
+              <div style={{ color: "#FFA107", fontWeight: "600" }}>Proficiency in</div>
+              <div style={{ fontWeight: "600" }}>Technology Stack</div>
               <div id={hireDevStyles.smallboxsection}>
-                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
-                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
-                <div id={hireDevStyles.smallboxes}>Exchange </div>
-                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+                <div id={hireDevStyles.smallboxes}>SAP ABAP Development</div>
+                <div id={hireDevStyles.smallboxes}>SAP Basis</div>
+                <div id={hireDevStyles.smallboxes}>SAP HANA</div>
+                <div id={hireDevStyles.smallboxes}>SAP Fiori/UI5</div>
+                <div id={hireDevStyles.smallboxes}>SAP BW/BI</div>
+                <div id={hireDevStyles.smallboxes}>SAP NetWeaver</div>
+                <div id={hireDevStyles.smallboxes}>SAP Cloud Platform</div>
+                <div id={hireDevStyles.smallboxes}>SAP Integration (PI/PO)</div>
+                <div id={hireDevStyles.smallboxes}>SAP Security/GRC</div>
+                <div id={hireDevStyles.smallboxes}>SAP Mobile Platform</div>
               </div>
             </div>
             <div id={hireDevStyles.eachblock}>
-              <div style={{color:"#FFA107",fontWeight:"600"}}>build now</div>
-              <div style={{fontWeight:"600"}}>Blockchain Offerings</div>
+              <div style={{ color: "#FFA107", fontWeight: "600" }}>Competence in</div>
+              <div style={{ fontWeight: "600" }}>Functional Modules</div>
               <div id={hireDevStyles.smallboxsection}>
-                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
-                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
-                <div id={hireDevStyles.smallboxes}>Exchange </div>
-                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+                <div id={hireDevStyles.smallboxes}>SAP FI/CO</div>
+                <div id={hireDevStyles.smallboxes}>SAP TM</div>
+                <div id={hireDevStyles.smallboxes}>SAP MM</div>
+                <div id={hireDevStyles.smallboxes}>SAP SD</div>
+                <div id={hireDevStyles.smallboxes}>SAP PP/PS</div>
+                <div id={hireDevStyles.smallboxes}>SAP EWM</div>
+                <div id={hireDevStyles.smallboxes}>SAP GTS</div>
+                <div id={hireDevStyles.smallboxes}>SAP HCM</div>
+                <div id={hireDevStyles.smallboxes}>SAP BI/BW</div>
+                <div id={hireDevStyles.smallboxes}>SAP PM</div>
               </div>
             </div>
             <div id={hireDevStyles.eachblock}>
-              <div style={{color:"#FFA107",fontWeight:"600"}}>build now</div>
-              <div style={{fontWeight:"600"}}>Blockchain Offerings</div>
+              <div style={{ color: "#FFA107", fontWeight: "600" }}>Knowledge in</div>
+              <div style={{ fontWeight: "600" }}>Industry Domains</div>
               <div id={hireDevStyles.smallboxsection}>
-                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
-                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
-                <div id={hireDevStyles.smallboxes}>Exchange </div>
-                <div id={hireDevStyles.smallboxes}>Exchange Development</div>
+                <div id={hireDevStyles.smallboxes}>Manufacturing</div>
+                <div id={hireDevStyles.smallboxes}>Healthcare</div>
+                <div id={hireDevStyles.smallboxes}>Financial Services</div>
+                <div id={hireDevStyles.smallboxes}>Telecommunications</div>
+                <div id={hireDevStyles.smallboxes}>Utilities</div>
+                <div id={hireDevStyles.smallboxes}>Public Sector</div>
+                <div id={hireDevStyles.smallboxes}>Automotive</div>
+                <div id={hireDevStyles.smallboxes}>Pharmaceuticals</div>
+                <div id={hireDevStyles.smallboxes}>Consumer Products</div>
+
               </div>
             </div>
           </div>
         </div>
       </section>
       <section id={sapStyle.secondsection}>
-                <div style={{ fontSize: "32px", fontWeight: "600", marginBottom: "50px" }}>Ensuring Excellence: Assessing SAP Talent</div>
-                <h3 style={{opacity:"0.7"}}>Meticulous assessment to ensure the proficiency, compatibility, and overall suitability of our SAP talent.</h3>
-                <div id={sapStyle.threeimage}>
-                    <div id={sapStyle.threeimagesection}>
-                        <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
-                        <div style={{ fontWeight: "600" }}>Technical Competency</div>
-                        <div style={{ fontSize: "14px" }}>Thorough assessment of SAP skills and knowledge</div>
-                    </div>
-                    <div id={sapStyle.threeimagesection}>
-                        <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
-                        <div style={{ fontWeight: "600" }}>Professional Experience</div>
-                        <div style={{ fontSize: "14px" }}>Verification of past work experience and project achievements.</div>
-                    </div>
-                    <div id={sapStyle.threeimagesection}>
-                        <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
-                        <div style={{ fontWeight: "600" }}>Cultural Fit</div>
-                        <div style={{ fontSize: "14px" }}>Evaluation of alignment with company values and team dynamics.</div>
-                    </div>
-                    
-                </div>
-                <div id={sapStyle.threeimage}>
-                    <div id={sapStyle.threeimagesection}>
-                        <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
-                        <div style={{ fontWeight: "600" }}>Certifications and Credentials</div>
-                        <div style={{ fontSize: "14px" }}>Validation of relevant certifications and qualifications.</div>
-                    </div>
-                    <div id={sapStyle.threeimagesection}>
-                        <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
-                        <div style={{ fontWeight: "600" }}>Background Check</div>
-                        <div style={{ fontSize: "14px" }}>Verification of educational and employment backgrounds.</div>
-                    </div>
-                    <div id={sapStyle.threeimagesection}>
-                        <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
-                        <div style={{ fontWeight: "600" }}>Soft Skills Assessment</div>
-                        <div style={{ fontSize: "14px" }}>Evaluation of communication, teamwork, and adaptability.</div>
-                    </div>
-                    
-                </div>
-            </section>
+        <div style={{ fontSize: "32px", fontWeight: "600", marginBottom: "50px" }}>Ensuring Excellence: Assessing SAP Talent</div>
+        <h3 style={{ opacity: "0.7" }}>Meticulous assessment to ensure the proficiency, compatibility, and overall suitability of our SAP talent.</h3>
+        <div id={sapStyle.threeimage}>
+          <div id={sapStyle.threeimagesection}>
+            <div><Image src="/HireDevImages/tech1.webp" height={130} width={190} alt="" /></div>
+            <div style={{ fontWeight: "600" }}>Technical Competency</div>
+            <div style={{ fontSize: "14px" }}>Thorough assessment of SAP skills and knowledge</div>
+          </div>
+          <div id={sapStyle.threeimagesection}>
+            <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
+            <div style={{ fontWeight: "600" }}>Professional Experience</div>
+            <div style={{ fontSize: "14px" }}>Verification of past work experience and project achievements.</div>
+          </div>
+          <div id={sapStyle.threeimagesection}>
+            <div><Image src="/HireDevImages/tech2.jpg" height={130} width={130} alt="" /></div>
+            <div style={{ fontWeight: "600" }}>Cultural Fit</div>
+            <div style={{ fontSize: "14px" }}>Evaluation of alignment with company values and team dynamics.</div>
+          </div>
+
+        </div>
+        <br/>
+        <div id={sapStyle.threeimage}>
+          <div id={sapStyle.threeimagesection}>
+            <div><Image src="/HireDevImages/certification.jpg" height={130} width={130} alt="" /></div>
+            <div style={{ fontWeight: "600" }}>Certifications and Credentials</div>
+            <div style={{ fontSize: "14px" }}>Validation of relevant certifications and qualifications.</div>
+          </div>
+          <div id={sapStyle.threeimagesection}>
+            <div><Image src="/HireDevImages/tech3.png" height={130} width={130} alt="" /></div>
+            <div style={{ fontWeight: "600" }}>Background Check</div>
+            <div style={{ fontSize: "14px" }}>Verification of educational and employment backgrounds.</div>
+          </div>
+          <div id={sapStyle.threeimagesection}>
+            <div><Image src="/HireDevImages/softskill.jpg" height={130} width={190} alt="" /></div>
+            <div style={{ fontWeight: "600" }}>Soft Skills Assessment</div>
+            <div style={{ fontSize: "14px" }}>Evaluation of communication, teamwork, and adaptability.</div>
+          </div>
+
+        </div>
+      </section>
       <FotterComponent />
     </div>
   )
