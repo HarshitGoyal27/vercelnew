@@ -177,7 +177,7 @@ const SapTalentPool = () => {
                 videoSrc={"/HomePageImages/HomePageVideo.mp4"}
                 videoWidth={"500"}
                 videoHeight={"600"} */}
-                        <Image src="/HomePageImages/home1.jpeg" width={390} height={590} style={{ borderRadius: "5px" }} alt="" />
+                        <Image src="/SaptalentImage/newhome1.jpeg" width={390} height={390} style={{ borderRadius: "5px" }} alt="" />
 
                     </div>
                 </div>
@@ -189,7 +189,7 @@ const SapTalentPool = () => {
                         <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Dive Into a Spectrum of SAP Expertise</div>
                     </div>
                     <div className={sapStyle.buttonSection}>
-                        <div>
+                        <div style={{marginTop:"50px"}}>
                             <div className={muduleSelect === "SAPModules" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPModules")}>SAP Modules /Sub Modules</div>
                             <div className={muduleSelect === "SAPSolutions" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPSolutions")}>SAP Solutions /Specializations</div>
                             <div className={muduleSelect === "SAPFunctional" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPFunctional")}>SAP Functional Areas</div>
@@ -465,33 +465,33 @@ const SapTalentPool = () => {
                 <div style={commonStyle.textCenter}>
                     <br />
                     <br />
-                    <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
+                    <h2 style={{fontSize:"38px"}}>
                         By the Numbers: Key Metrics of Our SAP Talent Pool
                     </h2>
                     <br />
-                    <h3 style={cardsStyling.sapCloudLegacySubHeading}>Discover the Magnitude of Our SAP Expertise in Numbers</h3>
+                    <h3 style={{fontSize:"22px"}}>Discover the Magnitude of Our SAP Expertise in Numbers</h3>
                     <br />
                 </div>
                 <div>
                     <div className={sapStyle.numberSection}>
                         <div className={sapStyle.eachsection}>
                             <Image src="/SaptalentImage/sapexpert.png" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-                            <div style={{ fontSize: "35px", fontWeight: "600" }}>1400+</div>
+                            <div style={{ fontSize: "35px", fontWeight: "600",color:"orange" }}>1400+</div>
                             <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>Pre-Vetted SAP Experts</div>
                         </div>
                         <div className={sapStyle.eachsection}>
                             <Image src="/SaptalentImage/sapcategory.jpg" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-                            <div style={{ fontSize: "35px", fontWeight: "600" }}>3000+</div>
+                            <div style={{ fontSize: "35px", fontWeight: "600",color:"orange" }}>3000+</div>
                             <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>SAP Category Combinations</div>
                         </div>
                         <div className={sapStyle.eachsection}>
                             <Image src="/SaptalentImage/ready.jpg" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-                            <div style={{ fontSize: "35px", fontWeight: "600" }}>1200+</div>
+                            <div style={{ fontSize: "35px", fontWeight: "600",color:"orange" }}>1200+</div>
                             <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>Ready-to-Deploy Consultants</div>
                         </div>
                         <div className={sapStyle.eachsection}>
                             <Image src="/SaptalentImage/module.png" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-                            <div style={{ fontSize: "35px", fontWeight: "600" }}>40+</div>
+                            <div style={{ fontSize: "35px", fontWeight: "600",color:"orange" }}>40+</div>
                             <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>SAP Modules and Submodules</div>
                         </div>
                     </div>
@@ -545,48 +545,48 @@ const SapTalentPool = () => {
                     </div>
                 </section>
             </main>
-            <section id={sapStyle.secondsection}>
+            <section id={sapStyle.secondsection3}>
                 <div style={{ fontSize: "23px", fontWeight: "600", marginBottom: "50px" }}>Accelerate Your SAP Initiatives with Data-Driven Insights</div>
                 <div id={sapStyle.threeimage}>
                     <div id={sapStyle.threeimagesection}>
                         {/* <div style={{ fontWeight: "600" }}>CLASSICALLY TRAINED</div> */}
-                        <div id={sapStyle.greenNumber}>10X</div>
+                        <div id={sapStyle.greenNumber2}>10X</div>
 
                         <div style={{ fontSize: "14px", opacity: "0.8" }}>Faster Deployment</div>
                         <div style={{ fontSize: "14px" }}>Experience rapid project kick-off with our swift deployment process, accelerating your time-to-market and ROI.</div>
                     </div>
                     <div id={sapStyle.threeimagesection}>
                         {/* <div style={{ fontWeight: "600" }}>PROVEN & HANDS-ON</div> */}
-                        <div id={sapStyle.greenNumber}>95%</div>
+                        <div id={sapStyle.greenNumber2}>95%</div>
 
                         <div style={{ fontSize: "14px", opacity: "0.8" }}>Precision Match</div>
                         <div style={{ fontSize: "14px" }}>Achieve unparalleled accuracy in talent selection with our precise matching algorithm, ensuring optimal resource allocation for your projects.</div>
                     </div>
                     <div id={sapStyle.threeimagesection}>
                         {/* <div style={{ fontWeight: "600" }}>EXECUTION-ORIENTED</div> */}
-                        <div id={sapStyle.greenNumber}>24/7</div>
+                        <div id={sapStyle.greenNumber2}>24/7</div>
 
                         <div style={{ fontSize: "14px", opacity: "0.8" }}>Access to Expertise</div>
                         <div style={{ fontSize: "14px" }}>Seamlessly access our SAP talent pool round-the-clock, enabling you to address project needs promptly and efficiently.</div>
                     </div>
 
                 </div>
-                <div id={sapStyle.threeimage}>
+                {/* <div id={sapStyle.threeimage}>
                     <div id={sapStyle.threeimagesection}>
-                        {/* <div style={{ fontWeight: "600" }}>EXECUTION-ORIENTED</div> */}
-                        <div id={sapStyle.greenNumber}>4 Hour</div>
+                        
+                        <div id={sapStyle.greenNumber2}>4 Hour</div>
 
                         <div style={{ fontSize: "14px", opacity: "0.8" }}>Turnaround Time</div>
                         <div style={{ fontSize: "14px" }}>Respond swiftly to project requirements with our quick turnaround time, ensuring agility and responsiveness in resource allocation.</div>
                     </div>
                     <div id={sapStyle.threeimagesection}>
-                        {/* <div style={{ fontWeight: "600" }}>EXECUTION-ORIENTED</div> */}
-                        <div id={sapStyle.greenNumber}>100%</div>
+                        
+                        <div id={sapStyle.greenNumber2}>100%</div>
 
                         <div style={{ fontSize: "14px", opacity: "0.8" }}>Satisfaction Guarantee</div>
                         <div style={{ fontSize: "14px" }}>Rest assured of project success with our unwavering commitment to delivering high-quality, client-centric solutions that exceed expectations.</div>
                     </div>
-                </div>
+                </div> */}
             </section>
             <FotterComponent />
         </div>

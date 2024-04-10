@@ -55,6 +55,7 @@
     gap:50px;
     margin:100px 0px;
 }
+
 #secondsectiongrey{
     @media(width<=1000px){
         width:1450px;
@@ -74,6 +75,17 @@
     margin:60px 0px;
     background-color: #f2f2f2;
     padding:50px 0px;
+}
+#secondsection3{
+    @media(width<=1000px){
+        width:1450px;
+    }
+    font-family: "Poppins";
+    text-align: center;
+    /* margin:60px 0px; */
+    background-color: #f2f2f2;
+    padding:100px 0px;
+    margin-bottom: -100px;
 }
 
 
@@ -111,6 +123,17 @@ align-items: center;
 justify-content: center;
 font-size: 40px;
 }
+#greenNumber2{
+    height:174px;
+    width:174px;
+ border-radius:100px;
+ background-color:#2871FF;
+ color: white;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 40px;
+ }
 
 
 #insight{
@@ -374,6 +397,7 @@ font-size: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 2px 2px 2px 2px gainsboro;
+        /* box-shadow: 2px 2px 2px 2px gainsboro; */
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       
 }
