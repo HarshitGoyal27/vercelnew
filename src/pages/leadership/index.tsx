@@ -99,7 +99,7 @@ export default function Leadership(){
             </div>
             {/* <p className={css.meet}>Meet Our Execution Team</p> */}
             <p className={css.secondHeading}>
-            Meet Our Executive Team
+            Meet Our Execution Team
                 </p>
             <div className={css.allCards}>
                 <Card sx={{ width: 300, height:400, marginBottom: '10px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '10px', overflow: 'hidden' }}>
