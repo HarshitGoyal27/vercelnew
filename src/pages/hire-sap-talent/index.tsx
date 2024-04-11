@@ -18,9 +18,11 @@ import CardComponent from '@/components/atoms/card';
 import sapStyle from "../../styles/sapTalentStyle.module.css"
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Opacity } from '@mui/icons-material';
+import { useRouter } from "next/router";
 const Hire = () => {
+  const router = useRouter();
   const HireDeveloperClicked = () => {
-    // router.push("/search-developers");
+    router.push("/sap-talent-pool");
   };
   const [selected, setSelected] = useState("AI-Vetted");
   const [selectedtwo, setSelectedtwo] = useState("AI-Vetted");

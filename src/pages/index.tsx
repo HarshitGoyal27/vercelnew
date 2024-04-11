@@ -34,7 +34,7 @@ import { GlobalContextProvider } from "../../context/store";
 export default function Home({ allData }: { allData: any }) {
   const router = useRouter();
   const launchCareerJourneyClicked = () => {
-    window.open("https://talent.skillscapital.io/candidateportal?register=true", "_blank");
+    router.push("/hire-sap-talent");
   };
   const handleButtonExplore = () => {
     router.push("/hire-sap-talent");

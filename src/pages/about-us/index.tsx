@@ -68,12 +68,15 @@ export default function About() {
           <br />
           <br />
           <div className={aboutPageStyles.ourValuesHeading}>
-            <div style={{ fontSize: "43px", fontWeight: "600" }}>Our Mission & Vision </div>
+            
+              <div style={{ fontSize: "43px", fontWeight: "600" }}>Excellence Quantified</div>
+              <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Empowering Your Vision with Unmatched Expertise and Dedicated Success</div>
+            
             {/* <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Empowering Your Vision with Unmatched Expertise and Dedicated Success</div> */}
           </div>
           {/* <br /> */}
           {/* <h3 style={{fontSize:"22px"}}>Discover the Magnitude of Our SAP Expertise in Numbers</h3> */}
-          <br />
+          {/* <br /> */}
         </div>
         <div>
           <div className={sapStyle.numberSection}>
@@ -101,11 +104,14 @@ export default function About() {
         </div>
       </section>
       <section>
-      <div className={aboutPageStyles.ourValuesHeading}>
-            <div style={{ fontSize: "43px", fontWeight: "600" }}>Excellence Quantified</div>
-            <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Empowering Your Vision with Unmatched Expertise and Dedicated Success</div>
-          </div>
 
+      <div className={aboutPageStyles.ourValuesHeading}>
+            
+            <div style={{ fontSize: "43px", fontWeight: "600" }}>Our Values</div>
+            {/* <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Empowering Your Vision with Unmatched Expertise and Dedicated Success</div> */}
+          
+          {/* <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Empowering Your Vision with Unmatched Expertise and Dedicated Success</div> */}
+        </div>
         <div className={aboutPageStyles.sixBoxOuter} >
           <div className={aboutPageStyles.sixBox}>Our Values
             <p style={{ width: "250px", fontSize: "14px", opacity: "0.8" }}>We provide the tech experts you need in hours rather than days or weeks so that you transform your tech landscape and innovate fast.</p>

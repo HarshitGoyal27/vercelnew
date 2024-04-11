@@ -190,12 +190,12 @@ const SapTalentPool = () => {
                     </div>
                     <div className={sapStyle.buttonSection}>
                         <div style={{marginTop:"50px"}}>
-                            <div className={muduleSelect === "SAPModules" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPModules")}>SAP Modules Spectrum</div>
-                            <div className={muduleSelect === "SAPSolutions" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPSolutions")}>SAP Solutions Array</div>
-                            <div className={muduleSelect === "SAPFunctional" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPFunctional")}>Functional Expertise</div>
-                            <div className={muduleSelect === "SAPTechnical" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPTechnical")}> SAP Tech Mastery</div>
-                            <div className={muduleSelect === "ProjectType" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("ProjectType")}>SAP Project Insights</div>
-                            <div className={muduleSelect === "RoleType" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("RoleType")}>Role Mastery</div>
+                            <div className={muduleSelect === "SAPModules" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPModules")}>SAP Modules / Sub Modules</div>
+                            <div className={muduleSelect === "SAPSolutions" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPSolutions")}>SAP Solutions / Specializations</div>
+                            <div className={muduleSelect === "SAPFunctional" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPFunctional")}>SAP Functional Areas</div>
+                            <div className={muduleSelect === "SAPTechnical" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPTechnical")}> SAP Technical Expertise</div>
+                            <div className={muduleSelect === "ProjectType" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("ProjectType")}>SAP Project Types</div>
+                            <div className={muduleSelect === "RoleType" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("RoleType")}>SAP Talent Roles</div>
                         </div>
                         {muduleSelect === "SAPModules" && <div className={sapStyle.buttonContent}>
                             <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Modules Spectrum</div>
@@ -481,12 +481,12 @@ const SapTalentPool = () => {
                         </div>
                         <div className={sapStyle.eachsection}>
                             <Image src="/SaptalentImage/sapcategory.jpg" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-                            <div style={{ fontSize: "35px", fontWeight: "600",color:"black" }}>3000+</div>
+                            <div style={{ fontSize: "35px", fontWeight: "600",color:"black" }}>1800+</div>
                             <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>SAP Category Combinations</div>
                         </div>
                         <div className={sapStyle.eachsection}>
                             <Image src="/SaptalentImage/ready.jpg" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-                            <div style={{ fontSize: "35px", fontWeight: "600",color:"black" }}>1200+</div>
+                            <div style={{ fontSize: "35px", fontWeight: "600",color:"black" }}>600+</div>
                             <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>Ready-to-Deploy Consultants</div>
                         </div>
                         <div className={sapStyle.eachsection}>
