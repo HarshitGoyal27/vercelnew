@@ -218,7 +218,7 @@ export const navLinks = {
   color: "black",
   // border:'solid red',
   padding: "50px 15px",
-  fontSize: "1.2rem",
+  fontSize: "1rem",
   transition: "color 0.5s ease-in-out", // Optional: smooth color transition on hover
   "&:hover": {
     color: "blue", // Change the color on hover
@@ -257,10 +257,10 @@ export const accordianStylingHomePage = {
   accordianStylingHeading: {
     color: `#000`,
     fontFamily: "Poppins",
-    fontSize: "38px",
+    fontSize: "35px",
     fontStyle: "normal",
     fontWeight: "700",
-    // width:"800px",
+    width:"550px",
     margin: "20px 12px",
     lineHeight: "normal",
     marginBlock: `0.3em 0.1em 0.1em 0em`,
@@ -287,6 +287,7 @@ export const accordianStylingHomePage = {
     marginBottom: '40px',
     marginBlockStart: `0em`,
     marginBlockEnd: `0.1em`,
+    width:"550px"
   },
   commonParagraphStyling: {
     color: `${PRIMARY_BLACK}`,

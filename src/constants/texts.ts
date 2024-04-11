@@ -312,12 +312,12 @@ export const HireDeveloperPageText = {
   HireDeveloperHeroHeading: `Hire Hard-to-Find Skilled Developers: AI-Vetted Expertise, Unmatched Quality for Your Project's Success`,
   HireDeveloperHeroPara: `Swiftly Connect with On-Demand, Top-Tier Talent Tailored to Your Project's Urgent Needs`,
 
-  HireDeveloperHeroNum1: `10K+`,
-  HireDeveloperHeroNum1Title: `Deep Vetted Developers`,
-  HireDeveloperHeroNum2: `100+`,
-  HireDeveloperHeroNum2Title: `Specialized Skill Sets`,
-  HireDeveloperHeroNum3: `40+`,
-  HireDeveloperHeroNum3Title: `AI Vetting Criteria`,
+  HireDeveloperHeroNum1: `14000+`,
+  HireDeveloperHeroNum1Title: `Deep Vetted SAP Talent`,
+  HireDeveloperHeroNum2: `80+`,
+  HireDeveloperHeroNum2Title: `SAP Modules & Solutions`,
+  HireDeveloperHeroNum3: `30+`,
+  HireDeveloperHeroNum3Title: `SAP Technical Expertise`,
 
   HireDeveloperHeroButton1: `Hire Developers`,
   HireDeveloperHeroButton2: `Watch Video`,
@@ -336,7 +336,7 @@ export const HireDeveloperPageText = {
   //---------------------------------------------------------------------------------------------------------------------------
 
   // Supercharge Your Hiring Section
-  superchargeHiringHeading: "Supercharge Your Hiring",
+  superchargeHiringHeading: "Supercharge Your SAP Hiring",
   superchargeHiringSubHeading: "Accelerate Your Recruitment Process with Access to Our Premier Network of AI-Vetted Developers, Ready to Join Your Team and Drive Success. ",
   superchargeHiringContent:"Unlock top-tier SAP talent swiftly with our AI-Powered Talent Cloud and our extensive network of SAP experts, ready to join your team and drive success. Our platform empowers you to hire deeply vetted SAP consultants for hard-to-find skills in just 4 hours, ensuring rapid deployment of top-tier talent to meet your project needs.",
   superChargeImageUrl: 'https://s3-alpha-sig.figma.com/img/c3c0/9a76/b799ec591a9b04510feb32c8b88045fc?Expires=1702857600&Signature=p335CYy31~DqKZ2HikkpmUzb9x7I8evMO5CkzHF3NCm0HIwyYXLKzwdasolYJIokFrAqSIsAbScFwMz5jlGy-lDYTaRJz1VdtHnG1PuaGukFNwqherrKPAVnMobVLdLhwvdiZQYzaYR2jEYN3u10UgkQOOlXL0erVJSHDC-PSkXhZeLcmDbm3882iEKo9rpaKy3EnVM9aBosu5jrxGJ5zOCnwSmzZfXiR4Wss4MyBjRWS4QWGq-IEbVA0qHsNFOMIj6D3F5QJMvQF82LdZA3-lVv15cqYwiuUfZ94wSgWjyuBb7-k0pWDsKJxLPhaLrDoq5Q1TO0OBhMI7uXV9r1ow__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',

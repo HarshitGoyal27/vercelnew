@@ -84,8 +84,8 @@ const Hire = () => {
               style={{
                 display: "flex",
                 justifyContent: "start",
-                gap: "50px",
-                margin: "0px 0px 0px 20px",
+                gap: "20px",
+                // margin: "0px 0px 0px 20px",
               }}
             >
               <div>
@@ -123,7 +123,7 @@ const Hire = () => {
                 videoSrc={"/HomePageImages/HomePageVideo.mp4"}
                 videoWidth={"500"}
                 videoHeight={"600"} */}
-            <Image src="/HireDeveloperImages/hiring3.png" alt="" height={300} width={400} />
+            <Image src="/HireDeveloperImages/hiring3.png" alt="" height={280} width={400} />
 
           </div>
         </div>
@@ -222,7 +222,7 @@ const Hire = () => {
           <section id={hireDevStyles.superchargeContainer} >
             {/* <div style={{ width: "80vw", margin: "auto" }}> */}
             <HireDevSectionWithImageAndIcon
-              imageUrl={"/HireDevImages/hiring.jpg"}
+              imageUrl={"/HireDeveloperImages/sapHiring.jpg"}
               altText={"WhySkillsCapitalDev"}
               Imgheight={500}
               Imgwidth={520}
@@ -245,7 +245,7 @@ const Hire = () => {
           </section>
           <section className={hireDevStyles.LaserFocusContainer}>
             <HireDevSectionWithImageAndIcon
-              imageUrl={"/HireDevImages/matching.jpg"}
+              imageUrl={"/HireDeveloperImages/matchingSap.png"}
               altText={"WhySkillsCapitalDev"}
               Imgheight={500}
               Imgwidth={550}
@@ -278,8 +278,8 @@ const Hire = () => {
               Tailored Solutions for Scalable Growth
             </h2>
             <br />
-            <h3 style={cardsStyling.sapCloudLegacySubHeading}>Flexibility and Scalability for Your SAP Projects</h3>
-            <h5 style={{ opacity: "0.7" }}>Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</h5>
+            <h3 style={cardsStyling.sapCloudLegacySubHeading}>Flexibility and Scalability for Your SAP Projects. We Offer Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</h3>
+            {/* <h5 style={{ opacity: "0.7" }}>Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</h5> */}
             <br />
           </div>
           <div className="cards" style={commonStyle.dflex_1}>
@@ -369,8 +369,8 @@ const Hire = () => {
               Seamless Integration and Support
             </h2>
             <br />
-            <h3 style={cardsStyling.sapCloudLegacySubHeading}>Smooth Onboarding and Ongoing Support for Hassle-Free Project Execution</h3>
-            <h5 style={{ opacity: "0.7" }}>Expert Guidance Every Step of the Way to Ensure Project Success</h5>
+            <h3 style={cardsStyling.sapCloudLegacySubHeading}>Smooth Onboarding and Ongoing Support for Hassle-Free Project Execution. Expert Guidance Every Step of the Way to Ensure Project Success</h3>
+            {/* <h5 style={{ opacity: "0.7" }}>Expert Guidance Every Step of the Way to Ensure Project Success</h5> */}
             <br />
           </div>
           <div className={hireDevStyles.onboarding}>
@@ -379,18 +379,18 @@ const Hire = () => {
               <div>Benefit from a streamlined onboarding process that ensures our talent seamlessly integrates into your project environment. From initial setup to knowledge transfer, we handle all aspects to minimize disruptions and maximize productivity.</div>
             </div>
             <div style={{display:"flex",flexDirection:"column",gap:"20px"}}>
-              <div style={{fontSize:"22px",fontWeight:"600"}}>Comprehensive Onboarding</div>
-              <div>Benefit from a streamlined onboarding process that ensures our talent seamlessly integrates into your project environment. From initial setup to knowledge transfer, we handle all aspects to minimize disruptions and maximize productivity.</div>
+              <div style={{fontSize:"22px",fontWeight:"600"}}>Continuous Collaboration</div>
+              <div>Experience uninterrupted collaboration with our dedicated project managers and consultants. We maintain open communication channels to address any issues or concerns promptly and ensure alignment with your project goals.</div>
             </div>
           </div>
-          <div className={hireDevStyles.onboarding}>
+          <div className={hireDevStyles.onboarding2}>
             <div style={{display:"flex",flexDirection:"column",gap:"20px"}}>
-              <div style={{fontSize:"22px",fontWeight:"600"}}>Comprehensive Onboarding</div>
-              <div>Benefit from a streamlined onboarding process that ensures our talent seamlessly integrates into your project environment. From initial setup to knowledge transfer, we handle all aspects to minimize disruptions and maximize productivity.</div>
+              <div style={{fontSize:"22px",fontWeight:"600"}}>Proactive Support</div>
+              <div>Stay ahead of challenges with proactive support and regular check-ins from our team. We proactively identify potential bottlenecks and offer proactive solutions to keep your project on track and within budget.</div>
             </div>
             <div style={{display:"flex",flexDirection:"column",gap:"20px"}}>
-              <div style={{fontSize:"22px",fontWeight:"600"}}>Comprehensive Onboarding</div>
-              <div>Benefit from a streamlined onboarding process that ensures our talent seamlessly integrates into your project environment. From initial setup to knowledge transfer, we handle all aspects to minimize disruptions and maximize productivity.</div>
+              <div style={{fontSize:"22px",fontWeight:"600"}}>Knowledge Transfer</div>
+              <div>Leverage our expertise not just for the duration of your project but for long-term knowledge transfer. We ensure that insights gained during the project are documented and shared with your internal team to foster ongoing learning and development.</div>
             </div>
           </div>
         </div>

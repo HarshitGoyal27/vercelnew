@@ -44,13 +44,29 @@ const FotterComponent = () => {
         </li>
 
         <li className={css.li2}>
-          <Link href="/hire" id={css.site} >
-            Hire Developers
+          <Link href="/hire-sap-talent" id={css.site} >
+            Hire SAP Talent
           </Link>
         </li>
         <li className={css.li2}>
+          <Link href="/hire-sap-talent" id={css.site} >
+          Hire Specialized Talent
+          </Link>
+        </li>
+        
+        <li className={css.li2}>
           <Link href="/leadership" id={css.site} >
             Leadership
+          </Link>
+        </li>
+        <li className={css.li2}>
+          <Link href="/about-us" id={css.site} >
+            About Us
+          </Link>
+        </li>
+        <li className={css.li2}>
+          <Link href="/sap-talent-pool" id={css.site} >
+            SAP Talent Pool
           </Link>
         </li>
         {/* <li  className={css.li2}>

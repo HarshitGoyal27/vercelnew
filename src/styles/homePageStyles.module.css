@@ -1007,6 +1007,8 @@
 }
 .ondemandflex{
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .topContentSection{
   @media(width>1600px){

@@ -40,10 +40,10 @@ export default function Leadership(){
                     {LeadershipText.LeadershipContent}
                 </p>
                 <p className={css.secondHeading}>
-                    Meet our Board of Directors
+                Meet Our Executive Team
                 </p>
             </div>
-            <p className={css.meet}>Meet Our Executive Team</p>
+            {/* <p className={css.meet}>Meet Our Executive Team</p> */}
             <div className={css.allCards} >
                 <Card sx={{ width: 350, height:400, marginBottom: '10px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '10px', overflow: 'hidden' }}>
                     <Image
@@ -97,7 +97,10 @@ export default function Leadership(){
                     </CardContent>
                 </Card>
             </div>
-            <p className={css.meet}>Meet Our Execution Team</p>
+            {/* <p className={css.meet}>Meet Our Execution Team</p> */}
+            <p className={css.secondHeading}>
+                Meet Our Executive Team
+                </p>
             <div className={css.allCards}>
                 <Card sx={{ width: 300, height:400, marginBottom: '10px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '10px', overflow: 'hidden' }}>
                     <Image

@@ -210,7 +210,7 @@ export default function Home({ allData }: { allData: any }) {
                 videoSrc={"/HomePageImages/HomePageVideo.mp4"}
                 videoWidth={"500"}
                 videoHeight={"600"} */}
-              <Image src="/HomePageImages/home1.jpeg" width={390} height={590} style={{borderRadius:"5px"}} alt=""  />
+              <Image src="/HomePageImages/banner02.png" width={450} height={350} style={{borderRadius:"5px"}} alt=""  />
 
             </div>
           </div>
@@ -300,9 +300,9 @@ export default function Home({ allData }: { allData: any }) {
               </div>
               <div>
                 <Image
-                  src={"/HomePageImages/4-AccordionHomeImage.png"}
+                  src={"/HomePageImages/fingureTip.jpg"}
                   alt="Accordian Image"
-                  width={502}
+                  width={450}
                   height={460}
                 />
               </div>
@@ -555,7 +555,7 @@ export default function Home({ allData }: { allData: any }) {
             <SpeedQualityCard
               title={HomePageText.speedHeading}
               subheading={HomePageText.speedSubHeading}
-              imageSrc={"/HomePageImages/fastwork2.avif"}
+              imageSrc={"/HomePageImages/fastHiring.png"}
               imageHeight={250}
               imageWidth={380}
               paragraph={HomePageText.speedPara}

@@ -177,7 +177,7 @@ const SapTalentPool = () => {
                 videoSrc={"/HomePageImages/HomePageVideo.mp4"}
                 videoWidth={"500"}
                 videoHeight={"600"} */}
-                        <Image src="/SaptalentImage/newhome1.jpeg" width={390} height={390} style={{ borderRadius: "5px" }} alt="" />
+                        <Image src="/SaptalentImage/sapexperties.png" width={350} height={350} style={{ borderRadius: "5px" }} alt="" />
 
                     </div>
                 </div>
@@ -476,22 +476,22 @@ const SapTalentPool = () => {
                     <div className={sapStyle.numberSection}>
                         <div className={sapStyle.eachsection}>
                             <Image src="/SaptalentImage/sapexpert.png" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-                            <div style={{ fontSize: "35px", fontWeight: "600",color:"orange" }}>1400+</div>
+                            <div style={{ fontSize: "35px", fontWeight: "600",color:"black" }}>1400+</div>
                             <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>Pre-Vetted SAP Experts</div>
                         </div>
                         <div className={sapStyle.eachsection}>
                             <Image src="/SaptalentImage/sapcategory.jpg" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-                            <div style={{ fontSize: "35px", fontWeight: "600",color:"orange" }}>3000+</div>
+                            <div style={{ fontSize: "35px", fontWeight: "600",color:"black" }}>3000+</div>
                             <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>SAP Category Combinations</div>
                         </div>
                         <div className={sapStyle.eachsection}>
                             <Image src="/SaptalentImage/ready.jpg" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-                            <div style={{ fontSize: "35px", fontWeight: "600",color:"orange" }}>1200+</div>
+                            <div style={{ fontSize: "35px", fontWeight: "600",color:"black" }}>1200+</div>
                             <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>Ready-to-Deploy Consultants</div>
                         </div>
                         <div className={sapStyle.eachsection}>
                             <Image src="/SaptalentImage/module.png" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-                            <div style={{ fontSize: "35px", fontWeight: "600",color:"orange" }}>40+</div>
+                            <div style={{ fontSize: "35px", fontWeight: "600",color:"black" }}>40+</div>
                             <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>SAP Modules and Submodules</div>
                         </div>
                     </div>
@@ -535,7 +535,7 @@ const SapTalentPool = () => {
                             </div>
                             <div>
                                 <Image
-                                    src={"/HomePageImages/4-AccordionHomeImage.png"}
+                                    src={"/HomePageImages/sapProject.png"}
                                     alt="Accordian Image"
                                     width={502}
                                     height={460}
@@ -552,21 +552,21 @@ const SapTalentPool = () => {
                         {/* <div style={{ fontWeight: "600" }}>CLASSICALLY TRAINED</div> */}
                         <div id={sapStyle.greenNumber2}>10X</div>
 
-                        <div style={{ fontSize: "14px", opacity: "0.8" }}>Faster Deployment</div>
-                        <div style={{ fontSize: "14px" }}>Experience rapid project kick-off with our swift deployment process, accelerating your time-to-market and ROI.</div>
+                        <div style={{ fontSize: "16px",fontWeight:"600" }}>Faster Deployment</div>
+                        <div style={{ fontSize: "14px",opacity: "0.8" }}>Experience rapid project kick-off with our swift deployment process, accelerating your time-to-market and ROI.</div>
                     </div>
                     <div id={sapStyle.threeimagesection}>
                         {/* <div style={{ fontWeight: "600" }}>PROVEN & HANDS-ON</div> */}
                         <div id={sapStyle.greenNumber2}>95%</div>
 
-                        <div style={{ fontSize: "14px", opacity: "0.8" }}>Precision Match</div>
+                        <div style={{ fontSize: "16px",fontWeight:"600"}}>Precision Match</div>
                         <div style={{ fontSize: "14px" }}>Achieve unparalleled accuracy in talent selection with our precise matching algorithm, ensuring optimal resource allocation for your projects.</div>
                     </div>
                     <div id={sapStyle.threeimagesection}>
                         {/* <div style={{ fontWeight: "600" }}>EXECUTION-ORIENTED</div> */}
                         <div id={sapStyle.greenNumber2}>24/7</div>
 
-                        <div style={{ fontSize: "14px", opacity: "0.8" }}>Access to Expertise</div>
+                        <div style={{ fontSize: "16px",fontWeight:"600"}}>Access to Expertise</div>
                         <div style={{ fontSize: "14px" }}>Seamlessly access our SAP talent pool round-the-clock, enabling you to address project needs promptly and efficiently.</div>
                     </div>
 

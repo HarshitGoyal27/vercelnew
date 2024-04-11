@@ -80,7 +80,7 @@
     @media(width<=1000px){
         width:1450px;
     }
-    font-family: "Poppins";
+    font-family: "Poppins"; 
     text-align: center;
     /* margin:60px 0px; */
     background-color: #f2f2f2;
@@ -326,6 +326,9 @@ font-size: 40px;
 }
 
 .outerNumberSection{
+    @media(width<1000px){
+        width:1400px;
+    }
     background-color: #2871FF;
     color: white;
     font-family: "Poppins";
@@ -344,11 +347,15 @@ font-size: 40px;
     gap: 20px;
 }
 .leftbuttonSection{
+    @media(width<1000px){
+        width:1400px;
+    }
     font-family: "Poppins";
     display: flex;
     flex-direction: column;
     gap:20px;
     padding-bottom: 80px;
+    background-color: #f2f2f2;
 }
 .leftbuttonHeadingSection{
     display: flex;
@@ -381,6 +388,9 @@ font-size: 40px;
     color:orange
 }
 .buttonContent{
+    @media(width<1000px){
+        width:800px;
+    }
     display: flex;
     flex-direction: column;
     gap:20px;
