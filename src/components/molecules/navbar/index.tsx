@@ -55,21 +55,22 @@ const Navbar: React.FC = () => {
           Hire Specialized Talent
           </Link>
         </div>
-        <div><div className={css.dropdown}>
-          <button className={css.dropbtn}>Company <KeyboardArrowDownIcon/>
-            <i className={`${css.fa} ${css["fa-caret-down"]}`}></i>
-          </button>
-          <div className={css.dropdownContent}>
-            <Link href="/leadership">Leadership</Link>
-            <Link href="/about-us">About Us</Link>
-            <Link href="/contact-us">Contact Us</Link>
-          </div>
-        </div> </div>
         <div>
           <Link href="/sap-talent-pool" style={navLinks}>
             SAP Talent Pool
           </Link>
         </div>
+        <div><div className={css.dropdown}>
+          <button className={css.dropbtn}>Company <KeyboardArrowDownIcon/>
+            <i className={`${css.fa} ${css["fa-caret-down"]}`}></i>
+          </button>
+          <div className={css.dropdownContent}>
+          <Link href="/about-us">About Us</Link>
+            <Link href="/leadership">Leadership</Link>
+            <Link href="/contact-us">Contact Us</Link>
+          </div>
+        </div> </div>
+        
         {/* <div>
           <Link href="/leadership" style={navLinks}>
             Leadership

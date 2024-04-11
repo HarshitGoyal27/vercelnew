@@ -50,7 +50,7 @@ const Hire = () => {
                   borderRadius: "5px",
                   background: "#424241",
                   fontSize: "18px",
-                  padding: "10px 25px",
+                  padding: "15px 25px",
                   justifyContent: "center",
                   alignItems: "center",
                   gap: "10px",
@@ -62,7 +62,7 @@ const Hire = () => {
                   borderRadius: "5px",
                   background: "white",
                   fontSize: "18px",
-                  padding: "10px 25px",
+                  padding: "15px 25px",
                   border: "1px solid black",
                   justifyContent: "center",
                   alignItems: "center",
@@ -73,11 +73,11 @@ const Hire = () => {
               />
               <br />
               <br />
-              <IconTextButton
+              {/* <IconTextButton
                 icon={<PlayCircleFilledWhiteOutlinedIcon />}
                 text="Watch Video"
                 onClick={HireDeveloperClicked}
-              />
+              /> */}
             </div>
             <br />
             <div
@@ -134,19 +134,12 @@ const Hire = () => {
             {HireDeveloperPageText.BottomImagesHeading}
           </div>
           <div className={hireDevStyles.trusedCompanies}>
-            <Image
-              className={hireDevStyles.amazon}
-              src={`/HireDeveloperImages/company_1.png`}
-              alt="Logo"
-              height={20}
-              width={70}
-            // style={{marginTop:"0px", borderRadius: "10px" }}
-            />
+            
             <Image
               className={hireDevStyles.amazon}
               src={`/HireDeveloperImages/company_4.jpeg`}
               alt="Logo"
-              height={20}
+              height={28}
               width={60}
             // style={{ borderRadius: "10px" }}
             />
@@ -158,35 +151,20 @@ const Hire = () => {
               width={70}
             // style={{ borderRadius: "10px" }}
             />
-            {/* <Image
-                  className={hireDevStyles.amazon}
-                  src={`/HireDeveloperImages/company_6.png`}
-                  alt="Logo"
-                  height={20}
-                  width={70}
-                style={{ marginTop:"-0px" }}
-                />
-                <Image
-                  className={hireDevStyles.amazon}
-                  src={`/HireDeveloperImages/company_8.jpeg`}
-                  alt="Logo"
-                  height={20}
-                  width={70}
-                  style={{ marginTop:"-0px" }}
-                /> */}
+            
             <Image
               className={hireDevStyles.amazon}
               src={`/HireDeveloperImages/company_9.jpg`}
               alt="Logo"
               height={20}
-              width={70}
+              width={75}
             // style={{ borderRadius: "10px" }}
             />
             <Image
               className={hireDevStyles.amazon}
               src={`/HireDeveloperImages/company_11.jpg`}
               alt="Logo"
-              height={20}
+              height={30}
               width={50}
             // style={{ borderRadius: "10px" }}
             />
@@ -194,7 +172,7 @@ const Hire = () => {
               className={hireDevStyles.amazon}
               src={`/HireDeveloperImages/company_12.jpeg`}
               alt="Logo"
-              height={20}
+              height={25}
               width={60}
             // style={{ borderRadius: "10px" }}
             />
@@ -203,14 +181,14 @@ const Hire = () => {
               src={`/HireDeveloperImages/company_13.jpg`}
               alt="Logo"
               height={20}
-              width={70}
+              width={75}
             // style={{ borderRadius: "10px" }}
             />
             <Image
               className={hireDevStyles.amazon}
               src={`/HireDeveloperImages/company_10.jpeg`}
               alt="Logo"
-              height={20}
+              height={30}
               width={50}
             // style={{ borderRadius: "10px" }}
             />
@@ -292,7 +270,7 @@ const Hire = () => {
               paragraphText={"Whether you're embarking on a small-scale SAP implementation or a large-scale transformation, we offer flexible team compositions to suit your project scope. From solo consultants to cross-functional teams, we adapt to meet your needs."}
               buttonText="Explore"
               onButtonClick={HireDeveloperClicked}
-              buttonEnabled={true}
+              buttonEnabled={false}
             />
             <CardComponent
               imageUrl={"/HireDevImages/expertise.jpg"}
@@ -303,18 +281,18 @@ const Hire = () => {
               paragraphText={"Scale your SAP initiatives dynamically with our on-demand talent pool. Need additional resources for a specific phase of your project? We've got you covered. Our flexible hiring model allows you to access expertise precisely when you need it."}
               buttonText="Explore"
               onButtonClick={HireDeveloperClicked}
-              buttonEnabled={true}
+              buttonEnabled={false}
             />
             <CardComponent
               imageUrl={"/HireDevImages/engagement.jpg"}
               imageHeight={210}
               imageWidth={250}
               headingNumber={""}
-              headingText={"Customized Engagement Models"}
+              headingText={"Customized Solutions"}
               paragraphText={"Choose from range of engagement models that align with your project requirements and budget. Whether you prefer project-based engagements, dedicated resources, or outcome-driven model, we offer solutions to ensure project's success."}
               buttonText="Explore"
               onButtonClick={HireDeveloperClicked}
-              buttonEnabled={true}
+              buttonEnabled={false}
             />
           </div>
         </div>
@@ -360,7 +338,7 @@ const Hire = () => {
           </div>
         </div>
       </section> */}
-      <section style={{paddingBottom:"50px"}}>
+      {/* <section style={{paddingBottom:"50px"}}>
         <div className={hireDevStyles.onboardingOuter}>
           <div style={commonStyle.textCenter}>
             <br />
@@ -370,7 +348,7 @@ const Hire = () => {
             </h2>
             <br />
             <h3 style={cardsStyling.sapCloudLegacySubHeading}>Smooth Onboarding and Ongoing Support for Hassle-Free Project Execution. Expert Guidance Every Step of the Way to Ensure Project Success</h3>
-            {/* <h5 style={{ opacity: "0.7" }}>Expert Guidance Every Step of the Way to Ensure Project Success</h5> */}
+            
             <br />
           </div>
           <div className={hireDevStyles.onboarding}>
@@ -394,7 +372,7 @@ const Hire = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section>
         <div className={hireDevStyles.headingunleash} >
           <br />
@@ -708,15 +686,15 @@ const Hire = () => {
                 <div id={hireDevStyles.smallboxes}>SAP CRM</div>
                 <div id={hireDevStyles.smallboxes}>SAP Analytics Cloud</div>
                 <div id={hireDevStyles.smallboxes}>SAP BW/4HANA</div>
-                <div id={hireDevStyles.smallboxes}>SAP SCM</div>
-                <div id={hireDevStyles.smallboxes}>SAP HR</div>
+                {/* <div id={hireDevStyles.smallboxes}>SAP SCM</div>
+                <div id={hireDevStyles.smallboxes}>SAP HR</div> */}
               </div>
             </div>
             <div id={hireDevStyles.eachblock}>
               <div style={{ color: "#FFA107", fontWeight: "600" }}>Proficiency in</div>
               <div style={{ fontWeight: "600" }}>Technology Stack</div>
               <div id={hireDevStyles.smallboxsection}>
-                <div id={hireDevStyles.smallboxes}>SAP ABAP Development</div>
+                <div id={hireDevStyles.smallboxes}>SAP ABAP</div>
                 <div id={hireDevStyles.smallboxes}>SAP Basis</div>
                 <div id={hireDevStyles.smallboxes}>SAP HANA</div>
                 <div id={hireDevStyles.smallboxes}>SAP Fiori/UI5</div>
@@ -724,8 +702,8 @@ const Hire = () => {
                 <div id={hireDevStyles.smallboxes}>SAP NetWeaver</div>
                 <div id={hireDevStyles.smallboxes}>SAP Cloud Platform</div>
                 <div id={hireDevStyles.smallboxes}>SAP Integration (PI/PO)</div>
-                <div id={hireDevStyles.smallboxes}>SAP Security/GRC</div>
-                <div id={hireDevStyles.smallboxes}>SAP Mobile Platform</div>
+                {/* <div id={hireDevStyles.smallboxes}>SAP Security/GRC</div>
+                <div id={hireDevStyles.smallboxes}>SAP Mobile Platform</div> */}
               </div>
             </div>
             <div id={hireDevStyles.eachblock}>
@@ -740,8 +718,8 @@ const Hire = () => {
                 <div id={hireDevStyles.smallboxes}>SAP EWM</div>
                 <div id={hireDevStyles.smallboxes}>SAP GTS</div>
                 <div id={hireDevStyles.smallboxes}>SAP HCM</div>
-                <div id={hireDevStyles.smallboxes}>SAP BI/BW</div>
-                <div id={hireDevStyles.smallboxes}>SAP PM</div>
+                {/* <div id={hireDevStyles.smallboxes}>SAP BI/BW</div>
+                <div id={hireDevStyles.smallboxes}>SAP PM</div> */}
               </div>
             </div>
             <div id={hireDevStyles.eachblock}>
@@ -756,7 +734,7 @@ const Hire = () => {
                 <div id={hireDevStyles.smallboxes}>Public Sector</div>
                 <div id={hireDevStyles.smallboxes}>Automotive</div>
                 <div id={hireDevStyles.smallboxes}>Pharmaceuticals</div>
-                <div id={hireDevStyles.smallboxes}>Consumer Products</div>
+                {/* <div id={hireDevStyles.smallboxes}>Consumer Products</div> */}
 
               </div>
             </div>

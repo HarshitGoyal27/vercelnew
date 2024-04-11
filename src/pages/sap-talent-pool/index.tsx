@@ -72,7 +72,7 @@ const SapTalentPool = () => {
                                 />
                             </Link>
 
-                            <CustomButton2
+                            {/* <CustomButton2
                                 label={"Explore Specialized Talent"}
                                 onClick={launchCareerJourneyClicked}
                                 buttonStyle={{
@@ -103,7 +103,7 @@ const SapTalentPool = () => {
 
                                     boxShadow: "5px 5px 35px 0px rgba(0, 0, 0, 0.25)",
                                 }}
-                            />
+                            /> */}
                         </div>
                         <div
                             style={{
@@ -177,7 +177,7 @@ const SapTalentPool = () => {
                 videoSrc={"/HomePageImages/HomePageVideo.mp4"}
                 videoWidth={"500"}
                 videoHeight={"600"} */}
-                        <Image src="/SaptalentImage/sapexperties.png" width={350} height={350} style={{ borderRadius: "5px" }} alt="" />
+                        <Image src="/SaptalentImage/erp.webp" width={400} height={350} style={{ borderRadius: "5px" }} alt="" />
 
                     </div>
                 </div>
@@ -200,8 +200,8 @@ const SapTalentPool = () => {
                         {muduleSelect === "SAPModules" && <div className={sapStyle.buttonContent}>
                             <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Modules / Sub Modules</div>
                             <div style={{ fontSize: "19px", fontWeight: "600" }}>Explore Our Comprehensive Range of SAP Modules and Submodules</div>
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Covering Every Aspect of SAP Expertise</div>
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>50+</div>
+                            {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Covering Every Aspect of SAP Expertise</div>
+                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>50+</div> */}
                             <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
                                 <div className={sapStyle.moduletype}>SAP ECC (Enterprise Core Components)</div>
                                 <div className={sapStyle.moduletype}>SAP S/4HANA (High-Performance Analytic Appliance)</div>
@@ -243,8 +243,8 @@ const SapTalentPool = () => {
                         {muduleSelect === "SAPSolutions" && <div className={sapStyle.buttonContent}>
                             <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Solutions / Specializations</div>
                             <div style={{ fontSize: "19px", fontWeight: "600" }}>Discover Specialized SAP Solutions and Expertise</div>
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Tailored Solutions for Every Business Need</div>
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>40+</div>
+                            {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Tailored Solutions for Every Business Need</div>
+                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>40+</div> */}
                             <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
                                 <div className={sapStyle.moduletype}>SAP Business One</div>
                                 <div className={sapStyle.moduletype}>SAP Ariba (Procurement Solutions)</div>
@@ -286,8 +286,8 @@ const SapTalentPool = () => {
                         {muduleSelect === "SAPFunctional" && <div className={sapStyle.buttonContent}>
                             <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Functional Areas</div>
                             <div style={{ fontSize: "19px", fontWeight: "600" }}>Unlock Expertise Across Various SAP Functional Areas</div>
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Functional Expertise to Drive Business Processes</div>
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>20+</div>
+                            {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Functional Expertise to Drive Business Processes</div>
+                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>20+</div> */}
                             <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
                                 <div className={sapStyle.moduletype}>SAP FI(Financial Accounting)</div>
                                 <div className={sapStyle.moduletype}>SAP CO(Controlling)</div>
@@ -329,8 +329,8 @@ const SapTalentPool = () => {
                         {muduleSelect === "SAPTechnical" && <div className={sapStyle.buttonContent}>
                             <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Technical Expertise</div>
                             <div style={{ fontSize: "19px", fontWeight: "600" }}>Harness Technical Prowess with Our SAP Specialists</div>
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Technical Skills to Optimize System Performance</div>
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>30+</div>
+                            {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Technical Skills to Optimize System Performance</div>
+                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>30+</div> */}
                             <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
                                 <div className={sapStyle.moduletype}>SAP ABAP (Advanced Business Application Programming)</div>
                                 <div className={sapStyle.moduletype}>SAP BASIS (Business Application Systems Integrated Solutions) </div>
@@ -476,7 +476,7 @@ const SapTalentPool = () => {
                     <div className={sapStyle.numberSection}>
                         <div className={sapStyle.eachsection}>
                             <Image src="/SaptalentImage/sapexpert.png" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-                            <div style={{ fontSize: "35px", fontWeight: "600",color:"black" }}>1400+</div>
+                            <div style={{ fontSize: "35px", fontWeight: "600",color:"black" }}>14000+</div>
                             <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>Pre-Vetted SAP Experts</div>
                         </div>
                         <div className={sapStyle.eachsection}>
@@ -491,8 +491,8 @@ const SapTalentPool = () => {
                         </div>
                         <div className={sapStyle.eachsection}>
                             <Image src="/SaptalentImage/module.png" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-                            <div style={{ fontSize: "35px", fontWeight: "600",color:"black" }}>40+</div>
-                            <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>SAP Modules and Submodules</div>
+                            <div style={{ fontSize: "35px", fontWeight: "600",color:"black" }}>80+</div>
+                            <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>SAP Modules and Solutions</div>
                         </div>
                     </div>
                 </div>
@@ -550,24 +550,24 @@ const SapTalentPool = () => {
                 <div id={sapStyle.threeimage}>
                     <div id={sapStyle.threeimagesection}>
                         {/* <div style={{ fontWeight: "600" }}>CLASSICALLY TRAINED</div> */}
-                        <div id={sapStyle.greenNumber2}>10X</div>
+                        <div id={sapStyle.greenNumber2}>4-Hour</div>
 
-                        <div style={{ fontSize: "16px",fontWeight:"600" }}>Faster Deployment</div>
-                        <div style={{ fontSize: "14px",opacity: "0.8" }}>Experience rapid project kick-off with our swift deployment process, accelerating your time-to-market and ROI.</div>
+                        <div style={{ fontSize: "16px",fontWeight:"600" }}>Turnaround Time</div>
+                        <div style={{ fontSize: "14px",opacity: "0.8" }}>Respond swiftly to project requirements with our quick turnaround time, ensuring agility and responsiveness in resource allocation.</div>
                     </div>
                     <div id={sapStyle.threeimagesection}>
                         {/* <div style={{ fontWeight: "600" }}>PROVEN & HANDS-ON</div> */}
-                        <div id={sapStyle.greenNumber2}>95%</div>
+                        <div id={sapStyle.greenNumber2}>24/7</div>
 
-                        <div style={{ fontSize: "16px",fontWeight:"600"}}>Precision Match</div>
-                        <div style={{ fontSize: "14px" }}>Achieve unparalleled accuracy in talent selection with our precise matching algorithm, ensuring optimal resource allocation for your projects.</div>
+                        <div style={{ fontSize: "16px",fontWeight:"600"}}>Access To Expertise</div>
+                        <div style={{ fontSize: "14px" }}>Seamlessly access our SAP talent pool round-the-clock, enabling you to address project needs promptly and efficiently.</div>
                     </div>
                     <div id={sapStyle.threeimagesection}>
                         {/* <div style={{ fontWeight: "600" }}>EXECUTION-ORIENTED</div> */}
-                        <div id={sapStyle.greenNumber2}>24/7</div>
+                        <div id={sapStyle.greenNumber2}>100%</div>
 
-                        <div style={{ fontSize: "16px",fontWeight:"600"}}>Access to Expertise</div>
-                        <div style={{ fontSize: "14px" }}>Seamlessly access our SAP talent pool round-the-clock, enabling you to address project needs promptly and efficiently.</div>
+                        <div style={{ fontSize: "16px",fontWeight:"600"}}>Satisfaction Guarantee</div>
+                        <div style={{ fontSize: "14px" }}>Rest assured of project success with our unwavering commitment to delivering high-quality, client-centric solutions that exceed expectations.</div>
                     </div>
 
                 </div>

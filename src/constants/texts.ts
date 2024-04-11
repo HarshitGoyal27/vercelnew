@@ -309,8 +309,8 @@ export const HireDeveloperPageText = {
   //---------------------------------------------------------------------------------------------------------------------------
 
 
-  HireDeveloperHeroHeading: `Hire Hard-to-Find Skilled Developers: AI-Vetted Expertise, Unmatched Quality for Your Project's Success`,
-  HireDeveloperHeroPara: `Swiftly Connect with On-Demand, Top-Tier Talent Tailored to Your Project's Urgent Needs`,
+  HireDeveloperHeroHeading: `Hire Elite SAP Consultants & Developers: AI-Vetted Expertise, Unmatched Quality for Your Project's Success`,
+  HireDeveloperHeroPara: `Swiftly Connect with On-Demand, Top-Tier SAP Talent Tailored to Your Project's Urgent and Specific Needs`,
 
   HireDeveloperHeroNum1: `14000+`,
   HireDeveloperHeroNum1Title: `Deep Vetted SAP Talent`,
@@ -319,7 +319,7 @@ export const HireDeveloperPageText = {
   HireDeveloperHeroNum3: `30+`,
   HireDeveloperHeroNum3Title: `SAP Technical Expertise`,
 
-  HireDeveloperHeroButton1: `Hire Developers`,
+  HireDeveloperHeroButton1: `Explore Talent Pool`,
   HireDeveloperHeroButton2: `Watch Video`,
 
 
@@ -347,7 +347,7 @@ export const HireDeveloperPageText = {
 
   superChargeParaPoints: ["Hire deeply vetted SAP consultants for specialized SAP skills in just 4 hours, leveraging our AI-powered platform and global network expertise to accelerate your SAP hiring process.", 
   "Specializing in hard-to-find SAP skills and niche expertise, we make the rare seem routine in our expansive talent pool, ensuring you connect with the right SAP talent to address skill gaps and project requirements effectively.", 
-  `Embrace SAP business continuity seamlessly with our On-Demand Talent Cloud, providing agility in SAP talent acquisition and keeping your SAP projects on track. Our platform enables you to adapt to changing SAP resource needs swiftly, ensuring resilience in the face of challenges.`
+  `Embrace SAP business continuity seamlessly with our On-Demand Talent Cloud, providing agility in SAP talent acquisition and keeping your SAP projects on track.  Adapt to changing SAP resource needs swiftly, ensuring resilience in face of challenges.`
   ],
 
   superChargePointsIcons: [`https://cdn-icons-png.flaticon.com/512/4752/4752567.png`, 'https://cdn-icons-png.flaticon.com/512/2228/2228782.png',

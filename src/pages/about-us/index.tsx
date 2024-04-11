@@ -15,10 +15,16 @@ import homepage from "../../assets/images/About_us/Homepage.png";
 import sapStyle from "../../styles/sapTalentStyle.module.css";
 import commonStyle from "@/constants/commonStyle";
 import homePageStyle from "../../styles/homePageStyles.module.css";
+import css from "../../styles/leadershipPageStyle.module.css";
 export default function About() {
   return (
     <>
       <Navbar />
+      <section>
+        <p className={css.heading}>
+          Skills Capital offers a unique solution to mid-market enterprises struggling with sourcing and retaining high-caliber technical professionals. We provide on-demand access to a pool of elite tech experts, eliminating the need for businesses to endure the expenses and challenges of hiring and training full-time staff. Clients leverage an AI-powered Talent Cloud to connect with pre-screened specialists possessing rare and specialized skills, ensuring the formation of tailor-made teams for specific projects. This approach is bolstered by experienced part-time architects or dev managers who oversee project success.
+        </p>
+      </section>
       <section className={aboutPageStyles.topsection} >
         <div className={aboutPageStyles.heading}>
           <p>
@@ -72,7 +78,7 @@ export default function About() {
           <div className={sapStyle.numberSection}>
             <div className={sapStyle.eachsection}>
               <Image src="/SaptalentImage/sapexpert.png" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-              <div style={{ fontSize: "35px", fontWeight: "600", color: "orange" }}>1400+</div>
+              <div style={{ fontSize: "35px", fontWeight: "600", color: "orange" }}>14000+</div>
               <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>Pre-Vetted SAP Experts</div>
             </div>
             <div className={sapStyle.eachsection}>
@@ -87,8 +93,8 @@ export default function About() {
             </div>
             <div className={sapStyle.eachsection}>
               <Image src="/SaptalentImage/module.png" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-              <div style={{ fontSize: "35px", fontWeight: "600", color: "orange" }}>40+</div>
-              <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>SAP Modules and Submodules</div>
+              <div style={{ fontSize: "35px", fontWeight: "600", color: "orange" }}>80+</div>
+              <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>SAP Modules and Solutions</div>
             </div>
           </div>
         </div>
@@ -137,7 +143,7 @@ export default function About() {
         <div className={aboutPageStyles.backGroundBlueHomePage}>
           <div>
             <div style={{ fontSize: "38px", fontWeight: "600" }}>
-              Our clients
+              Our Leadership Clients
             </div>
             <br />
             <br />

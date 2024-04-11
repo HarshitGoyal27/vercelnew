@@ -37,7 +37,10 @@ export default function Home({ allData }: { allData: any }) {
     window.open("https://talent.skillscapital.io/candidateportal?register=true", "_blank");
   };
   const handleButtonExplore = () => {
-    // router.push("/talent-pool");
+    router.push("/hire-sap-talent");
+  };
+  const handleButtonExploreNow = () => {
+    router.push("/hire-sap-talent");
   };
   const HireDeveloperClicked = () => {
     // router.push("/search-developers");
@@ -73,7 +76,7 @@ export default function Home({ allData }: { allData: any }) {
               </p>
 
               <div className={homePageStyle.topTwoButtons}>
-                <Link href="/hire-developers">
+                <Link href="/hire-sap-talent">
                   <CustomButton2
                     label={"Hire SAP Talent"}
                     buttonStyle={{
@@ -210,7 +213,7 @@ export default function Home({ allData }: { allData: any }) {
                 videoSrc={"/HomePageImages/HomePageVideo.mp4"}
                 videoWidth={"500"}
                 videoHeight={"600"} */}
-              <Image src="/HomePageImages/banner02.png" width={450} height={350} style={{borderRadius:"5px"}} alt=""  />
+              <Image src="/HomePageImages/banner02.png" width={450} height={350} style={{borderRadius:"5px",marginTop:"-130px"}} alt=""   />
 
             </div>
           </div>
@@ -334,7 +337,7 @@ export default function Home({ allData }: { allData: any }) {
                 headingText={HomePageText.SAP_heading2}
                 paragraphText={HomePageText.SAP_content2}
                 buttonText="Explore Now"
-                onButtonClick={handleButtonExplore}
+                onButtonClick={handleButtonExploreNow}
                 buttonEnabled={true}
               />
             <CardComponent
@@ -345,7 +348,7 @@ export default function Home({ allData }: { allData: any }) {
               headingText={HomePageText.Cloud_heading2}
               paragraphText={HomePageText.Cloud_content2}
               buttonText="Explore Now"
-              onButtonClick={handleButtonExplore}
+              onButtonClick={handleButtonExploreNow}
               buttonEnabled={true}
             />
             <CardComponent
@@ -356,7 +359,7 @@ export default function Home({ allData }: { allData: any }) {
               headingText={HomePageText.Legacy_heading2}
               paragraphText={HomePageText.Legacy_content2}
               buttonText="Explore Now"
-              onButtonClick={handleButtonExplore}
+              onButtonClick={handleButtonExploreNow}
               buttonEnabled={true}
             />
           </div>

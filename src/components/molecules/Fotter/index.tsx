@@ -53,10 +53,9 @@ const FotterComponent = () => {
           Hire Specialized Talent
           </Link>
         </li>
-        
         <li className={css.li2}>
-          <Link href="/leadership" id={css.site} >
-            Leadership
+          <Link href="/sap-talent-pool" id={css.site} >
+            SAP Talent Pool
           </Link>
         </li>
         <li className={css.li2}>
@@ -65,20 +64,12 @@ const FotterComponent = () => {
           </Link>
         </li>
         <li className={css.li2}>
-          <Link href="/sap-talent-pool" id={css.site} >
-            SAP Talent Pool
+          <Link href="/leadership" id={css.site} >
+            Leadership
           </Link>
         </li>
-        {/* <li  className={css.li2}>
-          <Link href="/vetting" id={css.site} >
-            Vetting
-          </Link>
-        </li>
-        <li className={css.li2}>
-          <Link href="/about" id={css.site}>
-            About Us
-          </Link>
-        </li> */}
+        
+        
         <li className={css.li2}>
           <Link href="/contact-us" id={css.site}>
             Contact Us
@@ -114,6 +105,7 @@ const FotterComponent = () => {
         <p>SAP</p>
         <p>Cloud & DevOps</p>
         <p>Legacy Tech</p>
+        <p>AI/ML</p>
         {/* <p>{FooterPageText.servicesPoint2}</p>
         <p>{FooterPageText.servicesPoint3}</p> */}
       </div>
