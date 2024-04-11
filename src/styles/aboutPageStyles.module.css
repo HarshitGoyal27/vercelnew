@@ -517,7 +517,14 @@
   font-size: 2rem;
   text-align: center;
 }
-
+.ourValuesHeading{
+  @media(width<1000px){
+    width:1400px;
+  }
+  font-family: "Poppins";
+  text-align: center;
+  padding: 50px 0px;
+}
 .addressPara {
   /* border: 1px solid #ddd; */
   font-family: "Open Sans";
@@ -601,24 +608,24 @@ gap:20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 200px;
-  height: 150px;
+  width: 240px;
+  height: 180px;
   border-radius: 10px;
   background-color: #2871FF;
   gap: 20px;
-  padding: 50px;
+  padding: 20px;
   
 }
 .oddeachOurValue {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 200px;
-  height: 150px;
+  width: 240px;
+  height: 180px;
   border-radius: 10px;
   background-color: white;
   border:1px solid grey;
-  padding: 50px;
+  padding: 20px;
 }
 .backGroundBlueHomePage {
   @media(width>1600px){

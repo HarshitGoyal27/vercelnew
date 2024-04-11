@@ -35,29 +35,29 @@ export default function About() {
           <div style={{ display: "flex", gap: "20px" }}>
             <div className={aboutPageStyles.eachbox} >
               <Image src="/AboutPageImages/setting.png" alt="setting" height={50} width={50} />
-              <div style={{ fontSize: "30px" }}>Technical Prowess</div>
+              <div style={{ fontSize: "22px", textAlign: "center", padding: "0px 10px" }}>Expertise in SAP and Specialized Tech</div>
             </div>
             <div className={aboutPageStyles.eachbox}>
               <Image src="/AboutPageImages/expertteam.webp" alt="setting" height={50} width={50} />
-              <div style={{ fontSize: "30px" }}>Expert Team</div>
+              <div style={{ fontSize: "22px", textAlign: "center", padding: "0px 10px" }}>Advanced AI/ML-Powered Matching</div>
             </div>
             <div className={aboutPageStyles.eachbox}>
-              <Image src="/AboutPageImages/increasegraphe.png" alt="setting" height={50} width={50} />
-              <div style={{ fontSize: "30px" }}>Rapid Development</div>
+              <Image src="/AboutPageImages/ecosystem.jpg" alt="setting" height={80} width={80} />
+              <div style={{ fontSize: "22px", textAlign: "center", padding: "0px 10px" }}>Diverse and Elite Talent Ecosystem</div>
             </div>
           </div>
           <div style={{ display: "flex", gap: "20px" }}>
             <div className={aboutPageStyles.eachbox}>
               <Image src="/AboutPageImages/support2.jpg" alt="setting" height={50} width={50} />
-              <div style={{ fontSize: "30px" }}>Complete Support</div>
+              <div style={{ fontSize: "22px", textAlign: "center", padding: "0px 10px" }}>Customized and Innovative Solutions</div>
             </div>
             <div className={aboutPageStyles.eachbox}>
               <Image src="/AboutPageImages/settingCrop.jpg" alt="setting" height={50} width={50} />
-              <div style={{ fontSize: "30px" }}>Meaningful Outcomes</div>
+              <div style={{ fontSize: "22px", textAlign: "center", padding: "0px 10px" }}>Proven Track Record of Success</div>
             </div>
             <div className={aboutPageStyles.eachbox}>
               <Image src="/AboutPageImages/growth.png" alt="setting" height={50} width={50} />
-              <div style={{ fontSize: "30px" }}>Innovation & Growth</div>
+              <div style={{ fontSize: "22px", textAlign: "center", padding: "0px 10px" }}>Future-Ready Talent Adaptation</div>
             </div>
           </div>
 
@@ -67,10 +67,11 @@ export default function About() {
         <div style={commonStyle.textCenter}>
           <br />
           <br />
-          <div style={{ fontSize: "38px", fontWeight: "600" }}>
-            Our Mission & Vision
+          <div className={aboutPageStyles.ourValuesHeading}>
+            <div style={{ fontSize: "43px", fontWeight: "600" }}>Our Mission & Vision </div>
+            {/* <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Empowering Your Vision with Unmatched Expertise and Dedicated Success</div> */}
           </div>
-          <br />
+          {/* <br /> */}
           {/* <h3 style={{fontSize:"22px"}}>Discover the Magnitude of Our SAP Expertise in Numbers</h3> */}
           <br />
         </div>
@@ -78,67 +79,74 @@ export default function About() {
           <div className={sapStyle.numberSection}>
             <div className={sapStyle.eachsection}>
               <Image src="/SaptalentImage/sapexpert.png" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-              <div style={{ fontSize: "35px", fontWeight: "600", color: "orange" }}>14000+</div>
-              <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>Pre-Vetted SAP Experts</div>
+              <div style={{ fontSize: "35px", fontWeight: "600", color: "black" }}>25k+</div>
+              <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>AI-Vetted Developers</div>
             </div>
             <div className={sapStyle.eachsection}>
               <Image src="/SaptalentImage/sapcategory.jpg" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-              <div style={{ fontSize: "35px", fontWeight: "600", color: "orange" }}>3000+</div>
-              <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>SAP Category Combinations</div>
+              <div style={{ fontSize: "35px", fontWeight: "600", color: "black" }}>100+</div>
+              <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>Specialized Skill Sets</div>
             </div>
             <div className={sapStyle.eachsection}>
               <Image src="/SaptalentImage/ready.jpg" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-              <div style={{ fontSize: "35px", fontWeight: "600", color: "orange" }}>1200+</div>
-              <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>Ready-to-Deploy Consultants</div>
+              <div style={{ fontSize: "35px", fontWeight: "600", color: "black" }}>24/7</div>
+              <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>Access To Expertise</div>
             </div>
             <div className={sapStyle.eachsection}>
               <Image src="/SaptalentImage/module.png" style={{ borderRadius: "50px" }} alt="" height={100} width={100} />
-              <div style={{ fontSize: "35px", fontWeight: "600", color: "orange" }}>80+</div>
-              <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>SAP Modules and Solutions</div>
+              <div style={{ fontSize: "35px", fontWeight: "600", color: "black" }}>100%</div>
+              <div style={{ fontSize: "22px", width: "200px", textAlign: "center" }}>Customer Success Focus</div>
             </div>
           </div>
         </div>
       </section>
-      <div className={aboutPageStyles.sixBoxOuter} >
-        <div className={aboutPageStyles.sixBox}>Our Values
-          <p style={{ width: "250px", fontSize: "14px", opacity: "0.8" }}>We provide the IBM experts you need in days rather than weeks or months so that you transform your legacy applications and innovate fast.</p>
-        </div>
-        <div className={aboutPageStyles.outerOurValue}>
-          <div className={aboutPageStyles.OurValue}>
-            <div className={aboutPageStyles.eachOurValue}>
-              <div style={{ fontSize: "22px" }}>Fully Vatted</div>
-              <div style={{ opacity: "0.8" }}>Screened and tested with the ability to mimic customer onboarding standards.</div>
-            </div>
-            <div className={aboutPageStyles.oddeachOurValue}>
-              <div style={{ fontSize: "22px" }}>Fully Vatted</div>
-              <div style={{ opacity: "0.8" }}>Screened and tested with the ability to mimic customer onboarding standards.</div>
+      <section>
+      <div className={aboutPageStyles.ourValuesHeading}>
+            <div style={{ fontSize: "43px", fontWeight: "600" }}>Excellence Quantified</div>
+            <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Empowering Your Vision with Unmatched Expertise and Dedicated Success</div>
+          </div>
 
-            </div>
-            <div className={aboutPageStyles.eachOurValue}>
-              <div style={{ fontSize: "22px" }}>Fully Vatted</div>
-              <div style={{ opacity: "0.8" }}>Screened and tested with the ability to mimic customer onboarding standards.</div>
+        <div className={aboutPageStyles.sixBoxOuter} >
+          <div className={aboutPageStyles.sixBox}>Our Values
+            <p style={{ width: "250px", fontSize: "14px", opacity: "0.8" }}>We provide the tech experts you need in hours rather than days or weeks so that you transform your tech landscape and innovate fast.</p>
+          </div>
+          <div className={aboutPageStyles.outerOurValue}>
+            <div className={aboutPageStyles.OurValue}>
+              <div className={aboutPageStyles.eachOurValue}>
+                <div style={{ fontSize: "22px" }}>Innovation-Driven</div>
+                <div style={{ opacity: "0.8" }}>Commitment to pioneering solutions that redefine industry standards and foster growth.</div>
+              </div>
+              <div className={aboutPageStyles.oddeachOurValue}>
+                <div style={{ fontSize: "22px" }}>Integrity and Transparency</div>
+                <div style={{ opacity: "0.8" }}>Building trust through honesty and clear communication in all our actions.</div>
 
+              </div>
+              <div className={aboutPageStyles.eachOurValue}>
+                <div style={{ fontSize: "22px" }}>Customer Centricity</div>
+                <div style={{ opacity: "0.8" }}>Tailoring our approach to meet unique customer needs, ensuring satisfaction and success.</div>
+
+              </div>
+            </div>
+            <div className={aboutPageStyles.OurValue}>
+              <div className={aboutPageStyles.oddeachOurValue}>
+                <div style={{ fontSize: "22px" }}>Adaptability and Agility</div>
+                <div style={{ opacity: "0.8" }}>Navigating market changes with flexibility, ensuring responsive and timely solutions.</div>
+
+              </div>
+              <div className={aboutPageStyles.eachOurValue}>
+                <div style={{ fontSize: "22px" }}>Excellence and Quality</div>
+                <div style={{ opacity: "0.8" }}>Committing to highest standards in every aspect of our work to deliver exceptional value.</div>
+
+              </div>
+              <div className={aboutPageStyles.oddeachOurValue}>
+                <div style={{ fontSize: "22px" }}>Empowerment and Leadership</div>
+                <div style={{ opacity: "0.8" }}>Fostering an environment where every team member is encouraged to lead and innovate.</div>
+
+              </div>
             </div>
           </div>
-          <div className={aboutPageStyles.OurValue}>
-            <div className={aboutPageStyles.oddeachOurValue}>
-              <div style={{ fontSize: "22px" }}>Fully Vatted</div>
-              <div style={{ opacity: "0.8" }}>Screened and tested with the ability to mimic customer onboarding standards.</div>
-
-            </div>
-            <div className={aboutPageStyles.eachOurValue}>
-              <div style={{ fontSize: "22px" }}>Fully Vatted</div>
-              <div style={{ opacity: "0.8" }}>Screened and tested with the ability to mimic customer onboarding standards.</div>
-
-            </div>
-            <div className={aboutPageStyles.oddeachOurValue}>
-              <div style={{ fontSize: "22px" }}>Fully Vatted</div>
-              <div style={{ opacity: "0.8" }}>Screened and tested with the ability to mimic customer onboarding standards.</div>
-
-            </div>
-          </div>
         </div>
-      </div>
+      </section>
       <section>
         <div className={aboutPageStyles.backGroundBlueHomePage}>
           <div>

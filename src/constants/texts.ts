@@ -926,7 +926,7 @@ export const FooterPageText = {
 }
 
 export const LeadershipText={
-  LeadershipContent:`Our forward-looking leadership team is made up of dedicated, focused and experienced executives.  Working with each other and with our employees worldwide, their knowledge and experience come together to make a difference for all our stakeholders – patients, healthcare providers, employees, investors and communities around the globe.`,
+  LeadershipContent:`Led by Industry Veterans, the leadership team has combined more than 100+ years of experience in Enterprise Software, having worked for top Fortune 500 Companies such as IBM, Accenture, PwC, Deloitte, Hewlett Packard etc.  The team have worked with many of the top companies, including many Fortune 1000 as clients such as IBM, Trilogy, ESW Capital, J.P Morgan, British Telecom, Siemens, BNP Paribas, Nomura, Bank of America, Blackrock, British Telecom, BSkyB, Three etc. on SAP transformation, technology innovation, digital transformation and legacy modernization projects.`,
 
 }
 

@@ -40,7 +40,7 @@ export default function Leadership(){
                     {LeadershipText.LeadershipContent}
                 </p>
                 <p className={css.secondHeading}>
-                Meet Our Executive Team
+                Meet Our Execution Team
                 </p>
             </div>
             {/* <p className={css.meet}>Meet Our Executive Team</p> */}
@@ -55,10 +55,10 @@ export default function Leadership(){
                     />
                     <CardContent>
                         <div style={{ textAlign: 'center' }}>
-                            <h2 style={{ margin: '10px 0', fontSize: '1.5rem', fontWeight: 'bold' }}>Vince</h2>
+                            <h2 style={{ margin: '10px 0', fontSize: '1.5rem', fontWeight: 'bold' }}>Vince Ostrosky</h2>
                             <div style={{ marginBottom: '5px', fontSize: '1rem' }}>Executive VP (Strategy)</div>
                             <div style={{ marginBottom: '5px', fontSize: '0.9rem' }}>MBA - Wharton Business School</div>
-                            <div style={{ fontSize: '0.9rem', fontStyle: 'italic', color: '#666' }}>Ex-IBM, PwC, Deloitte, JPM, Hewlett Packard</div>
+                            <div style={{ fontSize: '0.9rem', fontStyle: 'italic', color: '#666' }}>Ex-IBM, PwC, Deloitte, Hewlett Packard, Alorica</div>
                         </div>
                     </CardContent>
                 </Card>
@@ -92,14 +92,14 @@ export default function Leadership(){
                             <h2 style={{ margin: '10px 0', fontSize: '1.5rem', fontWeight: 'bold' }}>William Shin</h2>
                             <div style={{ marginBottom: '5px', fontSize: '1rem' }}>Executive VP (Transformation)</div>
                             <div style={{ marginBottom: '5px', fontSize: '0.9rem' }}>MS Operations Research - University of California, Berkley</div>
-                            <div style={{ fontSize: '0.9rem', fontStyle: 'italic', color: '#666' }}>Ex-Hewlett Packard, Infosys, DXC Technology, PwC, IBM</div>
+                            <div style={{ fontSize: '0.9rem', fontStyle: 'italic', color: '#666' }}>Ex-HP, Infosys, DXC, PwC, IBM</div>
                         </div>
                     </CardContent>
                 </Card>
             </div>
             {/* <p className={css.meet}>Meet Our Execution Team</p> */}
             <p className={css.secondHeading}>
-                Meet Our Executive Team
+            Meet Our Execution Team
                 </p>
             <div className={css.allCards}>
                 <Card sx={{ width: 300, height:400, marginBottom: '10px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '10px', overflow: 'hidden' }}>
@@ -129,9 +129,9 @@ export default function Leadership(){
                     />
                     <CardContent>
                         <div style={{ textAlign: 'center' }}>
-                            <h2 style={{ margin: '10px 0', fontSize: '1.5rem', fontWeight: 'bold' }}>Dan Schwartz</h2>
-                            <div style={{ marginBottom: '5px', fontSize: '1rem' }}>Federico</div>
-                            <div style={{ marginBottom: '5px', fontSize: '0.9rem' }}>Master Degree - La Salle Int. Graduate School, Spain,</div>
+                            <h2 style={{ margin: '10px 0', fontSize: '1.5rem', fontWeight: 'bold' }}>Federico Yáñez</h2>
+                            <div style={{ marginBottom: '5px', fontSize: '1rem' }}>Director Consulting</div>
+                            <div style={{ marginBottom: '5px', fontSize: '0.9rem' }}>Master Degree - La Salle Int. Graduate School, Spain</div>
                             <div style={{ fontSize: '0.9rem', fontStyle: 'italic', color: '#666' }}>Ex-Everis U.K, Accenture</div>
                         </div>
                     </CardContent>
@@ -146,10 +146,10 @@ export default function Leadership(){
                     />
                     <CardContent>
                         <div style={{ textAlign: 'center' }}>
-                            <h2 style={{ margin: '10px 0', fontSize: '1.5rem', fontWeight: 'bold' }}>Christopher</h2>
+                            <h2 style={{ margin: '10px 0', fontSize: '1.5rem', fontWeight: 'bold' }}>Christophe Druet</h2>
                             <div style={{ marginBottom: '5px', fontSize: '1rem' }}>Director Transformation</div>
                             <div style={{ marginBottom: '5px', fontSize: '0.9rem' }}>MBA - London Business School</div>
-                            <div style={{ fontSize: '0.9rem', fontStyle: 'italic', color: '#666' }}>Ex-Hewlett Packard, Infosys, DXC Technology, PwC, IBM</div>
+                            <div style={{ fontSize: '0.9rem', fontStyle: 'italic', color: '#666' }}>Ex-Elia Group, ENTSO-E, La Miam, University of Liège</div>
                         </div>
                     </CardContent>
                 </Card>
@@ -184,7 +184,7 @@ export default function Leadership(){
                             <h2 style={{ margin: '10px 0', fontSize: '1.5rem', fontWeight: 'bold' }}>Pradeep Singh</h2>
                             <div style={{ marginBottom: '5px', fontSize: '1rem' }}>Director Engineering</div>
                             <div style={{ marginBottom: '5px', fontSize: '0.9rem' }}>B.Tech Computer Science - IIT Delhi</div>
-                            <div style={{ fontSize: '0.9rem', fontStyle: 'italic', color: '#666' }}>B.Tech Computer Science - IIT Delhi</div>
+                            <div style={{ fontSize: '0.9rem', fontStyle: 'italic', color: '#666' }}>Ex-HCL, Times Internet, Mobisoc, SpiceLabs</div>
                         </div>
                     </CardContent>
                 </Card>
@@ -200,14 +200,14 @@ export default function Leadership(){
                         <div style={{ textAlign: 'center' }}>
                             <h2 style={{ margin: '10px 0', fontSize: '1.5rem', fontWeight: 'bold' }}>Kamal Sharma</h2>
                             <div style={{ marginBottom: '5px', fontSize: '1rem' }}>Director Delivery</div>
-                            <div style={{ marginBottom: '5px', fontSize: '0.9rem' }}>B.Tech Computer Science - IIT Delhi</div>
+                            <div style={{ marginBottom: '5px', fontSize: '0.9rem' }}>B.Sc - London University</div>
                             <div style={{ fontSize: '0.9rem', fontStyle: 'italic', color: '#666' }}>Ex-Polaris, SCA, Click Software</div>
                         </div>
                     </CardContent>
                 </Card>
                 <Card sx={{ width: 300, height:400, marginBottom: '50px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', borderRadius: '10px', overflow: 'hidden' }}>
                     <Image
-                        src={vince}
+                        src="/AboutPageImages/nullimage.webp"
                         alt="Vince's Photo"
                         height={200}
                         width={300}

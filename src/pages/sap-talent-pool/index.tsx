@@ -190,16 +190,16 @@ const SapTalentPool = () => {
                     </div>
                     <div className={sapStyle.buttonSection}>
                         <div style={{marginTop:"50px"}}>
-                            <div className={muduleSelect === "SAPModules" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPModules")}>SAP Modules /Sub Modules</div>
-                            <div className={muduleSelect === "SAPSolutions" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPSolutions")}>SAP Solutions /Specializations</div>
-                            <div className={muduleSelect === "SAPFunctional" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPFunctional")}>SAP Functional Areas</div>
-                            <div className={muduleSelect === "SAPTechnical" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPTechnical")}> SAP Technical Expertise</div>
-                            <div className={muduleSelect === "ProjectType" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("ProjectType")}>Project Type Specialization</div>
-                            <div className={muduleSelect === "RoleType" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("RoleType")}>Role Type Expertise</div>
+                            <div className={muduleSelect === "SAPModules" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPModules")}>SAP Modules Spectrum</div>
+                            <div className={muduleSelect === "SAPSolutions" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPSolutions")}>SAP Solutions Array</div>
+                            <div className={muduleSelect === "SAPFunctional" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPFunctional")}>Functional Expertise</div>
+                            <div className={muduleSelect === "SAPTechnical" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPTechnical")}> SAP Tech Mastery</div>
+                            <div className={muduleSelect === "ProjectType" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("ProjectType")}>SAP Project Insights</div>
+                            <div className={muduleSelect === "RoleType" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("RoleType")}>Role Mastery</div>
                         </div>
                         {muduleSelect === "SAPModules" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Modules / Sub Modules</div>
-                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Explore Our Comprehensive Range of SAP Modules and Submodules</div>
+                            <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Modules Spectrum</div>
+                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Explore Talent for a Diverse Array of 50+ SAP Modules and Sub-Modules</div>
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Covering Every Aspect of SAP Expertise</div>
                             <div style={{ fontSize: "16px", color: "#3C3C3C" }}>50+</div> */}
                             <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
@@ -241,8 +241,8 @@ const SapTalentPool = () => {
                             />
                         </div>}
                         {muduleSelect === "SAPSolutions" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Solutions / Specializations</div>
-                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Discover Specialized SAP Solutions and Expertise</div>
+                            <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Solutions Array</div>
+                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Discover Consultants for a Wide Range of 30+ SAP Solutions and Specializations</div>
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Tailored Solutions for Every Business Need</div>
                             <div style={{ fontSize: "16px", color: "#3C3C3C" }}>40+</div> */}
                             <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
@@ -284,8 +284,8 @@ const SapTalentPool = () => {
                             />
                         </div>}
                         {muduleSelect === "SAPFunctional" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Functional Areas</div>
-                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Unlock Expertise Across Various SAP Functional Areas</div>
+                            <div style={{ fontSize: "25px", fontWeight: "600" }}>Functional Expertise</div>
+                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Figure out Our SAP Talent&apos;s Functional Proficiency Across 40+ Key Functional Areas</div>
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Functional Expertise to Drive Business Processes</div>
                             <div style={{ fontSize: "16px", color: "#3C3C3C" }}>20+</div> */}
                             <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
@@ -327,8 +327,8 @@ const SapTalentPool = () => {
                             />
                         </div>}
                         {muduleSelect === "SAPTechnical" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Technical Expertise</div>
-                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Harness Technical Prowess with Our SAP Specialists</div>
+                            <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Tech Mastery</div>
+                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Delve into our extensive 30+ SAP Technical Expertise, with our Elite SAP Developers</div>
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Technical Skills to Optimize System Performance</div>
                             <div style={{ fontSize: "16px", color: "#3C3C3C" }}>30+</div> */}
                             <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
@@ -370,9 +370,9 @@ const SapTalentPool = () => {
                             />
                         </div>}
                         {muduleSelect === "ProjectType" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600" }}>Project Type Specialization: </div>
-                            {/* <div style={{ fontSize: "19px", fontWeight: "600" }}>Discover Specialized SAP Solutions and Expertise</div> */}
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Our talent pool encompasses experts skilled in various project types. Whether you require assistance with launching a new project or optimizing existing systems, our professionals are equipped to handle diverse project requirements.</div>
+                            <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Project Insights: </div>
+                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Navigate through 20+ SAP Project Type Specializations, empowering your project choices</div>
+                            {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Our talent pool encompasses experts skilled in various project types. Whether you require assistance with launching a new project or optimizing existing systems, our professionals are equipped to handle diverse project requirements.</div> */}
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>40+</div> */}
                             <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
                                 <div className={sapStyle.moduletype}>Design</div>
@@ -415,9 +415,9 @@ const SapTalentPool = () => {
                             />
                         </div>}
                         {muduleSelect === "RoleType" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600" }}>Role Type Expertise</div>
-                            {/* <div style={{ fontSize: "19px", fontWeight: "600" }}>We offer a comprehensive range of role types for your specific project needs. Our talent pool is meticulously curated to ensure each role is filled by an experienced and qualified professional, enabling seamless project execution and delivery.</div> */}
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>We offer a comprehensive range of role types for your specific project needs. Our talent pool is meticulously curated to ensure each role is filled by an experienced and qualified professional, enabling seamless project execution and delivery.</div>
+                            <div style={{ fontSize: "25px", fontWeight: "600" }}>Role Mastery</div>
+                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Discover 10+ Key Role Type Expertise, crafting specialized talent for every SAP need</div>
+                            {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>We offer a comprehensive range of role types for your specific project needs. Our talent pool is meticulously curated to ensure each role is filled by an experienced and qualified professional, enabling seamless project execution and delivery.</div> */}
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>40+</div> */}
                             <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
                                 <div className={sapStyle.moduletype}>Functional Consultant</div>
