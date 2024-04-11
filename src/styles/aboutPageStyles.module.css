@@ -525,7 +525,16 @@
   padding: 0px 20px;
   /* text-align: center; */
 }
-
+.topheading{
+  @media(width<1000px){
+    width:1250px;
+}
+font-family: "Poppins";
+text-align: center;
+padding: 50px 100px;
+font-size: 22px;
+background-color: #f2f2f2;
+}
 .heading {
 
   font-family: "Poppins";

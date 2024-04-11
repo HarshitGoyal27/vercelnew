@@ -21,9 +21,9 @@ export default function About() {
     <>
       <Navbar />
       <section>
-        <p className={css.heading}>
+        <div className={aboutPageStyles.topheading}>
           Skills Capital offers a unique solution to mid-market enterprises struggling with sourcing and retaining high-caliber technical professionals. We provide on-demand access to a pool of elite tech experts, eliminating the need for businesses to endure the expenses and challenges of hiring and training full-time staff. Clients leverage an AI-powered Talent Cloud to connect with pre-screened specialists possessing rare and specialized skills, ensuring the formation of tailor-made teams for specific projects. This approach is bolstered by experienced part-time architects or dev managers who oversee project success.
-        </p>
+        </div>
       </section>
       <section className={aboutPageStyles.topsection} >
         <div className={aboutPageStyles.heading}>
