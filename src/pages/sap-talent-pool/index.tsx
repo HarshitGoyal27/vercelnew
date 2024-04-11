@@ -40,7 +40,7 @@ const SapTalentPool = () => {
                         </p>
                         <br />
                         <div className={homePageStyle.topTwoButtons}>
-                            <Link href="/hire-developers">
+                            <Link href="/hire-sap-talent">
                                 <CustomButton2
                                     label={"Hire SAP Talent"}
                                     buttonStyle={{
