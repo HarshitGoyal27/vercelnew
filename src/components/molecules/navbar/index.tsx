@@ -66,7 +66,8 @@ const Navbar: React.FC = () => {
           </button>
           <div className={css.dropdownContent}>
           <Link href="/about-us">About Us</Link>
-            <Link href="/leadership">Leadership</Link>
+            <Link href="/leadership">Leadership Team</Link>
+            <Link href="/vetting">Vetting Process</Link>
             <Link href="/contact-us">Contact Us</Link>
           </div>
         </div> </div>

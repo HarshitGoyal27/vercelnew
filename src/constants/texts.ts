@@ -812,59 +812,274 @@ export const AboutUsText = {
 
 
 export const VettingPageText = {
-
-  // ======= ******************** Vetting Content *******===================================
-
   //---------------------------------------------------------------------------------------------------------------------------
-  // 1st Section Starts
-  //---------------------------------------------------------------------------------------------------------------------------
-  vettingHeroHeading: "Skills Capital Vetting Process",
-  vettingHeroSubHeading: "How AI Vetting Works",
+  //1st Section Starts
+  // SectionTitle ->  //Skills Capital First Section
+  //  ---------------------------------------------------------------------------------------------------------------------------
 
+  heading_1: "Transform Your Tech Capabilities",
+  heading_2: "with Vetted Talent in Specialized Skills,",
+  heading_3: "10X Faster and with 95% Accuracy",
+  heading_4: "Unlock Precision Matches with AI, External Assessments, and Human Insights",
+  heading1Bold: "Skills Capital",
+  heading2:
+    "Our Unique Combination of AI, EI and HI Ensures Ideal Candidate Matches Every Time",
+  heading2b: "",
+  heading3:
+    "Experience unparalleled accuracy in candidate selection through our unique blend of cutting-edge AI technology, rigorous external assessments, and invaluable human insights. Our meticulous vetting process guarantees that you're presented with candidates perfectly tailored to your project requirements.",
+  heading3b: " ",
+  heading3c: "",
+  headingCard: "AI + EI + HI = Most Precise Match",
+  button1_heading: "Hire Elite Talent",
+  button2_heading: "Explore Talent Pool",
 
-  //---------------------------------------------------------------------------------------------------------------------------
+  threeTagLine: ["Advanced AI", "Integrated Assessments", "Automated Insights"],
+
+  //  homeBannerVidUrl : url(),
+
+  //-------------------------------------------------------------------------------------------------------------------------
   // 1st Section Ends
-  //---------------------------------------------------------------------------------------------------------------------------
+  //-------------------------------------------------------------------------------------------------------------------------
+
   //---------------------------------------------------------------------------------------------------------------------------
   // 2nd Section Starts
-  //---------------------------------------------------------------------------------------------------------------------------
-  vettingHeading: "The Skills Capital Vetting Process",
-  vettingSubHeading: "Skills Capital is an invitation-only network of top small- and medium-sized development agencies located in Latin America and Europe. Every talent on YouTeam passes a multi-step vetting process.",
+  // SectionTitle ->  //Our Elite Dev Network
+  //  ---------------------------------------------------------------------------------------------------------------------------
 
+  secondHeading_h1: "Specialized Talent for Targeted Tech Domains",
+  SAP_imgUrl:
+    "https://s3-alpha-sig.figma.com/img/f2a3/e28e/5d40a93ae7c76b9200df3ccf6bc596e1?Expires=1702252800&Signature=TtvanWiEwg9gceoGhukNXa0yjY~tYxS-4XrF51Iy5RhW3zb7ivLvdZ2Lt491lc2KcpxlAtRixYXLmcb9QVkKmJBtLB7HeFkK8utKSEOV7iKHHJ5ig0MKK~WnE-b12Rw~YgowCbgYpwSxeeqJq~1gVxCn3f4PdVDFJnI0BAfZqyZwRPUO54hd~cHqD86LPQJZvn~IdVHofA4SpJXXzTtYIUgvZlP0Kh3rhT~HU3zXxQSN55eMnKdg2DaA89wzmin2t-VTJtPS452g24GpwmSVn5ETuuI50ll0yE87sv30XgOLVBzXogFU2xgazzUG0X5EZgTIwbcf1ANE2fPiiR642Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
 
-  //---------------------------------------------------------------------------------------------------------------------------
+  SAP_number: `Advanced AI`,
+  SAP_heading: `SAP Specialist Hub`,
+  SAP_content: `Harnessing the power of AI algorithms to analyze candidate data and assess technical proficiency. `,
+
+  Cloud_imgUrl:
+    "https://s3-alpha-sig.figma.com/img/d7cd/4bcd/997f9951c8e56f513a894eb83a574665?Expires=1702252800&Signature=GSeinVxiJjBHd6hCnk5-4eA0xmEtq29s-XSTk2wl29TPxdjWd~p~g8MFbQzZdmNn8gfX2FOe6criIh9aGVRh5ZpdNHNGhe446wyQNNsfHyt4mlzqA5SxHb-N7TZpQ4NTaulA~r1Wava4CoeOZb~dlZV4aUamEDRWPc8co1pPgfPwtP1mYBWWqXGKyb6onXnKKCxpR9Rj1Si9lzhxVGnO3TBqIQLI4G6Kth3sTBybOrZnhdUMC6CITkv-C3vZCJSvLry~pryWQXIJPTAdGyV3vA0m4~Yq8imiX2IoAluh3JKnoley0xjefXCgJUQXPadA0ZoZJwjxGJr3GW6JMU7PmA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+
+  Cloud_number: ` External Assessments`,
+  Cloud_heading: `Cloud & DevOps Excellence`,
+  Cloud_content: `Utilizing third-party evaluations and industry-standard tests to verify skill sets and expertise.`,
+
+  Legacy_imgUrl:
+    "https://s3-alpha-sig.figma.com/img/f02e/2b2a/7b1ddfdf89823f8dfc240cd349720b12?Expires=1702252800&Signature=q1k5N4orLPwAmXqToycW2L6rctWKglfGtbpk7lEk219mFFQqWeB4LUZzX2DSc71pkKORYngZmkxYVHLCL59uv47eprjPrVXLHfUkjr8VJ7wQbo1tb-DF1dUvewbqVZCDwWGbc0CLJNBrb2pOX9Q-AAnqGrtMbfjbdAn32dKVQigzShXQ3L6B-H90suCGlplvju~xyXhMKJP18qGqWRJbkgTdFMtoPUa0eGlY-cUAVATcX~TfjKbxh4lJSJak6D8Z-I4~vstnJ6FmwvswF2E~R0AdVS22j2OEaiWfP6~37doykip3EKiFpaaS2Tb8gLf6lPrPliNySVIWoQNguGuDKA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+
+  Legacy_number: `Human Insights`,
+  Legacy_heading: `Legacy Modernization Specialists`,
+  Legacy_content: `Leveraging human expertise to provide subjective evaluations and ensure cultural fit and soft skills alignment.`,
+
+  varsatile_content: "With diverse expertise and a commitment to excellence, our vast network empowers us to address a myriad of needs and consistently provide high-quality solutions.",
+
+  //-------------------------------------------------------------------------------------------------------------------------
   // 2nd Section Ends
-  //---------------------------------------------------------------------------------------------------------------------------
+  //-------------------------------------------------------------------------------------------------------------------------
 
   //---------------------------------------------------------------------------------------------------------------------------
-  // 3rd Section start
-  //---------------------------------------------------------------------------------------------------------------------------
+  // 3rd Section Starts
+  // SectionTitle ->  // Deploy On-Demand Deep Vetted Developers
+  //  ---------------------------------------------------------------------------------------------------------------------------
 
-  thirdHeadingH1: `SkillsCapital identifies top local development agencies.`,
-  thirdPara: `Elevate your team with rigorously screened SAP, Cloud, and Legacy experts using our advance algorithms combining power of Artificial Intellegence(AI), External Assessments (EI) and Human Intellegence(HI) `,
+  thirdHeadingH1: `Revolutionizing Vetting with Advanced AI`,
+  thirdPara: `Harnessing Cutting-Edge Technology for Unmatched Precision`,
 
   //Accordion Content Starts
-  accodiaonHeading1: `15,000+ Development agencies`,
-  accordionContent1: `Tailor your team according to your project requirements. From single developers to full-fledged expert teams, our on-demand approach adapts to your specific needs.`,
+  accodiaonHeading1: `Machine Learning Algorithms`,
+  accordionContent1: `Our AI-powered algorithms continuously learn and adapt, refining candidate evaluations based on evolving data sets and feedback loops.`,
 
-  accodiaonHeading2: `25% Development Agencies`,
-  accordionContent2: `Embark on a journey of innovation and excellence with Global Talent Access, where boundaries dissolve, and talent knows no borders. Our platform redefines the traditional hiring landscape, connecting businesses with a diverse pool of skilled professionals from around the world.`,
+  accodiaonHeading2: `Natural Language Processing (NLP)`,
+  accordionContent2: `Using NLP techniques, we analyze candidate communications to gauge communication skills, problem-solving abilities, and cultural alignment.`,
 
-  accodiaonHeading3: `10,000+ Engineers`,
-  accordionContent3: `Experience the power of tailored collaboration with Customized Teams. We understand that every project is unique, and so are the teams behind them. Our platform is designed to empower organizations to build and customize teams based on their specific needs, combining diverse skill sets, expertise, and cultural nuances.`,
-
-  accodiaonHeading4: `100+ Suitable Candidates`,
-  accordionContent4: `Experience the power of tailored collaboration with Customized Teams. We understand that every project is unique, and so are the teams behind them. Our platform is designed to empower organizations to build and customize teams based on their specific needs, combining diverse skill sets, expertise, and cultural nuances.`,
-
-  accodiaonHeading5: `2-3 Candidates`,
-  accordionContent5: `Experience the power of tailored collaboration with Customized Teams. We understand that every project is unique, and so are the teams behind them. Our platform is designed to empower organizations to build and customize teams based on their specific needs, combining diverse skill sets, expertise, and cultural nuances.`,
+  accodiaonHeading3: `Predictive Analytics`,
+  accordionContent3: `By analyzing past performance data, we predict future success rates, ensuring candidates are matched with roles where they're likely to excel.`,
 
   vettingDevelopersImgUrl: `https://s3-alpha-sig.figma.com/img/bc80/5b37/b5b8ce8b91bf6a78c8131b7e9b55aa80?Expires=1702252800&Signature=lbY3EUEp10~GlSAXqPz0PGYiNLXe7lIJeM20wFIjDfe57BBgujuwQNA1H0DGp1Ixfl-dB5s0JeacwyqN-jrw4kxP6t7JK8~NQzf--25bzXV0wQbWuj9GKRN-GkoRy442EHjxQskUEOTLUgR2y4U8r~2f-KjhJr6nHVZjMtlg8M9Zpl39F8tYs~XxT5yAKJ19SjlljxU5VT7Hzj9nN8Aq6HBeM5YICWdFCin7XDJKEVa4S5SyhtMM2axuWwKHiniKEyj1bmBJZaQANdKjX0nnKGTZNwE8kCj8msxzfj49IfW2gTVKRrwUuvr~DdHS4BV~UaDKvugBwSO-jROShiBidw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4`,
 
+  //-------------------------------------------------------------------------------------------------------------------------
+  // 3rd Section Ends
+  //-------------------------------------------------------------------------------------------------------------------------
+
   //---------------------------------------------------------------------------------------------------------------------------
-  // 3rd Section end
+  // 4th Section Starts
+  // SectionTitle -> Top Companies with SkillsCapital with Logo Sections
+  //  ---------------------------------------------------------------------------------------------------------------------------
+
+  topCompaniesHeading: `Our Leadership's Client Work - A Chronicle of Success`,
+
+  topCompaniesPara: `Including top companies backed by`,
+
+  topCompaniesLogo: {
+    img1: `https://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo.png`,
+    img2: `https://1000logos.net/wp-content/uploads/2016/11/google-logo.jpg`,
+    img3: `https://blogs.microsoft.com/wp-content/uploads/prod/2012/08/8867.Microsoft_5F00_Logo_2D00_for_2D00_screen.jpg`,
+    img4: `https://1000logos.net/wp-content/uploads/2021/04/Adobe-logo.png`,
+    img5: `https://www.freepnglogos.com/uploads/flipkart-logo-png/flipkart-logo-transparent-vector-3.png`,
+  },
+  //-------------------------------------------------------------------------------------------------------------------------
+  // 4th Section Ends
+  //-------------------------------------------------------------------------------------------------------------------------
+
   //---------------------------------------------------------------------------------------------------------------------------
-}
+  // 5th Section Starts
+  // SectionTitle -> Why Choose Our Developers? Sections
+  //  ---------------------------------------------------------------------------------------------------------------------------
+
+  whyOurDevelopersHeading: `Enhancing Vetting with External Assessments`,
+  whyOurDevelopersPara: `Rigorous Evaluations for Unbiased Insights`,
+
+  whyOurDevelopersSubHeading1: `Technical Proficiency Tests`,
+  whyOurDevelopersSubPara1: `Utilizing standardized tests and assessments to gauge candidates' technical skills and proficiency in specific domains.`,
+
+  whyOurDevelopersSubHeading2: ` Automated Skills Assessments`,
+  whyOurDevelopersSubPara2: `Leveraging automated platforms and tools to administer technical assessments and coding challenges, providing objective insights into candidates.`,
+
+  whyOurDevelopersSubHeading3: `Online Competency Tests`,
+  whyOurDevelopersSubPara3: `Utilizing online platforms to conduct competency tests tailored to specific roles, assessing candidates' aptitude, knowledge, and skills in a standardized and automated manner, ensuring objective evaluation.`,
+
+  whyOurDevelopersImage: `https://s3-alpha-sig.figma.com/img/42e7/8b9f/7bcf80c32e55528e0b1870bfaf57ff1e?Expires=1702857600&Signature=UIAK2fEdQLHcf8oW86aNipe0eUXAAgomKYuW60L97Bwgy8XdlUKnMGDJ4ZnpPQUzQoPrbvrL5avkrizN8ArUYiXZQX5Oz5XJFe-4zwbfbpiD1FrUwA03yvqXKuwF3Z8jyGSSZQbQh9ddp1zt17HUVw8BZeYdF69boufuo-cuoAS0N3XhPk8EjKu8tdQjFmPho6LnwexzmdzBaX1BRY3ZkcnQr-ESmSMgBj8Q0MJJ3v7vnRqFD9~0aq9EArzaSarVBcIb8GS0Dp3gSBHDlkOSccHCvl2S~TcVIHxe7~JQJqa1zaKhremonK1lijuHiftyk6nKiJXuBFSzAly8BUV2Mg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4`,
+
+  paraPoints: ["We prioritize a swift 4-hour turnaround, ensuring you can deploy top-tier talent when you need it.", "Our AI technology meticulously vets each developer, assuring you of their qualifications and expertise.",
+    "With a diverse skill set ranging from SAP and Cloud to Legacy systems, our developers can address an array of technical challenges."
+  ],
+
+  pointsIcons: [`https://cdn-icons-png.flaticon.com/512/5554/5554495.png`, `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnWDBm2vLn9Ij3UJ4I9n4X1v7O4_sEbk6PB1x368ia7MetDmUeFIOZGczVt7jWnO6bWYs&usqp=CAU`,
+    `https://cdn.iconscout.com/icon/premium/png-256-thumb/skills-10-994366.png?f=webp`
+  ],
+  //-------------------------------------------------------------------------------------------------------------------------
+  // Fifth Section Ends
+  //-------------------------------------------------------------------------------------------------------------------------
+  thirdHeadingH12: `Elevate Vetting through Human Insights`,
+  thirdPara2: `The Human Touch in Precision Candidate Evaluation`,
+
+  //Accordion Content Starts
+  accodiaonHeading12: `Behavioral Interviews`,
+  accordionContent12: `Conducting in-depth interviews to evaluate candidates' soft skills, communication abilities, and problem-solving approaches, providing valuable insights beyond technical qualifications.`,
+
+  accodiaonHeading22: `Cultural Fit Assessments`,
+  accordionContent22: `Assessing candidates' compatibility with your organization's values, work environment, and team dynamics to ensure alignment and cohesion within the company culture.`,
+
+  accodiaonHeading32: `Expert Feedback`,
+  accordionContent32: `Leveraging experienced professionals and industry experts to provide subjective evaluations and recommendations based on their expertise and insights, enriching the vetting process with diverse perspectives and nuanced judgments.`,
+
+  //---------------------------------------------------------------------------------------------------------------------------
+  // 6th Section Starts
+  // SectionTitle -  Speed And Quality Starts
+  //  ---------------------------------------------------------------------------------------------------------------------------
+
+  speedImgUrl:
+    "https://s3-alpha-sig.figma.com/img/84a2/2931/becc55966cb23e8c7d7f3b39f666a15c?Expires=1702857600&Signature=UIfJx8l7uzzmcKuhDOlgzBXQQ-bxhf0aYfxw07ymVDj3n0eYpjSuS4AEPRfsGYk3CD-IKxMX7zgpB2SSUXnuXIQvGKBI-qanBfEvLMtZ7rhdTuk0F03Y2ofWS~5jjQ2qQ5whJlsIRE5tyZ3EOFauPndPW3o3fYy023Q8Vb52S2-sZ8e4584A0W6VsFYOTshUstFpDgK2KNAEFZzmr40wlY3QPAVcl2~~keOC4VT3VF5U31w-Dw9muKAYQjj9Y687s2EXQmRMTSOszGpIn-c2sJss~0YVchXNGhV0ZjkbkgjUsh5Q8MANDUaNgSOv4rcqQRru9JQOoBPKWPRkVjNy1w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+  speedHeading: "Lightning-Fast Turnaround",
+  speedSubHeading: "10X Faster Delivery",
+  speedPara:
+    "Choose our developers for a deployment speed that's ten times faster than traditional channels, ensuring you gain swift access to top-tier talent and can accelerate your project timelines effectively",
+
+  QualityHeading: "Uncompromised Quality",
+  QualitySubHeading: "95% Precision Match",
+  qualityPara:
+    "Our meticulous matching process ensures a 95% accuracy rate in aligning our elite developers with your specific requirements, guaranteeing a quality of service that precisely meets your project's needs",
+
+  qualityImgUrl:
+    "https://s3-alpha-sig.figma.com/img/38f7/56dd/15b8d99608d0ac0d8b1dc989a28b53ef?Expires=1702857600&Signature=mMaCeL6ZFkMfopR9HPSaeIW19BNFHvWnAfm7BDRN8dzWrphvGdYDzqHVEXJMZ~X6kyUp5B2pSFuAWLOL9fr887cSAiDba~yCHRwsX~hIzLsQOccFuRIWzqJirR6g8cD7~Csl12f-3xzLK91uXVJhy~7FrrC0BNMU~P6PO9p80cYJKa7ZDSsnAr4t6b14utolw0B4PJ5w4ILgok9h7W~ZkHepZv-Uv9jSOBYhbaPcSPOCxIcuDnGMP06u2MQtY5Wa6eXGKqXLmthgSJeYH2sPF7qB-i1mB2DfZLfhMD0ymO41mmhSRhA9W-ahsNn~8TBaWpg4JzMh9YOt9-mEt2EgVw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+
+  //---------------------------------------------------------------------------------------------------------------------------
+  // 6th Section Ends
+  //---------------------------------------------------------------------------------------------------------------------------
+  howitworkheading1: "Pre-Vetting",
+  howitworkpara1: "Thoroughly assess candidate qualifications and compatibility with project prerequisites prior to formal selection.",
+  howitworkheading2: "Real-Time Match",
+  howitworkpara2: "Continuously align candidates with evolving project criteria in an adaptive, dynamic matching process.",
+  howitworkheading3: "Post-Vetting",
+  howitworkpara3: "Conduct additional evaluations post-match to ensure ongoing suitability and alignment with project needs.",
+  //---------------------------------------------------------------------------------------------------------------------------
+  // 7th Section Starts
+  // SectionTitle - World Map Section
+  //  ---------------------------------------------------------------------------------------------------------------------------
+
+  worldMapHeading: `200,000+ Developers with Hard-to-Find Skills Comprise Our Skills Capital Talent Pool`,
+
+  worldMapPara: `Leveraging Our 12,200+ Deeply Vetted Elite Tech Talents to Empower Clients and Drive Innovation Across the Globe`,
+
+  worldMapNum1: `20+`,
+  worldMapNum1Title: `Niche Technologies`,
+  worldMapNum2: `10,000+`,
+  worldMapNum2Title: `Certified Talent`,
+  worldMapNum3: `10+`,
+  worldMapNum3Title: `Domain Expertise`,
+
+  worldMapButton1: `Hire Elite Talent`,
+  worldMapButton2: `Explore Talent Pool`,
+
+  worldMapImg: `https://s3-alpha-sig.figma.com/img/7780/117c/a11e220f64e49346efdef7cd44d2c4c7?Expires=1703462400&Signature=FSc2qQINjBtkDsP3SMYMPHRes3NaHK2rq3DDUxSAv1oNFv9HNwBB715Fa1LUZA3roMp08FubYIdBdiPzqGQU5v2~K9PSNL6BrBLoZEPP0x712mdvLA3xTQogRsBnjfqP9~k3bCq8JDUCVUfxHOBGx-scgMJGBczyqJzdPIoXk5azbxYZADkyTcUtO3FblIHw14CjMGLgvyzXhLwqdmOiqw~sv-rvKTdfCRSaaBPYirjqijJ7eSD14hly4AmqSJ9s~nNOZNaDTIb61Wwqw6Guhuxxev2~r0JDTpoOpPdLvLrOAF9f396Cf3kvAITexIi6ATPKgyJIAXw5SGuNbc114A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4`,
+
+  //---------------------------------------------------------------------------------------------------------------------------
+  // 7th Section Ends
+  //---------------------------------------------------------------------------------------------------------------------------
+
+  //-----------------------------------------------------------------------------------------------------------------------------
+  // 8th Section Starts
+  // SectionTitle - Why Choose Us?
+  //---------------------------------------------------------------------------------------------------------------------------
+  whyUsHeading: `Why Choose Us?`,
+
+  whyUsCard1Heading: `Client-Centric Approach`,
+  whyUsCard1Points: [
+    "Tailored to your needs",
+    "Track record of success",
+    "Easy team assimilation",
+    "24/7 support & guidance",
+  ],
+  whyUsCard1ImgUrl: "https://offshoreteam.io/wp-content/uploads/2023/11/deeply-vetted.jpg",
+
+  whyUsCard2Heading: `Focused on Your Success`,
+  whyUsCard2Points: [
+    "Goal Alignment",
+    "Strategic Execution",
+    "Outcome Driven",
+    "Business Continuity",
+  ],
+  whyUsCard2ImgUrl: "https://img.freepik.com/premium-vector/time-zones-flat-style-illustration-design_538610-653.jpg",
+
+
+  whyUsMainCardHeading: `Talent Cloud Our Platform Facilitates`,
+  whyUsMainCardPoints: [
+    "Intellegent Vetting",
+    "Extensive Matching",
+    "Availability check",
+    "Quality Control",
+  ],
+  whyUsMainCardBulletIcons: [`https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Globe_icon.svg/2048px-Globe_icon.svg.png`,
+
+    `https://www.freeiconspng.com/thumbs/artificial-intelligence-icon-png/artificial-intelligence-png-11.png`,
+
+    `https://cdn-icons-png.flaticon.com/512/138/138410.png`,
+
+    'https://cdn-icons-png.flaticon.com/512/5554/5554495.png',
+
+    'https://png.pngtree.com/png-clipart/20230418/original/pngtree-service-quality-line-icon-png-image_9065045.png'
+  ],
+  whyUsMainCardButton: `See How It Works`,
+
+  //---------------------------------------------------------------------------------------------------------------------------
+  // 8th Section Ends
+  //---------------------------------------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------------------------------------------
+  // 9th Section Starts
+  //---------------------------------------------------------------------------------------------------------------------------
+
+  bestDeveloperHeading: "Best Developers",
+  bestDeveloperSubHeading: "They are some of the best developers we have and they have tested and worked with several client",
+
+  bestDeveloperBtnText: "Hire Developers",
+  //---------------------------------------------------------------------------------------------------------------------------
+  // 9th Section Ends
+  //---------------------------------------------------------------------------------------------------------------------------
+
+  companiesCarauselContent: [
+    "1 Turing books $87M at a $1.1B valuation to help source, hire and manage engineers remotely",
+    "2 Turing books $87M at a $1.1B valuation to help source, hire and manage engineers remotely",
+    "3 Turing books $87M at a $1.1B valuation to help source, hire and manage engineers remotely",
+    "4 Turing books $87M at a $1.1B valuation to help source, hire and manage engineers remotely",
+  ],
+};
 
 export const SubreqPageText = {
   // step1 

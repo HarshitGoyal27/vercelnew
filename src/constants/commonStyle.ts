@@ -921,7 +921,7 @@ export const cardsStyling = {
     marginBlockEnd: '0.1em',
   },
   sapCloudLegacyCardNumber: {
-    fontSize: "2.5rem",
+    fontSize: "1.9rem",
     textAlign: "center" as "center",
     fontWeight: 600,
     fontFamily: "Poppins",
