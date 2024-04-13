@@ -805,54 +805,53 @@ const HireSpecializedTalentPage = () => {
                             {/* <div style={{ fontSize: "19px", fontWeight: "600" }}>Explore Talent for a Diverse Array of 50+ SAP Modules and Sub-Modules</div> */}
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Covering Every Aspect of SAP Expertise</div>
                             <div style={{ fontSize: "16px", color: "#3C3C3C" }}>50+</div> */}
-                            <div className={sapStyle.threebuttonOuterMost}>
-                                <div className={sapStyle.threebuttonOuter}>
-                                    <div style={{ width: "300px", display: "flex", flexDirection: "column", gap: "10px" }}>
-                                        <div>Mainframe Systems</div>
-                                        <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-                                            <div className={sapStyle.moduletype2}>IBM zSeries</div>
-                                            <div className={sapStyle.moduletype2}>IBM iSeries</div>
-                                        </div>
-                                    </div>
-                                    <div style={{ width: "300px", display: "flex", flexDirection: "column", gap: "10px" }}>
-                                        <div >Database Management Systems</div>
-                                        <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-                                            <div className={sapStyle.moduletype2}>IBM Db2</div>
-                                            <div className={sapStyle.moduletype2}>Oracle Database</div>
-                                            <div className={sapStyle.moduletype2}>Microsoft SQL Server</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className={sapStyle.threebuttonOuter}>
-                                    <div style={{ width: "300px", display: "flex", flexDirection: "column", gap: "10px" }}>
-                                        <div>Enterprise Resource Planning </div>
-                                        <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-                                            <div className={sapStyle.moduletype2}>SAP ECC</div>
-                                            <div className={sapStyle.moduletype2}>Oracle E-Business Suite</div>
-                                            <div className={sapStyle.moduletype2}>JD Edwards</div>
-                                        </div>
-                                    </div>
-                                    <div style={{ width: "300px", display: "flex", flexDirection: "column", gap: "10px" }}>
-                                        <div>Customer Relationship Management </div>
-                                        <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-                                            <div className={sapStyle.moduletype2}>Salesforce</div>
-                                            <div className={sapStyle.moduletype2}>Microsoft Dynamics</div>
-                                            <div className={sapStyle.moduletype2}>SAP CRM</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className={sapStyle.threebuttonOuter}>
-                                    <div style={{ width: "300px", display: "flex", flexDirection: "column", gap: "10px" }}>
-                                        <div>Document Management Systems </div>
-                                        <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                            <table  className={sapStyle.tableClass}>
+
+                                <tr >
+                                    <td style={{fontWeight:"600"}}>Mainframe Systems</td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>IBM zSeries</div>
+                                        <div className={sapStyle.moduletype2}>IBM iSeries</div>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td style={{fontWeight:"600"}}>Database Management Systems</td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>IBM Db2</div>
+                                        <div className={sapStyle.moduletype2}>Oracle Database</div>
+                                        <div className={sapStyle.moduletype2}>Microsoft SQL Server</div>
+                                    </td>
+                                </tr>
+
+                                <tr >
+                                    <td style={{fontWeight:"600"}}>Enterprise Resource Planning </td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>SAP ECC</div>
+                                        <div className={sapStyle.moduletype2}>Oracle E-Business Suite</div>
+                                        <div className={sapStyle.moduletype2}>JD Edwards</div>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td style={{fontWeight:"600"}}>Customer Relationship Management </td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>Salesforce</div>
+                                        <div className={sapStyle.moduletype2}>Microsoft Dynamics</div>
+                                        <div className={sapStyle.moduletype2}>SAP CRM</div>
+                                    </td>
+                                </tr>
+
+                                <tr >
+                                    
+                                        <td style={{fontWeight:"600"}}>Document Management Systems </td>
+                                        <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
                                             <div className={sapStyle.moduletype2}>IBM FileNet</div>
                                             <div className={sapStyle.moduletype2}>OpenText Documentum</div>
                                             <div className={sapStyle.moduletype2}>Laserfiche</div>
-                                        </div>
-                                    </div>
+                                        </td>
+                                    
 
-                                </div>
-                            </div>
+                                </tr>
+                            </table>
 
                         </div>}
                         {muduleSelect === "SAPSolutions" && <div className={sapStyle.buttonContent}>
@@ -1084,8 +1083,8 @@ const HireSpecializedTalentPage = () => {
             <section >
                 <div className={homePageStyle.backGroundBlueHomePage2}>
                     <div>
-                        <h1 style={{fontSize:"35px",fontWeight:"600"}}>
-                        Elite Talent for Top Legacy, Cloud and AI/ML Vendors
+                        <h1 style={{ fontSize: "35px", fontWeight: "600" }}>
+                            Elite Talent for Top Legacy, Cloud and AI/ML Vendors
                         </h1>
                         <br />
                         <br />

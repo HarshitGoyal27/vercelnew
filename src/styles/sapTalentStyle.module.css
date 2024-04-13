@@ -414,14 +414,14 @@ font-size: 40px;
 .moduletype2{
     /* border: 1px solid black; */
     border-radius: 10px;
-    padding: 5px 15px;
-    font-size: 12px;
+    /* padding: 5px 15px; */
+    /* font-size: 12px; */
     opacity: 0.7;
     display: flex;
     justify-content: center;
     align-items: center;
     /* box-shadow: 2px 2px 2px 2px gainsboro; */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
   
 }
 
@@ -435,4 +435,9 @@ font-size: 40px;
     gap: 30px;
     justify-content: center;
     /* align-items: center; */
+}
+.tableClass{
+    border-spacing: 30px;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
 }
