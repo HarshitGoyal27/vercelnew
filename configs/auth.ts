@@ -7,4 +7,8 @@ export const DEV_PUBLIC_APIURL = 'https://renderdeploy-zz4r.onrender.com/apideve
 export const SCORE_URL = 'http://127.0.0.1:8080/api/home';
 
 
+export const SERVER_ID = "service_ukdcbj6";
+export const TEMPLATE_ID = "template_0ctbx5f";
+export const PUBLIC_KEY = "bTT0iXvgjPi43DqF5";
+
 

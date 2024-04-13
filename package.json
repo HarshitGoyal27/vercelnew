@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
@@ -25,6 +26,7 @@
     "bootstrap": "^5.3.3",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.10",
+    "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
     "fs": "^0.0.1-security",
     "mammoth": "^1.6.0",
