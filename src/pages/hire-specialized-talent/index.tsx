@@ -788,8 +788,8 @@ const HireSpecializedTalentPage = () => {
             <section>
                 <div className={sapStyle.leftbuttonSection}>
                     <div className={sapStyle.leftbuttonHeadingSection}>
-                        <div style={{ fontSize: "43px", fontWeight: "600" }}>Explore Specialized SAP Skills</div>
-                        <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Dive Into a Spectrum of SAP Expertise</div>
+                        <div style={{ fontSize: "43px", fontWeight: "600" }}>Elite Tech Talent for Specialized Tech</div>
+                        <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Harness the Power of AI to Connect and Deploy Top Talent Across Specialized Tech Domains</div>
                     </div>
                     <div className={sapStyle.buttonSection}>
                         <div style={{ marginTop: "50px" }}>
@@ -805,17 +805,17 @@ const HireSpecializedTalentPage = () => {
                             {/* <div style={{ fontSize: "19px", fontWeight: "600" }}>Explore Talent for a Diverse Array of 50+ SAP Modules and Sub-Modules</div> */}
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Covering Every Aspect of SAP Expertise</div>
                             <div style={{ fontSize: "16px", color: "#3C3C3C" }}>50+</div> */}
-                            <table  className={sapStyle.tableClass}>
+                            <table className={sapStyle.tableClass}>
 
                                 <tr >
-                                    <td style={{fontWeight:"600"}}>Mainframe Systems</td>
+                                    <td style={{ fontWeight: "600" }}>Mainframe Systems</td>
                                     <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
                                         <div className={sapStyle.moduletype2}>IBM zSeries</div>
                                         <div className={sapStyle.moduletype2}>IBM iSeries</div>
                                     </td>
                                 </tr>
                                 <tr >
-                                    <td style={{fontWeight:"600"}}>Database Management Systems</td>
+                                    <td style={{ fontWeight: "600" }}>Database Management Systems</td>
                                     <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
                                         <div className={sapStyle.moduletype2}>IBM Db2</div>
                                         <div className={sapStyle.moduletype2}>Oracle Database</div>
@@ -824,7 +824,7 @@ const HireSpecializedTalentPage = () => {
                                 </tr>
 
                                 <tr >
-                                    <td style={{fontWeight:"600"}}>Enterprise Resource Planning </td>
+                                    <td style={{ fontWeight: "600" }}>Enterprise Resource Planning </td>
                                     <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
                                         <div className={sapStyle.moduletype2}>SAP ECC</div>
                                         <div className={sapStyle.moduletype2}>Oracle E-Business Suite</div>
@@ -832,7 +832,7 @@ const HireSpecializedTalentPage = () => {
                                     </td>
                                 </tr>
                                 <tr >
-                                    <td style={{fontWeight:"600"}}>Customer Relationship Management </td>
+                                    <td style={{ fontWeight: "600" }}>Customer Relationship Management </td>
                                     <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
                                         <div className={sapStyle.moduletype2}>Salesforce</div>
                                         <div className={sapStyle.moduletype2}>Microsoft Dynamics</div>
@@ -841,96 +841,127 @@ const HireSpecializedTalentPage = () => {
                                 </tr>
 
                                 <tr >
-                                    
-                                        <td style={{fontWeight:"600"}}>Document Management Systems </td>
-                                        <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-                                            <div className={sapStyle.moduletype2}>IBM FileNet</div>
-                                            <div className={sapStyle.moduletype2}>OpenText Documentum</div>
-                                            <div className={sapStyle.moduletype2}>Laserfiche</div>
-                                        </td>
-                                    
+
+                                    <td style={{ fontWeight: "600" }}>Document Management Systems </td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>IBM FileNet</div>
+                                        <div className={sapStyle.moduletype2}>OpenText Documentum</div>
+                                        <div className={sapStyle.moduletype2}>Laserfiche</div>
+                                    </td>
+
 
                                 </tr>
                             </table>
 
                         </div>}
                         {muduleSelect === "SAPSolutions" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Solutions Array</div>
-                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Discover Consultants for a Wide Range of 30+ SAP Solutions and Specializations</div>
+                            <div style={{ fontSize: "25px", fontWeight: "600" , color: "#2871FF"}}>Cloud & DevOps</div>
+                            {/* <div style={{ fontSize: "19px", fontWeight: "600" }}>Discover Consultants for a Wide Range of 30+ SAP Solutions and Specializations</div> */}
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Tailored Solutions for Every Business Need</div>
                             <div style={{ fontSize: "16px", color: "#3C3C3C" }}>40+</div> */}
-                            <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
-                                <div className={sapStyle.moduletype}>SAP Business One</div>
-                                <div className={sapStyle.moduletype}>SAP Ariba (Procurement Solutions)</div>
-                                <div className={sapStyle.moduletype}>SAP SuccessFactors (Human Capital Management)</div>
-                                <div className={sapStyle.moduletype}>SAP Hybris (E-commerce Solutions) </div>
-                                <div className={sapStyle.moduletype}>SAP Concur (Expense Management)</div>
+                            <table className={sapStyle.tableClass}>
 
-                            </div>
+                                <tr >
+                                    <td style={{ fontWeight: "600" }}>Cloud Providers</td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>Amazon Web Services</div>
+                                        <div className={sapStyle.moduletype2}>Microsoft Azure</div>
+                                        <div className={sapStyle.moduletype2}>Google Cloud Platform</div>
+                                        <div className={sapStyle.moduletype2}>IBM Cloud</div>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td style={{ fontWeight: "600" }}>Containers & Orchestration</td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>Docker</div>
+                                        <div className={sapStyle.moduletype2}>Kubernetes</div>
+                                        <div className={sapStyle.moduletype2}>OpenShift</div>
+                                        <div className={sapStyle.moduletype2}>Docker Swarm</div>
+                                    </td>
+                                </tr>
+
+                                <tr >
+                                    <td style={{ fontWeight: "600" }}>Continuous Integration/Continuous Deployment </td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>Jenkins</div>
+                                        <div className={sapStyle.moduletype2}>GitLab CI/CD</div>
+                                        <div className={sapStyle.moduletype2}>CircleCI</div>
+                                        <div className={sapStyle.moduletype2}>Travis CI</div>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td style={{ fontWeight: "600" }}>Infrastructure as Code </td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>Terraform</div>
+                                        <div className={sapStyle.moduletype2}>AWS CloudFormation</div>
+                                        <div className={sapStyle.moduletype2}>Ansible</div>
+                                        <div className={sapStyle.moduletype2}>Puppet</div>
+                                    </td>
+                                </tr>
+
+                                <tr >
+
+                                    <td style={{ fontWeight: "600" }}>Monitoring & Logging </td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>Prometheus</div>
+                                        <div className={sapStyle.moduletype2}>Grafana</div>
+                                        <div className={sapStyle.moduletype2}>ELK Stack</div>
+                                        <div className={sapStyle.moduletype2}>New Relic</div>
+                                    </td>
+
+
+                                </tr>
+                            </table>
 
                         </div>}
                         {muduleSelect === "SAPFunctional" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600" }}>Functional Expertise</div>
-                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Figure out Our SAP Talent&apos;s Functional Proficiency Across 40+ Key Functional Areas</div>
+                            <div style={{ fontSize: "25px", fontWeight: "600", color: "#2871FF" }}>AI/ML</div>
+                            {/* <div style={{ fontSize: "19px", fontWeight: "600" }}>Figure out Our SAP Talent&apos;s Functional Proficiency Across 40+ Key Functional Areas</div> */}
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Functional Expertise to Drive Business Processes</div>
                             <div style={{ fontSize: "16px", color: "#3C3C3C" }}>20+</div> */}
-                            <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
-                                <div className={sapStyle.moduletype}>SAP FI(Financial Accounting)</div>
-                                <div className={sapStyle.moduletype}>SAP CO(Controlling)</div>
-                                <div className={sapStyle.moduletype}>SAP SD(Sales and Distribution)</div>
-                                <div className={sapStyle.moduletype}>SAP MM(Material Management) </div>
-                                <div className={sapStyle.moduletype}>SAP HCM(Human Capital Management)</div>
+                            <table className={sapStyle.tableClass}>
 
-                            </div>
+                                <tr >
+                                    <td style={{ fontWeight: "600" }}>Machine Learning Frameworks</td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>TensorFlow</div>
+                                        <div className={sapStyle.moduletype2}>PyTorch</div>
+                                        <div className={sapStyle.moduletype2}>scikit-learn</div>
+                                        <div className={sapStyle.moduletype2}>Keras</div>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td style={{ fontWeight: "600" }}>Natural Language Processing</td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>NLTK</div>
+                                        <div className={sapStyle.moduletype2}>BERT</div>
+                                        <div className={sapStyle.moduletype2}>GPT</div>
+                                    </td>
+                                </tr>
 
-                        </div>}
-                        {muduleSelect === "SAPTechnical" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Tech Mastery</div>
-                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Delve into our extensive 30+ SAP Technical Expertise, with our Elite SAP Developers</div>
-                            {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Technical Skills to Optimize System Performance</div>
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>30+</div> */}
-                            <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
-                                <div className={sapStyle.moduletype}>SAP ABAP (Advanced Business Application Programming)</div>
-                                <div className={sapStyle.moduletype}>SAP BASIS (Business Application Systems Integrated Solutions) </div>
-                                <div className={sapStyle.moduletype}>SAP BW/BI (Business Warehouse / Business Intelligence)</div>
-                                <div className={sapStyle.moduletype}>SAP HANA (High-Performance Analytic Appliance) </div>
-                                <div className={sapStyle.moduletype}>SAP Fiori (User Experience)</div>
+                                <tr >
+                                    <td style={{ fontWeight: "600" }}>Computer Vision </td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>OpenCV</div>
+                                        <div className={sapStyle.moduletype2}>TensorFlow Object Detection API</div>
+                                        <div className={sapStyle.moduletype2}>YOLO</div>
+                                        <div className={sapStyle.moduletype2}>ImageNet</div>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td style={{ fontWeight: "600" }}>Reinforcement Learning </td>
+                                    <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                                        <div className={sapStyle.moduletype2}>OpenAI Gym</div>
+                                        <div className={sapStyle.moduletype2}>RLlib</div>
+                                        <div className={sapStyle.moduletype2}>Deep Q-Networks (DQN)</div>
+                                    </td>
+                                </tr>
 
-                            </div>
-
-                        </div>}
-                        {muduleSelect === "ProjectType" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600" }}>SAP Project Insights: </div>
-                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Navigate through 20+ SAP Project Type Specializations, empowering your project choices</div>
-                            {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Our talent pool encompasses experts skilled in various project types. Whether you require assistance with launching a new project or optimizing existing systems, our professionals are equipped to handle diverse project requirements.</div> */}
-                            {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>40+</div> */}
-                            <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
-                                <div className={sapStyle.moduletype}>Design</div>
-                                <div className={sapStyle.moduletype}>Implementation</div>
-                                <div className={sapStyle.moduletype}>Enhancements</div>
-                                <div className={sapStyle.moduletype}>Migration</div>
-                                <div className={sapStyle.moduletype}>Support</div>
-                                <div className={sapStyle.moduletype}>Application Management Services (AMS)</div>
-
-
-                            </div>
-
-                        </div>}
-                        {muduleSelect === "RoleType" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600" }}>Role Mastery</div>
-                            <div style={{ fontSize: "19px", fontWeight: "600" }}>Discover 10+ Key Role Type Expertise, crafting specialized talent for every SAP need</div>
-                            {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>We offer a comprehensive range of role types for your specific project needs. Our talent pool is meticulously curated to ensure each role is filled by an experienced and qualified professional, enabling seamless project execution and delivery.</div> */}
-                            {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>40+</div> */}
-                            <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
-                                <div className={sapStyle.moduletype}>Functional Consultant</div>
-                                <div className={sapStyle.moduletype}>Technical Architect</div>
-                                <div className={sapStyle.moduletype}>Techno-Functional Expert</div>
-                                <div className={sapStyle.moduletype}>Project Manager</div>
-                                {/* <div className={sapStyle.moduletype}>SAP HCM(Human Capital Management)</div> */}
-
-                            </div>
+                                
+                            </table>
 
                         </div>}
+                        
                     </div>
                 </div>
             </section>
