@@ -24,6 +24,9 @@ const HireSpecializedTalentPage = () => {
     const HireDeveloperClicked = () => {
         router.push("/sap-talent-pool");
     };
+    const handleButtonExploreNow = () => {
+        router.push("/hire-sap-talent");
+      };
     const [selected, setSelected] = useState("AI-Vetted");
     const [selectedtwo, setSelectedtwo] = useState("AI-Vetted");
     const [muduleSelect, setModuleSelect] = useState("SAPModules");
@@ -37,12 +40,12 @@ const HireSpecializedTalentPage = () => {
                 <div className={homePageStyle.flexCenter}>
                     <div className={homePageStyle.topContentSection}>
                         <h1 className={`${hireDevStyles.mainHeadingHireDev}`}>
-                            Hire Elite Talent for Specialized Tech: AI-Vetted Expertise, Unmatched Quality for Your Project&apos;s Success
+                        Hire Elite Talent for Specialized Tech: AI-Vetted Expertise, Unmatched Quality for Your Project&apos;s Success
                             {/* <div>{HomePageText.heading_4}</div> */}
                         </h1>
 
                         <h2 className={`${hireDevStyles.mainSubHeadingHireDev}`}>
-                            Swiftly Connect with On-Demand, Top-Tier Tech Talent Tailored to Your Project&apos;s Urgent and Specific Needs
+                        Swiftly Connect with On-Demand, Top-Tier Tech Talent Tailored to Your Project&apos;s Urgent and Specific Needs
 
                         </h2>
 
@@ -165,56 +168,56 @@ const HireSpecializedTalentPage = () => {
                 </div>
             </section>
             <section id={homePageStyle.ourEliteNetwork} >
-                <div
-                    style={{ background: "#F1F1F1", padding: "10px 100px 50px 100px" }}
-                >
-                    <div style={commonStyle.textCenter}>
-                        <br />
-                        <br />
-                        <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
-                            Specialized Talent to Transform the SAP and Non-SAP Ecosystem
-                        </h2>
-                        <br />
-                        <h3 style={cardsStyling.sapCloudLegacySubHeading}>Access a World-Class Pool of Specialized Tech Experts to Provide Comprehensive Solutions</h3>
-                        <br />
-                    </div>
-                    <div className="cards" style={commonStyle.dflex_1}>
-                        <CardComponent
-                            imageUrl={"/HomePageImages/1-SAP.png"}
-                            imageHeight={210}
-                            imageWidth={250}
-                            headingNumber={HomePageText.SAP_number}
-                            headingText={HomePageText.SAP_heading}
-                            paragraphText={HomePageText.SAP_content}
-                            buttonText="Explore"
-                            onButtonClick={handleButtonExplore}
-                            buttonEnabled={true}
-                        />
-                        <CardComponent
-                            imageUrl={"/HomePageImages/2-CloudImage.png"}
-                            imageHeight={210}
-                            imageWidth={250}
-                            headingNumber={HomePageText.Cloud_number}
-                            headingText={HomePageText.Cloud_heading}
-                            paragraphText={HomePageText.Cloud_content}
-                            buttonText="Explore"
-                            onButtonClick={handleButtonExplore}
-                            buttonEnabled={true}
-                        />
-                        <CardComponent
-                            imageUrl={"/HomePageImages/3-LegacyImage.png"}
-                            imageHeight={210}
-                            imageWidth={250}
-                            headingNumber={HomePageText.Legacy_number}
-                            headingText={HomePageText.Legacy_heading}
-                            paragraphText={HomePageText.Legacy_content}
-                            buttonText="Explore"
-                            onButtonClick={handleButtonExplore}
-                            buttonEnabled={true}
-                        />
-                    </div>
-                </div>
-            </section>
+        <div
+          style={{ background: "#F1F1F1", padding: "10px 100px 50px 100px" }}
+        >
+          <div style={commonStyle.textCenter}>
+            <br />
+            <br />
+            <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
+            Specialized Talent to Transform the SAP and Non-SAP Ecosystem
+            </h2>
+            <br />
+            <h3 style={cardsStyling.sapCloudLegacySubHeading}>Access a World-Class Pool of Specialized Tech Experts to Provide Comprehensive Solutions</h3>
+            <br />
+          </div>
+          <div className="cards" style={commonStyle.dflex_1}>
+            <CardComponent
+                imageUrl={"/HomePageImages/cloudDevops.png"}
+                imageHeight={150}
+                imageWidth={250}
+                headingNumber={HomePageText.SAP_number2}
+                headingText={HomePageText.SAP_heading2}
+                paragraphText={HomePageText.SAP_content2}
+                buttonText="Explore Now"
+                onButtonClick={handleButtonExploreNow}
+                buttonEnabled={true}
+              />
+            <CardComponent
+              imageUrl={"/HomePageImages/legacySoftware.png"}
+              imageHeight={210}
+              imageWidth={250}
+              headingNumber={HomePageText.Cloud_number2}
+              headingText={HomePageText.Cloud_heading2}
+              paragraphText={HomePageText.Cloud_content2}
+              buttonText="Explore Now"
+              onButtonClick={handleButtonExploreNow}
+              buttonEnabled={true}
+            />
+            <CardComponent
+              imageUrl={"/HomePageImages/llm.jpg"}
+              imageHeight={150}
+              imageWidth={250}
+              headingNumber={HomePageText.Legacy_number2}
+              headingText={HomePageText.Legacy_heading2}
+              paragraphText={HomePageText.Legacy_content2}
+              buttonText="Explore Now"
+              onButtonClick={handleButtonExploreNow}
+              buttonEnabled={true}
+            />
+          </div>
+        </div>
+      </section>
 
             <main>
                 <section id={hireDevStyles.wholeContainer}>
@@ -282,7 +285,7 @@ const HireSpecializedTalentPage = () => {
                         <br />
                         <br />
                         <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
-                            Tailored Solutions for Scalable Growth
+                        Tailored Solutions for Scalable Growth
                         </h2>
                         <br />
                         <h3 style={cardsStyling.sapCloudLegacySubHeading}>Flexibility and Scalability for Your Projects. We Offer Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</h3>
@@ -296,7 +299,7 @@ const HireSpecializedTalentPage = () => {
                             imageWidth={250}
                             headingNumber={""}
                             headingText={"Agile Team Composition"}
-                            paragraphText={"Whether you're embarking on a small-scale SAP implementation or a large-scale transformation, we offer flexible team compositions to suit your project scope. From solo consultants to cross-functional teams, we adapt to meet your needs."}
+                            paragraphText={"Whether you're embarking on a small-scale tech implementation or a large-scale transformation, we offer flexible team compositions to suit your project scope. From solo consultants to cross-functional teams, we adapt to meet your needs."}
                             buttonText="Explore"
                             onButtonClick={HireDeveloperClicked}
                             buttonEnabled={false}
@@ -307,7 +310,7 @@ const HireSpecializedTalentPage = () => {
                             imageWidth={250}
                             headingNumber={""}
                             headingText={"On-Demand Expertise"}
-                            paragraphText={"Scale your SAP initiatives dynamically with our on-demand talent pool. Need additional resources for a specific phase of your project? We've got you covered. Our flexible hiring model allows you to access expertise precisely when you need it."}
+                            paragraphText={"Scale your tech initiatives dynamically with our on-demand talent pool. Need additional resources for a specific phase of your project? We've got you covered. Our flexible hiring model allows you to access expertise precisely when you need it."}
                             buttonText="Explore"
                             onButtonClick={HireDeveloperClicked}
                             buttonEnabled={false}
@@ -410,7 +413,7 @@ const HireSpecializedTalentPage = () => {
                     Unleashing the Power of Tech Talent Expertise
                     </h2>
                     <br />
-                    <h3 style={cardsStyling.sapCloudLegacySubHeading}>Elevate Your Projects with Our SAP Talent Experience, Versatility, and Collaboration at Your Service</h3>
+                    <h3 style={cardsStyling.sapCloudLegacySubHeading}>Elevate Your Projects with Our Talent Experience, Versatility, and Collaboration at Your Service</h3>
 
 
                 </div>
@@ -447,7 +450,7 @@ const HireSpecializedTalentPage = () => {
                         <div style={{ display: "flex", gap: "10px" }}>
                             <div id={hireDevStyles.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Our SAP professionals undergo rigorous AI-driven vetting processes to ensure their technical proficiency and expertise.</div>
+                                <div className={hireDevStyles.scalableSubheading}>Our tech professionals undergo rigorous AI-driven vetting processes to ensure their technical proficiency and expertise.</div>
                             </div>
                         </div>
                         <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
@@ -464,7 +467,7 @@ const HireSpecializedTalentPage = () => {
                         <div style={{ display: "flex", gap: "10px" }}>
                             <div id={hireDevStyles.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Our talent holds relevant certifications from SAP and other recognized institutions, validating their skill set and knowledge.</div>
+                                <div className={hireDevStyles.scalableSubheading}>Our talent holds relevant certifications from tech and other recognized institutions, validating their skill set and knowledge.</div>
                             </div>
 
                         </div>
@@ -483,7 +486,7 @@ const HireSpecializedTalentPage = () => {
                         <div style={{ display: "flex", gap: "10px" }}>
                             <div id={hireDevStyles.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>With years of hands-on experience in SAP implementation, customization, and support, our consultants bring invaluable expertise.</div>
+                                <div className={hireDevStyles.scalableSubheading}>With years of hands-on experience in tech implementation, customization, and support, our consultants bring invaluable expertise.</div>
                             </div>
                         </div>
                         <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
@@ -501,7 +504,7 @@ const HireSpecializedTalentPage = () => {
                         <div style={{ display: "flex", gap: "10px" }}>
                             <div id={hireDevStyles.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Our SAP talent is readily available to meet your project needs, offering flexible engagement models and quick deployment.</div>
+                                <div className={hireDevStyles.scalableSubheading}>Our tech talent is readily available to meet your project needs, offering flexible engagement models and quick deployment.</div>
                             </div>
                         </div>
 
@@ -519,7 +522,7 @@ const HireSpecializedTalentPage = () => {
                         <div style={{ display: "flex", gap: "10px" }}>
                             <div id={hireDevStyles.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Equipped with a diverse skill set covering SAP modules and technologies, our talent can adapt to different requirements seamlessly.</div>
+                                <div className={hireDevStyles.scalableSubheading}>Equipped with a diverse skill set covering tech modules and technologies, our talent can adapt to different requirements seamlessly.</div>
                             </div>
                         </div>
 
@@ -537,7 +540,7 @@ const HireSpecializedTalentPage = () => {
                         <div style={{ display: "flex", gap: "10px" }}>
                             <div id={hireDevStyles.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Our talent stays updated with latest SAP trends and innovations, ensuring they are equipped to handle evolving technology landscapes.</div>
+                                <div className={hireDevStyles.scalableSubheading}>Our talent stays updated with latest tech trends and innovations, ensuring they are equipped to handle evolving technology landscapes.</div>
                             </div>
                         </div>
 
@@ -869,13 +872,13 @@ const HireSpecializedTalentPage = () => {
                 </div>
             </section>
             <section id={sapStyle.secondsection}>
-                <div style={{ fontSize: "32px", fontWeight: "600" }}>Ensuring Excellence: Assessing SAP Talent</div>
+                <div style={{ fontSize: "32px", fontWeight: "600" }}>Ensuring Excellence: Assessing Specialized Tech Talent</div>
                 <h3 style={{ opacity: "0.7" }}>Meticulous assessment to ensure the proficiency, compatibility, and overall suitability of our niche talent.</h3>
                 <div id={sapStyle.threeimage}>
                     <div id={sapStyle.threeimagesection}>
                         <div><Image src="/HireDevImages/tech1.webp" height={130} width={190} alt="" /></div>
                         <div style={{ fontWeight: "600" }}>Technical Competency</div>
-                        <div style={{ fontSize: "14px" }}>Thorough assessment of SAP skills and knowledge</div>
+                        <div style={{ fontSize: "14px" }}>Thorough assessment of tech skills and knowledge</div>
                     </div>
                     <div id={sapStyle.threeimagesection}>
                         <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
@@ -916,7 +919,7 @@ const HireSpecializedTalentPage = () => {
                 <div className={homePageStyle.backGroundBlueHomePage}>
                     <div>
                         <h1 id={hireDevStyles.heading}>
-                            Elite Talent for Top Legacy, Cloud and AI/ML Vendors
+                        Elite Talent for Top Legacy, Cloud and AI/ML Vendors
                         </h1>
                         <br />
                         <br />
