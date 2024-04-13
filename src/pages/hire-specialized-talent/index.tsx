@@ -239,7 +239,7 @@ const HireSpecializedTalentPage = () => {
                                 "Forge Business Resilience Seamlessly",
                             ]}
                             paraPoints={[
-                                "Hire deeply vetted SAP consultants for specialized Tech skills in just 4 hours, leveraging our AI-powered platform and global network expertise to accelerate your hiring process.",
+                                "Hire deeply vetted tech consultants for specialized Tech skills in just 4 hours, leveraging our AI-powered platform and global network expertise to accelerate your hiring process.",
                                 "Specializing in hard-to-find tech skills and niche expertise, we make the rare seem routine in our expansive talent pool, ensuring you connect with the right talent to address skill gaps and project requirements effectively.",
                                 "Embrace business continuity seamlessly with our On-Demand Talent Cloud, providing agility in talent acquisition and keeping your projects on track. Adapt to changing resource needs swiftly, ensuring resilience in face of challenges."
                             ]}
@@ -267,7 +267,7 @@ const HireSpecializedTalentPage = () => {
                             ]}
                             paraPoints={[
                                 "Elevate your hiring standards with our advanced AI assessment tailored for niche tech skills. Achieve a remarkably high accuracy rate in qualification filtering, ensuring swift and precise matches for your projects.",
-                                "Drive success by seamlessly integrating external intelligence from platforms like HackerRank and custom assessments. Ensure meticulous candidate matches for your SAP projects, expediting the path to top-tier niche talent.",
+                                "Drive success by seamlessly integrating external intelligence from platforms like HackerRank and custom assessments. Ensure meticulous candidate matches for your tech projects, expediting the path to top-tier niche talent.",
                                 "Harness human insights to align business and culture through talent carefully scouted by expert interviewers. Ensure soft skills, effective communication, and cultural alignment for a well-rounded organizational match in your team."
                             ]}
                             noOflogoImages={3}
