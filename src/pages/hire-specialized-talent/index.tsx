@@ -227,7 +227,7 @@ const HireSpecializedTalentPage = () => {
                             Imgwidth={520}
                             order="imageRight"
                             pointsIcons={HireDeveloperPageText.superChargePointsIcons}
-                            heading={HireDeveloperPageText.superchargeHiringHeading}
+                            heading={"Supercharge Your Hiring"}
                             subHeading={"Accelerate Your Recruitment Process with Access to Our Premier Network of AI-Vetted Developers, Ready to Join Your Team and Drive Success."}
                             noOfPoints={3}
                             points={[
@@ -254,7 +254,7 @@ const HireSpecializedTalentPage = () => {
                             Imgwidth={550}
                             order="imageLeft"
                             pointsIcons={HireDeveloperPageText.perfectMatchPointsIcons}
-                            heading={HireDeveloperPageText.perfectMatchHeading}
+                            heading={"Laser Precision in Talent Matching"}
                             subHeading={"Accelerate Your Recruitment Process with Access to Our Premier Network of AI-Vetted Developers, Ready to Join Your Team and Drive Success."}
                             noOfPoints={3}
                             points={[
@@ -407,7 +407,7 @@ const HireSpecializedTalentPage = () => {
                     <br />
                     <br />
                     <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
-                        Unleashing the Power of SAP Expertise
+                    Unleashing the Power of Tech Talent Expertise
                     </h2>
                     <br />
                     <h3 style={cardsStyling.sapCloudLegacySubHeading}>Elevate Your Projects with Our SAP Talent Experience, Versatility, and Collaboration at Your Service</h3>
@@ -688,7 +688,7 @@ const HireSpecializedTalentPage = () => {
           </div>
         </div>
       </section> */}
-<section>
+            <section>
                 <div className={sapStyle.leftbuttonSection}>
                     <div className={sapStyle.leftbuttonHeadingSection}>
                         <div style={{ fontSize: "43px", fontWeight: "600" }}>Elite Tech Talent for Specialized Tech</div>
@@ -909,14 +909,14 @@ const HireSpecializedTalentPage = () => {
 
                 </div>
             </section>
-            
-            
-            
-            <section style={{marginBottom:"-80px"}}>
+
+
+
+            <section style={{ marginBottom: "-80px" }}>
                 <div className={homePageStyle.backGroundBlueHomePage}>
                     <div>
                         <h1 id={hireDevStyles.heading}>
-                        Elite Talent for Top Legacy, Cloud and AI/ML Vendors
+                            Elite Talent for Top Legacy, Cloud and AI/ML Vendors
                         </h1>
                         <br />
                         <br />
@@ -1078,7 +1078,7 @@ const HireSpecializedTalentPage = () => {
                     </div>
                 </div>
             </section>
-            
+
             <FotterComponent />
         </div>
     )
