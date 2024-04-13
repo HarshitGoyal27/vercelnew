@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
         <div>
-          <Link href="/hire-sap-talent" style={navLinks}>
+          <Link href="/hire-specialized-talent" style={navLinks}>
           Hire Specialized Talent
           </Link>
         </div>

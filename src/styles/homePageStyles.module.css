@@ -77,6 +77,42 @@
   align-items: center;
   padding: 60px 0px;
 }
+.backGroundBlueHomePage2 {
+  @media(width>1600px){
+    width:1500px;
+    height:900px;
+  }
+  @media(1200px<width<=1500px) {
+    width: 97vw;
+  }
+  @media(768px<width<=1000px) {
+    width: 1450px;
+  }
+
+  @media(425px<width<=768px) {
+    width: 1450px;
+  }
+
+  @media(430px>=width>320px) {
+    width: 1440px;
+  }
+
+  @media(width<=320px) {
+    width: 1268px;
+  }
+
+  background-color: #f2f2f2;
+  text-align: center;
+  color: black;
+  display: flex;
+  justify-content: center;
+  width: 97vw;
+  /* margin: 60px auto; */
+  /* height: 80vh; */
+  align-items: center;
+  padding: 60px 0px;
+  font-family: "Poppins", sans-serif;
+}
 @media(1000px<width<=1200px){
   #ourEliteNetwork{
     width:97vw;
