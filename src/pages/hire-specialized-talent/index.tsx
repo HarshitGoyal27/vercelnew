@@ -191,7 +191,7 @@ const HireSpecializedTalentPage = () => {
                 paragraphText={HomePageText.SAP_content2}
                 buttonText="Explore Now"
                 onButtonClick={handleButtonExploreNow}
-                buttonEnabled={true}
+                buttonEnabled={false}
               />
             <CardComponent
               imageUrl={"/HomePageImages/legacySoftware.png"}
@@ -202,7 +202,7 @@ const HireSpecializedTalentPage = () => {
               paragraphText={HomePageText.Cloud_content2}
               buttonText="Explore Now"
               onButtonClick={handleButtonExploreNow}
-              buttonEnabled={true}
+              buttonEnabled={false}
             />
             <CardComponent
               imageUrl={"/HomePageImages/llm.jpg"}
@@ -213,7 +213,7 @@ const HireSpecializedTalentPage = () => {
               paragraphText={HomePageText.Legacy_content2}
               buttonText="Explore Now"
               onButtonClick={handleButtonExploreNow}
-              buttonEnabled={true}
+              buttonEnabled={false}
             />
           </div>
         </div>
@@ -224,10 +224,10 @@ const HireSpecializedTalentPage = () => {
                     <section id={hireDevStyles.superchargeContainer} >
                         {/* <div style={{ width: "80vw", margin: "auto" }}> */}
                         <HireDevSectionWithImageAndIcon
-                            imageUrl={"/HireDeveloperImages/sapHiring.jpg"}
+                            imageUrl={"/HireDeveloperImages/hiringdev.jpg"}
                             altText={"WhySkillsCapitalDev"}
-                            Imgheight={500}
-                            Imgwidth={520}
+                            Imgheight={450}
+                            Imgwidth={550}
                             order="imageRight"
                             pointsIcons={HireDeveloperPageText.superChargePointsIcons}
                             heading={"Supercharge Your Hiring"}

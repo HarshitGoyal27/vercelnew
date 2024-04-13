@@ -34,13 +34,13 @@ import { GlobalContextProvider } from "../../context/store";
 export default function Home({ allData }: { allData: any }) {
   const router = useRouter();
   const launchCareerJourneyClicked = () => {
-    router.push("/hire-sap-talent");
+    router.push("/hire-specialized-talent");
   };
   const handleButtonExplore = () => {
     router.push("/hire-sap-talent");
   };
   const handleButtonExploreNow = () => {
-    router.push("/hire-sap-talent");
+    router.push("/hire-specialized-talent");
   };
   const HireDeveloperClicked = () => {
     // router.push("/search-developers");
