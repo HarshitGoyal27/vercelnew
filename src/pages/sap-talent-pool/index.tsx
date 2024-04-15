@@ -177,7 +177,7 @@ const SapTalentPool = () => {
                 videoSrc={"/HomePageImages/HomePageVideo.mp4"}
                 videoWidth={"500"}
                 videoHeight={"600"} */}
-                        <Image src="/HomePageImages/saptalentImage2.png" width={400} height={400} style={{ borderRadius: "5px" }} alt="" />
+                        <Image src="/SaptalentImage/erp.webp" width={400} height={300} style={{ borderRadius: "5px" }} alt="" />
 
                     </div>
                 </div>
