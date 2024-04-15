@@ -125,7 +125,7 @@ const Hire = () => {
                 videoSrc={"/HomePageImages/HomePageVideo.mp4"}
                 videoWidth={"500"}
                 videoHeight={"600"} */}
-            <Image src="/HireDeveloperImages/hiring3.png" alt="" height={280} width={400} />
+            <Image src="/HireDeveloperImages/hireSapImage.jpeg" alt="" height={400} width={400} />
 
           </div>
         </div>

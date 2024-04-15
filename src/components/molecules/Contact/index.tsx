@@ -30,7 +30,7 @@ const Letstalk = () => {
     return (
         <div>
             <div id={css.contactOuter}>
-                <div style={{fontSize:"23px", fontWeight:"600"}}>LET&nbsp;S TALK</div>
+                <div style={{fontSize:"23px", fontWeight:"600"}}>LET&apos;S TALK</div>
                 <div style={{opacity:"0.7"}}>Get in touch with us today to explore how our specialized tech ecosystem platform can elevate your business</div>
                 <form id={css.formDesign}>
                     <div style={{ display: "flex", gap: "20px" }}>

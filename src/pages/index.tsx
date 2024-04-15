@@ -213,7 +213,7 @@ export default function Home({ allData }: { allData: any }) {
                 videoSrc={"/HomePageImages/HomePageVideo.mp4"}
                 videoWidth={"500"}
                 videoHeight={"600"} */}
-              <Image src="/HomePageImages/banner02.png" width={450} height={350} style={{borderRadius:"5px",marginTop:"-130px"}} alt=""   />
+              <Image src="/HomePageImages/homePage1.jpeg" width={450} height={450} style={{borderRadius:"5px",marginTop:"-130px"}} alt=""   />
 
             </div>
           </div>
