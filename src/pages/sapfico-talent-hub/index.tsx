@@ -140,7 +140,7 @@ const SapficoTalentHubPage = () => {
                         <div style={{ display: "flex", gap: "10px" }}>
                             <div id={hireDevStyles.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Collaborate with us to leverage our expertise and resources in SAP FICO for mutual success. Whether you're a business seeking consultancy or a fellow consultancy firm, let's explore synergies and create value together.</div>
+                                <div className={hireDevStyles.scalableSubheading}>Collaborate with us to leverage our expertise and resources in SAP FICO for mutual success. Whether you&apos;re a business seeking consultancy or a fellow consultancy firm, let&apos;s explore synergies and create value together.</div>
                             </div>
                         </div>
                         <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
