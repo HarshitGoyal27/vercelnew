@@ -20,6 +20,15 @@
      padding: 50px 0px;
      font-family: "Poppins";
 }
+.topsection{
+    
+    margin:20px 50px;
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    
+}
 .transsectionBox{
     /* width:25vw; */
     background-color: #000;

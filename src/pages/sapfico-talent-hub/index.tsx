@@ -17,7 +17,7 @@ const SapficoTalentHubPage = () => {
             <Navbar />
             <section className={sapficoStyle.outerSectionMost} >
                 <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-                    <div id={css.topsection}>
+                    <div className={sapficoStyle.topsection}>
                         <div style={{ fontSize: "48px", width: "300px", fontWeight: "600", lineHeight: "59px" }}>SAP-FICO Talent Hub</div>
                         <div style={{ fontSize: "20px" }}>Find a transformation consultant to achieve meaningful change.</div>
                         <div>
