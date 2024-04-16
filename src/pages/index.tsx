@@ -31,6 +31,7 @@ import homePageStyle from "./../styles/homePageStyles.module.css";
 import { useRouter } from "next/router";
 import CompaniesCarausel from "@/components/molecules/CompaniesCarausel";
 import { GlobalContextProvider } from "../../context/store";
+import aboutPageStyles from "../styles/aboutPageStyles.module.css"
 export default function Home({ allData }: { allData: any }) {
   const router = useRouter();
   const launchCareerJourneyClicked = () => {
@@ -781,7 +782,92 @@ export default function Home({ allData }: { allData: any }) {
           </section> */}
 
       </main>
+      <section>
+        <div className={aboutPageStyles.backGroundBlueHomePage}>
+          <div>
+            <div style={{ fontSize: "38px", fontWeight: "600" }}>
+            As Covered in the Media
+            </div>
+            <br />
+            <div style={{ fontSize: "18px", fontWeight: "600" }}>
+            SkillsCapital Revolutionizes SAP and Specialized Talent Landscape
+            </div>
+            <br />
+            <br />
 
+
+            <div style={{ display: "flex", gap: "20px", flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
+
+
+              <div style={{ backgroundColor: "white", borderRadius: "10px", border: "1px solid lightgrey", width: "300px", height: "100px" }}>
+                <Image
+                  className={hireDevStyles.amazon}
+                  src={`/AboutPageImages/media1.jpg`}
+                  alt="Logo"
+                  height={100}
+                  width={170}
+                  style={{ marginTop: "0px", borderRadius: "10px" }}
+                />
+              </div>
+
+              <div style={{ backgroundColor: "white", border: "1px solid lightgrey", borderRadius: "10px", width: "300px", height: "100px" }}>
+                <Image
+                  className={hireDevStyles.amazon}
+                  src={`/AboutPageImages/media2.png`}
+                  alt="Logo"
+                  height={100}
+                  width={130}
+                  style={{ marginTop: "0px", borderRadius: "10px" }}
+                />
+              </div>
+              <div style={{ backgroundColor: "white", border: "1px solid lightgrey", borderRadius: "10px", width: "300px", height: "100px" }}>
+                <Image
+                  className={hireDevStyles.amazon}
+                  src={`/AboutPageImages/media3.avif`}
+                  alt="Logo"
+                  height={80}
+                  width={160}
+                  style={{ borderRadius: "10px" }}
+                />
+              </div>
+              <div style={{ backgroundColor: "white", border: "1px solid lightgrey", borderRadius: "10px", width: "300px", height: "100px" }}>
+                <Image
+                  className={hireDevStyles.amazon}
+                  src={`/AboutPageImages/media4.jpg`}
+                  alt="Logo"
+                  height={90}
+                  width={130}
+                  style={{ borderRadius: "10px" }}
+                />
+              </div>
+
+              <div style={{ backgroundColor: "white", border: "1px solid lightgrey", borderRadius: "10px", width: "300px", height: "100px" }}>
+                <Image
+                  className={hireDevStyles.amazon}
+                  src={`/AboutPageImages/media5.png`}
+                  alt="Logo"
+                  height={80}
+                  width={270}
+                  style={{ borderRadius: "10px" }}
+                />
+              </div>
+              <div style={{ backgroundColor: "white", border: "1px solid lightgrey", borderRadius: "10px", width: "300px", height: "100px" }}>
+                <Image
+                  className={hireDevStyles.amazon}
+                  src={`/AboutPageImages/media6.png`}
+                  alt="Logo"
+                  height={60}
+                  width={240}
+                  style={{ borderRadius: "10px" }}
+                />
+              </div>
+              
+
+
+            </div>
+          </div>
+        </div>
+      </section>
       <FotterComponent />
     </>
   );

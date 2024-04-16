@@ -21,7 +21,7 @@ export default function About() {
     <>
       <Navbar />
       <section>
-        <div className={aboutPageStyles.topheading}>
+      <div className={aboutPageStyles.topheading}>
           <div>
             Skills Capital offers a unique solution to mid-market enterprises struggling with sourcing and retaining high-caliber technical professionals. We provide on-demand access to a pool of elite tech experts, eliminating the need for businesses to endure the expenses and challenges of hiring and training full-time staff. Clients leverage an AI-powered Talent Cloud to connect with pre-screened specialists possessing rare and specialized skills, ensuring the formation of tailor-made teams for specific projects. This approach is bolstered by experienced part-time architects or dev managers who oversee project success.
           </div>
@@ -71,10 +71,10 @@ export default function About() {
           <br />
           <br />
           <div className={aboutPageStyles.ourValuesHeading}>
-
-            <div style={{ fontSize: "43px", fontWeight: "600" }}>Excellence Quantified</div>
-            <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Empowering Your Vision with Unmatched Expertise and Dedicated Success</div>
-
+            
+              <div style={{ fontSize: "43px", fontWeight: "600" }}>Excellence Quantified</div>
+              <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Empowering Your Vision with Unmatched Expertise and Dedicated Success</div>
+            
             {/* <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Empowering Your Vision with Unmatched Expertise and Dedicated Success</div> */}
           </div>
           {/* <br /> */}
@@ -108,11 +108,11 @@ export default function About() {
       </section>
       <section>
 
-        <div className={aboutPageStyles.ourValuesHeading}>
-
-          <div style={{ fontSize: "43px", fontWeight: "600" }}>Our Values</div>
-          {/* <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Empowering Your Vision with Unmatched Expertise and Dedicated Success</div> */}
-
+      <div className={aboutPageStyles.ourValuesHeading}>
+            
+            <div style={{ fontSize: "43px", fontWeight: "600" }}>Our Values</div>
+            {/* <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Empowering Your Vision with Unmatched Expertise and Dedicated Success</div> */}
+          
           {/* <div style={{ fontSize: "20px", opacity: "0.8", textAlign: "center" }}>Empowering Your Vision with Unmatched Expertise and Dedicated Success</div> */}
         </div>
         <div className={aboutPageStyles.sixBoxOuter} >

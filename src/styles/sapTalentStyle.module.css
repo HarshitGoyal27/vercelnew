@@ -357,6 +357,18 @@ font-size: 40px;
     padding-bottom: 80px;
     background-color: #f2f2f2;
 }
+.leftbuttonSection2{
+    @media(width<1000px){
+        width:1400px;
+    }
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding: 120px 0px;
+    background-color: #f2f2f2;
+    margin: 120px 0px;
+}
 .leftbuttonHeadingSection{
     display: flex;
     flex-direction: column;
