@@ -58,19 +58,19 @@ const SapficoTalentHubPage = () => {
                 <section id={hireDevStyles.fontpopBelow}>
                     <div id={hireDevStyles.selectbar}>
                         <div style={selected === "AI-Vetted" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-                            <div style={{ padding: "30px" }} onClick={() => setSelected("AI-Vetted")}>SAP Solutions</div>
+                            <div style={{ padding: "30px" }} onClick={() => setSelected("AI-Vetted")}>Expertise Showcase</div>
                         </div>
                         <div style={selected === "Certified" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-                            <div style={{ padding: "30px" }} onClick={() => setSelected("Certified")}>Migration Expertise</div>
+                            <div style={{ padding: "30px" }} onClick={() => setSelected("Certified")}>Client Testimonials</div>
                         </div>
                         <div style={selected === "Accomplished" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-                            <div style={{ padding: "30px" }} onClick={() => setSelected("Accomplished")}>Industry-Specific SAP Solutions</div>
+                            <div style={{ padding: "30px" }} onClick={() => setSelected("Accomplished")}>Solution Offerings</div>
                         </div>
                         <div style={selected === "On-Demand" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-                            <div style={{ padding: "30px" }} onClick={() => setSelected("On-Demand")}>Integration Services</div>
+                            <div style={{ padding: "30px" }} onClick={() => setSelected("On-Demand")}>Partnership Opportunities</div>
                         </div>
                         <div style={selected === "Versatile" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-                            <div style={{ padding: "30px" }} onClick={() => setSelected("Versatile")}>SAP Support</div>
+                            <div style={{ padding: "30px" }} onClick={() => setSelected("Versatile")}>Contact Information</div>
                         </div>
                         
                     </div>
@@ -86,7 +86,7 @@ const SapficoTalentHubPage = () => {
                         <div style={{ display: "flex", gap: "10px" }}>
                             <div id={hireDevStyles.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Highlight the consulting firm&apos;s ability to provide comprehensive SAP solutions, covering various modules such as Finance, Supply Chain Management, Human Resources, and Customer Relationship Management.</div>
+                                <div className={hireDevStyles.scalableSubheading}>Our seasoned SAP FICO consultants bring years of hands-on experience in financial management, accounting, and controlling. With deep knowledge of SAP solutions, they excel in optimizing processes and driving business growth.</div>
                             </div>
                         </div>
                         <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More - SAP consulting</span></div>
@@ -104,7 +104,7 @@ const SapficoTalentHubPage = () => {
                         <div style={{ display: "flex", gap: "10px" }}>
                             <div id={hireDevStyles.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Showcase proficiency in assisting organizations with migrating to SAP S/4HANA, the next-generation ERP suite. Highlight the benefits of S/4HANA, such as real-time analytics, simplified data models, and improved user experience, and discuss the consulting firm&apos;s approach to ensuring a smooth transition while maximizing ROI.</div>
+                                <div className={hireDevStyles.scalableSubheading}>Hear from satisfied clients who have witnessed tangible results and transformational changes through our consulting services. Their feedback underscores our commitment to delivering exceptional value and exceeding expectations.</div>
                             </div>
                         </div>
                         <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
@@ -122,7 +122,7 @@ const SapficoTalentHubPage = () => {
                         <div style={{ display: "flex", gap: "10px" }}>
                             <div id={hireDevStyles.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Emphasize experience in delivering industry-specific SAP solutions tailored to the unique requirements of different sectors such as manufacturing, retail, healthcare, and utilities. Highlight success stories and case studies demonstrating how the consulting firm has helped organizations within specific industries leverage SAP to drive innovation and competitive advantage.</div>
+                                <div className={hireDevStyles.scalableSubheading}>From seamless system implementations to tailored customization and ongoing support, our comprehensive suite of consulting services caters to every aspect of SAP FICO requirements. We empower businesses to leverage technology for strategic advantage.</div>
                             </div>
                         </div>
                         <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
@@ -140,7 +140,7 @@ const SapficoTalentHubPage = () => {
                         <div style={{ display: "flex", gap: "10px" }}>
                             <div id={hireDevStyles.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Showcase expertise in implementing SAP Cloud solutions such as SAP S/4HANA Cloud, SAP SuccessFactors, and SAP Business ByDesign. Highlight the consulting firm&apos;s capabilities in cloud migration, integration with existing on-premises systems, and leveraging emerging technologies like AI and IoT to enhance business processes.</div>
+                                <div className={hireDevStyles.scalableSubheading}>Collaborate with us to leverage our expertise and resources in SAP FICO for mutual success. Whether you're a business seeking consultancy or a fellow consultancy firm, let's explore synergies and create value together.</div>
                             </div>
                         </div>
                         <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
@@ -158,7 +158,7 @@ const SapficoTalentHubPage = () => {
                         <div style={{ display: "flex", gap: "10px" }}>
                             <div id={hireDevStyles.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Highlight ongoing support and managed services offerings to ensure the continued success of SAP deployments. Discuss services such as system monitoring, performance optimization, user training, and regular updates to keep SAP systems running smoothly and efficiently.</div>
+                                <div className={hireDevStyles.scalableSubheading}>Ready to unlock the full potential of SAP FICO for your business? Reach out to us today for expert insights, personalized consultations, and bespoke solutions. Connect with our team via phone, email, or through our online inquiry form.</div>
                             </div>
                         </div>
                         <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
@@ -171,17 +171,17 @@ const SapficoTalentHubPage = () => {
                     
                     <div className={sapStyle.buttonSection}>
                         <div style={{ marginTop: "50px" }}>
-                            <div className={muduleSelect === "SAPModules" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPModules")}>Implementation</div>
-                            <div className={muduleSelect === "SAPSolutions" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPSolutions")}>Latest Trends and Updates</div>
-                            <div className={muduleSelect === "SAPFunctional" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPFunctional")}>Training and Certification</div>
-                            <div className={muduleSelect === "SAPTechnical" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPTechnical")}>Networking Opportunities</div>
+                            <div className={muduleSelect === "SAPModules" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPModules")}>Knowledge Repository</div>
+                            <div className={muduleSelect === "SAPSolutions" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPSolutions")}>Learning Opportunities</div>
+                            <div className={muduleSelect === "SAPFunctional" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPFunctional")}>Community Engagement</div>
+                            <div className={muduleSelect === "SAPTechnical" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("SAPTechnical")}>Industry Insights</div>
                             {/* <div className={muduleSelect === "ProjectType" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("ProjectType")}>SAP Project Types</div>
                             <div className={muduleSelect === "RoleType" ? sapStyle.singleButtonClicked : sapStyle.singleButton} onClick={() => setModuleSelect("RoleType")}>SAP Talent Roles</div> */}
                         </div>
                         {muduleSelect === "SAPModules" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600", color: "#2871FF" }}>SAP FICO Implementation Best Practices</div>
+                            <div style={{ fontSize: "25px", fontWeight: "600", color: "#2871FF" }}>Knowledge Repository</div>
                             {/* <div style={{ fontSize: "19px", fontWeight: "600" }}>Explore Talent for a Diverse Array of 50+ SAP Modules and Sub-Modules</div> */}
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Provide insights into best practices for implementing SAP FICO modules, covering aspects such as project planning, configuration, data migration, and testing. Offer tips and strategies for ensuring successful SAP FICO implementations, based on industry standards and experiences from previous projects.</div>
+                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Dive into our extensive library featuring a wealth of articles, templates, and tools curated to support your journey in SAP FICO. Access valuable resources to deepen your understanding and enhance your proficiency in financial management and SAP systems.</div>
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>50+</div> */}
                             {/* <div>sapfico-resource-hub</div> */}
                             <div style={{ padding: "10px", marginTop: "10px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More - sapfico-resource-hub</span></div>
@@ -189,25 +189,25 @@ const SapficoTalentHubPage = () => {
 
                         </div>}
                         {muduleSelect === "SAPSolutions" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600", color: "#2871FF" }}>Latest Trends and Updates in SAP FICO</div>
+                            <div style={{ fontSize: "25px", fontWeight: "600", color: "#2871FF" }}>Learning Opportunities</div>
                             {/* <div style={{ fontSize: "19px", fontWeight: "600" }}>Discover Consultants for a Wide Range of 30+ SAP Solutions and Specializations</div> */}
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Keep users informed about the latest trends, updates, and innovations in SAP FICO. This could include information on new features introduced in SAP S/4HANA Finance, regulatory changes impacting financial accounting, and advancements in controlling and reporting functionalities. Regularly update this section to ensure visitors have access to current information.</div>
+                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Join our vibrant community of learners and experts in SAP FICO through our diverse range of webinars, workshops, and events. Expand your knowledge, acquire new skills, and stay ahead of industry trends with our dynamic learning experiences.</div>
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>40+</div> */}
                             <div style={{ padding: "10px", marginTop: "10px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
 
                         </div>}
                         {muduleSelect === "SAPFunctional" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600", color: "#2871FF" }}>SAP FICO Training and Certification Resources</div>
+                            <div style={{ fontSize: "25px", fontWeight: "600", color: "#2871FF" }}>Community Engagement</div>
                             {/* <div style={{ fontSize: "19px", fontWeight: "600" }}>Figure out Our SAP Talent&apos;s Functional Proficiency Across 40+ Key Functional Areas</div> */}
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Provide a curated list of training courses, webinars, and certification programs related to SAP FICO. Include both online and offline learning resources offered by SAP Education, authorized training partners, and industry organizations. Offer guidance on selecting the most relevant training paths based on individual career goals and skill levels.</div>
+                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Engage in meaningful discussions, share insights, and seek guidance from fellow professionals in our forums and discussion groups. Connect with like-minded individuals, collaborate on projects, and foster a culture of knowledge exchange within the SAP FICO community.</div>
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>20+</div> */}
                             <div style={{ padding: "10px", marginTop: "10px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
 
                         </div>}
                         {muduleSelect === "SAPTechnical" && <div className={sapStyle.buttonContent}>
-                            <div style={{ fontSize: "25px", fontWeight: "600", color: "#2871FF" }}>SAP FICO Community and Networking Opportunities</div>
+                            <div style={{ fontSize: "25px", fontWeight: "600", color: "#2871FF" }}>Industry Insights</div>
                             {/* <div style={{ fontSize: "19px", fontWeight: "600" }}>Figure out Our SAP Talent&apos;s Functional Proficiency Across 40+ Key Functional Areas</div> */}
-                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}> Foster a sense of community among SAP FICO professionals by providing networking opportunities and access to discussion forums or user groups. Encourage knowledge sharing, collaboration, and peer-to-peer support among members of the SAP FICO community. Promote relevant events, conferences, and meetups where professionals can connect and exchange insights.</div>
+                            <div style={{ fontSize: "16px", color: "#3C3C3C" }}> Stay abreast of the rapidly evolving landscape of SAP FICO with our latest updates on trends, regulations, and innovations. Gain valuable insights that empower you to make informed decisions and adapt to changes in the industry landscape effectively.</div>
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>20+</div> */}
                             <div style={{ padding: "10px", marginTop: "10px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
 
@@ -236,8 +236,8 @@ const SapficoTalentHubPage = () => {
                                 <Image src="/HireDevImages/skillset.png" alt="" height={50} width={50} />
                             </div>
                             <div id={hireDevStyles.mosteinnerContainer}>
-                                <div id={hireDevStyles.scalableGrowthHeading}>Diverse Skill Sets</div>
-                                <div className={hireDevStyles.scalableSubheading}>Highlight the diverse skill sets available within the SAP talent pool, including expertise in various SAP modules such as Finance (FICO), Supply Chain Management (SCM), Human Capital Management (HCM), and Customer Relationship Management (CRM). </div>
+                                <div id={hireDevStyles.scalableGrowthHeading}>Exclusive Access and Networking</div>
+                                <div className={hireDevStyles.scalableSubheading}>oin our SAP FICO talent pool to access top job opportunities, projects, and freelance gigs while networking with like-minded professionals.</div>
                             </div>
                         </div>
                         <div style={{ display: "flex", gap: "10px",alignItems:"center"  }}>
@@ -245,8 +245,8 @@ const SapficoTalentHubPage = () => {
                                 <Image src="/HireDevImages/certified_exp.webp" alt="" height={50} width={50} />
                             </div>
                             <div id={hireDevStyles.mosteinnerContainer}>
-                                <div id={hireDevStyles.scalableGrowthHeading}>Certified SAP Professionals</div>
-                                <div className={hireDevStyles.scalableSubheading}>Emphasize that the SAP talent pool consists of certified professionals who have undergone rigorous training and certification programs offered by SAP Education or authorized training partners. </div>
+                                <div id={hireDevStyles.scalableGrowthHeading}>Stay Informed and Supported</div>
+                                <div className={hireDevStyles.scalableSubheading}>Receive regular updates on industry trends and skill requirements, along with access to career support resources like workshops and counseling, to propel your SAP FICO career forward. </div>
                             </div>
                         </div>
                         <div style={{ display: "flex", gap: "10px",alignItems:"center" }}>
@@ -254,8 +254,8 @@ const SapficoTalentHubPage = () => {
                                 <Image src="/HireDevImages/engagement.jpg" alt="" height={50} width={50} />
                             </div>
                             <div id={hireDevStyles.mosteinnerContainerLast}>
-                                <div id={hireDevStyles.scalableGrowthHeading}>Flexible Engagement Models</div>
-                                <div className={hireDevStyles.scalableSubheading}>Our SAP talent pool offers flexible engagement models, from contract to full-time arrangements. Scale resources based on project needs for short-term projects, long-term engagements, or ongoing support. We ensure agility and responsiveness to meet client&apos;s changing business demands.</div>
+                                <div id={hireDevStyles.scalableGrowthHeading}>Community Engagement</div>
+                                <div className={hireDevStyles.scalableSubheading}> Connect with peers within our vibrant community, exchange insights, and collaborate on projects, fostering growth and advancement in the SAP FICO domain.</div>
                             </div>
                         </div>
                     </div>
@@ -270,15 +270,15 @@ const SapficoTalentHubPage = () => {
                 </div>
                 <div className={sapficoStyle.transsectionBoxOuter}>
                 <div className={sapficoStyle.transsectionBox}>
-                    <div style={{fontSize:"18px",marginBottom:"10px",fontWeight:"600"}}>Function Type</div>
+                    <div style={{fontSize:"18px",marginBottom:"10px",fontWeight:"600"}}>Skills Development and Validation</div>
                     <div style={{ padding: "10px", marginTop: "10px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
                 </div>
                 <div className={sapficoStyle.transsectionBox}>
-                    <div style={{fontSize:"18px",marginBottom:"10px",fontWeight:"600"}}>Role Type</div>
+                    <div style={{fontSize:"18px",marginBottom:"10px",fontWeight:"600"}}>Expert-Led Learning</div>
                     <div style={{ padding: "10px", marginTop: "10px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
                 </div>
                 <div className={sapficoStyle.transsectionBox}>
-                    <div style={{fontSize:"18px",marginBottom:"10px",fontWeight:"600"}}>Project Type</div>
+                    <div style={{fontSize:"18px",marginBottom:"10px",fontWeight:"600"}}>Practical Learning Environment</div>
                     <div style={{ padding: "10px", marginTop: "10px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
                 </div>
                 </div>
