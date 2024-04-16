@@ -15,7 +15,7 @@ const SapficoTalentHubPage = () => {
     return (
         <div>
             <Navbar />
-            <section id={css.outerSectionMost} >
+            <section className={sapficoStyle.outerSectionMost} >
                 <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
                     <div id={css.topsection}>
                         <div style={{ fontSize: "48px", width: "300px", fontWeight: "600", lineHeight: "59px" }}>SAP-FICO Talent Hub</div>
