@@ -15,7 +15,7 @@ const SapficoTalentHubPage = () => {
     return (
         <div>
             <Navbar />
-            <section className={sapficoStyle.outerSectionMost} >
+            {/* <section className={sapficoStyle.outerSectionMost} >
                 <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
                     <div className={sapficoStyle.topsection}>
                         <div style={{ fontSize: "48px", width: "300px", fontWeight: "600", lineHeight: "59px" }}>SAP-FICO Talent Hub</div>
@@ -41,7 +41,7 @@ const SapficoTalentHubPage = () => {
                     </div>
                     <Image style={{borderRadius:"10px"}} src="/TalentPoolImages/sapfico.png" height={330} width={330} alt="" />
                 </div>
-            </section>
+            </section> */}
             
             <section>
                 <div className={hireDevStyles.headingunleash} >
@@ -265,7 +265,7 @@ const SapficoTalentHubPage = () => {
             <section className={sapficoStyle.transsection}>
                 <div className={sapficoStyle.transsectionHeading}>
                     <div style={{fontSize:"20px",marginBottom:"10px",fontWeight:"600"}}>SAP-FICO Expertise</div>
-                    <div>SAP FICO professionals encompass Functional, Technical, and Techno-Functional Consultants, each with distinct responsibilities. </div>
+                    <div >SAP FICO professionals encompass Functional, Technical, and Techno-Functional Consultants, each with distinct responsibilities. </div>
                     <div style={{ padding: "10px", marginTop: "10px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
                 </div>
                 <div className={sapficoStyle.transsectionBoxOuter}>

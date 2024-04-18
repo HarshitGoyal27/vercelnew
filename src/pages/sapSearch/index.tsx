@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import css from "../../styles/sapSearchStyle.module.css";
 import CustomAutocompleteFromAPI from '@/components/molecules/AutoComplete';
 import { Input, MenuItem, Select, TextField } from '@mui/material';
@@ -11,6 +11,13 @@ interface Profile {
     Certification: string;
     Preferred_Industry_Domain: string;
 }
+interface Form_Data {
+    keyWord: string,
+    primaryModule: string,
+    secondaryModule: string,
+    roleType: string,
+    technicalSkills: string
+}
 const SapSearch = () => {
     const [profiles, setProfile] = useState<Profile>({
         Skill_Set: '',
@@ -21,23 +28,50 @@ const SapSearch = () => {
         Certification: '',
         Preferred_Industry_Domain: '',
     });
+
     const [touched, setTouched] = useState(false);
+    
+
+    const [formData, setFormData] = useState<Form_Data>({
+        keyWord: "",
+        primaryModule: "",
+        secondaryModule: "",
+        roleType: "",
+        technicalSkills: ""
+    })
+    const handleChange = (event: any) => {
+        const { name, value } = event.target;
+        console.log(value," " ,name)
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+    useEffect(()=>{
+        console.log(formData);
+    },[formData])
     return (
         <div>
             <section id={css.mostOuter}>
                 <div id={css.outerform}>
                     <div >
                         <div id={css.fieldname}>Key word</div>
-                        <TextField size="small" id={css.longSearch} />
+                        <TextField
+                            name='keyWord'
+                            size="small"
+                            id={css.longSearch}
+                            value={formData.keyWord}
+                            onChange={handleChange}
+                        />
                     </div>
                     <div style={{ display: "flex", gap: "20px" }}>
                         <div>
                             <div id={css.fieldname}>Primary Module</div>
-                            <TextField size="small" id={css.smallSearch} />
+                            <TextField name='primaryModule' size="small" id={css.smallSearch} value={formData.primaryModule} onChange={handleChange} />
                         </div>
                         <div>
                             <div id={css.fieldname}>Secondary Module</div>
-                            <TextField size="small" id={css.smallSearch} />
+                            <TextField name="secondaryModule" size="small" id={css.smallSearch} value={formData.secondaryModule} onChange={handleChange} />
                         </div>
                     </div>
                     <div style={{ display: "flex", gap: "20px" }}>
@@ -47,17 +81,23 @@ const SapSearch = () => {
                         </div> */}
                         <div>
                             <div id={css.fieldname}>Role Type</div>
-                            <select value="" id={css.selectStyle}>
-                            <option value="">Select an option</option>
+                            <select 
+                                id={css.selectStyle}
+                                value={formData.roleType}
+                                name="roleType"
+                                onChange={handleChange}
+                            >
+                                <option value="">Select an option</option>
                                 <option value="Technical">Technical</option>
                                 <option value="Functional">Functional</option>
                                 <option value="Techno-Functional">Techno-Functional</option>
-                                
+
                             </select>
                         </div>
                         <div>
                             <div id={css.fieldname}>Technical Skills</div>
-                            <TextField size="small" id={css.smallSearch} />
+                            <TextField name="technicalSkills" size="small" id={css.smallSearch} value={formData.technicalSkills} onChange={handleChange}
+                            />
                         </div>
                     </div>
                 </div>
@@ -102,7 +142,7 @@ const SapSearch = () => {
                         <div>
                             <div id={css.fieldname}>Project Type</div>
                             <select value="" id={css.selectStyle}>
-                            <option value="">Select an option</option>
+                                <option value="">Select an option</option>
                                 <option value="Implementation">Implementation</option>
                                 <option value="Enhancement">Enhancement</option>
                                 <option value="Migration">Migration</option>
@@ -116,7 +156,7 @@ const SapSearch = () => {
                         <div>
                             <div id={css.fieldname}>Position Type</div>
                             <select value="" id={css.selectStyle}>
-                            <option value="">Select an option</option>
+                                <option value="">Select an option</option>
                                 <option value="Consultant">Consultant</option>
                                 <option value="Developer">Developer</option>
                                 <option value="Architect">Architect</option>
@@ -138,7 +178,7 @@ const SapSearch = () => {
                     </div>
                 </div>
                 <div id={css.outerform}>
-                <div style={{ display: "flex", gap: "20px" }}>
+                    <div style={{ display: "flex", gap: "20px" }}>
                         <div>
                             <div id={css.fieldname}>Country</div>
                             <TextField size="small" id={css.smallSearch} />
@@ -162,7 +202,7 @@ const SapSearch = () => {
                         <div>
                             <div id={css.fieldname}>Employee Type</div>
                             <select value="" id={css.selectStyle}>
-                            <option value="">Select an option</option>
+                                <option value="">Select an option</option>
                                 <option value="fulltime">Full Time</option>
                                 <option value="parttime">Part Time</option>
                                 <option value="contract">Contract</option>
