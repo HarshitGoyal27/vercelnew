@@ -30,6 +30,7 @@
     font-family: "Poppins";
     display: flex;
     gap:50px;
+    justify-content: center;
   }
   .outerscalable{
     display: flex;
