@@ -85,6 +85,78 @@ const Sapfico = () => {
                     </div>
                 </div>
             </section>}
+            {selected === "Certified" && <section className={sapficoStyle.fontpop2}>
+                <div className={sapficoStyle.scalableGrowth2}>
+                    <div className={sapficoStyle.scalableGrowthInner}>
+
+                        <Image src="/HireDevImages/migration.jpg" style={{ padding: "0px" }} alt="" height={300} width={350} />
+                    </div>
+                    <div className={sapficoStyle.scalableGrowthInner2}>
+                        <div style={{ display: "flex", gap: "10px" }}>
+                            <div className={sapficoStyle.mosteinnerContainer}>
+                                {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
+                                <div className={sapficoStyle.scalableSubheading}>Hear from satisfied clients who have witnessed tangible results and transformational changes through our consulting services. Their feedback underscores our commitment to delivering exceptional value and exceeding expectations.</div>
+                            </div>
+                        </div>
+                        <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
+
+                    </div>
+                </div>
+            </section>}
+            {selected === "Accomplished" && <section className={sapficoStyle.fontpop2}>
+                <div className={sapficoStyle.scalableGrowth2}>
+                    <div className={sapficoStyle.scalableGrowthInner}>
+
+                        <Image src="/HireDevImages/industrySap.webp" style={{ padding: "0px" }} alt="" height={200} width={300} />
+                    </div>
+                    <div className={sapficoStyle.scalableGrowthInner2}>
+                        <div style={{ display: "flex", gap: "10px" }}>
+                            <div className={sapficoStyle.mosteinnerContainer}>
+                                {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
+                                <div className={sapficoStyle.scalableSubheading}>From seamless system implementations to tailored customization and ongoing support, our comprehensive suite of consulting services caters to every aspect of SAP FICO requirements. We empower businesses to leverage technology for strategic advantage.</div>
+                            </div>
+                        </div>
+                        <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
+
+                    </div>
+                </div>
+            </section>}
+            {selected === "On-Demand" && <section className={sapficoStyle.fontpop2}>
+                <div className={sapficoStyle.scalableGrowth2}>
+                    <div className={sapficoStyle.scalableGrowthInner}>
+
+                        <Image src="/HireDevImages/integration.jpg" style={{ padding: "0px" }} alt="" height={300} width={300} />
+                    </div>
+                    <div className={sapficoStyle.scalableGrowthInner2}>
+                        <div style={{ display: "flex", gap: "10px" }}>
+                            <div className={sapficoStyle.mosteinnerContainer}>
+                                {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
+                                <div className={sapficoStyle.scalableSubheading}>Collaborate with us to leverage our expertise and resources in SAP FICO for mutual success. Whether you&apos;re a business seeking consultancy or a fellow consultancy firm, let&apos;s explore synergies and create value together.</div>
+                            </div>
+                        </div>
+                        <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
+
+                    </div>
+                </div>
+            </section>}
+            {selected === "Versatile" && <section className={sapficoStyle.fontpop2}>
+                <div className={sapficoStyle.scalableGrowth2}>
+                    <div className={sapficoStyle.scalableGrowthInner}>
+
+                        <Image src="/HireDevImages/sapSupport.webp" style={{ padding: "0px" }} alt="" height={300} width={300} />
+                    </div>
+                    <div className={sapficoStyle.scalableGrowthInner2}>
+                        <div style={{ display: "flex", gap: "10px" }}>
+                            <div className={sapficoStyle.mosteinnerContainer}>
+                                {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
+                                <div className={sapficoStyle.scalableSubheading}>Ready to unlock the full potential of SAP FICO for your business? Reach out to us today for expert insights, personalized consultations, and bespoke solutions. Connect with our team via phone, email, or through our online inquiry form.</div>
+                            </div>
+                        </div>
+                        <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
+
+                    </div>
+                </div>
+            </section>}
             <section>
                 <div className={sapStyle.leftbuttonSection2}>
                     
