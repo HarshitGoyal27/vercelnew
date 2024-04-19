@@ -15,7 +15,7 @@ const SapficoTalentHubPage = () => {
     return (
         <div>
             <Navbar />
-            {/* <section className={sapficoStyle.outerSectionMost} >
+            <section className={sapficoStyle.outerSectionMost} >
                 <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
                     <div className={sapficoStyle.topsection}>
                         <div style={{ fontSize: "48px", width: "300px", fontWeight: "600", lineHeight: "59px" }}>SAP-FICO Talent Hub</div>
@@ -41,7 +41,7 @@ const SapficoTalentHubPage = () => {
                     </div>
                     <Image style={{borderRadius:"10px"}} src="/TalentPoolImages/sapfico.png" height={330} width={330} alt="" />
                 </div>
-            </section> */}
+            </section>
             
             <section>
                 <div className={hireDevStyles.headingunleash} >
@@ -223,8 +223,8 @@ const SapficoTalentHubPage = () => {
                     </div>
                     <div className={hireDevStyles.scalableSubheading}>Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</div>
                 </div> */}
-                <div id={hireDevStyles.scalableGrowth}>
-                    <div id={hireDevStyles.scalableGrowthInner}>
+                <div id={sapficoStyle.scalableGrowth}>
+                    <div className={sapficoStyle.scalableGrowthInner}>
                         <div id={hireDevStyles.scalableGrowthHeading}>Unlock Your Potential with Our SAP Talent Pool</div>
                         <div>Discover Certified Experts in SAP Modules for Flexible Engagement Models</div>
                         <div style={{ padding: "10px", marginTop: "10px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
