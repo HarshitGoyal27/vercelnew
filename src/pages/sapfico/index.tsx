@@ -6,7 +6,7 @@ import Image from 'next/image';
 import FotterComponent from '@/components/molecules/Fotter';
 import hireDevStyles from "./../../styles/hireDevStyles.module.css";
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-const sapfico = () => {
+const Sapfico = () => {
     const [muduleSelect, setModuleSelect] = useState("SAPModules");
     const [selected, setSelected] = useState("AI-Vetted");
   return (
@@ -169,4 +169,4 @@ const sapfico = () => {
   )
 }
 
-export default sapfico;
+export default Sapfico;
