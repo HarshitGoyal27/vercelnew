@@ -42,6 +42,39 @@ const Sapfico = () => {
                 </div>
             </section>
             <section>
+                <div className={hireDevStyles.headingunleash} >
+                    {/* <br />
+                    <br /> */}
+                    {/* <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
+                        Unleashing the Power of Tech Talent Expertise
+                    </h2> */}
+                    {/* <br /> */}
+                    {/* <h3 style={cardsStyling.sapCloudLegacySubHeading}>Elevate Your Projects with Our Talent Experience, Versatility, and Collaboration at Your Service</h3> */}
+
+
+                </div>
+                <section id={hireDevStyles.fontpopBelow}>
+                    <div id={hireDevStyles.selectbar}>
+                        <div style={selected === "AI-Vetted" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+                            <div style={{ padding: "30px" }} onClick={() => setSelected("AI-Vetted")}>Expertise Showcase</div>
+                        </div>
+                        <div style={selected === "Certified" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+                            <div style={{ padding: "30px" }} onClick={() => setSelected("Certified")}>Client Testimonials</div>
+                        </div>
+                        <div style={selected === "Accomplished" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+                            <div style={{ padding: "30px" }} onClick={() => setSelected("Accomplished")}>Solution Offerings</div>
+                        </div>
+                        <div style={selected === "On-Demand" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+                            <div style={{ padding: "30px" }} onClick={() => setSelected("On-Demand")}>Partnership Opportunities</div>
+                        </div>
+                        <div style={selected === "Versatile" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
+                            <div style={{ padding: "30px" }} onClick={() => setSelected("Versatile")}>Contact Information</div>
+                        </div>
+                        
+                    </div>
+                </section>
+            </section>
+            <section>
                 <div className={sapStyle.leftbuttonSection2}>
                     
                     <div className={sapStyle.buttonSection}>
