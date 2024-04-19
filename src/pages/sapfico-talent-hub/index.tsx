@@ -216,7 +216,7 @@ const SapficoTalentHubPage = () => {
                     </div>
                 </div>
             </section>
-            <section id={hireDevStyles.fontpop}>
+            <section >
                 {/* <div style={{ textAlign: "center" }}>
                     <div id={hireDevStyles.scalableGrowthHeading}>
                        Flexi bility and Scalability for Your SAP Projects
@@ -225,7 +225,7 @@ const SapficoTalentHubPage = () => {
                 </div> */}
                 <div id={sapficoStyle.scalableGrowth}>
                     <div className={sapficoStyle.scalableGrowthInner}>
-                        <div id={hireDevStyles.scalableGrowthHeading}>Unlock Your Potential with Our SAP Talent Pool</div>
+                        <div id={sapficoStyle.scalableGrowthHeading}>Unlock Your Potential with Our SAP Talent Pool</div>
                         <div>Discover Certified Experts in SAP Modules for Flexible Engagement Models</div>
                         <div style={{ padding: "10px", marginTop: "10px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
 
