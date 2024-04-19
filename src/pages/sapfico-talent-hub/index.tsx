@@ -216,7 +216,7 @@ const SapficoTalentHubPage = () => {
                     </div>
                 </div>
             </section>
-            <section >
+            <section className={sapficoStyle.outerscalable} >
                 {/* <div style={{ textAlign: "center" }}>
                     <div id={hireDevStyles.scalableGrowthHeading}>
                        Flexi bility and Scalability for Your SAP Projects
