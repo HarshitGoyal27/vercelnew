@@ -1,21 +1,20 @@
-import FotterComponent from '@/components/molecules/Fotter'
-import Navbar from '@/components/molecules/navbar'
+import Navbar from '@/components/molecules/navbar';
 import React, { useState } from 'react'
-import sapStyle from "../../styles/sapTalentStyle.module.css"
-import hireDevStyles from "./../../styles/hireDevStyles.module.css";
-import { cardsStyling } from '@/constants/commonStyle';
-import AddCircleIcon from '@mui/icons-material/AddCircle';
 import sapficoStyle from "../../styles/sapficoTalentHubStyle.module.css";
-import css from "../../styles/sapTalentStyle.module.css"
 import CustomButton2 from '@/components/atoms/CustomButton2';
 import Image from 'next/image';
+import FotterComponent from '@/components/molecules/Fotter';
+import hireDevStyles from "./../../styles/hireDevStyles.module.css";
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import sapStyle from "../../styles/sapTalentStyle.module.css"
 const SapficoTalentHubPage = () => {
     const [muduleSelect, setModuleSelect] = useState("SAPModules");
     const [selected, setSelected] = useState("AI-Vetted");
-    return (
-        <div>
-            <Navbar />
-            <section className={sapficoStyle.outerSectionMost} >
+  return (
+    
+    <div>
+      <Navbar/>
+      <section className={sapficoStyle.outerSectionMost} >
                 <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
                     <div className={sapficoStyle.topsection}>
                         <div style={{ fontSize: "48px", width: "300px", fontWeight: "600", lineHeight: "59px" }}>SAP-FICO Talent Hub</div>
@@ -42,21 +41,12 @@ const SapficoTalentHubPage = () => {
                     <Image style={{borderRadius:"10px"}} src="/TalentPoolImages/sapfico.png" height={330} width={330} alt="" />
                 </div>
             </section>
-            
             <section>
-                <div className={hireDevStyles.headingunleash} >
-                    {/* <br />
-                    <br /> */}
-                    {/* <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
-                        Unleashing the Power of Tech Talent Expertise
-                    </h2> */}
-                    {/* <br /> */}
-                    {/* <h3 style={cardsStyling.sapCloudLegacySubHeading}>Elevate Your Projects with Our Talent Experience, Versatility, and Collaboration at Your Service</h3> */}
-
-
+                <div className={sapficoStyle.headingunleash} >
+                    
                 </div>
-                <section id={hireDevStyles.fontpopBelow}>
-                    <div id={hireDevStyles.selectbar}>
+                <section className={sapficoStyle.fontpopBelow}>
+                    <div className={sapficoStyle.selectbar}>
                         <div style={selected === "AI-Vetted" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
                             <div style={{ padding: "30px" }} onClick={() => setSelected("AI-Vetted")}>Expertise Showcase</div>
                         </div>
@@ -75,18 +65,19 @@ const SapficoTalentHubPage = () => {
                         
                     </div>
                 </section>
+                
             </section>
-            {selected === "AI-Vetted" && <section id={hireDevStyles.fontpop2}>
-                <div id={hireDevStyles.scalableGrowth2}>
-                    <div id={hireDevStyles.scalableGrowthInner}>
+            {selected === "AI-Vetted" && <section className={sapficoStyle.fontpop2}>
+                <div className={sapficoStyle.scalableGrowth2}>
+                    <div className={sapficoStyle.scalableGrowthInner}>
 
                         <Image src="/HireDevImages/sapSolution.jpg" style={{ padding: "0px" }} alt="" height={300} width={300} />
                     </div>
-                    <div id={hireDevStyles.scalableGrowthInner2}>
+                    <div className={sapficoStyle.scalableGrowthInner2}>
                         <div style={{ display: "flex", gap: "10px" }}>
-                            <div id={hireDevStyles.mosteinnerContainer}>
+                            <div className={sapficoStyle.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Our seasoned SAP FICO consultants bring years of hands-on experience in financial management, accounting, and controlling. With deep knowledge of SAP solutions, they excel in optimizing processes and driving business growth.</div>
+                                <div className={sapficoStyle.scalableSubheading}>Our seasoned SAP FICO consultants bring years of hands-on experience in financial management, accounting, and controlling. With deep knowledge of SAP solutions, they excel in optimizing processes and driving business growth.</div>
                             </div>
                         </div>
                         <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More - SAP consulting</span></div>
@@ -94,17 +85,17 @@ const SapficoTalentHubPage = () => {
                     </div>
                 </div>
             </section>}
-            {selected === "Certified" && <section id={hireDevStyles.fontpop2}>
-                <div id={hireDevStyles.scalableGrowth2}>
-                    <div id={hireDevStyles.scalableGrowthInner}>
+            {selected === "Certified" && <section className={sapficoStyle.fontpop2}>
+                <div className={sapficoStyle.scalableGrowth2}>
+                    <div className={sapficoStyle.scalableGrowthInner}>
 
                         <Image src="/HireDevImages/migration.jpg" style={{ padding: "0px" }} alt="" height={300} width={350} />
                     </div>
-                    <div id={hireDevStyles.scalableGrowthInner2}>
+                    <div className={sapficoStyle.scalableGrowthInner2}>
                         <div style={{ display: "flex", gap: "10px" }}>
-                            <div id={hireDevStyles.mosteinnerContainer}>
+                            <div className={sapficoStyle.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Hear from satisfied clients who have witnessed tangible results and transformational changes through our consulting services. Their feedback underscores our commitment to delivering exceptional value and exceeding expectations.</div>
+                                <div className={sapficoStyle.scalableSubheading}>Hear from satisfied clients who have witnessed tangible results and transformational changes through our consulting services. Their feedback underscores our commitment to delivering exceptional value and exceeding expectations.</div>
                             </div>
                         </div>
                         <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
@@ -112,17 +103,17 @@ const SapficoTalentHubPage = () => {
                     </div>
                 </div>
             </section>}
-            {selected === "Accomplished" && <section id={hireDevStyles.fontpop2}>
-                <div id={hireDevStyles.scalableGrowth2}>
-                    <div id={hireDevStyles.scalableGrowthInner}>
+            {selected === "Accomplished" && <section className={sapficoStyle.fontpop2}>
+                <div className={sapficoStyle.scalableGrowth2}>
+                    <div className={sapficoStyle.scalableGrowthInner}>
 
                         <Image src="/HireDevImages/industrySap.webp" style={{ padding: "0px" }} alt="" height={200} width={300} />
                     </div>
-                    <div id={hireDevStyles.scalableGrowthInner2}>
+                    <div className={sapficoStyle.scalableGrowthInner2}>
                         <div style={{ display: "flex", gap: "10px" }}>
-                            <div id={hireDevStyles.mosteinnerContainer}>
+                            <div className={sapficoStyle.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>From seamless system implementations to tailored customization and ongoing support, our comprehensive suite of consulting services caters to every aspect of SAP FICO requirements. We empower businesses to leverage technology for strategic advantage.</div>
+                                <div className={sapficoStyle.scalableSubheading}>From seamless system implementations to tailored customization and ongoing support, our comprehensive suite of consulting services caters to every aspect of SAP FICO requirements. We empower businesses to leverage technology for strategic advantage.</div>
                             </div>
                         </div>
                         <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
@@ -130,17 +121,17 @@ const SapficoTalentHubPage = () => {
                     </div>
                 </div>
             </section>}
-            {selected === "On-Demand" && <section id={hireDevStyles.fontpop2}>
-                <div id={hireDevStyles.scalableGrowth2}>
-                    <div id={hireDevStyles.scalableGrowthInner}>
+            {selected === "On-Demand" && <section className={sapficoStyle.fontpop2}>
+                <div className={sapficoStyle.scalableGrowth2}>
+                    <div className={sapficoStyle.scalableGrowthInner}>
 
                         <Image src="/HireDevImages/integration.jpg" style={{ padding: "0px" }} alt="" height={300} width={300} />
                     </div>
-                    <div id={hireDevStyles.scalableGrowthInner2}>
+                    <div className={sapficoStyle.scalableGrowthInner2}>
                         <div style={{ display: "flex", gap: "10px" }}>
-                            <div id={hireDevStyles.mosteinnerContainer}>
+                            <div className={sapficoStyle.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Collaborate with us to leverage our expertise and resources in SAP FICO for mutual success. Whether you&apos;re a business seeking consultancy or a fellow consultancy firm, let&apos;s explore synergies and create value together.</div>
+                                <div className={sapficoStyle.scalableSubheading}>Collaborate with us to leverage our expertise and resources in SAP FICO for mutual success. Whether you&apos;re a business seeking consultancy or a fellow consultancy firm, let&apos;s explore synergies and create value together.</div>
                             </div>
                         </div>
                         <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
@@ -148,17 +139,17 @@ const SapficoTalentHubPage = () => {
                     </div>
                 </div>
             </section>}
-            {selected === "Versatile" && <section id={hireDevStyles.fontpop2}>
-                <div id={hireDevStyles.scalableGrowth2}>
-                    <div id={hireDevStyles.scalableGrowthInner}>
+            {selected === "Versatile" && <section className={sapficoStyle.fontpop2}>
+                <div className={sapficoStyle.scalableGrowth2}>
+                    <div className={sapficoStyle.scalableGrowthInner}>
 
                         <Image src="/HireDevImages/sapSupport.webp" style={{ padding: "0px" }} alt="" height={300} width={300} />
                     </div>
-                    <div id={hireDevStyles.scalableGrowthInner2}>
+                    <div className={sapficoStyle.scalableGrowthInner2}>
                         <div style={{ display: "flex", gap: "10px" }}>
-                            <div id={hireDevStyles.mosteinnerContainer}>
+                            <div className={sapficoStyle.mosteinnerContainer}>
                                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                                <div className={hireDevStyles.scalableSubheading}>Ready to unlock the full potential of SAP FICO for your business? Reach out to us today for expert insights, personalized consultations, and bespoke solutions. Connect with our team via phone, email, or through our online inquiry form.</div>
+                                <div className={sapficoStyle.scalableSubheading}>Ready to unlock the full potential of SAP FICO for your business? Reach out to us today for expert insights, personalized consultations, and bespoke solutions. Connect with our team via phone, email, or through our online inquiry form.</div>
                             </div>
                         </div>
                         <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
@@ -216,16 +207,16 @@ const SapficoTalentHubPage = () => {
                     </div>
                 </div>
             </section>
-            <section className={sapficoStyle.outerscalable} >
+            <section >
                 {/* <div style={{ textAlign: "center" }}>
                     <div id={hireDevStyles.scalableGrowthHeading}>
                        Flexi bility and Scalability for Your SAP Projects
                     </div>
                     <div className={hireDevStyles.scalableSubheading}>Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</div>
                 </div> */}
-                <div id={sapficoStyle.scalableGrowth}>
+                <div className={sapficoStyle.scalableGrowth}>
                     <div className={sapficoStyle.scalableGrowthInner}>
-                        <div id={sapficoStyle.scalableGrowthHeading}>Unlock Your Potential with Our SAP Talent Pool</div>
+                        <div className={sapficoStyle.scalableGrowthHeading}>Unlock Your Potential with Our SAP Talent Pool</div>
                         <div>Discover Certified Experts in SAP Modules for Flexible Engagement Models</div>
                         <div style={{ padding: "10px", marginTop: "10px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
 
@@ -235,33 +226,32 @@ const SapficoTalentHubPage = () => {
                             <div>
                                 <Image src="/HireDevImages/skillset.png" alt="" height={50} width={50} />
                             </div>
-                            <div id={hireDevStyles.mosteinnerContainer}>
-                                <div id={hireDevStyles.scalableGrowthHeading}>Exclusive Access and Networking</div>
-                                <div className={hireDevStyles.scalableSubheading}>oin our SAP FICO talent pool to access top job opportunities, projects, and freelance gigs while networking with like-minded professionals.</div>
+                            <div className={sapficoStyle.mosteinnerContainer}>
+                                <div className={sapficoStyle.scalableGrowthHeading}>Exclusive Access and Networking</div>
+                                <div className={sapficoStyle.scalableSubheading}>oin our SAP FICO talent pool to access top job opportunities, projects, and freelance gigs while networking with like-minded professionals.</div>
                             </div>
                         </div>
                         <div style={{ display: "flex", gap: "10px",alignItems:"center"  }}>
                             <div>
                                 <Image src="/HireDevImages/certified_exp.webp" alt="" height={50} width={50} />
                             </div>
-                            <div id={hireDevStyles.mosteinnerContainer}>
-                                <div id={hireDevStyles.scalableGrowthHeading}>Stay Informed and Supported</div>
-                                <div className={hireDevStyles.scalableSubheading}>Receive regular updates on industry trends and skill requirements, along with access to career support resources like workshops and counseling, to propel your SAP FICO career forward. </div>
+                            <div className={sapficoStyle.mosteinnerContainer}>
+                                <div className={sapficoStyle.scalableGrowthHeading}>Stay Informed and Supported</div>
+                                <div className={sapficoStyle.scalableSubheading}>Receive regular updates on industry trends and skill requirements, along with access to career support resources like workshops and counseling, to propel your SAP FICO career forward. </div>
                             </div>
                         </div>
                         <div style={{ display: "flex", gap: "10px",alignItems:"center" }}>
                             <div>
                                 <Image src="/HireDevImages/engagement.jpg" alt="" height={50} width={50} />
                             </div>
-                            <div id={hireDevStyles.mosteinnerContainerLast}>
-                                <div id={hireDevStyles.scalableGrowthHeading}>Community Engagement</div>
-                                <div className={hireDevStyles.scalableSubheading}> Connect with peers within our vibrant community, exchange insights, and collaborate on projects, fostering growth and advancement in the SAP FICO domain.</div>
+                            <div className={sapficoStyle.mosteinnerContainerLast}>
+                                <div className={sapficoStyle.scalableGrowthHeading}>Community Engagement</div>
+                                <div className={sapficoStyle.scalableSubheading}> Connect with peers within our vibrant community, exchange insights, and collaborate on projects, fostering growth and advancement in the SAP FICO domain.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
             <section className={sapficoStyle.transsection}>
                 <div className={sapficoStyle.transsectionHeading}>
                     <div style={{fontSize:"20px",marginBottom:"10px",fontWeight:"600"}}>SAP-FICO Expertise</div>
@@ -283,9 +273,9 @@ const SapficoTalentHubPage = () => {
                 </div>
                 </div>
             </section>
-            <FotterComponent />
-        </div>
-    )
+            <FotterComponent/>
+    </div>
+  )
 }
 
-export default SapficoTalentHubPage
+export default SapficoTalentHubPage;
