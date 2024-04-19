@@ -31,10 +31,17 @@
     display: flex;
     gap:50px;
   }
-  .outerscalable{
+  /* .outerscalable{
     display: flex;
     font-family: "Poppins";
     justify-content: center;
+  } */
+  .scalableGrowthInner2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    /* gap:40px; */
   }
   .scalableGrowthInner{
     @media(width<1000px){

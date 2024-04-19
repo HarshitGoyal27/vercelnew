@@ -230,7 +230,7 @@ const SapficoTalentHubPage = () => {
                         <div style={{ padding: "10px", marginTop: "10px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
 
                     </div>
-                    <div id={hireDevStyles.scalableGrowthInner2}>
+                    <div className={sapficoStyle.scalableGrowthInner2}>
                         <div style={{ display: "flex", gap: "10px",alignItems:"center"  }}>
                             <div>
                                 <Image src="/HireDevImages/skillset.png" alt="" height={50} width={50} />
