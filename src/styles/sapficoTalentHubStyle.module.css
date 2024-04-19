@@ -103,3 +103,27 @@
     display: flex;
     gap:20px;
 }
+.headingunleash{
+    @media(width<1000px){
+      width:1400px;
+    }
+    text-align: center;
+    font-family: "Poppins";
+    padding: 0px 20px;
+  }
+  .fontpopBelow{
+    @media(width<=1000px){
+      width:1400px;
+    }
+    margin-top: 80px;
+    font-family: Poppins, sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  .selectbar{
+  
+    display: flex;
+    /* gap:50px; */
+    cursor: pointer;
+    /* border-bottom: 1px solid grey; */
+  }
