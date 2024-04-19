@@ -67,7 +67,7 @@ const Sapfico = () => {
                 </section>
                 
             </section>
-            {selected === "AI-Vetted" && <section id={hireDevStyles.fontpop2}>
+            {selected === "AI-Vetted" && <section className={sapficoStyle.fontpop2}>
                 <div className={sapficoStyle.scalableGrowth2}>
                     <div className={sapficoStyle.scalableGrowthInner}>
 

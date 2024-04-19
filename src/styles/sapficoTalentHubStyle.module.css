@@ -164,3 +164,11 @@
     }
     width:600px;
   }
+  .fontpop2{
+    @media(width<1000px){
+      width:1400px;
+    }
+    font-family: Poppins, sans-serif;
+    padding: 20px;
+    padding-top: 60px;
+  }
