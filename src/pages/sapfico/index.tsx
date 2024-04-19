@@ -41,39 +41,24 @@ const Sapfico = () => {
                     <Image style={{borderRadius:"10px"}} src="/TalentPoolImages/sapfico.png" height={330} width={330} alt="" />
                 </div>
             </section>
-            <section>
-                <div className={hireDevStyles.headingunleash} >
-                    {/* <br />
-                    <br /> */}
-                    {/* <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
-                        Unleashing the Power of Tech Talent Expertise
-                    </h2> */}
-                    {/* <br /> */}
-                    {/* <h3 style={cardsStyling.sapCloudLegacySubHeading}>Elevate Your Projects with Our Talent Experience, Versatility, and Collaboration at Your Service</h3> */}
+            {selected === "AI-Vetted" && <section id={hireDevStyles.fontpop2}>
+                <div id={hireDevStyles.scalableGrowth2}>
+                    <div id={hireDevStyles.scalableGrowthInner}>
 
-
-                </div>
-                <section id={hireDevStyles.fontpopBelow}>
-                    <div id={hireDevStyles.selectbar}>
-                        <div style={selected === "AI-Vetted" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-                            <div style={{ padding: "30px" }} onClick={() => setSelected("AI-Vetted")}>Expertise Showcase</div>
-                        </div>
-                        <div style={selected === "Certified" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-                            <div style={{ padding: "30px" }} onClick={() => setSelected("Certified")}>Client Testimonials</div>
-                        </div>
-                        <div style={selected === "Accomplished" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-                            <div style={{ padding: "30px" }} onClick={() => setSelected("Accomplished")}>Solution Offerings</div>
-                        </div>
-                        <div style={selected === "On-Demand" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-                            <div style={{ padding: "30px" }} onClick={() => setSelected("On-Demand")}>Partnership Opportunities</div>
-                        </div>
-                        <div style={selected === "Versatile" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-                            <div style={{ padding: "30px" }} onClick={() => setSelected("Versatile")}>Contact Information</div>
-                        </div>
-                        
+                        <Image src="/HireDevImages/sapSolution.jpg" style={{ padding: "0px" }} alt="" height={300} width={300} />
                     </div>
-                </section>
-            </section>
+                    <div id={hireDevStyles.scalableGrowthInner2}>
+                        <div style={{ display: "flex", gap: "10px" }}>
+                            <div id={hireDevStyles.mosteinnerContainer}>
+                                {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
+                                <div className={hireDevStyles.scalableSubheading}>Our seasoned SAP FICO consultants bring years of hands-on experience in financial management, accounting, and controlling. With deep knowledge of SAP solutions, they excel in optimizing processes and driving business growth.</div>
+                            </div>
+                        </div>
+                        <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More - SAP consulting</span></div>
+
+                    </div>
+                </div>
+            </section>}
             <section>
                 <div className={sapStyle.leftbuttonSection2}>
                     
