@@ -207,6 +207,51 @@ const Sapfico = () => {
                     </div>
                 </div>
             </section>
+            <section className={sapficoStyle.outerscalable} >
+                {/* <div style={{ textAlign: "center" }}>
+                    <div id={hireDevStyles.scalableGrowthHeading}>
+                       Flexi bility and Scalability for Your SAP Projects
+                    </div>
+                    <div className={hireDevStyles.scalableSubheading}>Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</div>
+                </div> */}
+                <div className={sapficoStyle.scalableGrowth}>
+                    <div className={sapficoStyle.scalableGrowthInner}>
+                        <div className={sapficoStyle.scalableGrowthHeading}>Unlock Your Potential with Our SAP Talent Pool</div>
+                        <div>Discover Certified Experts in SAP Modules for Flexible Engagement Models</div>
+                        <div style={{ padding: "10px", marginTop: "10px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
+
+                    </div>
+                    <div className={sapficoStyle.scalableGrowthInner2}>
+                        <div style={{ display: "flex", gap: "10px",alignItems:"center"  }}>
+                            <div>
+                                <Image src="/HireDevImages/skillset.png" alt="" height={50} width={50} />
+                            </div>
+                            <div className={sapficoStyle.mosteinnerContainer}>
+                                <div className={sapficoStyle.scalableGrowthHeading}>Exclusive Access and Networking</div>
+                                <div className={sapficoStyle.scalableSubheading}>oin our SAP FICO talent pool to access top job opportunities, projects, and freelance gigs while networking with like-minded professionals.</div>
+                            </div>
+                        </div>
+                        <div style={{ display: "flex", gap: "10px",alignItems:"center"  }}>
+                            <div>
+                                <Image src="/HireDevImages/certified_exp.webp" alt="" height={50} width={50} />
+                            </div>
+                            <div className={sapficoStyle.mosteinnerContainer}>
+                                <div className={sapficoStyle.scalableGrowthHeading}>Stay Informed and Supported</div>
+                                <div className={sapficoStyle.scalableSubheading}>Receive regular updates on industry trends and skill requirements, along with access to career support resources like workshops and counseling, to propel your SAP FICO career forward. </div>
+                            </div>
+                        </div>
+                        <div style={{ display: "flex", gap: "10px",alignItems:"center" }}>
+                            <div>
+                                <Image src="/HireDevImages/engagement.jpg" alt="" height={50} width={50} />
+                            </div>
+                            <div className={sapficoStyle.mosteinnerContainerLast}>
+                                <div className={sapficoStyle.scalableGrowthHeading}>Community Engagement</div>
+                                <div className={sapficoStyle.scalableSubheading}> Connect with peers within our vibrant community, exchange insights, and collaborate on projects, fostering growth and advancement in the SAP FICO domain.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section className={sapficoStyle.transsection}>
                 <div className={sapficoStyle.transsectionHeading}>
                     <div style={{fontSize:"20px",marginBottom:"10px",fontWeight:"600"}}>SAP-FICO Expertise</div>

@@ -19,11 +19,11 @@
     align-items: center;
     gap:30px;
   }
-  #scalableGrowthHeading{
+  .scalableGrowthHeading{
     font-size: 22px;
     font-weight: 600;
   }
-#scalableGrowth{
+.scalableGrowth{
     @media(width<1000px){
         width:1400px;
     }
@@ -171,4 +171,19 @@
     font-family: Poppins, sans-serif;
     padding: 20px;
     padding-top: 60px;
+  }
+
+  .mosteinnerContainer{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid grey;
+    gap:20px;
+    padding: 40px;
+  }
+  .mosteinnerContainerLast{
+    display: flex;
+    flex-direction: column;
+    /* border-bottom: 1px solid grey; */
+    gap:20px;
+    padding: 40px;
   }
