@@ -127,3 +127,40 @@
     cursor: pointer;
     /* border-bottom: 1px solid grey; */
   }
+  .scalableGrowth2{
+    display: flex;
+    /* gap:50px; */
+    justify-content: center;
+  }
+  .scalableGrowthInner{
+    /* @media(width<1000px){
+      width:300px;
+    } */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:40px;
+    border-right: 1px solid grey;
+    padding: 10px;
+    width: 350px;
+  }
+  .scalableGrowthInner2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    /* gap:40px; */
+  }
+  .mosteinnerContainer{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid grey;
+    gap:20px;
+    padding: 40px;
+  }
+  .scalableSubheading{
+    @media(width>1000px){
+      width:40vw;
+    }
+    width:600px;
+  }

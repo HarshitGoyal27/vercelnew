@@ -65,7 +65,26 @@ const Sapfico = () => {
                         
                     </div>
                 </section>
+                
             </section>
+            {selected === "AI-Vetted" && <section id={hireDevStyles.fontpop2}>
+                <div className={sapficoStyle.scalableGrowth2}>
+                    <div className={sapficoStyle.scalableGrowthInner}>
+
+                        <Image src="/HireDevImages/sapSolution.jpg" style={{ padding: "0px" }} alt="" height={300} width={300} />
+                    </div>
+                    <div className={sapficoStyle.scalableGrowthInner2}>
+                        <div style={{ display: "flex", gap: "10px" }}>
+                            <div className={sapficoStyle.mosteinnerContainer}>
+                                {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
+                                <div className={sapficoStyle.scalableSubheading}>Our seasoned SAP FICO consultants bring years of hands-on experience in financial management, accounting, and controlling. With deep knowledge of SAP solutions, they excel in optimizing processes and driving business growth.</div>
+                            </div>
+                        </div>
+                        <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More - SAP consulting</span></div>
+
+                    </div>
+                </div>
+            </section>}
             <section>
                 <div className={sapStyle.leftbuttonSection2}>
                     
