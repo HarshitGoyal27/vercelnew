@@ -288,7 +288,7 @@ How It Works: Understand the process of engaging with the SAP FICO Talent Hub, f
             </section>
             <section>
                 <div className={sapficoStyle.attributeSection}>
-                    <div className={hireDevStyles.headingunleash} >
+                    <div className={sapficoStyle.headingunleash} >
                         <br />
                         <br />
                         <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
