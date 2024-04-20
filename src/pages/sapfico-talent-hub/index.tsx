@@ -287,7 +287,7 @@ How It Works: Understand the process of engaging with the SAP FICO Talent Hub, f
                 </div>
             </section>
             <section>
-                <div id={hireDevStyles.attributeSection}>
+                <div className={sapficoStyle.attributeSection}>
                     <div className={hireDevStyles.headingunleash} >
                         <br />
                         <br />
@@ -299,39 +299,39 @@ How It Works: Understand the process of engaging with the SAP FICO Talent Hub, f
 
 
                     </div>
-                    <div id={hireDevStyles.innerattributeSection}>
-                        <div id={hireDevStyles.eachblock}>
+                    <div className={sapficoStyle.innerattributeSection}>
+                        <div className={sapficoStyle.eachblock}>
                             <div style={{ color: "#FFA107", fontWeight: "600" }}>Key Skills and Roles</div>
                             {/* <div style={{ fontWeight: "600" }}>SAP Solutions</div> */}
-                            <div id={hireDevStyles.smallboxsection}>
-                                <div style={{ padding: "0px 20px", textAlign: "center" }}>
+                            <div className={sapficoStyle.smallboxsection}>
+                                <div style={{fontSize:"14px", padding: "0px 20px", textAlign: "center" }}>
                                     Explore the essential skills and roles within the SAP FICO domain, including functional consultants, technical developers, project managers, and solution architects.
                                 </div>
                             </div>
                         </div>
-                        <div id={hireDevStyles.eachblock}>
+                        <div className={sapficoStyle.eachblock}>
                             <div style={{ color: "#FFA107", fontWeight: "600" }}>Project Type and Stages</div>
                             {/* <div style={{ fontWeight: "600" }}>Technology Stack</div> */}
-                            <div id={hireDevStyles.smallboxsection}>
-                                <div style={{ padding: "0px 20px", textAlign: "center" }}>
+                            <div className={sapficoStyle.smallboxsection}>
+                                <div style={{fontSize:"14px", padding: "0px 20px", textAlign: "center" }}>
                                     Explore the essential skills and roles within the SAP FICO domain, including functional consultants, technical developers, project managers, and solution architects.
                                 </div>
                             </div>
                         </div>
-                        <div id={hireDevStyles.eachblock}>
+                        <div className={sapficoStyle.eachblock}>
                             <div style={{ color: "#FFA107", fontWeight: "600" }}>Industry Insights</div>
                             {/* <div style={{ fontWeight: "600" }}>Functional Modules</div> */}
-                            <div id={hireDevStyles.smallboxsection}>
-                                <div style={{ padding: "0px 20px", textAlign: "center" }}>
+                            <div className={sapficoStyle.smallboxsection}>
+                                <div style={{fontSize:"14px", padding: "0px 20px", textAlign: "center" }}>
                                     Gain valuable insights into industry trends, challenges, and opportunities shaping the SAP FICO landscape, supported by real-world examples and case studies.
                                 </div>
                             </div>
                         </div>
-                        <div id={hireDevStyles.eachblock}>
+                        <div className={sapficoStyle.eachblock}>
                             <div style={{ color: "#FFA107", fontWeight: "600" }}>Professional Development</div>
                             {/* <div style={{ fontWeight: "600" }}>Industry Domains</div> */}
-                            <div id={hireDevStyles.smallboxsection}>
-                                <div style={{ padding: "0px 20px", textAlign: "center" }}>
+                            <div className={sapficoStyle.smallboxsection}>
+                                <div style={{fontSize:"14px", padding: "0px 20px", textAlign: "center" }}>
                                     Learn about professional development opportunities for SAP FICO professionals, including certifications, training programs, and career advancement paths.
                                 </div>
 
