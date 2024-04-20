@@ -833,7 +833,56 @@ export const AboutUsText = {
       "Fostering an environment where every team member is encouraged to lead and innovate."
     ]
 }
+export const SapficoPageText = {
+  mainheading: "SAP-FICO Consulting",
+  mainSubHeading: "Find a transformation consultant to achieve meaningful change.",
+  tranHeading: "SAP-FICO TRANSFORMATION CONSULTING CAPABILITIES",
+  tranHeading1: "EXPERTISE TO ACCELERATE YOUR TRANSFORMATION",
+  tranSubHeading1: "Engage thought leaders on everything from Six Sigma implementation to risk management, employee empowerment to CRM adoption.",
+  tranHeading2: "SKILLS TO SUPPLEMENT YOUR TEAM",
+  tranSubHeading2: "Add expertise whenever you need to fulfill important initiatives or meet critical deadlines.",
+  tranHeading3: "FROM INSIGHT TO ACTION",
+  tranSubHeading3: "BTG's modular approach makes it easy to get the help you need, whether it&apos;s individuals or teams, on-site or remote, U.S. based or global.",
 
+  wedoHeading: "WHAT WE DO",
+  wedoHeading1: "The power of pace in technology",
+  wedoSubHeading1: "Hivemind Technologies explains what steps matter in speeding software development for transformations.",
+  wedoHeading2: "",
+  wedoSubHeadin2: "",
+  wedoHeading3: "",
+  wedoSubHeadin3: "",
+
+  indemandHeading: "IN-DEMAND PROBLEM SOLVERS FOR ALL OF YOUR TRANSFORMATION CONSULTING NEEDS",
+  type: ["Financial Accounting (FI)", "Controlling (CO)", "General Ledger (FI-GL)", "Accounts Payable (FI-AP)", "Accounts Receivable (FI-AR)", "Asset Accounting (FI-AA)", "Profitability Analysis (CO-PA)", "Bank Accounting (FI-BL)", "Cost Element Accounting (CO-OM-CEL)", "Cost Center Accounting (CO-OM-CCA)"],
+
+  limitlessHeading: "LIMITLESS ACCESS TO TOP TRANSFORMATION CONSULTANTS",
+  profname: "ALEX PASHKOWSKY",
+  profwork: "Program Manager",
+
+  margketHeading: "MARKETPLACE TALENT FACTS",
+  margketHeading1: "CLASSICALLY TRAINED",
+  marketNumber1: "8,100+",
+  margketSubHeading1: "have worked at top consulting firms",
+
+  margketHeading2: "PROVEN & HANDS-ON",
+  marketNumber2: "64%",
+  margketSubHeading2: "have both consulting and operational experience",
+
+  margketHeading3: "EXECUTION-ORIENTED",
+  marketNumber3: "5,600",
+  margketSubHeading3: "experienced project and program managers",
+
+  techHeading: "TRANSFORMATION CONSULTING CASE STUDIES AND FEATURED INSIGHTS",
+  techSubHeading: "Our high-end, on-demand talent marketplace powers greater agility, innovation, outcomes, and competitive advantage. Through proprietary technology, vast talent knowledge, and skilled in-house consultants, we deliver a handpicked selection of freelance consultants and experts vetted for the project at hand.",
+
+  techHeading1: "The power of pace in technology",
+  techSubHeading1: "The power of pace in technology",
+  // techHeading2:"SELECT YOUR TALENT",
+  // techSubHeading2:"Choose your consultant or team of experts from a curated slate of talent.",
+  // techHeading3:"GET THE WORK DONE",
+  // techSubHeading3:"Rest easy as your consultant is rapidly deployed onsite or remote. Let us take care of the rest.",
+
+}
 export const HireSapTalentText = {
   TailoredHeading:"Tailored Solutions for Scalable Growth",
   TailoredSubHeading:"Flexibility and Scalability for Your SAP Projects. We Offer Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity",
