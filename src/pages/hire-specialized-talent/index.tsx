@@ -1,4 +1,4 @@
-import { HireDeveloperPageText, HomePageText } from '@/constants/texts'
+import { HireDeveloperPageText, HireSpecializedTalentText, HomePageText } from '@/constants/texts'
 import React, { useState } from 'react'
 import hireDevStyles from "./../../styles/hireDevStyles.module.css";
 import IconTextButton from '@/components/atoms/ButtonWithIcon';
@@ -40,12 +40,12 @@ const HireSpecializedTalentPage = () => {
                 <div className={homePageStyle.flexCenter}>
                     <div className={homePageStyle.topContentSection}>
                         <h1 className={`${hireDevStyles.mainHeadingHireDev}`}>
-                        Hire Elite Talent for Specialized Tech: AI-Vetted Expertise, Unmatched Quality for Your Project&apos;s Success
+                        {HireSpecializedTalentText.topSectionHeading}
                             {/* <div>{HomePageText.heading_4}</div> */}
                         </h1>
 
                         <h2 className={`${hireDevStyles.mainSubHeadingHireDev}`}>
-                        Swiftly Connect with On-Demand, Top-Tier Tech Talent Tailored to Your Project&apos;s Urgent and Specific Needs
+                        {HireSpecializedTalentText.topSectionSubHeading}
 
                         </h2>
 
@@ -62,26 +62,26 @@ const HireSpecializedTalentPage = () => {
                         >
                             <div>
                                 <div className={`${hireDevStyles.hireDevNumberTitle}`}>
-                                    11400+
+                                {HireSpecializedTalentText.topSectionNumbers[0]}
                                 </div>
                                 <span className={`${hireDevStyles.hireDevNumberContent}`}>
-                                    Pre Vetted Tech Talent
+                                {HireSpecializedTalentText.topSectionNumbersContent[0]}
                                 </span>
                             </div>
                             <div>
                                 <div className={`${hireDevStyles.hireDevNumberTitle}`}>
-                                    30+
+                                {HireSpecializedTalentText.topSectionNumbers[1]}
                                 </div>
                                 <span className={`${hireDevStyles.hireDevNumberContent}`}>
-                                    Specialized Tech Domains
+                                {HireSpecializedTalentText.topSectionNumbersContent[1]}
                                 </span>
                             </div>
                             <div>
                                 <div className={`${hireDevStyles.hireDevNumberTitle}`}>
-                                    10+
+                                {HireSpecializedTalentText.topSectionNumbers[2]}
                                 </div>
                                 <span className={`${hireDevStyles.hireDevNumberContent}`}>
-                                    Industry Leaders Expertise
+                                {HireSpecializedTalentText.topSectionNumbersContent[2]}
                                 </span>
                             </div>
 
@@ -230,18 +230,18 @@ const HireSpecializedTalentPage = () => {
                             Imgwidth={550}
                             order="imageRight"
                             pointsIcons={HireDeveloperPageText.superChargePointsIcons}
-                            heading={"Supercharge Your Hiring"}
-                            subHeading={"Accelerate Your Recruitment Process with Access to Our Premier Network of AI-Vetted Developers, Ready to Join Your Team and Drive Success."}
+                            heading={HireSpecializedTalentText.superchargeHeading}
+                            subHeading={HireSpecializedTalentText.superchargeSubHeading}
                             noOfPoints={3}
                             points={[
-                                "Unlock Elite Talent Swiftly",
-                                "Navigate Skill Scarcity Effortlessly",
-                                "Forge Business Resilience Seamlessly",
+                                HireSpecializedTalentText.superchargePointsHeading[0],
+                                HireSpecializedTalentText.superchargePointsHeading[1],
+                                HireSpecializedTalentText.superchargePointsHeading[2],
                             ]}
                             paraPoints={[
-                                "Hire deeply vetted tech consultants for specialized Tech skills in just 4 hours, leveraging our AI-powered platform and global network expertise to accelerate your hiring process.",
-                                "Specializing in hard-to-find tech skills and niche expertise, we make the rare seem routine in our expansive talent pool, ensuring you connect with the right talent to address skill gaps and project requirements effectively.",
-                                "Embrace business continuity seamlessly with our On-Demand Talent Cloud, providing agility in talent acquisition and keeping your projects on track. Adapt to changing resource needs swiftly, ensuring resilience in face of challenges."
+                                HireSpecializedTalentText.superchargePointsContent[0],
+                                HireSpecializedTalentText.superchargePointsContent[1],
+                                HireSpecializedTalentText.superchargePointsContent[2]
                             ]}
                             noOflogoImages={3}
                             logoImagesUrl={[`1`, "2", "3"]}
@@ -257,18 +257,18 @@ const HireSpecializedTalentPage = () => {
                             Imgwidth={550}
                             order="imageLeft"
                             pointsIcons={HireDeveloperPageText.perfectMatchPointsIcons}
-                            heading={"Laser Precision in Talent Matching"}
-                            subHeading={"Accelerate Your Recruitment Process with Access to Our Premier Network of AI-Vetted Developers, Ready to Join Your Team and Drive Success."}
+                            heading={HireSpecializedTalentText.laserHeading}
+                            subHeading={HireSpecializedTalentText.laserSubHeading}
                             noOfPoints={3}
                             points={[
-                                "AI Precision for Niche Talent",
-                                "Expert Curation for Tech Success",
-                                "Holistic Matches for Organizational Alignment",
+                                HireSpecializedTalentText.laserPointsHeading[0],
+                                HireSpecializedTalentText.laserPointsHeading[1],
+                                HireSpecializedTalentText.laserPointsHeading[2],
                             ]}
                             paraPoints={[
-                                "Elevate your hiring standards with our advanced AI assessment tailored for niche tech skills. Achieve a remarkably high accuracy rate in qualification filtering, ensuring swift and precise matches for your projects.",
-                                "Drive success by seamlessly integrating external intelligence from platforms like HackerRank and custom assessments. Ensure meticulous candidate matches for your tech projects, expediting the path to top-tier niche talent.",
-                                "Harness human insights to align business and culture through talent carefully scouted by expert interviewers. Ensure soft skills, effective communication, and cultural alignment for a well-rounded organizational match in your team."
+                                HireSpecializedTalentText.laserPointsContent[0],
+                                HireSpecializedTalentText.laserPointsContent[1],
+                                HireSpecializedTalentText.laserPointsContent[2]
                             ]}
                             noOflogoImages={3}
                             logoImagesUrl={[`1`, "2", "3"]}

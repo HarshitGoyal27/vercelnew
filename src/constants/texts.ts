@@ -808,8 +808,86 @@ export const AboutUsText = {
     "Rua Theodoro Makiolka, 1239 Stanta Cândida 82640-010 Curitiba, Paraná Brazil ",
 
     "B1/H3, Mohan Estate, Industrial Area, New Delhi 110044 - India"],
+
+    aboutusTopContent:"Skills Capital offers a unique solution to mid-market enterprises struggling with sourcing and retaining high-caliber technical professionals. We provide on-demand access to a pool of elite tech experts, eliminating the need for businesses to endure the expenses and challenges of hiring and training full-time staff. Clients leverage an AI-powered Talent Cloud to connect with pre-screened specialists possessing rare and specialized skills, ensuring the formation of tailor-made teams for specific projects. This approach is bolstered by experienced part-time architects or dev managers who oversee project success.",
+
+    whyContent:["Expertise in SAP and Specialized Tech",
+      "Advanced AI/ML-Powered Matching",
+      "Diverse and Elite Talent Ecosystem",
+      "Customized and Innovative Solutions",
+      "Proven Track Record of Success",
+      "Future-Ready Talent Adaptation"
+    ],
+    excelQualityHeading:"Excellence Quantified",
+    excelQualitySubHeading:"Empowering Your Vision with Unmatched Expertise and Dedicated Success",
+    excelQualityNumbers:["25k+","100+","24/7","100%"],
+    excelQualityNumbersContent:["AI-Vetted Developers","Specialized Skill Sets","Access To Expertise","Customer Success Focus"],
+
+    ourValuesSubcontent:"We provide the tech experts you need in hours rather than days or weeks so that you transform your tech landscape and innovate fast.",
+    ourValuespointsHeading:["Innovation-Driven","Integrity and Transparency","Customer Centricity","Adaptability and Agility","Excellence and Quality","Empowerment and Leadership"],
+    ourValuespointsContent:["Commitment to pioneering solutions that redefine industry standards and foster growth.",
+      "Building trust through honesty and clear communication in all our actions.",
+      "Tailoring our approach to meet unique customer needs, ensuring satisfaction and success.",
+      "Navigating market changes with flexibility, ensuring responsive and timely solutions.",
+      "Committing to highest standards in every aspect of our work to deliver exceptional value.",
+      "Fostering an environment where every team member is encouraged to lead and innovate."
+    ]
 }
 
+export const HireSapTalentText = {
+  TailoredHeading:"Tailored Solutions for Scalable Growth",
+  TailoredSubHeading:"Flexibility and Scalability for Your SAP Projects. We Offer Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity",
+  TailoredPointsHeading:["Agile Team Composition","On-Demand Expertise","Customized Solutions"],
+  TailoredPointsContent:["Whether you're embarking on a small-scale SAP implementation or a large-scale transformation, we offer flexible team compositions to suit your project scope. From solo consultants to cross-functional teams, we adapt to meet your needs.",
+    "Scale your SAP initiatives dynamically with our on-demand talent pool. Need additional resources for a specific phase of your project? We've got you covered. Our flexible hiring model allows you to access expertise precisely when you need it.",
+    "Choose from range of engagement models that align with your project requirements and budget. Whether you prefer project-based engagements, dedicated resources, or outcome-driven model, we offer solutions to ensure project's success."
+  ],
+  UnleashingHeading:"Unleashing the Power of SAP Expertise",
+  UnleashingSubHeading:"Elevate Your Projects with Our SAP Talent Experience, Versatility, and Collaboration at Your Service",
+  UnleashingPointsHeading:["AI-Vetted","Certified","Accomplished","On-Demand","Versatile","Future-Ready"],
+  UnleashingPointsContent:["Our SAP professionals undergo rigorous AI-driven vetting processes to ensure their technical proficiency and expertise.",
+    "Our talent holds relevant certifications from SAP and other recognized institutions, validating their skill set and knowledge.",
+    "With years of hands-on experience in SAP implementation, customization, and support, our consultants bring invaluable expertise.",
+    "Our SAP talent is readily available to meet your project needs, offering flexible engagement models and quick deployment.",
+    "Equipped with a diverse skill set covering SAP modules and technologies, our talent can adapt to different requirements seamlessly.",
+    "Our talent stays updated with latest SAP trends and innovations, ensuring they are equipped to handle evolving technology landscapes."
+  ],
+
+  ensureExcelHeading:"Ensuring Excellence: Assessing SAP Talent",
+  ensureExcelSubHeading:"Meticulous assessment to ensure the proficiency, compatibility, and overall suitability of our SAP talent.",
+  ensureExcelPointHeading:["Technical Competency","Professional Experience","Cultural Fit","Certifications and Credentials","Background Check","Soft Skills Assessment"],
+  ensureExcelPointContent:["Thorough assessment of SAP skills and knowledge",
+    "Verification of past work experience and project achievements.",
+    "Evaluation of alignment with company values and team dynamics.",
+    "Validation of relevant certifications and qualifications.",
+    "Verification of educational and employment backgrounds.",
+    "Evaluation of communication, teamwork, and adaptability."
+  ]
+
+};
+
+export const HireSpecializedTalentText = {
+  topSectionHeading:"Hire Elite Talent for Specialized Tech: AI-Vetted Expertise, Unmatched Quality for Your Project's Success",
+  topSectionSubHeading:"Swiftly Connect with On-Demand, Top-Tier Tech Talent Tailored to Your Project's Urgent and Specific Needs",
+  topSectionNumbers:["11400+","30+","10+"],
+  topSectionNumbersContent:["Pre Vetted Tech Talent","Specialized Tech Domains","Industry Leaders Expertise"],
+
+  superchargeHeading:"Supercharge Your Hiring",
+  superchargeSubHeading:"Accelerate Your Recruitment Process with Access to Our Premier Network of AI-Vetted Developers, Ready to Join Your Team and Drive Success.",
+  superchargePointsHeading:["Unlock Elite Talent Swiftly","Navigate Skill Scarcity Effortlessly","Forge Business Resilience Seamlessly"],
+  superchargePointsContent:["Hire deeply vetted tech consultants for specialized Tech skills in just 4 hours, leveraging our AI-powered platform and global network expertise to accelerate your hiring process.",
+    "Specializing in hard-to-find tech skills and niche expertise, we make the rare seem routine in our expansive talent pool, ensuring you connect with the right talent to address skill gaps and project requirements effectively.",
+    "Embrace business continuity seamlessly with our On-Demand Talent Cloud, providing agility in talent acquisition and keeping your projects on track. Adapt to changing resource needs swiftly, ensuring resilience in face of challenges."
+  ],
+
+  laserHeading:"Laser Precision in Talent Matching",
+  laserSubHeading:"Accelerate Your Recruitment Process with Access to Our Premier Network of AI-Vetted Developers, Ready to Join Your Team and Drive Success.",
+  laserPointsHeading:["AI Precision for Niche Talent","Expert Curation for Tech Success","Holistic Matches for Organizational Alignment"],
+  laserPointsContent:["Elevate your hiring standards with our advanced AI assessment tailored for niche tech skills. Achieve a remarkably high accuracy rate in qualification filtering, ensuring swift and precise matches for your projects.",
+    "Drive success by seamlessly integrating external intelligence from platforms like HackerRank and custom assessments. Ensure meticulous candidate matches for your tech projects, expediting the path to top-tier niche talent.",
+    "Harness human insights to align business and culture through talent carefully scouted by expert interviewers. Ensure soft skills, effective communication, and cultural alignment for a well-rounded organizational match in your team."
+  ]
+}
 
 export const VettingPageText = {
   //---------------------------------------------------------------------------------------------------------------------------

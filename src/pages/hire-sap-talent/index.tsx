@@ -1,4 +1,4 @@
-import { HireDeveloperPageText, HomePageText } from '@/constants/texts'
+import { HireDeveloperPageText, HireSapTalentText, HomePageText } from '@/constants/texts'
 import React, { useState } from 'react'
 import hireDevStyles from "./../../styles/hireDevStyles.module.css";
 import IconTextButton from '@/components/atoms/ButtonWithIcon';
@@ -255,10 +255,10 @@ const Hire = () => {
             <br />
             <br />
             <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
-              Tailored Solutions for Scalable Growth
+              {HireSapTalentText.TailoredHeading}
             </h2>
             <br />
-            <h3 style={cardsStyling.sapCloudLegacySubHeading}>Flexibility and Scalability for Your SAP Projects. We Offer Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</h3>
+            <h3 style={cardsStyling.sapCloudLegacySubHeading}></h3>
             {/* <h5 style={{ opacity: "0.7" }}>Tailored Talent Solutions to Match Your Unique Business Needs, Project Size and Complexity</h5> */}
             <br />
           </div>
@@ -268,8 +268,8 @@ const Hire = () => {
               imageHeight={210}
               imageWidth={250}
               headingNumber={""}
-              headingText={"Agile Team Composition"}
-              paragraphText={"Whether you're embarking on a small-scale SAP implementation or a large-scale transformation, we offer flexible team compositions to suit your project scope. From solo consultants to cross-functional teams, we adapt to meet your needs."}
+              headingText={HireSapTalentText.TailoredPointsHeading[0]}
+              paragraphText={HireSapTalentText.TailoredPointsContent[0]}
               buttonText="Explore"
               onButtonClick={HireDeveloperClicked}
               buttonEnabled={false}
@@ -279,8 +279,8 @@ const Hire = () => {
               imageHeight={210}
               imageWidth={250}
               headingNumber={""}
-              headingText={"On-Demand Expertise"}
-              paragraphText={"Scale your SAP initiatives dynamically with our on-demand talent pool. Need additional resources for a specific phase of your project? We've got you covered. Our flexible hiring model allows you to access expertise precisely when you need it."}
+              headingText={HireSapTalentText.TailoredPointsHeading[1]}
+              paragraphText={HireSapTalentText.TailoredPointsContent[1]}
               buttonText="Explore"
               onButtonClick={HireDeveloperClicked}
               buttonEnabled={false}
@@ -290,8 +290,8 @@ const Hire = () => {
               imageHeight={210}
               imageWidth={250}
               headingNumber={""}
-              headingText={"Customized Solutions"}
-              paragraphText={"Choose from range of engagement models that align with your project requirements and budget. Whether you prefer project-based engagements, dedicated resources, or outcome-driven model, we offer solutions to ensure project's success."}
+              headingText={HireSapTalentText.TailoredPointsHeading[2]}
+              paragraphText={HireSapTalentText.TailoredPointsContent[2]}
               buttonText="Explore"
               onButtonClick={HireDeveloperClicked}
               buttonEnabled={false}
@@ -380,32 +380,32 @@ const Hire = () => {
           <br />
           <br />
           <h2 style={cardsStyling.sapCloudLegacyMainHeading}>
-            Unleashing the Power of SAP Expertise
+            {HireSapTalentText.UnleashingHeading}
           </h2>
           <br />
-          <h3 style={cardsStyling.sapCloudLegacySubHeading}>Elevate Your Projects with Our SAP Talent Experience, Versatility, and Collaboration at Your Service</h3>
+          <h3 style={cardsStyling.sapCloudLegacySubHeading}>{HireSapTalentText.UnleashingSubHeading}</h3>
 
 
         </div>
         <section id={hireDevStyles.fontpopBelow}>
           <div id={hireDevStyles.selectbar}>
             <div style={selected === "AI-Vetted" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-              <div style={{ padding: "30px" }} onClick={() => setSelected("AI-Vetted")}>AI-Vetted</div>
+              <div style={{ padding: "30px" }} onClick={() => setSelected("AI-Vetted")}>{HireSapTalentText.UnleashingPointsHeading[0]}</div>
             </div>
             <div style={selected === "Certified" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-              <div style={{ padding: "30px" }} onClick={() => setSelected("Certified")}>Certified</div>
+              <div style={{ padding: "30px" }} onClick={() => setSelected("Certified")}>{HireSapTalentText.UnleashingPointsHeading[1]}</div>
             </div>
             <div style={selected === "Accomplished" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-              <div style={{ padding: "30px" }} onClick={() => setSelected("Accomplished")}>Accomplished</div>
+              <div style={{ padding: "30px" }} onClick={() => setSelected("Accomplished")}>{HireSapTalentText.UnleashingPointsHeading[2]}</div>
             </div>
             <div style={selected === "On-Demand" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-              <div style={{ padding: "30px" }} onClick={() => setSelected("On-Demand")}>On-Demand</div>
+              <div style={{ padding: "30px" }} onClick={() => setSelected("On-Demand")}>{HireSapTalentText.UnleashingPointsHeading[3]}</div>
             </div>
             <div style={selected === "Versatile" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-              <div style={{ padding: "30px" }} onClick={() => setSelected("Versatile")}>Versatile</div>
+              <div style={{ padding: "30px" }} onClick={() => setSelected("Versatile")}>{HireSapTalentText.UnleashingPointsHeading[4]}</div>
             </div>
             <div style={selected === "Future-Ready" ? { borderBottom: "2px solid yellow" } : { borderBottom: "2px solid grey" }}>
-              <div style={{ padding: "30px" }} onClick={() => setSelected("Future-Ready")}>Future-Ready</div>
+              <div style={{ padding: "30px" }} onClick={() => setSelected("Future-Ready")}>{HireSapTalentText.UnleashingPointsHeading[5]}</div>
             </div>
           </div>
         </section>
@@ -420,7 +420,7 @@ const Hire = () => {
             <div style={{ display: "flex", gap: "10px" }}>
               <div id={hireDevStyles.mosteinnerContainer}>
                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                <div className={hireDevStyles.scalableSubheading}>Our SAP professionals undergo rigorous AI-driven vetting processes to ensure their technical proficiency and expertise.</div>
+                <div className={hireDevStyles.scalableSubheading}>{HireSapTalentText.UnleashingPointsContent[0]}</div>
               </div>
             </div>
             <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
@@ -437,7 +437,7 @@ const Hire = () => {
             <div style={{ display: "flex", gap: "10px" }}>
               <div id={hireDevStyles.mosteinnerContainer}>
                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                <div className={hireDevStyles.scalableSubheading}>Our talent holds relevant certifications from SAP and other recognized institutions, validating their skill set and knowledge.</div>
+                <div className={hireDevStyles.scalableSubheading}>{HireSapTalentText.UnleashingPointsContent[1]}</div>
               </div>
 
             </div>
@@ -456,7 +456,7 @@ const Hire = () => {
             <div style={{ display: "flex", gap: "10px" }}>
               <div id={hireDevStyles.mosteinnerContainer}>
                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                <div className={hireDevStyles.scalableSubheading}>With years of hands-on experience in SAP implementation, customization, and support, our consultants bring invaluable expertise.</div>
+                <div className={hireDevStyles.scalableSubheading}>{HireSapTalentText.UnleashingPointsContent[2]}</div>
               </div>
             </div>
             <div style={{ padding: "40px", marginTop: "30px", display: "flex", alignContent: "center", gap: "5px" }}><AddCircleIcon sx={{ color: "darkorange" }} /> <span>Read More</span></div>
@@ -474,7 +474,7 @@ const Hire = () => {
             <div style={{ display: "flex", gap: "10px" }}>
               <div id={hireDevStyles.mosteinnerContainer}>
                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                <div className={hireDevStyles.scalableSubheading}>Our SAP talent is readily available to meet your project needs, offering flexible engagement models and quick deployment.</div>
+                <div className={hireDevStyles.scalableSubheading}>{HireSapTalentText.UnleashingPointsContent[3]}</div>
               </div>
             </div>
 
@@ -492,7 +492,7 @@ const Hire = () => {
             <div style={{ display: "flex", gap: "10px" }}>
               <div id={hireDevStyles.mosteinnerContainer}>
                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                <div className={hireDevStyles.scalableSubheading}>Equipped with a diverse skill set covering SAP modules and technologies, our talent can adapt to different requirements seamlessly.</div>
+                <div className={hireDevStyles.scalableSubheading}>{HireSapTalentText.UnleashingPointsContent[4]}</div>
               </div>
             </div>
 
@@ -510,7 +510,7 @@ const Hire = () => {
             <div style={{ display: "flex", gap: "10px" }}>
               <div id={hireDevStyles.mosteinnerContainer}>
                 {/* <div id={hireDevStyles.scalableGrowthHeading}>Agile Team Composition</div> */}
-                <div className={hireDevStyles.scalableSubheading}>Our talent stays updated with latest SAP trends and innovations, ensuring they are equipped to handle evolving technology landscapes.</div>
+                <div className={hireDevStyles.scalableSubheading}>{HireSapTalentText.UnleashingPointsContent[5]}</div>
               </div>
             </div>
 
@@ -744,23 +744,23 @@ const Hire = () => {
         </div>
       </section>
       <section id={sapStyle.secondsection}>
-        <div style={{ fontSize: "32px", fontWeight: "600", marginBottom: "50px" }}>Ensuring Excellence: Assessing SAP Talent</div>
-        <h3 style={{ opacity: "0.7" }}>Meticulous assessment to ensure the proficiency, compatibility, and overall suitability of our SAP talent.</h3>
+        <div style={{ fontSize: "32px", fontWeight: "600", marginBottom: "50px" }}>{HireSapTalentText.ensureExcelHeading}</div>
+        <h3 style={{ opacity: "0.7" }}>{HireSapTalentText.ensureExcelSubHeading}</h3>
         <div id={sapStyle.threeimage}>
           <div id={sapStyle.threeimagesection}>
             <div><Image src="/HireDevImages/tech1.webp" height={130} width={190} alt="" /></div>
-            <div style={{ fontWeight: "600" }}>Technical Competency</div>
-            <div style={{ fontSize: "14px" }}>Thorough assessment of SAP skills and knowledge</div>
+            <div style={{ fontWeight: "600" }}>{HireSapTalentText.ensureExcelPointHeading[0]}</div>
+            <div style={{ fontSize: "14px" }}>{HireSapTalentText.ensureExcelPointContent[0]}</div>
           </div>
           <div id={sapStyle.threeimagesection}>
             <div><Image src="/HireDevImages/proexp.avif" height={130} width={130} alt="" /></div>
-            <div style={{ fontWeight: "600" }}>Professional Experience</div>
-            <div style={{ fontSize: "14px" }}>Verification of past work experience and project achievements.</div>
+            <div style={{ fontWeight: "600" }}>{HireSapTalentText.ensureExcelPointHeading[1]}</div>
+            <div style={{ fontSize: "14px" }}>{HireSapTalentText.ensureExcelPointContent[1]}</div>
           </div>
           <div id={sapStyle.threeimagesection}>
             <div><Image src="/HireDevImages/tech2.jpg" height={130} width={130} alt="" /></div>
-            <div style={{ fontWeight: "600" }}>Cultural Fit</div>
-            <div style={{ fontSize: "14px" }}>Evaluation of alignment with company values and team dynamics.</div>
+            <div style={{ fontWeight: "600" }}>{HireSapTalentText.ensureExcelPointHeading[2]}</div>
+            <div style={{ fontSize: "14px" }}>{HireSapTalentText.ensureExcelPointContent[2]}</div>
           </div>
 
         </div>
@@ -768,18 +768,18 @@ const Hire = () => {
         <div id={sapStyle.threeimage}>
           <div id={sapStyle.threeimagesection}>
             <div><Image src="/HireDevImages/certification.jpg" height={130} width={130} alt="" /></div>
-            <div style={{ fontWeight: "600" }}>Certifications and Credentials</div>
-            <div style={{ fontSize: "14px" }}>Validation of relevant certifications and qualifications.</div>
+            <div style={{ fontWeight: "600" }}>{HireSapTalentText.ensureExcelPointHeading[3]}</div>
+            <div style={{ fontSize: "14px" }}>{HireSapTalentText.ensureExcelPointContent[3]}</div>
           </div>
           <div id={sapStyle.threeimagesection}>
             <div><Image src="/HireDevImages/tech3.png" height={130} width={130} alt="" /></div>
-            <div style={{ fontWeight: "600" }}>Background Check</div>
-            <div style={{ fontSize: "14px" }}>Verification of educational and employment backgrounds.</div>
+            <div style={{ fontWeight: "600" }}>{HireSapTalentText.ensureExcelPointHeading[4]}</div>
+            <div style={{ fontSize: "14px" }}>{HireSapTalentText.ensureExcelPointContent[4]}</div>
           </div>
           <div id={sapStyle.threeimagesection}>
             <div><Image src="/HireDevImages/softskill.jpg" height={130} width={190} alt="" /></div>
-            <div style={{ fontWeight: "600" }}>Soft Skills Assessment</div>
-            <div style={{ fontSize: "14px" }}>Evaluation of communication, teamwork, and adaptability.</div>
+            <div style={{ fontWeight: "600" }}>{HireSapTalentText.ensureExcelPointHeading[5]}</div>
+            <div style={{ fontSize: "14px" }}>{HireSapTalentText.ensureExcelPointContent[5]}</div>
           </div>
 
         </div>
