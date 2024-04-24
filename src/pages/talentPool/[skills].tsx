@@ -19,7 +19,7 @@ const SapFicoTalentPool = ( props :any) => {
             <section id={css.outerSectionMost} >
                 <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
                     <div id={css.topsection}>
-                        <div style={{ fontSize: "48px", width: "300px", fontWeight: "600", lineHeight: "59px" }}>{SapficoPageText.mainheading}</div>
+                        <div style={{ fontSize: "48px", width: "300px", fontWeight: "600", lineHeight: "59px" }}>{page_data.skill} Consulting</div>
                         <div style={{ fontSize: "20px" }}>{SapficoPageText.mainSubHeading}</div>
                         <div>
                             <CustomButton2
@@ -186,7 +186,8 @@ const SapFicoTalentPool = ( props :any) => {
 export async function getServerSideProps(context:any){
       const responseData = await axios.get(`${DEV_PUBLIC_APIURL}consultant/${context.query.skills}`)
       
-      const page_data = responseData.data.data
+      const page_data = {...responseData.data.data,skill:context.query.skills}
+      
     console.log("object",`${DEV_PUBLIC_APIURL}consultant/${context.query.skills}`)
     return {
         props:{page_data},
