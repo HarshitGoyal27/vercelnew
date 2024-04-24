@@ -69,7 +69,7 @@ const FotterComponent = () => {
           </Link>
         </li>
         <li className={css.li2}>
-          <Link href="/leadership" id={css.site} >
+          <Link href="/vetting" id={css.site} >
             Vetting Process
           </Link>
         </li>

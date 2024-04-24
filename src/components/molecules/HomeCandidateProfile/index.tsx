@@ -12,8 +12,8 @@ import { DEV_PUBLIC_URL } from '../../../../configs/auth';
 const apiUrl = `${DEV_PUBLIC_URL}form/candidates`;
 import Image from 'next/image';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import hireDevStyle from "../../../styles/hireDevStyles.module.css";
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import hireDevStyle from "../../../styles/hireDevStyles.module.css";
 interface Candidates {
   Name: string;
   Email: string;
@@ -40,7 +40,7 @@ function SampleNextArrow(props: any) {
       } as any}
       onClick={onClick}
     >
-      <NavigateNextIcon sx={{ color: "black", fontSize: "46px" }} />
+      <NavigateNextIcon sx={{color:"black" ,fontSize:"46px"}}/>
     </div>
   );
 }
@@ -59,7 +59,7 @@ function SamplePrevArrow(props: any) {
       } as any}
       onClick={onClick}
     >
-      <NavigateBeforeIcon sx={{ color: "black", fontSize: "46px" }} />
+      <NavigateBeforeIcon sx={{color:"black",fontSize:"46px"}}/>
     </div>
   );
 }
@@ -90,8 +90,8 @@ const HomeCandidateProfile: React.FC = () => {
   };
   try {
     useEffect(() => {
-      // Fetch default data for SAP when the component mounts
       fetchData(skills);
+      
     }, [skills]);
   } catch (error) {
     alert(error);
@@ -112,12 +112,8 @@ const HomeCandidateProfile: React.FC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
-
+    prevArrow: <SamplePrevArrow  />
   };
-  const handleButtonClick = (string: any) => {
-
-  }
   return (
     <>
       <div className={homePageStyle.carauselHeading}>Best Developers</div>
@@ -147,7 +143,7 @@ const HomeCandidateProfile: React.FC = () => {
                     <div className={homePageStyle.name}>{item.Name}</div>
                     <div className={homePageStyle.candidateskills}>{truncateSentence(item.CandidateProfile)}</div>
                     <div className={homePageStyle.skillsSection} ><span style={{ fontWeight: "600" }}>Salary:</span>  <span style={{ color: "blue" }}>{item.Salary}</span></div>
-                    <div className={homePageStyle.availableContainer} >
+                    <div className={homePageStyle.availableContainer } >
                       <div style={{ color: "blue" }}><span style={{ fontWeight: "570" }}>Available:</span>  6 months</div>
                       <div>{item.CurrentLocation}</div>
                     </div>

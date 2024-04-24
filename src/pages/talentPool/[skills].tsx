@@ -48,18 +48,18 @@ const SapFicoTalentPool = ( props :any) => {
                 <div id={css.threeimage}>
                     <div id={css.threeimagesection}>
                         <div><Image src="/TalentPoolImages/service2.webp" height={130} width={130} alt="" /></div>
-                        <div style={{ fontWeight: "600" }}>{SapficoPageText.tranHeading1}</div>
-                        <div style={{ fontSize: "14px" }}>{page_data[0].substring(3)}</div>
+                        <div style={{ fontWeight: "600" }}>{page_data.consulting[0][0]}</div>
+                        <div style={{ fontSize: "14px" }}>{page_data.consulting[0][1]}</div>
                     </div>
                     <div id={css.threeimagesection}>
                         <div><Image src="/TalentPoolImages/service3.webp" height={130} width={130} alt="" /></div>
-                        <div style={{ fontWeight: "600" }}>{SapficoPageText.tranHeading2}</div>
-                        <div style={{ fontSize: "14px" }}>{page_data[1].substring(3)}</div>
+                        <div style={{ fontWeight: "600" }}>{page_data.consulting[1][0]}</div>
+                        <div style={{ fontSize: "14px" }}>{page_data.consulting[1][1]}</div>
                     </div>
                     <div id={css.threeimagesection}>
                         <div><Image src="/TalentPoolImages/service4.webp" height={130} width={130} alt="" /></div>
-                        <div style={{ fontWeight: "600" }}>{SapficoPageText.tranHeading3}</div>
-                        <div style={{ fontSize: "14px" }}>{page_data[2].substring(3)}</div>
+                        <div style={{ fontWeight: "600" }}>{page_data.consulting[2][0]}</div>
+                        <div style={{ fontSize: "14px" }}>{page_data.consulting[2][1]}</div>
                     </div>
                 </div>
             </section>
@@ -67,20 +67,20 @@ const SapFicoTalentPool = ( props :any) => {
                 <div style={{ fontSize: "23px", fontWeight: "600", marginBottom: "50px" }}>{SapficoPageText.wedoHeading}</div>
                 <div id={css.insightOuter}>
                     <div id={css.insight2}>
-                        <div style={{ fontWeight: "600", fontSize: "20px" }}>{SapficoPageText.wedoHeading1}</div>
-                        <div>{SapficoPageText.wedoSubHeading1}</div>
+                        <div style={{ fontWeight: "600", fontSize: "20px" }}>Elite Tech Talent Access</div>
+                        <div>Provide mid-market enterprises with on-demand access to elite tech professionals, minimizing hiring and training costs.</div>
                     </div>
                     <div id={css.insight2}>
-                        <div style={{ fontWeight: "600", fontSize: "20px" }}>The power of pace in technology</div>
-                        <div >Hivemind Technologies explains what steps matter in speeding software development for transformations.</div>
+                        <div style={{ fontWeight: "600", fontSize: "20px" }}>Custom Solutions & Innovation</div>
+                        <div >Deliver customized solutions using advanced AI/ML, ensuring project success and client satisfaction.</div>
                     </div>
                     <div id={css.insight2}>
-                        <div style={{ fontWeight: "600", fontSize: "20px" }}>The power of pace in technology</div>
-                        <div >Hivemind Technologies explains what steps matter in speeding software development for transformations.</div>
+                        <div style={{ fontWeight: "600", fontSize: "20px" }}>Customer-Centric Approach</div>
+                        <div >Tailor services to unique customer needs, fostering trust and satisfaction through clear communication.</div>
                     </div>
                     <div id={css.insight2}>
-                        <div style={{ fontWeight: "600", fontSize: "20px" }}>The power of pace in technology</div>
-                        <div >Hivemind Technologies explains what steps matter in speeding software development for transformations.</div>
+                        <div style={{ fontWeight: "600", fontSize: "20px" }}>Empowered Leadership Culture</div>
+                        <div >Empower clients with future-ready talent, enabling them to thrive in a dynamic tech landscape.</div>
                     </div>
                 </div>
             </section>
@@ -158,20 +158,20 @@ const SapFicoTalentPool = ( props :any) => {
                 <div style={{ fontSize: "23px", fontWeight: "600", marginBottom: "50px" }}>{SapficoPageText.techHeading}</div>
                 <div id={css.insightOuter}>
                     <div id={css.insight}>
-                        <div style={{ fontWeight: "600" }}>The power of pace in technology</div>
-                        <div>Hivemind Technologies explains what steps matter in speeding software development for transformations.</div>
+                        <div style={{ fontWeight: "600" }}>{page_data.insights[0][0]}</div>
+                        <div>{page_data.insights[0][1]}</div>
                     </div>
                     <div id={css.insight}>
-                        <div style={{ fontWeight: "600" }}>The power of pace in technology</div>
-                        <div>Hivemind Technologies explains what steps matter in speeding software development for transformations.</div>
+                        <div style={{ fontWeight: "600" }}>{page_data.insights[1][0]}</div>
+                        <div>{page_data.insights[1][1]}</div>
                     </div>
                     <div id={css.insight}>
-                        <div style={{ fontWeight: "600" }}>The power of pace in technology</div>
-                        <div>Hivemind Technologies explains what steps matter in speeding software development for transformations.</div>
+                        <div style={{ fontWeight: "600" }}>{page_data.insights[2][0]}</div>
+                        <div>{page_data.insights[2][1]}</div>
                     </div>
                     <div id={css.insight}>
-                        <div style={{ fontWeight: "600" }}>The power of pace in technology</div>
-                        <div>Hivemind Technologies explains what steps matter in speeding software development for transformations.</div>
+                        <div style={{ fontWeight: "600" }}>{page_data.insights[3][0]}</div>
+                        <div>{page_data.insights[3][1]}</div>
                     </div>
                 </div>
             </section>
