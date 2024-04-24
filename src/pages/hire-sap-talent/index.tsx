@@ -19,6 +19,7 @@ import sapStyle from "../../styles/sapTalentStyle.module.css"
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Opacity } from '@mui/icons-material';
 import { useRouter } from "next/router";
+import HomeCandidateProfile from '@/components/molecules/HomeCandidateProfile';
 const Hire = () => {
   const router = useRouter();
   const HireDeveloperClicked = () => {
@@ -784,6 +785,9 @@ const Hire = () => {
 
         </div>
       </section>
+      <section className={homePageStyle.carauselOutercontainer}>
+          <HomeCandidateProfile/>
+          </section>
       <FotterComponent />
     </div>
   )

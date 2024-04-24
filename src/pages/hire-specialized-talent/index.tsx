@@ -19,6 +19,7 @@ import sapStyle from "../../styles/sapTalentStyle.module.css"
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Opacity } from '@mui/icons-material';
 import { useRouter } from "next/router";
+import HomeCandidateProfile from '@/components/molecules/HomeCandidateProfile';
 const HireSpecializedTalentPage = () => {
     const router = useRouter();
     const HireDeveloperClicked = () => {
@@ -712,7 +713,7 @@ const HireSpecializedTalentPage = () => {
                             {/* <div style={{ fontSize: "16px", color: "#3C3C3C" }}>Covering Every Aspect of SAP Expertise</div>
                             <div style={{ fontSize: "16px", color: "#3C3C3C" }}>50+</div> */}
                             <table className={sapStyle.tableClass}>
-
+                            <tbody>
                                 <tr >
                                     <td style={{ fontWeight: "600" }}>Mainframe Systems</td>
                                     <td style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
@@ -757,6 +758,7 @@ const HireSpecializedTalentPage = () => {
 
 
                                 </tr>
+                                </tbody>
                             </table>
 
                         </div>}
@@ -1081,7 +1083,9 @@ const HireSpecializedTalentPage = () => {
                     </div>
                 </div>
             </section>
-
+            <section className={homePageStyle.carauselOutercontainer}>
+          <HomeCandidateProfile/>
+          </section>
             <FotterComponent />
         </div>
     )

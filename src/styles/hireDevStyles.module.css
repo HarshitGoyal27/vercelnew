@@ -171,7 +171,16 @@
   display: flex;
   justify-content: center;
   width:150px;
-  
+}
+.sapbuttonsecondClicked{
+  border:1px solid lightgrey;
+  border-top-left-radius:5px;
+  border-bottom-left-radius:5px;
+  padding:5px 20px;
+  display: flex;
+  justify-content: center;
+  width:150px;
+  background-color: lightgrey;
 }
 .cloudbuttonsecond{
   border-top:1px solid lightgrey;
@@ -183,6 +192,17 @@
   width:150px;
   
 }
+.cloudbuttonsecondClicked{
+  border-top:1px solid lightgrey;
+  border-bottom:1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  padding:5px 20px;
+  display: flex;
+  justify-content: center;
+  width:150px;
+  background-color: lightgrey;
+  
+}
 .legacybuttonsecond{
   border:1px solid lightgrey;
   padding:5px 20px;
@@ -192,6 +212,16 @@
   justify-content: center;
   width:150px;
   
+}
+.legacybuttonsecondClicked{
+  border:1px solid lightgrey;
+  padding:5px 20px;
+  border-top-right-radius:5px;
+  border-bottom-right-radius:5px;
+  display: flex;
+  justify-content: center;
+  width:150px;
+  background-color: lightgrey;
 }
 .outerhowitwork{
   @media(1200px<width<=1391px){

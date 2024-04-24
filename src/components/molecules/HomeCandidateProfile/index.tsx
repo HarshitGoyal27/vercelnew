@@ -40,7 +40,7 @@ function SampleNextArrow(props: any) {
       } as any}
       onClick={onClick}
     >
-      <NavigateNextIcon sx={{color:"black" ,fontSize:"46px"}}/>
+      <NavigateNextIcon sx={{ color: "black", fontSize: "46px" }} />
     </div>
   );
 }
@@ -59,7 +59,7 @@ function SamplePrevArrow(props: any) {
       } as any}
       onClick={onClick}
     >
-      <NavigateBeforeIcon sx={{color:"black",fontSize:"46px"}}/>
+      <NavigateBeforeIcon sx={{ color: "black", fontSize: "46px" }} />
     </div>
   );
 }
@@ -73,6 +73,7 @@ function truncateSentence(sentence: string, maxLength = 195) {
 const HomeCandidateProfile: React.FC = () => {
   const [apiResponse, setApiResponse] = useState<Candidates[]>([]);
   const [loading, setLoading] = useState(true);
+  const [skills, setSkills] = useState("TM")
   const fetchData = async (skills: string) => {
     try {
       console.log("Fetching data for skills:", skills);
@@ -90,8 +91,8 @@ const HomeCandidateProfile: React.FC = () => {
   try {
     useEffect(() => {
       // Fetch default data for SAP when the component mounts
-      fetchData("JAVA");
-    }, []);
+      fetchData(skills);
+    }, [skills]);
   } catch (error) {
     alert(error);
   }
@@ -111,10 +112,10 @@ const HomeCandidateProfile: React.FC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow  />
-    
+    prevArrow: <SamplePrevArrow />
+
   };
-  const handleButtonClick = (string:any)=>{
+  const handleButtonClick = (string: any) => {
 
   }
   return (
@@ -122,15 +123,15 @@ const HomeCandidateProfile: React.FC = () => {
       <div className={homePageStyle.carauselHeading}>Best Developers</div>
       <div className={homePageStyle.belowHeading}>They are some of the best developers we have and they have tested and worked with several client</div>
       <div className={hireDevStyle.buttonsContainer} >
-            <div className={hireDevStyle.buttonsContainerSecond}>
-              <div className={hireDevStyle.sapbuttonsecond} onClick={() => handleButtonClick("SAP")}>TM</div>
-              <div className={hireDevStyle.cloudbuttonsecond} onClick={() => handleButtonClick("Cloud")}>SD</div>
-              <div className={hireDevStyle.cloudbuttonsecond} onClick={() => handleButtonClick("Legacy")}>FI</div>
-              <div className={hireDevStyle.cloudbuttonsecond} onClick={() => handleButtonClick("Legacy")}>CO</div>
-              <div className={hireDevStyle.cloudbuttonsecond} onClick={() => handleButtonClick("Legacy")}>GTS</div>
-              <div className={hireDevStyle.legacybuttonsecond} onClick={() => handleButtonClick("Legacy")}>MM</div>
-            </div>
-          </div>
+        <div className={hireDevStyle.buttonsContainerSecond}>
+          <div className={skills==="TM"?hireDevStyle.sapbuttonsecondClicked:hireDevStyle.sapbuttonsecond} onClick={() => setSkills("TM")}>TM</div>
+          <div className={skills==="SD"?hireDevStyle.cloudbuttonsecondClicked:hireDevStyle.cloudbuttonsecond} onClick={() => setSkills("SD")}>SD</div>
+          <div className={skills==="FI"?hireDevStyle.cloudbuttonsecondClicked:hireDevStyle.cloudbuttonsecond} onClick={() => setSkills("FI")}>FI</div>
+          <div className={skills==="CO"?hireDevStyle.cloudbuttonsecondClicked:hireDevStyle.cloudbuttonsecond} onClick={() => setSkills("CO")}>CO</div>
+          <div className={skills==="GTS"?hireDevStyle.cloudbuttonsecondClicked:hireDevStyle.cloudbuttonsecond} onClick={() => setSkills("GTS")}>GTS</div>
+          <div className={skills==="MM"?hireDevStyle.legacybuttonsecondClicked:hireDevStyle.legacybuttonsecond} onClick={() => setSkills("MM")}>MM</div>
+        </div>
+      </div>
       <div className={homePageStyle.profileCarausel}>
         <Slider {...settings}>
           {(apiResponse === undefined) ? ("loading...") : (apiResponse.map((item: any, index: any) => (
@@ -146,7 +147,7 @@ const HomeCandidateProfile: React.FC = () => {
                     <div className={homePageStyle.name}>{item.Name}</div>
                     <div className={homePageStyle.candidateskills}>{truncateSentence(item.CandidateProfile)}</div>
                     <div className={homePageStyle.skillsSection} ><span style={{ fontWeight: "600" }}>Salary:</span>  <span style={{ color: "blue" }}>{item.Salary}</span></div>
-                    <div className={homePageStyle.availableContainer } >
+                    <div className={homePageStyle.availableContainer} >
                       <div style={{ color: "blue" }}><span style={{ fontWeight: "570" }}>Available:</span>  6 months</div>
                       <div>{item.CurrentLocation}</div>
                     </div>
