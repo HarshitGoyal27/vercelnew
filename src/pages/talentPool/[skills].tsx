@@ -1,14 +1,18 @@
 import Navbar from '@/components/molecules/navbar'
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from "next/image";
-import css from "../../../styles/sapTalentStyle.module.css"
+import css from "../../styles/sapTalentStyle.module.css"
 import CustomButton2 from '@/components/atoms/CustomButton2';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import FotterComponent from '@/components/molecules/Fotter';
 
 import Letstalk from '@/components/molecules/Contact';
 import { SapficoPageText } from '@/constants/texts';
-const SapFicoTalentPool = () => {
+import axios from 'axios';
+import { DEV_PUBLIC_APIURL } from '../../../configs/auth';
+const SapFicoTalentPool = ( props :any) => {
+    const { page_data } = props;
+    console.log(props)
     return (
         <div>
             <Navbar />
@@ -45,17 +49,17 @@ const SapFicoTalentPool = () => {
                     <div id={css.threeimagesection}>
                         <div><Image src="/TalentPoolImages/service2.webp" height={130} width={130} alt="" /></div>
                         <div style={{ fontWeight: "600" }}>{SapficoPageText.tranHeading1}</div>
-                        <div style={{ fontSize: "14px" }}>{SapficoPageText.tranSubHeading1}</div>
+                        <div style={{ fontSize: "14px" }}>{page_data[0].substring(3)}</div>
                     </div>
                     <div id={css.threeimagesection}>
                         <div><Image src="/TalentPoolImages/service3.webp" height={130} width={130} alt="" /></div>
                         <div style={{ fontWeight: "600" }}>{SapficoPageText.tranHeading2}</div>
-                        <div style={{ fontSize: "14px" }}>{SapficoPageText.tranSubHeading2}</div>
+                        <div style={{ fontSize: "14px" }}>{page_data[1].substring(3)}</div>
                     </div>
                     <div id={css.threeimagesection}>
                         <div><Image src="/TalentPoolImages/service4.webp" height={130} width={130} alt="" /></div>
                         <div style={{ fontWeight: "600" }}>{SapficoPageText.tranHeading3}</div>
-                        <div style={{ fontSize: "14px" }}>{SapficoPageText.tranSubHeading3}</div>
+                        <div style={{ fontSize: "14px" }}>{page_data[2].substring(3)}</div>
                     </div>
                 </div>
             </section>
@@ -177,6 +181,16 @@ const SapFicoTalentPool = () => {
             <FotterComponent />
         </div>
     )
+}
+
+export async function getServerSideProps(context:any){
+      const responseData = await axios.get(`${DEV_PUBLIC_APIURL}consultant/${context.query.skills}`)
+      
+      const page_data = responseData.data.data
+    console.log("object",`${DEV_PUBLIC_APIURL}consultant/${context.query.skills}`)
+    return {
+        props:{page_data},
+    }
 }
 
 export default SapFicoTalentPool

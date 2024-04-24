@@ -1025,7 +1025,7 @@
   @media(768px <=width <=1000px) {
     margin-left: -30px;
   }
-  @media(1000px <=width <=1200px) {
+  @media(1000px <=width <=1500px) {
     width:80vw;
   }
 
@@ -1066,6 +1066,7 @@
   @media(1000px<width<=1500px) {
     width: 100vw;
     margin: 0;
+    margin-top: -180px;
     /* display: none; */
   }
   @media(width<=426px) {
@@ -1082,12 +1083,13 @@
   }
 
   width: 1470px;
-  height: 426px;
+  /* height: 426px; */
   margin-left: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: -180px;
 }
 
 .carauselHeading {
@@ -1113,6 +1115,10 @@
 }
 
 .ProfilecardStyle {
+  @media(1030px <=width <=1500px) {
+    margin-left: 10vw;
+    width: 700px;
+  }
   @media(768px <=width <=1030px) {
     margin-left: 55px;
     width: 700px;
@@ -1136,7 +1142,7 @@
     height: 240px;
     margin-left: 120px;
   }
-
+  
   margin:20px;
   margin-left:20%;
   height:280px;

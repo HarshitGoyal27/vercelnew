@@ -870,6 +870,9 @@ export default function Home({ allData }: { allData: any }) {
           </div>
         </div>
       </section>
+      <section className={homePageStyle.carauselOutercontainer}>
+          <HomeCandidateProfile/>
+          </section>
       <FotterComponent />
     </>
   );

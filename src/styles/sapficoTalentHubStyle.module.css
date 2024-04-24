@@ -205,6 +205,9 @@
   }
 
   .aboutSection{
+    @media(width<1000px){
+      width:1400px;
+    }
     font-family: Poppins, sans-serif;
     text-align: center;
     margin-top: 80px;
@@ -212,6 +215,9 @@
   }
 
   .whyusSection{
+    @media(width<1000px){
+      width:1400px;
+    }
     font-family: Poppins, sans-serif;
     text-align: center;
     margin-top: 80px;

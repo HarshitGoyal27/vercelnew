@@ -12,6 +12,7 @@ import { DEV_PUBLIC_URL } from '../../../../configs/auth';
 const apiUrl = `${DEV_PUBLIC_URL}form/candidates`;
 import Image from 'next/image';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import hireDevStyle from "../../../styles/hireDevStyles.module.css";
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 interface Candidates {
   Name: string;
@@ -111,11 +112,25 @@ const HomeCandidateProfile: React.FC = () => {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow  />
+    
   };
+  const handleButtonClick = (string:any)=>{
+
+  }
   return (
     <>
       <div className={homePageStyle.carauselHeading}>Best Developers</div>
       <div className={homePageStyle.belowHeading}>They are some of the best developers we have and they have tested and worked with several client</div>
+      <div className={hireDevStyle.buttonsContainer} >
+            <div className={hireDevStyle.buttonsContainerSecond}>
+              <div className={hireDevStyle.sapbuttonsecond} onClick={() => handleButtonClick("SAP")}>TM</div>
+              <div className={hireDevStyle.cloudbuttonsecond} onClick={() => handleButtonClick("Cloud")}>SD</div>
+              <div className={hireDevStyle.cloudbuttonsecond} onClick={() => handleButtonClick("Legacy")}>FI</div>
+              <div className={hireDevStyle.cloudbuttonsecond} onClick={() => handleButtonClick("Legacy")}>CO</div>
+              <div className={hireDevStyle.cloudbuttonsecond} onClick={() => handleButtonClick("Legacy")}>GTS</div>
+              <div className={hireDevStyle.legacybuttonsecond} onClick={() => handleButtonClick("Legacy")}>MM</div>
+            </div>
+          </div>
       <div className={homePageStyle.profileCarausel}>
         <Slider {...settings}>
           {(apiResponse === undefined) ? ("loading...") : (apiResponse.map((item: any, index: any) => (
