@@ -20,6 +20,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Opacity } from '@mui/icons-material';
 import { useRouter } from "next/router";
 import HomeCandidateProfile from '@/components/molecules/HomeCandidateProfile';
+import ResponsiveCarousel from '@/components/molecules/ProfileCorousel';
 const Hire = () => {
   const router = useRouter();
   const HireDeveloperClicked = () => {
@@ -126,7 +127,8 @@ const Hire = () => {
                 videoSrc={"/HomePageImages/HomePageVideo.mp4"}
                 videoWidth={"500"}
                 videoHeight={"600"} */}
-            <Image src="/HireDeveloperImages/hireSapImage.jpeg" alt="" height={400} width={400} />
+                <ResponsiveCarousel opacityValue={1} skillSetValue="sap" />
+            {/* <Image src="/HireDeveloperImages/hireSapImage.jpeg" alt="" height={400} width={400} /> */}
 
           </div>
         </div>

@@ -60,8 +60,14 @@ const ResponsiveCarousel: React.FC<ResponsiveCarouselProps> = ({ opacityValue, s
     return <CircularProgress />;
   }
 
-  const profileImageURLs = ['https://thepienews.com/wp-content/uploads/2020/01/Profile-Picture-Small.jpg', 'https://img.freepik.com/free-photo/smiling-man_1098-15443.jpg', 'https://img.freepik.com/premium-photo/happy-businessman_107420-67978.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1699747200&semt=ais', 'https://img.freepik.com/premium-photo/photo-young-student-guy-internet-online-meeting-video-call-lesson-conference-study-concept_274222-31085.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699747200&semt=ais', 'https://img.freepik.com/premium-photo/close-up-happy-bearded-man-suit-laughing-smiling-standing-white-background_1258-49895.jpg?size=626&ext=jpg&ga=GA1.1.1518270500.1698451200&semt=ais'];
-
+  // const profileImageURLs = ['https://thepienews.com/wp-content/uploads/2020/01/Profile-Picture-Small.jpg', 'https://img.freepik.com/free-photo/smiling-man_1098-15443.jpg', 'https://img.freepik.com/premium-photo/happy-businessman_107420-67978.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1699747200&semt=ais', 'https://img.freepik.com/premium-photo/photo-young-student-guy-internet-online-meeting-video-call-lesson-conference-study-concept_274222-31085.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699747200&semt=ais', 'https://img.freepik.com/premium-photo/close-up-happy-bearded-man-suit-laughing-smiling-standing-white-background_1258-49895.jpg?size=626&ext=jpg&ga=GA1.1.1518270500.1698451200&semt=ais'];
+  const profileImageURLs = [
+    // "https://thepienews.com/wp-content/uploads/2020/01/Profile-Picture-Small.jpg",
+    "https://img.freepik.com/free-photo/smiling-man_1098-15443.jpg",
+    "https://img.freepik.com/premium-photo/happy-businessman_107420-67978.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1699747200&semt=ais",
+    "https://img.freepik.com/premium-photo/photo-young-student-guy-internet-online-meeting-video-call-lesson-conference-study-concept_274222-31085.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699747200&semt=ais",
+    "https://img.freepik.com/premium-photo/close-up-happy-bearded-man-suit-laughing-smiling-standing-white-background_1258-49895.jpg?size=626&ext=jpg&ga=GA1.1.1518270500.1698451200&semt=ais",
+  ];
   return (
     <div>
       <div className={talentPoolStyle.profileCarauselContainer} style={{ opacity: `${opacityValue}` }} >
@@ -73,7 +79,7 @@ const ResponsiveCarousel: React.FC<ResponsiveCarouselProps> = ({ opacityValue, s
             infiniteLoop={true}
             showArrows={false}
             showStatus={false}
-
+            showIndicators={false}
           >
             {profiles.map((profile, index) => (
               <div key={index}>
