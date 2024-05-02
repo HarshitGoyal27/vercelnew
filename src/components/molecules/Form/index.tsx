@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, ChangeEvent } from "react";
 import {
   Autocomplete,
   Checkbox,
@@ -27,10 +27,17 @@ import SmallAutocompleteFromAPI from "../smallAutoComplete";
 import { useGlobalContext } from "../../../../context/store";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-
+import CloseIcon from '@mui/icons-material/Close';
 interface Option {
   id: number;
   label: string;
+}
+
+interface RecentSearchItem {
+  Skill_Set: string;
+  Experience_in_Years: string;
+  minExp: string;
+  maxExp: string;
 }
 
 interface Candidates {
@@ -46,7 +53,7 @@ interface Candidates {
   PrefferedLocation: string;
   CurrentLocation: string;
   MayAlsoKnow: string;
-  Education:string;
+  Education: string;
 }
 
 interface Profile {
@@ -57,8 +64,8 @@ interface Profile {
   Skill_Name_Version: string;
   Certification: string;
   Preferred_Industry_Domain: string;
-  minExp:string;
-  maxExp:string;
+  minExp: string;
+  maxExp: string;
 }
 interface Skill_Info {
   skill_name: string;
@@ -76,8 +83,8 @@ const Form: React.FC = () => {
   const [profiles, setProfile] = useState<Profile>({
     Skill_Set: "",
     Experience_in_Years: "",
-    minExp:"",
-    maxExp:"",
+    minExp: "",
+    maxExp: "",
     Current_Location: "",
     Current_Timezone: "",
     Skill_Name_Version: "",
@@ -109,28 +116,26 @@ const Form: React.FC = () => {
   const [filterOption, setFilterOption] = useState("");
   const [touched, setTouched] = useState(false);
   const [salary, setSalary] = useState<string>();
-
+  const [recent, setRecent] = useState(false);
+  const [recentSearch, setRecentSearch] = useState<RecentSearchItem[]>([]);
   const [expandedRow, setExpandedRow] = useState(null);
 
-
-  const toggleRow = (index:any) => {
+  const toggleRow = (index: any) => {
     setExpandedRow(expandedRow === index ? null : index);
   };
 
-  const handleMinExperienceChange=async(event:any)=>{
-      console.log('Min expericene',event.target.value);
-      setProfile({ ...profiles, minExp: event.target.value });
-      
+  const handleMinExperienceChange = async (event: any) => {
+    console.log('Min expericene', event.target.value);
+    setProfile({ ...profiles, minExp: event.target.value });
+
   }
 
-  const handleMaxExperienceChange=async(event:any)=>{
-    console.log('Max expericene',event.target.value);
+  const handleMaxExperienceChange = async (event: any) => {
+    console.log('Max expericene', event.target.value);
     setProfile({ ...profiles, maxExp: event.target.value });
   }
 
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
-  ): Promise<void> => {
+  const handleSubmit = async (e: any) => {
     setLoading(true);
     console.log("AAAA", profiles);
     if (profiles.Skill_Set) {
@@ -145,6 +150,17 @@ const Form: React.FC = () => {
 
     try {
       console.log("-------->", profiles, pageNumber);
+      let localData = localStorage.getItem("RecentSearch");
+      if (localData) localData = JSON.parse(localData);
+      let jsonArr: any[] = [];
+      if (typeof localData === 'object' && Array.isArray(localData)) {
+        jsonArr = [profiles, ...localData]; // Concatenate localData array with profiles array
+      } else {
+        jsonArr.push(profiles); // Push profiles into jsonArr
+      }
+      const jsonString = JSON.stringify(jsonArr);
+      localStorage.setItem('RecentSearch', jsonString);
+      setRecent(true);
       const resp = await axios.post(`${DEV_PUBLIC_URL}form/candidates`, {
         profiles,
         pageNumber,
@@ -373,6 +389,7 @@ const Form: React.FC = () => {
         : selectedId.filter((item) => item !== valueData)
     );
   };
+
   const handleSelectAll = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectAll(e.target.checked);
     const allIDs = apiResponse.map((item) => item.id);
@@ -387,7 +404,7 @@ const Form: React.FC = () => {
   };
 
   useEffect(() => {
-    console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',apiResponse);
+    console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', apiResponse);
     const allIDs = apiResponse.map((item) => item.id);
     const allNumbersPresent = allIDs.every((id) => selectedId.includes(id));
     if (allNumbersPresent) {
@@ -398,8 +415,8 @@ const Form: React.FC = () => {
   }, [apiResponse, selectedId]);
 
   useEffect(() => {
-    console.log("profiles--->", profiles);
-  }, [profiles]);
+    console.log("profiles--->", selectedId);
+  }, [selectedId]);
 
   const handleMeetButton = () => {
     localStorage.setItem("selectedId", JSON.stringify({ selectedId }));
@@ -411,7 +428,8 @@ const Form: React.FC = () => {
   };
   const [sortOption, setSortOption] = useState("");
 
-  const handleChange = (event: SelectChangeEvent) => {
+  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    console.log(event.target.value)
     setSortOption(event.target.value);
     if (event.target.value === "salary") {
       const sortedProfiles = [...apiResponse].sort(
@@ -430,9 +448,11 @@ const Form: React.FC = () => {
       setApiDummyResponse(sortedProfiles);
     }
   };
+
   useEffect(() => {
-    console.log("mymy", profiles);
-  }, [profiles]);
+    console.log("mymy", apiDummyResponse);
+  }, [apiDummyResponse]);
+
   const handleChangefilter = async (event: SelectChangeEvent) => {
     setFilterOption(event.target.value);
     console.log("object", event.target.value);
@@ -451,465 +471,414 @@ const Form: React.FC = () => {
     setAllSkillInfo((prevSkills) => [...prevSkills, skillInfo]);
     setSelectedMonth("");
   };
+  useEffect(() => {
+    let data = localStorage.getItem("RecentSearch");
+    if (data) {
+      data = JSON.parse(data);
+      typeof (data) === 'object' && data && setRecentSearch(data);
+    }
+    console.log('Reached here', data);
+  }, [])
+
+  const handleClickRecent = (search: any) => {
+    console.log('Inside function', search);
+    let skillElem = document.getElementById("first") as HTMLInputElement;
+    let LocElem = document.getElementById("second") as HTMLInputElement;
+    let MinExpElem = document.getElementById("third") as HTMLInputElement;
+    let MaxExpElem = document.getElementById("fourth") as HTMLInputElement;
+    let TimeZoneElem = document.getElementById("fifth") as HTMLInputElement;
+    if (skillElem) {
+      skillElem.value = search.Skill_Set;
+    }
+    if (LocElem) {
+      if (search.Current_Location) {
+        LocElem.value = search.Current_Location;
+      }
+    }
+    if (MinExpElem) {
+      if (search.minExp) {
+        MinExpElem.value = search.minExp;
+      }
+    }
+    if (MaxExpElem) {
+      if (search.maxExp) {
+        MaxExpElem.value = search.maxExp;
+      }
+    }
+    console.log('abcdefg', search, profiles);
+    setProfile({ ...search })
+    // if(TimeZoneElem){
+    //   if(search.Current_Location.length>0){
+    //     TimeZoneElem.value=search.Current_Location
+    //   }
+    // }
+  }
+
+  const handleClose = (index: any) => {
+    console.log('hiii')
+    let data = localStorage.getItem("RecentSearch");
+    if (data) {
+      data = JSON.parse(data);
+      let arr = Array.isArray(data) ? data.filter((ele, idx) => idx !== index) : [];
+      // Update local storage with the filtered data
+      localStorage.setItem("RecentSearch", JSON.stringify(arr));
+      setRecentSearch(arr);
+    }
+  }
+
+
   return (
     <>
       {!getAllCandidate && (
         <div>
           <h1 className={css.homeWrapper}>Search Elite Developers</h1>
           <div className={css.formStyle}>
-            <CustomAutocompleteFromAPI
-              setSelectedValue={setProfile}
-              touched={touched}
-            />
-           
-            <form onSubmit={handleSubmit}>
-              {/* <TextField
-              placeholder="Enter Current Location"
-              name="Current_Location"
-              value={profiles.Current_Location}
-              onChange={handleInputChange}
-              fullWidth
-              margin="normal"
-              style={{ margin: '20px 25%', width: '50%' }}
-            /> */}
-              <SmallAutocompleteFromAPI
-                handleFilter={null}
-                setAllSkills={null}
-                setFinalTotalSkills={null}
-                widtha="50%"
-                name="Current Location"
-                imageurl=""
-                fieldName="searchLocation"
+            <div style={{ width: '60%' }}>
+              <CustomAutocompleteFromAPI
                 setSelectedValue={setProfile}
-                url={`${DEV_PUBLIC_URL}location/candidates`}
+                touched={touched}
               />
-              {/* <TextField
-              placeholder="Enter Years of Experience"
-              name="Experience_in_Years"
-              value={profiles.Experience_in_Years}
-              onChange={handleInputChange}
-              fullWidth
-              margin="normal"
-              style={{ margin: '20px 25%', width: '50%' }}
-            /> */}
+            </div>
+            <div style={{ width: '30%', height: '70vh', backgroundColor: '#f7f7f7', marginRight: '2%', padding: '1.2vw', overflow: 'auto' }}>
+              <div style={{ fontWeight: '500', fontSize: '2rem' }}>RECENT SEARCHES</div>
               <div>
-                <FormControl sx={{ margin: "20px 0px 0px 25%", width: "25%" }}>
-                  <InputLabel>Minimum Experience</InputLabel>
-                  <Select
-                    label="Minimum Experience"
-                    displayEmpty
-                    inputProps={{ "aria-label": "Without label" }}
-                    onChange={handleMinExperienceChange}
-                    MenuProps={{
-                      PaperProps: {
-                        style: {
-                          maxHeight: 200,
-                        },
-                      },
-                    }}
-                  >
-                    {Array.from({ length: 16 }, (_, index) => (
-                      <MenuItem key={index} value={index + 5}>
-                        {index + 5}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-                <FormControl sx={{ margin: "20px 0px 0px 0px", width: "25%" }}>
-                  <InputLabel>Maximum Experience</InputLabel>
-                  <Select
-                    label="Maximum Experience"
-                    displayEmpty
-                    inputProps={{ "aria-label": "Without label" }}
-                    onChange={handleMaxExperienceChange}
-                    MenuProps={{
-                      PaperProps: {
-                        style: {
-                          maxHeight: 200,
-                        },
-                      },
-                    }}
-                  >
-                    {Array.from({ length: 16 }, (_, index) => (
-                      <MenuItem key={index} value={index + 5}>
-                        {index + 5}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
+                {
+                  recentSearch.length > 0 && recentSearch.map((ele, idx) => (
+                    <div style={{ display: 'flex', marginTop: '4vh' }} key={idx}>
+                      <div><CloseIcon style={{ fontSize: '16', color: 'grey', cursor: 'pointer' }} onClick={() => handleClose(idx)} /></div>
+                      <div style={{ marginTop: '2.5vh', backgroundColor: '#f7f7f7', fontSize: '1.5rem' }}>
+                        <div>{ele.Skill_Set}</div>
+                        <div style={{ marginTop: '-0.4rem' }}>
+                          <span onClick={(event) => handleClickRecent(ele)} style={{ fontSize: '0.9rem', cursor: 'pointer', color: 'blue', width: 'auto' }}>Fill this Search</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                }
               </div>
-
-              <FormControl sx={{ margin: "20px 25%", width: "50%" }}>
-                <InputLabel>Salary</InputLabel>
-                <Select
-                  value={salary === undefined ? "" : salary}
-                  onChange={handlesalary}
-                  label="Salary"
-                  displayEmpty
-                  inputProps={{ "aria-label": "Without label" }}
-                  MenuProps={{
-                    PaperProps: {
-                      style: {
-                        maxHeight: 200,
-                      },
-                    },
-                  }}
-                >
-                  {Array.from({ length: 47 }, (_, index) => (
-                    // Your JSX code here, for example:
-                    <MenuItem key={index} value={index}>
-                      ${80 + index * 20}
-                    </MenuItem>
-                  ))}
-                  <MenuItem value={"above 1000"}>above $1000</MenuItem>
-                </Select>
-              </FormControl>
-              <Autocomplete
-                disablePortal
-                id="Current_Timezone"
-                style={{ margin: "20px 25%", width: "50%" }}
-                options={["IST", "CET", "ET", "none"]}
-                sx={{ width: 300 }}
-                onChange={handleTimeZone}
-                renderInput={(params) => (
-                  <TextField {...params} label="Enter Time Zone" />
-                )}
-              />
-              {/* <TextField
-              placeholder="Enter Certification"
-              name="Certification"
-              value={profiles.Certification}
-              onChange={handleInputChange}
-              fullWidth
-              margin="normal"
-              style={{ margin: '20px 25%', width: '50%' }}
-            /> */}
-              <SmallAutocompleteFromAPI
-                handleFilter={null}
-                setAllSkills={null}
-                setFinalTotalSkills={null}
-                widtha="50%"
-                name="Certification"
-                imageurl=""
-                fieldName="word"
-                setSelectedValue={setProfile}
-                url={`${DEV_PUBLIC_URL}certification/candidates`}
-              />
-              <TextField
-                placeholder="Enter Preferred Industry Domain"
-                name="Preferred_Industry_Domain"
-                value={profiles.Preferred_Industry_Domain}
-                onChange={handleInputChange}
-                fullWidth
-                margin="normal"
-                style={{ margin: "20px 25%", width: "50%" }}
-              />
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Button type="submit" variant="contained" color="primary">
-                  Get elite candidates now
-                </Button>
-              </div>
-              <br />
-            </form>
+            </div>
           </div>
+          <Button type="submit" variant="contained" color="primary" onClick={(e) => handleSubmit(e)}>
+            Get elite candidates now
+          </Button>
         </div>
       )}
 
       {showAskClient && <AskClient handleYouSelect={handleYouSelect} />}
       {youSelect && (
         <div>
-          <div className="mainProfileWrapper">
-            {eliteButtonClicked && (
-              <div className={css.outerOuterCheckbox}>
-                <div className={css.outerCheckbox}>
-                  <Checkbox
-                    checked={selectAll}
-                    onChange={handleSelectAll}
-                    sx={{ "& .MuiSvgIcon-root": { fontSize: 38 } }}
-                  />
-                  <label htmlFor="selectall">: Select All </label>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    width: "650px",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                    flexDirection: "row-reverse",
-                  }}
-                >
-                  <div style={{ display: "flex", alignItems: "center" }}>
-                    <FormControl sx={{ m: 1, minWidth: 120 }}>
-                      <InputLabel>Filter by:</InputLabel>
-                      <Select
-                        value={filterOption}
-                        onChange={handleChangefilter}
-                        displayEmpty
-                        label="Filter by:"
-                        inputProps={{ "aria-label": "Without label" }}
-                        className={css.dropdown}
-                        MenuProps={{
-                          PaperProps: {
-                            style: {
-                              borderRadius: "10px",
-                            },
-                          },
-                        }}
-                      >
-                        <MenuItem value={"searchLocation"}>Location</MenuItem>
-                        <MenuItem value={"Experience_in_Years"}>
-                          Experience
-                        </MenuItem>
-                        <MenuItem value={"Current_Timezone"}>TimeZone</MenuItem>
-                        <MenuItem value={"College"}>College</MenuItem>
-                        <MenuItem value={"Company"}>Company</MenuItem>
-                        <MenuItem value={"None"}>None</MenuItem>
-                      </Select>
-                    </FormControl>
-                    {filterOption && filterOption === "searchLocation" && (
-                      <SmallAutocompleteFromAPI
-                        handleFilter={handleFilter}
-                        setAllSkills={null}
-                        setFinalTotalSkills={null}
-                        widtha="200px"
-                        name="location"
-                        imageurl=""
-                        fieldName="searchLocation"
-                        setSelectedValue={setSkillInfo}
-                        url={`${DEV_PUBLIC_URL}location/candidates`}
-                      />
-                    )}
-                    {filterOption && filterOption === "Company" && (
-                      <SmallAutocompleteFromAPI
-                        handleFilter={handleFilter}
-                        setAllSkills={null}
-                        setFinalTotalSkills={null}
-                        widtha="200px"
-                        name="Company Name"
-                        imageurl=""
-                        fieldName="CompanyName"
-                        setSelectedValue={setSkillInfo}
-                        url={`${DEV_PUBLIC_URL}searchbar/candidates`}
-                      />
-                    )}
-                    {filterOption && filterOption === "College" && (
-                      <SmallAutocompleteFromAPI
-                        handleFilter={handleFilter}
-                        setAllSkills={null}
-                        setFinalTotalSkills={null}
-                        widtha="200px"
-                        name="College Name"
-                        imageurl=""
-                        fieldName="CollegeName"
-                        setSelectedValue={setSkillInfo}
-                        url={`${DEV_PUBLIC_URL}searchbar/candidates`}
-                      />
-                    )}
-                    {filterOption && filterOption === "Experience_in_Years" && (
-                      <FormControl sx={{ m: 1, minWidth: 120 }}>
-                        <InputLabel>Experience</InputLabel>
-                        <Select
-                          value={expOption}
-                          onChange={handleFilterExperience}
-                          label="Experience"
-                          displayEmpty
-                          inputProps={{ "aria-label": "Without label" }}
-                          className={css.dropdown}
-                          MenuProps={{
-                            PaperProps: {
-                              style: {
-                                maxHeight: 200,
-                              },
-                            },
-                          }}
-                        >
-                          {Array.from({ length: 19 }, (_, index) => (
-                            // Your JSX code here, for example:
-                            <MenuItem key={index} value={index + 2}>
-                              {index + 2}
-                            </MenuItem>
-                          ))}
-                        </Select>
-                      </FormControl>
-                    )}
-                    {filterOption && filterOption === "Current_Timezone" && (
-                      <FormControl sx={{ m: 1, minWidth: 120 }}>
-                        <InputLabel>TimeZone</InputLabel>
-                        <Select
-                          value={timeZone}
-                          onChange={handleFilterExperience}
-                          label="TimeZone"
-                          displayEmpty
-                          inputProps={{ "aria-label": "Without label" }}
-                          className={css.dropdown}
-                          MenuProps={{
-                            PaperProps: {
-                              style: {
-                                borderRadius: "10px",
-                              },
-                            },
-                          }}
-                        >
-                          <MenuItem value="IST">IST</MenuItem>
-                          <MenuItem value="CET">CET</MenuItem>
-                          <MenuItem value="ET">ET</MenuItem>
-                        </Select>
-                      </FormControl>
-                    )}
-                  </div>
-                  <div>
-                    <FormControl sx={{ m: 1, minWidth: 120 }}>
-                      <InputLabel>Sort by:</InputLabel>
-                      <Select
-                        value={sortOption}
-                        onChange={handleChange}
-                        displayEmpty
-                        label="Sort by:"
-                        inputProps={{ "aria-label": "Without label" }}
-                        className={css.dropdown}
-                        MenuProps={{
-                          PaperProps: {
-                            style: {
-                              borderRadius: "10px",
-                            },
-                          },
-                        }}
-                      >
-                        <MenuItem value={"salary"}>Salary</MenuItem>
-                        <MenuItem value={"Experience_in_Years"}>
-                          Experience
-                        </MenuItem>
-                        <MenuItem value={"name"}>Name</MenuItem>
-                      </Select>
-                    </FormControl>
-                  </div>
-                </div>
-              </div>
-            )}
-            {loading ? (
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <CircularProgress />
-              </Box>
-            ) : apiDummyResponse.length !== 0 ? (
-              apiDummyResponse.map((profile, index) => (
-                <div className={css.outerContainer} key={index}>
-                  <div style={{ marginTop: "150px", marginLeft: "260px" }}>
-                    <Checkbox
-                      value={profile.id}
-                      checked={selectedId.includes(profile.id)}
-                      onChange={handleCheckBox}
-                      sx={{ "& .MuiSvgIcon-root": { fontSize: 38 } }}
-                    />
-                  </div>
-                  <Paper elevation={3} className={css.paperr}>
-                    <div>{profile.Name}</div>
-                    <div style={{ display: "flex", height: "90%" }}>
-                      <div className={css.iconbox}>
-                        <div className={css.icons}>
-                          <div style={{ display: "flex" }}>
-                            <BusinessCenterIcon />
-                            <div className={css.icontext}>
-                              {profile.Experience} Years
-                            </div>
-                          </div>
-                          <div style={{ display: "flex" }}>
-                            <AttachMoneyIcon />
-                            <div className={css.icontext}>{profile.Salary}</div>
-                          </div>
-                          <div style={{ display: "flex" }}>
-                            <LocationOnOutlinedIcon />
-                            <div className={css.icontext}>
-                              {profile.CurrentLocation}
-                            </div>
-                          </div>
-                        </div>
-                        <div className={css.infobox}>
-                          <div>Current</div>
-                          <div>{profile.CurrentRole}</div>
+          <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+          <link href="css/fonts.css" rel="stylesheet" />
+          <link href="css/reset.css" rel="stylesheet" />
+          <link href="css/style.css" rel="stylesheet" />
+          <link href="css/responsive.css" rel="stylesheet" />
+          <header className="navbar navbar-expand-lg navbar-light ">
+            <div className="container">
+              {/* <!-- Logo --> */}
+              <a className="navbar-brand" href="index.html">
+                <img src="images/SkillsCapitalLogo.png" alt="skillCapital" height="50" />
+              </a>
 
-                          <div>Previous</div>
-                          <div>{profile.PreviousRole}</div>
+              {/* <!-- Menu Button (for mobile) --> */}
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
 
-                          <div>Education</div>
-                          <div>{profile.Education}</div>
-
-                          <div>Key Skills</div>
-                          <div>{profile.Skills}</div>
-
-                          <div>May also know</div>
-                          <div>{profile.MayAlsoKnow}</div>
-                        </div>
-                      </div>
-                      <div className={css.box2}>
-                        <div>
-                          <center>
-                            <Image
-                              src="/images/dummyPic.png"
-                              width={50}
-                              height={50}
-                              alt="Profile Picture"
-                            />
-                          </center>
-                          <div className={css.cp}>
-                            {profile.CandidateProfile}
-                          </div>
-                        </div>
-                      </div>
+              {/* <!-- Menu Items --> */}
+              <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul className="navbar-nav">
+                  <li className="nav-item ">
+                    <a className="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" aria-haspopup="true" aria-expanded="false">Hire Elite Talent</a>
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                      <a className="dropdown-item" href="hire-sap-talent.html">Hire SAP Talent</a>
+                      <a className="dropdown-item" href="explore-specialized-talent.html">Hire Specialized Talent</a>
                     </div>
-                  </Paper>
-                </div>
-              ))
-            ) : (
-              "No candidate found"
-            )}
-          </div>
-          <div>
-            {disableNextButton && (
-              <div className={css.nodata}>No more data</div>
-            )}
-          </div>
-          {eliteButtonClicked && (
-            <div className={css.meetButton}>
-              <div>
-                <Button
-                  onClick={handleMeetButton}
-                  variant="contained"
-                  disabled={selectedId.length === 0}
-                >
-                  Schedule Meeting
-                </Button>
-              </div>
-              <div className={css.nextButtonContainer}>
-                <button
-                  disabled={disablePrevButton}
-                  onClick={prevHandle}
-                  className={css.prevStyle}
-                >
-                  <ArrowBackIcon />
-                </button>
-                <div className={css.pageNumber}>{pageNumber}</div>
-                <button
-                  disabled={disableNextButton}
-                  onClick={nextFun}
-                  className={css.nextStyle}
-                >
-                  <ArrowForwardIcon />
-                </button>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="gobal-elastic-teams.html">Global Elastic Teams</a>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" aria-haspopup="true" aria-expanded="false">SAP Talent Solutions</a>
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                      <a className="dropdown-item" href="hire-sap-talent.html">Hire Top SAP Talent</a>
+                      <a className="dropdown-item" href="sap-talent-pool.html">SAP Talent Pool</a>
+                      <a className="dropdown-item" href="sap-custom-solutions.html">SAP Custom Solutions</a>
+                      <a className="dropdown-item" href="sap-elite-consulting.html">SAP Elite Consulting</a>
+                      <a className="dropdown-item" href="sap-portal-hub.html">SAP Portal Hub</a>
+                    </div>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" aria-haspopup="true" aria-expanded="false">Company</a>
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                      <a className="dropdown-item" href="about-us.html">About Us</a>
+                      <a className="dropdown-item" href="leadership-team.html">Leadership Team</a>
+                      <a className="dropdown-item" href="vetting-process.html">Vetting Process</a>
+                      <a className="dropdown-item" href="careers.html">Careers</a>
+                      <a className="dropdown-item" href="contact-us.html">Contact Us</a>
+                    </div>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="https://talent.skillscapital.io/clientportal">Client Login</a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="contact-us.html">Contact Us</a>
+                  </li>
+                </ul>
               </div>
             </div>
-          )}
+          </header>
+
+          <div className="wrapper searchResult ">
+            {/* <!-- welcome Section  --> */}
+            <div className="searchResultSection ">
+              <section className="container mt-4 ">
+                <div className="row">
+                  <div className="col-md-12">
+                    <h2>Search Result</h2>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-12 ">
+                    <div className="filterBox">
+                      <div className="filterBoxLeft">
+                        <select id="sortby" name="" onChange={handleChange}>
+                          <option value="volvo">Sort By</option>
+                          <option value="salary">Salary</option>
+                          <option value="Experience_in_Years">Experience</option>
+                          <option value="name">Name</option>
+                        </select>
+                        <select id="filterby" name="">
+                          <option value="volvo">Filter By</option>
+                          <option value="saab">Location</option>
+                          <option value="mercedes">TimeZone</option>
+                          <option value="audi">College</option>
+                          <option value="mercedes">Company</option>
+                          <option value="audi">None</option>
+                        </select>
+
+                      </div>
+                      <div className="filterBoxRight">
+                        <label htmlFor="selectall">Select All: </label>
+                        <input 
+                        className="" 
+                        type="checkbox" 
+                        checked={selectAll}
+                    onChange={handleSelectAll}
+                        />
+
+                      </div>
+                      <div className="clear"></div>
+                    </div>
+                  </div>
+                  <div className="col-md-12 ">
+                    <div className="resultSection">
+                      <div className="resultCont">
+                        <ul>
+                          {loading ? (
+                            <Box
+                              sx={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              <CircularProgress />
+                            </Box>
+                          ) : apiDummyResponse.length !== 0 ? (
+                            apiDummyResponse.map((profile, index) => (
+                              <li className="listingPanel" key={index}>
+                                <div className="listTopSection">
+                                  <div className="selectOption">
+                                    <input
+                                      className=""
+                                      type="checkbox"
+                                      value={profile.id}
+                                      checked={selectedId.includes(profile.id)}
+                                      onChange={handleCheckBox}
+                                    />
+
+                                  </div>
+                                  <div className="ListImg">
+                                    <img src="images/avatar1.png" alt="avatar1" />
+                                  </div>
+                                  <div className="listDecs">
+                                    <h3 className="listName">{profile.Name}</h3>
+                                    <h4 className="currentLocation">{profile.CurrentLocation}</h4>
+                                    <h5><span>Years of Exp : {profile.Experience}</span> <strong>| </strong> <span>Current Salary : {profile.Salary}</span></h5>
+                                    <h6 className="listTitle"></h6>
+                                  </div>
+                                  <div className="otherDesc">
+                                    <p>{profile.CandidateProfile}</p>
+                                    <p><span>Current Position </span>{profile.CurrentRole}</p>
+                                    <p><span>Current Company </span>Larsen &amp; Toubro InfoTech Limited</p>
+                                    <p><span>Education </span>{profile.Education}</p>
+                                    <p><span>Key Skills: </span>{profile.Skills}</p>
+                                  </div>
+
+
+                                </div>
+                              </li>
+                            ))
+                          ) : (
+                            "No candidate found"
+                          )}
+
+
+                          {/* <li className="listingPanel">
+                            <div className="listTopSection">
+                              <div className="selectOption">
+                                <input className="" type="checkbox" />
+
+                              </div>
+                              <div className="ListImg">
+                                <img src="images/avatar1.png" alt="avatar1" />
+                              </div>
+                              <div className="listDecs">
+                                <h3 className="listName">John Doe</h3>
+                                <h4 className="currentLocation">New York, NY 20188</h4>
+                                <h5>Years of Exp : 10 Years <strong>| </strong> Current Salary : $6626.51</h5>
+                                <h6 className="listTitle"></h6>
+                              </div>
+                              <div className="otherDesc">
+                                <p>SAP FICO Functional Senior Consultant - MBA - Finance with 8+ years of Experience in SAP and 10+ years of expertise in Finance / Accounts domain. SAP ECC & S4HANA FICO Certified professional, SAP S4HANA Certified Associate - CO and Treasury</p>
+                                <p><span>Current Position: </span>Senior Finance Executive</p>
+                                <p><span>Current Company: </span>Larsen &amp; Toubro InfoTech Limited</p>
+                                <p><span>Education: </span>MBA/PGDM Institute of Management in Kerala, 2012</p>
+                                <p><span>Key Skills: </span>SAP R3,SAP FICO,Accounting,Bank Reconciliation,TDS,VAT,Service Tax,Central Excise,Tally ERP9,GST</p>
+                              </div>
+
+
+                            </div>
+                          </li>
+                          <li className="listingPanel">
+                            <div className="listTopSection">
+                              <div className="selectOption">
+                                <input className="" type="checkbox" />
+
+                              </div>
+                              <div className="ListImg">
+                                <img src="images/avatar1.png" alt="avatar1" />
+                              </div>
+                              <div className="listDecs">
+                                <h3 className="listName">John Doe</h3>
+                                <h4 className="currentLocation">New York, NY 20188</h4>
+                                <h5>Years of Exp : 10 Years <strong>| </strong> Current Salary : $6626.51</h5>
+                                <h6 className="listTitle"></h6>
+                              </div>
+                              <div className="otherDesc">
+                                <p>SAP FICO Functional Senior Consultant - MBA - Finance with 8+ years of Experience in SAP and 10+ years of expertise in Finance / Accounts domain. SAP ECC & S4HANA FICO Certified professional, SAP S4HANA Certified Associate - CO and Treasury</p>
+                                <p><span>Current Position: </span>Senior Finance Executive</p>
+                                <p><span>Current Company: </span>Larsen &amp; Toubro InfoTech Limited</p>
+                                <p><span>Education: </span>MBA/PGDM Institute of Management in Kerala, 2012</p>
+                                <p><span>Key Skills: </span>SAP R3,SAP FICO,Accounting,Bank Reconciliation,TDS,VAT,Service Tax,Central Excise,Tally ERP9,GST</p>
+                              </div>
+
+
+                            </div>
+                          </li>
+                          <li className="listingPanel">
+                            <div className="listTopSection">
+                              <div className="selectOption">
+                                <input className="" type="checkbox" />
+
+                              </div>
+                              <div className="ListImg">
+                                <img src="images/avatar1.png" alt="avatar1" />
+                              </div>
+                              <div className="listDecs">
+                                <h3 className="listName">John Doe</h3>
+                                <h4 className="currentLocation">New York, NY 20188</h4>
+                                <h5>Years of Exp : 10 Years <strong>| </strong> Current Salary : $6626.51</h5>
+                                <h6 className="listTitle"></h6>
+                              </div>
+                              <div className="otherDesc">
+                                <p>SAP FICO Functional Senior Consultant - MBA - Finance with 8+ years of Experience in SAP and 10+ years of expertise in Finance / Accounts domain. SAP ECC & S4HANA FICO Certified professional, SAP S4HANA Certified Associate - CO and Treasury</p>
+                                <p><span>Current Position: </span>Senior Finance Executive</p>
+                                <p><span>Current Company: </span>Larsen &amp; Toubro InfoTech Limited</p>
+                                <p><span>Education: </span>MBA/PGDM Institute of Management in Kerala, 2012</p>
+                                <p><span>Key Skills: </span>SAP R3,SAP FICO,Accounting,Bank Reconciliation,TDS,VAT,Service Tax,Central Excise,Tally ERP9,GST</p>
+                              </div>
+
+
+                            </div>
+                          </li> */}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-12 ">
+                    <div className="paginationSection">
+                      <ul className="pagination">
+                        <li className="page-item disabled">
+                          {/* <a className="page-link" href="#" tabIndex="-1" aria-disabled="true">Previous</a> */}
+                        </li>
+                        <li className="page-item active" aria-current="page">
+                          <a className="page-link" href="#">1 <span className="sr-only">(current)</span></a>
+                        </li>
+                        <li className="page-item"><a className="page-link" href="#">2</a></li>
+                        <li className="page-item"><a className="page-link" href="#">3</a></li>
+                        <li className="page-item"><a className="page-link" href="#">4</a></li>
+                        <li className="page-item"><a className="page-link" href="#">5</a></li>
+                        <li className="page-item">
+                          <a className="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+
+            </div>
+
+
+          </div>
+          <footer className="footer">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-4 footerheader">
+                  <h5>Pages</h5>
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hire-sap-talent.html">Hire SAP Talent</a></li>
+                    <li><a href="explore-specialized-talent.html">Explore Specialized Talent</a></li>
+                    <li><a href="gobal-elastic-teams.html">Global Elastic Teams</a></li>
+                    <li><a href="vetting-process.html">Vetting Process</a></li>
+                    <li><a href="leadership-team.html">Leadership Team</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                  </ul>
+                </div>
+                <div className="col-md-4 footerheader">
+                  <h5>Tech Specialties</h5>
+                  <ul>
+                    <li><a href="">Tech Specialties</a></li>
+                    <li><a href="">SAP</a></li>
+                    <li><a href="">Cloud &amp; DevOps</a></li>
+                    <li><a href="">Legacy Tech</a></li>
+                    <li><a href="">AI &amp; ML</a></li>
+
+                  </ul>
+                </div>
+                <div className="col-md-4 footerheader">
+                  <h5>Contact</h5>
+                  <ul>
+                    <li><a href="">Email: contact@skillscapital.io</a></li>
+                    <li>Address:<br />B1/H3, NH-19, Block B,<br />Mohan Cooperative Industrial<br /> Estate, New Delhi, 110044,<br />India</li>
+
+                  </ul>
+                </div>
+                <div className="col-md-4">
+
+                </div>
+                <div className="col-md-12 copyright">
+                  <p>&copy; 2024 skills Capital. All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+          </footer>
         </div>
       )}
     </>
