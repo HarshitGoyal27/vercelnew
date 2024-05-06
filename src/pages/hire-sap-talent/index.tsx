@@ -62,7 +62,7 @@ function truncateSentence(sentence: string, maxLength = 195) {
     return sentence;
   }
 }
- const Hire=()=> {
+const Hire = () => {
   const router = useRouter();
   const HireDeveloperClicked = () => {
     router.push("/sap-talent-pool");
@@ -177,7 +177,7 @@ function truncateSentence(sentence: string, maxLength = 195) {
       <link href="css/reset.css" rel="stylesheet" />
       <link href="css/style.css" rel="stylesheet" />
       <link href="css/responsive.css" rel="stylesheet" />
-      <Navbar/>
+      <Navbar />
 
       <div className="wrapper hireSapTalent">
         <div className="capabilitiesSection">
@@ -528,40 +528,43 @@ function truncateSentence(sentence: string, maxLength = 195) {
           </section>
         </div>
       </div >
-      <div className="searchSliderCont">
-        <section className="container mt-4 ">
-          <div className="row ">
-            <div className="col-md-12   ">
-              <h2>Best Developers</h2>
-              <h4>They are some of the best developers we have and they have tested and worked with several client</h4>
-              <Slider {...setting} className="searchSlider">
-                {(apiResponse === undefined) ? ("loading...") : (apiResponse.map((item: any, index: any) => (
-                  <div className="slide " key={index}>
-                    <div className="slideCont">
-                      <div className="SlideImg"><img src="images/dummyImage.jpg" alt="name" /></div>
-                      <div className="slideText">
-                        <h3>{item.CurrentRole}</h3>
-                        <p className="DepText">{truncateSentence(item.CandidateProfile)}</p>
-                        <p className="salaryText">Salary <span>{item.Salary}</span></p>
-                        <p className="timeText">Available: 6 month </p>
-                        <p className="cityText">Location: {item.CurrentLocation}</p>
-                        <p className="ratingText">rating</p>
-                        <a href="#">Chat</a> <a href="#">hire</a>
+      <div style={{marginTop:"-150px"}}>
+        <div className="searchSliderCont">
+          <section className="container mt-4 ">
+            <div className="row ">
+              <div className="col-md-12   ">
+                <h2>Best Developers</h2>
+                <h4>They are some of the best developers we have and they have tested and worked with several client</h4>
+                <Slider {...setting} className="searchSlider">
+                  {(apiResponse === undefined) ? ("loading...") : (apiResponse.map((item: any, index: any) => (
+                    <div className="slide " key={index}>
+                      <div className="slideCont">
+                        <div className="SlideImg"><img src="images/dummyImage.jpg" alt="name" /></div>
+                        <div className="slideText">
+                          <h3>{item.CurrentRole}</h3>
+                          <p className="DepText">{truncateSentence(item.CandidateProfile)}</p>
+                          <p className="salaryText">Salary <span>{item.Salary}</span></p>
+                          <p className="timeText">Available: 6 month </p>
+                          <p className="cityText">Location: {item.CurrentLocation}</p>
+                          <p className="ratingText">rating</p>
+                          <a href="#">Chat</a> <a href="#">hire</a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )))}
-              </Slider>
+                  )))}
+                </Slider>
+              </div>
+
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <div className="hireSap"><a className="hire" href="hire-sap-talent.html">Explore Talent Pool</a><a className="hire"
+                  href="hire-specialized-tech-talent.html">Hire Elite Talent</a></div>
+              </div>
             </div>
-            <div style={{display:"flex",justifyContent:"center"}}>
-            <div className="hireSap"><a className="hire" href="hire-sap-talent.html">Explore Talent Pool</a><a className="hire"
-                    href="hire-specialized-tech-talent.html">Hire Elite Talent</a></div>
-            </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
       {/* <ProfileCorousel/> */}
-      <FotterComponent/>
+      <FotterComponent />
     </>
   );
 }

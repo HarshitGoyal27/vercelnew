@@ -668,6 +668,7 @@ import { DEV_PUBLIC_URL } from "../../../configs/auth";
             </div>
 
         </div>
+        <div style={{marginTop:"-150px"}}>
         <div className="searchSliderCont">
           <section className="container mt-4 ">
             <div className="row ">
@@ -699,6 +700,7 @@ import { DEV_PUBLIC_URL } from "../../../configs/auth";
             </div>
             </div>
           </section>
+          </div>
         </div>
         {/* <ProfileCorousel/> */}
         <FotterComponent/>
