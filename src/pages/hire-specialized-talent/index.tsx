@@ -678,7 +678,7 @@ import { DEV_PUBLIC_URL } from "../../../configs/auth";
                   {(apiResponse === undefined) ? ("loading...") : (apiResponse.map((item: any, index: any) => (
                     <div className="slide " key={index}>
                       <div className="slideCont">
-                        <div className="SlideImg"><img alt="Candidate name" /></div>
+                        <div className="SlideImg"><img src="images/dummyImage.jpg" alt="name" /></div>
                         <div className="slideText">
                           <h3>{item.CurrentRole}</h3>
                           <p className="DepText">{truncateSentence(item.CandidateProfile)}</p>

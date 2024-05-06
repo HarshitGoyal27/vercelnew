@@ -538,7 +538,7 @@ function truncateSentence(sentence: string, maxLength = 195) {
                 {(apiResponse === undefined) ? ("loading...") : (apiResponse.map((item: any, index: any) => (
                   <div className="slide " key={index}>
                     <div className="slideCont">
-                      <div className="SlideImg"><img  alt="candidate name" /></div>
+                      <div className="SlideImg"><img src="images/dummyImage.jpg" alt="name" /></div>
                       <div className="slideText">
                         <h3>{item.CurrentRole}</h3>
                         <p className="DepText">{truncateSentence(item.CandidateProfile)}</p>
