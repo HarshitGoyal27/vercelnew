@@ -119,14 +119,14 @@ const HireSpecializedTalentPage = () => {
     }, []);
     const [apiResponse, setApiResponse] = useState<Candidates[]>([]);
     const [loading, setLoading] = useState(true);
-    const [skills, setSkills] = useState("TM")
+    const [skills, setSkills] = useState("SAP")
     const [profileType, setProfileType] = useState("")
     const fetchData = async (skills: string) => {
         try {
             console.log("Fetching data for skills:", skills);
 
             let resp = await axios.post(`${apiUrl}`, {
-                profiles: { Skill_Set: "SAP" }, pageNumber: Math.floor(Math.random() * 10) + 1
+                profiles: { Skill_Set: skills }, pageNumber: Math.floor(Math.random() * 10) + 1
             });
             let candidates = resp.data.data.candidatesData;
             setApiResponse(candidates);
@@ -685,12 +685,12 @@ const HireSpecializedTalentPage = () => {
                                         <button type="button" className="btn btn-outline-primary" onClick={()=>{setProfileType("Techno-Functional")}}>Techno-Functional</button>
                                     </div>
                                     {profileType==="Functional" && <div>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP SD</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP TM</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP MM</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP CO</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP PP</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP SD</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("SD")}}>SAP SD</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("TM")}}>SAP TM</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("MM")}}>SAP MM</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("CO")}}>SAP CO</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("PP")}}>SAP PP</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("SD")}}>SAP SD</button>
                                     </div>}
                                     {profileType==="Technical" && <div>
                                         <button type="button" className="btn btn-outline-primary btn-sm">SAP SD</button>

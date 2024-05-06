@@ -541,7 +541,7 @@ const Hire = () => {
                       <div className="slideCont">
                         <div className="SlideImg"><img src="images/dummyImage.jpg" alt="name" /></div>
                         <div className="slideText">
-                          <h3>{item.CurrentRole}</h3>
+                          <h3>{(item.CurrentRole).split(" at ")[0]}</h3>
                           <p className="DepText">{truncateSentence(item.CandidateProfile)}</p>
                           <p className="salaryText">Salary <span>{item.Salary}</span></p>
                           <p className="timeText">Available: 6 month </p>
