@@ -147,7 +147,7 @@ const Navbar: React.FC = () => {
                   <a className="dropdown-item" href="aboutus.html">About Us</a>
                   <a className="dropdown-item" href="leadership.html">Leadership Team</a>
                   <a className="dropdown-item" href="vetting-process.html">Vetting Process</a>
-                  <a className="dropdown-item" href="#">Careers</a>
+                  <a className="dropdown-item" href="https://talent.skillscapital.io/jobs/Careers">Careers</a>
                   <a className="dropdown-item" href="contactus.html">Contact Us</a>
                 </div>
               </li>
