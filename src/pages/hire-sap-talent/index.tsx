@@ -189,7 +189,7 @@ const Hire = () => {
 
                   <p>AI-Vetted Expertise, Unmatched Quality for Your Project&apos;s Success Swiftly Connect with On-Demand, Top-Tier SAP Talent Tailored to Your Project&apos;s Urgent and Specific Needs</p>
 
-                  <div className="hireSap"><a className="hire" href="/sap-talent-pool.html">Search SAP Talent</a><a className="hire" href="#">Explore Talent Pool</a></div>
+                  <div className="hireSap"><a className="hire" href="/sapSearch">Search SAP Talent</a><a className="hire" href="#">Explore Talent Pool</a></div>
                 </div>
                 <div className="row">
                   <div className="col-md-4 vettedCont">
@@ -547,7 +547,7 @@ const Hire = () => {
                           <p className="timeText">Available: 6 month </p>
                           <p className="cityText">Location: {item.CurrentLocation}</p>
                           <p className="ratingText">rating</p>
-                          <a href="#">Chat</a> <a href="#">hire</a>
+                          {/* <a href="#">Chat</a> <a href="#">hire</a> */}
                         </div>
                       </div>
                     </div>

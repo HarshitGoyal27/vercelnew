@@ -133,7 +133,7 @@ export default function Home({ allData }: { allData: any }) {
       console.log("Fetching data for skills:", skills);
 
       let resp = await axios.post(`${apiUrl}`, {
-        profiles: { Skill_Set: "TM" }, pageNumber: Math.floor(Math.random() * 10) + 1
+        profiles: { Skill_Set: "SAP" }, pageNumber: Math.floor(Math.random() * 10) + 1
       });
       let candidates = resp.data.data.candidatesData;
       setApiResponse(candidates);
@@ -206,7 +206,7 @@ export default function Home({ allData }: { allData: any }) {
                     your projects advance swiftly and execute with unmatched precision and quality.</p>
 
                   <div className="hireSap"><a className="hire" href="hire-sap-talent.html">Hire SAP Talent</a><a className="hire"
-                    href="hire-specialized-tech-talent.html">Explore Specialized Talent</a></div>
+                    href="hire-specialized-talent">Explore Specialized Talent</a></div>
                   <div className="deepVetted"><span><img src="/images/icon03.jpg" alt="Deep Vetted" />Deep Vetted</span><span><img
                     src="/images/icon02.jpg" alt="Culturally Fit" />Culturally Fit</span><span><img src="/images/icon01.jpg"
                       alt="Deploy Ready" />Deploy Ready</span></div>
@@ -227,7 +227,7 @@ export default function Home({ allData }: { allData: any }) {
             <div className="row">
               <div className="col-md-12">
                 <h2>Empower Your SAP Initiatives with<br />Our Extensive Expert Network</h2>
-                <h4>Access a World-className Pool of SAP Professionals, Ready to Drive Your Success</h4>
+                <h4>Access a World-class Pool of SAP Professionals, Ready to Drive Your Success</h4>
               </div>
             </div>
             <div className="row mt-4">
@@ -239,7 +239,7 @@ export default function Home({ allData }: { allData: any }) {
                   <p>Select from over 14,000 SAP experts who are certified and pre-vetted through rigorous evaluation. Our
                     commitment to quality means you collaborate with professionals who bring proven expertise to SAP
                     projects.</p>
-                  <div><a href="hire-sap-talent.html">Explore</a> </div>
+                  <div><a href="hire-sap-talent">Explore</a> </div>
 
                 </div>
               </div>
@@ -252,7 +252,7 @@ export default function Home({ allData }: { allData: any }) {
                   <p>Explore a diverse array of SAP skills with over 1800+ unique combinations spanning across SAP modules,
                     solutions, and specializations. From SAP FICO to SAP HANA, it encompasses a wide spectrum of SAP
                     expertise.</p>
-                  <a href="/hire-sap-talent.html">Explore</a>
+                  <a href="/hire-sap-talent">Explore</a>
                 </div>
               </div>
               <div className="col-md-4">
@@ -264,7 +264,7 @@ export default function Home({ allData }: { allData: any }) {
                   <p>Benefit from immediate access to 600 SAP consultants who are ready to deploy and integrate seamlessly
                     into your projects. Accelerate your SAP initiatives with experts who are prepared to hit the ground
                     running.</p>
-                  <a href="/hire-sap-talent.html">Explore</a>
+                  <a href="/hire-sap-talent">Explore</a>
                 </div>
               </div>
 
@@ -343,7 +343,7 @@ export default function Home({ allData }: { allData: any }) {
                   <span className="number">6400+</span>
                   <p>Empower your Cloud &amp; DevOps with our elite experts (AWS, Azure, GCP etc.), driving innovation and
                     efficiency in your tech landscape.</p>
-                  <div><a href="/hire-specialized-tech-talent.html">Explore Now</a> </div>
+                  <div><a href="/hire-specialized-talent">Explore Now</a> </div>
 
                 </div>
               </div>
@@ -355,7 +355,7 @@ export default function Home({ allData }: { allData: any }) {
                   <span className="number">4600+</span>
                   <p>Revitalize and transform your legacy systems with our deep vetted talent, ensuring seamless
                     modernization and future-readiness.</p>
-                  <a href="/hire-specialized-tech-talent.html">Explore Now</a>
+                  <a href="/hire-specialized-talent">Explore Now</a>
                 </div>
               </div>
               <div className="col-md-4">
@@ -366,7 +366,7 @@ export default function Home({ allData }: { allData: any }) {
                   <span className="number">400+</span>
                   <p>Leverage our elite team of AI/ML specialists to unlock the full potential of artificial intelligence
                     and GenAI in your organization</p>
-                  <a href="/hire-specialized-tech-talent.html">Explore Now</a>
+                  <a href="/hire-specialized-talent">Explore Now</a>
                 </div>
               </div>
 
@@ -440,7 +440,7 @@ export default function Home({ allData }: { allData: any }) {
                 <p>AI Vetting Criteria</p>
               </div>
               <div className="col-md-12 hireTalent">
-                <a href="/hire-sap-talent.html">Hire SAP Talent</a> <a
+                <a href="/hire-sap-talent">Hire SAP Talent</a> <a
                   href="https://talent.skillscapital.io/candidateportal?register=true">Explore Specialized Talent</a>
 
               </div>
@@ -692,13 +692,13 @@ export default function Home({ allData }: { allData: any }) {
                     <div className="slideCont">
                       <div className="SlideImg"><img src="images/dummyImage.jpg" alt="name" /></div>
                       <div className="slideText">
-                        <h3>{item.CurrentRole}</h3>
+                        <h3>{(item.CurrentRole).split(" at ")[0]}</h3>
                         <p className="DepText">{truncateSentence(item.CandidateProfile)}</p>
                         <p className="salaryText">Salary <span>{item.Salary}</span></p>
                         <p className="timeText">Available: 6 month </p>
                         <p className="cityText">Location: {item.CurrentLocation}</p>
                         <p className="ratingText">rating</p>
-                        <a href="#">Chat</a> <a href="#">hire</a>
+                        {/* <a href="#">Chat</a> <a href="#">hire</a> */}
                       </div>
                     </div>
                   </div>
@@ -706,8 +706,8 @@ export default function Home({ allData }: { allData: any }) {
               </Slider>
             </div>
             <div style={{display:"flex",justifyContent:"center"}}>
-            <div className="hireSap"><a className="hire" href="hire-sap-talent.html">Explore Talent Pool</a><a className="hire"
-                    href="hire-specialized-tech-talent.html">Hire Elite Talent</a></div>
+            <div className="hireSap"><a className="hire" href="hire-sap-talent">Explore Talent Pool</a><a className="hire"
+                    href="hire-specialized-talent">Hire Elite Talent</a></div>
             </div>
             
           </div>

@@ -4,6 +4,7 @@
     "@next/next/no-img-element": "off",
     // other rules...
     "@next/next/no-css-tags": "off",
+    "@next/next/no-html-link-for-pages": "off",
     "jsx-a11y/role-supports-aria-props": "off"
   }
 }

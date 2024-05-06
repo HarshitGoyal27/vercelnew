@@ -135,7 +135,7 @@ const Navbar: React.FC = () => {
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" aria-haspopup="true" aria-expanded="false">SAP Talent Solutions</a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                   <a className="dropdown-item" href="hire-sap-talent">Hire Top SAP Talent</a>
-                  <a className="dropdown-item" href="sap-talent-pool.html">SAP Talent Pool</a>
+                  <a className="dropdown-item" href="sap-talent-pool">SAP Talent Pool</a>
                   <a className="dropdown-item" href="#">SAP Custom Solutions</a>
                   <a className="dropdown-item" href="#">SAP Elite Consulting</a>
                   <a className="dropdown-item" href="sap-portal-hub.html">SAP Portal Hub</a>
