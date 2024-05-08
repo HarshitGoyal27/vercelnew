@@ -678,35 +678,30 @@ const HireSpecializedTalentPage = () => {
                             <div className="col-md-12   ">
                                 <h2>Best Developers</h2>
                                 <h4>They are some of the best developers we have and they have tested and worked with several client</h4>
-                                <div style={{display:"flex",justifyContent:"center",flexDirection:"column",alignItems:"center",gap:"20px"}}>
-                                    <div>
-                                        <button type="button" className="btn btn-outline-primary" onClick={()=>{setProfileType("Functional")}}>Functional</button>
-                                        <button type="button" className="btn btn-outline-primary" onClick={()=>{setProfileType("Technical")}}>Technical</button>
-                                        <button type="button" className="btn btn-outline-primary" onClick={()=>{setProfileType("Techno-Functional")}}>Techno-Functional</button>
+                                <div style={{display:"flex",justifyContent:"center",flexDirection:"column",gap:"20px"}}>
+                                    <div style={{display:"flex", gap:"10px"}}>
+                                        <button type="button" className="btn btn-outline-primary" onClick={()=>{setProfileType("Cloud")}}>Cloud</button>
+                                        <button type="button" className="btn btn-outline-primary" onClick={()=>{setProfileType("Legacy")}}>Legacy</button>
+                                        <button type="button" className="btn btn-outline-primary" onClick={()=>{setProfileType("AI/ML")}}>AI/ML</button>
                                     </div>
-                                    {profileType==="Functional" && <div>
-                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("SD")}}>SAP SD</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("TM")}}>SAP TM</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("MM")}}>SAP MM</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("CO")}}>SAP CO</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("PP")}}>SAP PP</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("SD")}}>SAP SD</button>
+                                    {profileType==="Cloud" && <div style={{display:"flex", gap:"10px"}}>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("AWS")}}>AWS</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("Azure")}}>Azure</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("GCP")}}>GCP</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("DevOps")}}>DevOps</button>
+                                        {/* <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("PP")}}>SAP PP</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("SD")}}>SAP SD</button> */}
                                     </div>}
-                                    {profileType==="Technical" && <div>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP SD</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP TM</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP MM</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP CO</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP PP</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP SD</button>
+                                    {profileType==="Legacy" && <div style={{display:"flex", gap:"10px"}}>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("IBM")}}>IBM</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("Oracle")}}>Oracle</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("Microsoft")}}>Microsoft</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("Salesforce")}}>Salesforce</button>
                                     </div>}
-                                    {profileType==="Techno-Functional" && <div>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP SD</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP TM</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP MM</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP CO</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP PP</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm">SAP SD</button>
+                                    {profileType==="AI/ML" && <div style={{display:"flex", gap:"10px"}}> 
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("Generative AI")}}>Generative AI</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("Predictive AI")}}>Predictive AI</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>{setSkills("Interactive AI")}}>Interactive AI</button>
                                     </div>}
                                 </div>
 

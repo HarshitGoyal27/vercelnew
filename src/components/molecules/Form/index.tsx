@@ -534,15 +534,16 @@ const Form: React.FC = () => {
     <>
       {!getAllCandidate && (
         <div>
-          <h1 className={css.homeWrapper}>Search Elite Developers</h1>
-          <div className={css.formStyle}>
-            <div style={{ width: '60%' }}>
-              <CustomAutocompleteFromAPI
-                setSelectedValue={setProfile}
-                touched={touched}
-              />
-            </div>
-            <div style={{ width: '30%', height: '70vh', backgroundColor: '#f7f7f7', marginRight: '2%', padding: '1.2vw', overflow: 'auto' }}>
+          {/* <h1 className={css.homeWrapper}>Search Elite Developers</h1> */}
+          {/* <div className={css.formStyle}> */}
+          {/* <div style={{ width: '60%' }}> */}
+          <CustomAutocompleteFromAPI
+            setSelectedValue={setProfile}
+            touched={touched}
+            handleSubmit = {handleSubmit}
+          />
+          {/* </div> */}
+          {/* <div style={{ width: '30%', height: '70vh', backgroundColor: '#f7f7f7', marginRight: '2%', padding: '1.2vw', overflow: 'auto' }}>
               <div style={{ fontWeight: '500', fontSize: '2rem' }}>RECENT SEARCHES</div>
               <div>
                 {
@@ -559,11 +560,14 @@ const Form: React.FC = () => {
                   ))
                 }
               </div>
-            </div>
-          </div>
-          <Button type="submit" variant="contained" color="primary" onClick={(e) => handleSubmit(e)}>
+            </div> */}
+          {/* </div> */}
+          {/* <Button type="submit" variant="contained" color="primary" onClick={(e) => handleSubmit(e)}>
             Get elite candidates now
-          </Button>
+          </Button> */}
+          {/* <li>
+            <button className="searchBtn" onClick={(e) => handleSubmit(e)}>Get elite candidates now</button>
+          </li> */}
         </div>
       )}
 
@@ -827,7 +831,7 @@ const Form: React.FC = () => {
                   </div>
 
                 </div>
-                <div style={{ textAlign: "center",marginBottom:"100px" }}>
+                <div style={{ textAlign: "center", marginBottom: "100px" }}>
                   <button
                     type="button"
                     className="btn btn-primary btn-lg"

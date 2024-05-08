@@ -24,8 +24,11 @@ body {
     clear: both;
     line-height: 1px;
 }
-.DepText{
-    width:23vw;
+.leftSide{
+    float: left;
+}
+.rightSide{
+    float: right;
 }
 .position-rel {
     position: relative;
@@ -34,6 +37,7 @@ body {
 .uppercase {
     text-transform: uppercase;
 }
+
 
 .tal { text-align: left; }
 .tac { text-align: center; }

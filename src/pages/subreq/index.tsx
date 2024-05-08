@@ -10,6 +10,8 @@ import Layout from '@/components/layout';
 import { Button, Input, MenuItem, Select, TextField } from '@mui/material';
 import axios from 'axios';
 import { DEV_PUBLIC_CALLURL } from '../../../configs/auth';
+import FotterComponent from '@/components/molecules/Fotter';
+import Navbar from '@/components/molecules/navbar';
 interface ClientInfo {
     // Skills:string[];
     Name: string;
@@ -138,6 +140,13 @@ const SubreqPage = () => {
     };
     return (
         <>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+            <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+            <link href="css/fonts.css" rel="stylesheet" />
+            <link href="css/reset.css" rel="stylesheet" />
+            <link href="css/style.css" rel="stylesheet" />
+            <link href="css/responsive.css" rel="stylesheet" />
             {/* {steps === 1 && (
             <Stepone
                 ClientData={ClientData}
@@ -151,85 +160,108 @@ const SubreqPage = () => {
          {steps===3 && <Stepthree ClientData={ClientData} errors={errors} handleInputChange={handleInputChange} handleRadioButton={handleRadioButton}  onNextStep={handleNextStep} />}
          {steps===4 && <Stepfour yearofExpValue={yearofExpValue}  ClientData={ClientData} handleYearofExp={handleYearofExp} onNextStep={handleNextStep}/>}
          {steps===5 && <Thankyou ClientData={ClientData} />} */}
-            {!thankyouPage && <section id={css1.mostOuter}>
-                <div id={css1.outerform}>
-                    <div >
-                        <div id={css1.fieldname}  >Name</div>
-                        <TextField size="small" name="Name" onChange={handleInputChange} id={css1.longSearch} />
-                    </div>
-                    <div style={{ display: "flex", gap: "20px" }}>
-                        <div>
-                            <div id={css1.fieldname}>Email</div>
-                            <TextField size="small" name="Email" onChange={handleInputChange} id={css1.smallSearch} />
+            {!thankyouPage &&
+            <div>
+                <Navbar/>
+             <div className="wrapper searchForm ">
+                    {/* <!-- welcome Section  --> */}
+                    <div className="searchFormSection ">
+                      <section className="container mt-4 ">
+                        <div className="row">
+                          <div className="col-md-12">
+                            <h2>Submit Requirement</h2>
+                          </div>
                         </div>
-                        <div>
-                            <div id={css1.fieldname}>Phone</div>
-                            <TextField size="small" name="contact_number" onChange={handleInputChange} id={css1.smallSearch} />
-                        </div>
-                    </div>
-                    <div style={{ display: "flex", gap: "20px" }}>
-                        {/* <div>
-                                    <div id={css1.fieldname}>Role Type</div>
-                                    <TextField size="small" id={css1.smallSearch} />
-                                </div> */}
-                        <div>
-                            <div id={css1.fieldname}>Company Name</div>
-                            <TextField size="small" name="Company_name" onChange={handleInputChange} id={css1.smallSearch} />
-                        </div>
-                        <div>
-                            <div id={css1.fieldname}>Designation / Title</div>
-                            <TextField size="small" name="Designation" onChange={handleInputChange} id={css1.smallSearch} />
-                        </div>
-                    </div>
-                </div>
-                <div id={css1.outerform}>
+                        <div className="row">
+                          <div className="col-md-12">
+                            <div className="specificSearchForm">
+                              <div className="oneCol">
+                                <label>Name</label>
+                                <input type="text" className="form-control" id="" name="Name" onChange={handleInputChange} />
+                              </div>
+                              <div className="twoCol">
+                                <div className="leftCol">
+                                  <label>Email</label>
+                                  <input type="text" className="form-control" id="" name="Email" onChange={handleInputChange} />
+                                </div>
+                                <div className="rightCol">
+                                  <label>Phone</label>
+                                  <input type="text" className="form-control" id="" name="contact_number" onChange={handleInputChange} />
+                                </div>
+                                <div className="clear"></div>
+                              </div>
+                              <div className="twoCol">
+                                <div className="leftCol">
+                                <label>Company Name</label>
+                                  <input type="text" className="form-control" id=""  name="Company_name" onChange={handleInputChange} />
+                                </div>
+                                <div className="rightCol">
+                                  <label>Designation / Title</label>
+                                  <input type="text" className="form-control" id="" name="Designation" onChange={handleInputChange} />
+                                </div>
+                                <div className="clear"></div>
+                              </div>
+                            </div>
 
-                    <div style={{ display: "flex", gap: "20px" }}>
-                        <div>
-                            <div id={css1.fieldname}>Role Title</div>
-                            <TextField size="small" name="Role_Title" onChange={handleInputChange} id={css1.smallSearch} />
+                            <div className="specificSearchForm">
+                              <div className="twoCol">
+                                <div className="leftCol">
+                                  <label>Role Title</label>
+                                  <input type="text" className="form-control" id="" name="Role_Title" onChange={handleInputChange}/>
+                                </div>
+                                <div className="rightCol">
+                                  <label>Number of Openings</label>
+                                  <input type="text" className="form-control" id="" name="Openings" onChange={handleInputChange}/>
+                                </div>
+                                <div className="clear"></div>
+                              </div>
+                              <div className="twoCol">
+                                <div className="leftCol">
+                                  <label>Budget</label>
+                                  <input type="text" className="form-control" id="" name="Budget" onChange={handleInputChange}/>
+                                </div>
+                                <div className="rightCol">
+                                  <label>Timezone</label>
+                                  <input type="text" className="form-control" id="" />
+                                </div>
+                                <div className="clear"></div>
+                              </div>
+                              <div className="leftCol">
+                                <label>Job Description</label>
+                                <input type="text" className="form-control" id="" name="Job_Description" onChange={handleInputChange}/>
+                              </div>
+                              <div className="rightCol">
+                                  <label>Start Date</label>
+                                  <input  className="form-control" id="" type="date" name="Start_Date" onChange={handleInputChange} />
+                                </div>
+                                <div className="clear"></div>
+                            </div>
+                            <div className="specificSearchForm">
+                              <div className="twoCol">
+                                
+                                
+                                <div className="clear"></div>
+                              </div>
+                              
+
+                            </div>
+                            
+                            <div className="sapSearchBtn">
+                              <button className="searchBtn" onClick={()=>{setThankyouPage(true)}}>Click Me</button>
+
+                            </div>
+
+
+                          </div>
+
                         </div>
-                        <div>
-                            <div id={css1.fieldname}>Number of Openings</div>
-                            <TextField size="small" name="Openings" onChange={handleInputChange} id={css1.smallSearch} />
-                        </div>
+                      </section>
                     </div>
-                    <div style={{ display: "flex", gap: "20px" }}>
-                        <div>
-                            <div id={css1.fieldname}>Budget</div>
-                            <TextField size="small" name="Budget" onChange={handleInputChange} id={css1.smallSearch} />
-                        </div>
-                        <div>
-                            <div id={css1.fieldname}>Timezone</div>
-                            <select name="Current_Timezone" onChange={handleTimeZone} id={css1.selectStyle}>
-                                <option>Select an option</option>
-                                <option value="IST">IST</option>
-                                <option value="CET">CET</option>
-                                <option value="ET">ET</option>
-                                <option value="none">none</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div style={{ display: "flex", gap: "20px" }}>
-                        <div>
-                            <div id={css1.fieldname}>Job Description</div>
-                            <TextField size="small" name="Job_Description" onChange={handleInputChange} id={css1.smallSearch} />
-                        </div>
-                        <div>
-                            <div id={css1.fieldname}>Start Date</div>
-                            <TextField size="small" name="Start_Date" onChange={handleInputChange} type='date' id={css1.smallSearch} />
-                        </div>
-
-                    </div>
 
 
-                </div>
-
-
-                <div>
-                    <Button onClick={()=>{setThankyouPage(true)}} >CLICK ME</Button>
-                </div>
-            </section>}
+                  </div>
+                  <FotterComponent/>
+                  </div>}
             {thankyouPage && <Thankyou/>}
         </>
     )
