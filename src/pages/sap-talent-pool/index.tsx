@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import { DEV_PUBLIC_URL } from "../../../configs/auth";
+import { CandidateProfileData } from "@/constants/profileData";
 const apiUrl = `${DEV_PUBLIC_URL}form/candidates`;
 interface Candidates {
     Name: string;
@@ -21,6 +22,7 @@ interface Candidates {
     PrefferedLocation: string;
     CurrentLocation: string;
     buttonText: string;
+    Education:string;
 }
 function truncateSentence(sentence: string, maxLength = 195) {
     if (sentence != undefined && sentence.length > maxLength) {
@@ -476,12 +478,12 @@ const SapTalentPool = () => {
                             <h2>Best Developers</h2>
                             <h4>They are some of the best developers we have and they have tested and worked with several client</h4>
                             <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", gap: "20px" }}>
-                                <div style={{display:"flex", gap:"10px"}}>
+                                <div style={{ display: "flex", gap: "10px" }}>
                                     <button type="button" className="btn btn-outline-primary" onClick={() => { setProfileType("Functional") }}>Functional</button>
                                     <button type="button" className="btn btn-outline-primary" onClick={() => { setProfileType("Technical") }}>Technical</button>
                                     <button type="button" className="btn btn-outline-primary" onClick={() => { setProfileType("Techno-Functional") }}>Techno-Functional</button>
                                 </div>
-                                {profileType === "Functional" && <div style={{display:"flex", gap:"10px"}}>
+                                {profileType === "Functional" && <div style={{ display: "flex", gap: "10px" }}>
                                     <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("SD") }}>SAP SD</button>
                                     <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("TM") }}>SAP TM</button>
                                     <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("MM") }}>SAP MM</button>
@@ -489,14 +491,14 @@ const SapTalentPool = () => {
                                     <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("PP") }}>SAP PP</button>
                                     <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("SD") }}>SAP SD</button>
                                 </div>}
-                                {profileType === "Technical" && <div style={{display:"flex", gap:"10px"}}>
-                                    <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("SAP Basis") }}>SAP Basis</button>
-                                    <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("SAP HANA") }}>SAP HANA</button>
-                                    <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("SAP Fiori") }}>SAP Fiori</button>
-                                    <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("SAP BW/BI") }}>SAP BW/BI</button>
-                                    <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("SAP PO/PI") }}>SAP PO/PI</button>
+                                {profileType === "Technical" && <div style={{ display: "flex", gap: "10px" }}>
+                                    <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("SAP_Basis") }}>SAP Basis</button>
+                                    <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("SAP_HANA") }}>SAP HANA</button>
+                                    <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("SAP_Fiori") }}>SAP Fiori</button>
+                                    <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("SAP_BW") }}>SAP BW/BI</button>
+                                    {/* <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("SAP PO/PI") }}>SAP PO/PI</button> */}
                                 </div>}
-                                {profileType === "Techno-Functional" && <div style={{display:"flex", gap:"10px"}}>
+                                {profileType === "Techno-Functional" && <div style={{ display: "flex", gap: "10px" }}>
                                     <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("SD") }}>SAP SD</button>
                                     <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("TM") }}>SAP TM</button>
                                     <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("MM") }}>SAP MM</button>
@@ -506,17 +508,19 @@ const SapTalentPool = () => {
                                 </div>}
                             </div>
                             <Slider {...setting} className="searchSlider">
-                                {(apiResponse === undefined) ? ("loading...") : (apiResponse.map((item: any, index: any) => (
+                                {(CandidateProfileData[skills as keyof typeof CandidateProfileData].map((item: any, index: any) => (
                                     <div className="slide " key={index}>
                                         <div className="slideCont">
                                             <div className="SlideImg"><img src="images/dummyImage.jpg" alt="name" /></div>
                                             <div className="slideText">
                                                 <h3>{(item.CurrentRole).split(" at ")[0]}</h3>
                                                 <p className="DepText">{truncateSentence(item.CandidateProfile)}</p>
-                                                <p className="salaryText">Salary <span>{item.Salary}</span></p>
+                                                <p className="salaryText">Education: <span>{(item.Education).split(",")[0]}</span></p>
+                                                <p className="salaryText">Experience: <span>{item.Experience}</span></p>
+                                                {/* <p className="salaryText">Education: <span>{item.Experience}</span></p> */}
                                                 <p className="timeText">Available: 6 month </p>
                                                 <p className="cityText">Location: {item.CurrentLocation}</p>
-                                                <p className="ratingText">rating</p>
+                                                <p className="salaryText">Top skills: <span>{(item.Skills).split(",")[0]}, {(item.Skills).split(",")[1]}, {(item.Skills).split(",")[2]}, {(item.Skills).split(",")[3]}</span></p>
                                                 {/* <a href="#">Chat</a> <a href="#">hire</a> */}
                                             </div>
                                         </div>

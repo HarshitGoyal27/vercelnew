@@ -129,7 +129,7 @@ const Navbar: React.FC = () => {
                 </div>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="gobal-elastic-teams.html">Global Elastic Teams</a>
+                <a className="nav-link" href="global-elastic-teams">Global Elastic Teams</a>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" aria-haspopup="true" aria-expanded="false">SAP Talent Solutions</a>
@@ -138,17 +138,17 @@ const Navbar: React.FC = () => {
                   <a className="dropdown-item" href="sap-talent-pool">SAP Talent Pool</a>
                   <a className="dropdown-item" href="#">SAP Custom Solutions</a>
                   <a className="dropdown-item" href="#">SAP Elite Consulting</a>
-                  <a className="dropdown-item" href="sap-portal-hub.html">SAP Portal Hub</a>
+                  <a className="dropdown-item" href="sap-portal-hub">SAP Portal Hub</a>
                 </div>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" aria-haspopup="true" aria-expanded="false">Company</a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-                  <a className="dropdown-item" href="aboutus.html">About Us</a>
-                  <a className="dropdown-item" href="leadership.html">Leadership Team</a>
-                  <a className="dropdown-item" href="vetting-process.html">Vetting Process</a>
+                  <a className="dropdown-item" href="about">About Us</a>
+                  <a className="dropdown-item" href="leadership">Leadership Team</a>
+                  <a className="dropdown-item" href="vetting-process">Vetting Process</a>
                   <a className="dropdown-item" href="https://talent.skillscapital.io/jobs/Careers">Careers</a>
-                  <a className="dropdown-item" href="contactus.html">Contact Us</a>
+                  <a className="dropdown-item" href="contact-us">Contact Us</a>
                 </div>
               </li>
               <li className="nav-item">
@@ -161,6 +161,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </header>
+      
     </div>
 
   );

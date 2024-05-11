@@ -142,10 +142,10 @@ const FotterComponent = () => {
                     <li><Link href="/">Home</Link></li>
                     <li><Link href="hire-sap-talent">Hire SAP Talent</Link></li>
                     <li><Link href="hire-specialized-talent">Explore Specialized Talent</Link></li>
-                    <li><Link href="gobal-elastic-teams.html">Global Elastic Teams</Link></li>
-                    <li><Link href="vetting-process.html">Vetting Process</Link></li>
-                    <li><Link href="leadership-team.html">Leadership Team</Link></li>
-                    <li><Link href="contact-us.html">Contact Us</Link></li>
+                    <li><Link href="global-elastic-teams">Global Elastic Teams</Link></li>
+                    <li><Link href="vetting">Vetting Process</Link></li>
+                    <li><Link href="leadership">Leadership Team</Link></li>
+                    <li><Link href="contact-us">Contact Us</Link></li>
                   </ul>
                 </div>
                 <div className="col-md-4 footerheader">

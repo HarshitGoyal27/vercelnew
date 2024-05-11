@@ -9,23 +9,26 @@ import { Autocomplete, Button, TextField } from '@mui/material';
 import dayjs, { Dayjs } from 'dayjs';
 import { SubreqPageText } from '@/constants/texts';
 interface ClientInfo {
-    Skills: string[];
+    // Skills:string[];
     Name: string;
     Email: string;
-    workEmail:string;
     Company_name: string;
     contact_number: string;
+    Start_Date: string | null;
+    Job_Description: string;
+    Budget: string;
+    Openings: string;
+    Role_Title: string;
+    Designation: string;
+    Current_Timezone: string | null;
     meetingDate:string|null;
-    Current_Timezone:string|null;
-    workType:string;
 }
 interface SteponeProps {
     onNextStep: () => void;
-    handleTimeZone: (event: React.ChangeEvent<{}>, value: string | null) => void;
     ClientData:ClientInfo;
     handledateTime: (data: Dayjs) => void;
   }
-const Steptwo: React.FC<SteponeProps>= ({ handledateTime, onNextStep ,handleTimeZone})=> {
+const Steptwo: React.FC<SteponeProps>= ({ handledateTime, onNextStep })=> {
     const [selectedDateTime, setSelectedDateTime] = useState<any>();
     const [selectedTimeZone, setSelectedTimeZone] = useState<string|null>();
     const handleDateTimeChange = (newDateTime: Dayjs | null) => {
@@ -34,10 +37,10 @@ const Steptwo: React.FC<SteponeProps>= ({ handledateTime, onNextStep ,handleTime
         handledateTime(newDateTime);
       }
     };
-    const handleZone = (event: React.ChangeEvent<{}>, value: string | null) => {
-        setSelectedTimeZone(value);
-        handleTimeZone(event,value);
-      }
+    // const handleZone = (event: React.ChangeEvent<{}>, value: string | null) => {
+    //     setSelectedTimeZone(value);
+    //     handleTimeZone(event,value);
+    //   }
     return (
         <div className={css.step2container}>
             <div className={css.step2innercontainer}>
@@ -72,16 +75,16 @@ const Steptwo: React.FC<SteponeProps>= ({ handledateTime, onNextStep ,handleTime
                         onChange={handleDateTimeChange}
                         />
                     </LocalizationProvider>
-                    <div style={{display:"flex", gap:"100px"}}>
-                        <Autocomplete
+                    <div style={{textAlign:"center"}}>
+                        {/* <Autocomplete
                         disablePortal
                         id="Current_Timezone"
                         options={["IST","CET","ET", "none"]}
                         sx={{ width: "300px",marginLeft:"10px" }}
                         onChange={handleZone}
                         renderInput={(params) => <TextField {...params} label="Enter Time Zone" />}
-                        />
-                        <Button onClick={onNextStep} disabled={!selectedDateTime || !selectedTimeZone}  variant="contained">Next</Button>
+                        /> */}
+                        <Button onClick={onNextStep} disabled={!selectedDateTime}  variant="contained">Next</Button>
                     </div>
                 </div>
             </div>

@@ -686,7 +686,7 @@ const Form: React.FC = () => {
                                     <input
                                       className=""
                                       type="checkbox"
-                                      value={profile.id}
+                                      // value={profile.id}
                                       checked={selectedId.includes(profile.id)}
                                       onChange={handleCheckBox}
                                     />

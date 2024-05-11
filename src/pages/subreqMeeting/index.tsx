@@ -25,8 +25,9 @@ interface ClientInfo {
     Role_Title: string;
     Designation: string;
     Current_Timezone: string | null;
+    meetingDate:string|null;
 }
-const SubreqPage = () => {
+const SubreqMeetingPage = () => {
     // const {selectedId,setSelectedId} = useGlobalContext();
     const [ClientData, setClientData] = useState<ClientInfo>({
         // Skills:[],
@@ -41,7 +42,8 @@ const SubreqPage = () => {
         Budget: "",
         Openings: "",
         Role_Title: "",
-        Designation: ""
+        Designation: "",
+        meetingDate:""
     })
     const [errors, setErrors] = useState({
         workEmail: '',
@@ -87,18 +89,38 @@ const SubreqPage = () => {
         console.log("profiles->", ClientData);
     }
     const [steps, setSteps] = useState(1);
+    const [datePage, setDatePage] = useState(false);
+    const handleNextStep = async () => {
+        setThankyouPage(true);
+        setDatePage(false);
+        const storedData = localStorage.getItem("selectedId");
+        const parsedData = storedData ? JSON.parse(storedData) : null;
+        const selectedId = parsedData ? parsedData.selectedId : null;
+        console.log("id", ClientData, selectedId);
+        try {
+            const resp = await axios.post(`${DEV_PUBLIC_CALLURL}call`, { ClientData, selectedId });
+            // const candidates = resp.data.data.candidatesData;
+            // if (candidates === 'Data not present') {
+            //   setApiResponse([]);
+            // } else if (candidates.length !== 0) {
+            //   setApiResponse(candidates);
+            // } else {
+            //   setApiResponse([]);
+            // }
 
-    const handleNextStep = () => {
-        setSteps((prevSteps) => prevSteps + 1);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+        
     };
-    // const handledateTime = (data: Dayjs) => {
-    //     const currentDate: Dayjs = dayjs();
-    //     const futureDate: Dayjs = currentDate.add(1, 'day');
-    //     const formattedDate: string = futureDate.format('YYYY-MM-DDTHH:mm:ss');
-    //     const newDate = `${formattedDate}+05:30`
-    //     setClientData({ ...ClientData, meetingDate: newDate });
-    //     console.log("profiles->", ClientData);
-    // }
+    const handledateTime = (data: Dayjs) => {
+        const currentDate: Dayjs = dayjs();
+        const futureDate: Dayjs = currentDate.add(1, 'day');
+        const formattedDate: string = futureDate.format('YYYY-MM-DDTHH:mm:ss');
+        const newDate = `${formattedDate}+05:30`
+        setClientData({ ...ClientData, meetingDate: newDate });
+        console.log("profiles->", ClientData);
+    }
     // const handleRadioButton = (event: React.ChangeEvent<HTMLInputElement>) => {
     //     setClientData({ ...ClientData, workType: (event.target as HTMLInputElement).value });
     //     console.log("profiles->", ClientData);
@@ -120,25 +142,25 @@ const SubreqPage = () => {
     }
     const [thankyouPage, setThankyouPage] = useState<boolean>(false);
     const handleClick = async () => {
-        setThankyouPage(true);
-        const storedData = localStorage.getItem("selectedId");
-        const parsedData = storedData ? JSON.parse(storedData) : null;
-        const selectedId = parsedData ? parsedData.selectedId : null;
-        console.log("id", selectedId);
-        try {
-            const resp = await axios.post(`${DEV_PUBLIC_CALLURL}call`, { ClientData, selectedId });
-            // const candidates = resp.data.data.candidatesData;
-            // if (candidates === 'Data not present') {
-            //   setApiResponse([]);
-            // } else if (candidates.length !== 0) {
-            //   setApiResponse(candidates);
-            // } else {
-            //   setApiResponse([]);
-            // }
+        setDatePage(true);
+        // const storedData = localStorage.getItem("selectedId");
+        // const parsedData = storedData ? JSON.parse(storedData) : null;
+        // const selectedId = parsedData ? parsedData.selectedId : null;
+        // console.log("id", ClientData, selectedId);
+        // try {
+        //     const resp = await axios.post(`${DEV_PUBLIC_CALLURL}call`, { ClientData, selectedId });
+        //     // const candidates = resp.data.data.candidatesData;
+        //     // if (candidates === 'Data not present') {
+        //     //   setApiResponse([]);
+        //     // } else if (candidates.length !== 0) {
+        //     //   setApiResponse(candidates);
+        //     // } else {
+        //     //   setApiResponse([]);
+        //     // }
 
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
+        // } catch (error) {
+        //     console.error('Error fetching data:', error);
+        // }
     };
     return (
         <>
@@ -162,7 +184,7 @@ const SubreqPage = () => {
          {steps===3 && <Stepthree ClientData={ClientData} errors={errors} handleInputChange={handleInputChange} handleRadioButton={handleRadioButton}  onNextStep={handleNextStep} />}
          {steps===4 && <Stepfour yearofExpValue={yearofExpValue}  ClientData={ClientData} handleYearofExp={handleYearofExp} onNextStep={handleNextStep}/>}
          {steps===5 && <Thankyou ClientData={ClientData} />} */}
-            {!thankyouPage &&
+            {!thankyouPage&&!datePage &&
                 <div>
                     <Navbar />
                     <div className="wrapper searchForm ">
@@ -262,9 +284,10 @@ const SubreqPage = () => {
                     </div>
                     <FotterComponent />
                 </div>}
+                {datePage && <Steptwo ClientData={ClientData} handledateTime={handledateTime} onNextStep={handleNextStep}/>}
             {thankyouPage && <Thankyou />}
         </>
     )
 }
 
-export default SubreqPage;
+export default SubreqMeetingPage;

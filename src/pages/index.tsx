@@ -39,6 +39,7 @@ import Slider from "react-slick";
 import { DEV_PUBLIC_URL } from "../../configs/auth";
 import axios from "axios";
 import ProfileCorousel from "@/components/molecules/profileCarausel";
+import { CandidateProfileData } from "@/constants/profileData";
 const apiUrl = `${DEV_PUBLIC_URL}form/candidates`;
 interface Candidates {
   Name: string;
@@ -687,17 +688,19 @@ export default function Home({ allData }: { allData: any }) {
               <h2>Best Developers</h2>
               <h4>They are some of the best developers we have and they have tested and worked with several client</h4>
               <Slider {...setting} className="searchSlider">
-                {(apiResponse === undefined) ? ("loading...") : (apiResponse.map((item: any, index: any) => (
+                {(apiResponse === undefined) ? ("loading...") : (CandidateProfileData.data.map((item: any, index: any) => (
                   <div className="slide " key={index}>
                     <div className="slideCont">
                       <div className="SlideImg"><img src="images/dummyImage.jpg" alt="name" /></div>
                       <div className="slideText">
                         <h3>{(item.CurrentRole).split(" at ")[0]}</h3>
                         <p className="DepText">{truncateSentence(item.CandidateProfile)}</p>
-                        <p className="salaryText">Salary <span>{item.Salary}</span></p>
+                        {/* <p className="salaryText">Salary <span>{item.Salary}</span></p> */}
+                        <p className="salaryText">Experience: <span>{item.Experience}</span></p>
                         <p className="timeText">Available: 6 month </p>
                         <p className="cityText">Location: {item.CurrentLocation}</p>
-                        <p className="ratingText">rating</p>
+                        <p className="salaryText">Top skills: <span>{(item.Skills).split(",")[0]}, {(item.Skills).split(",")[1]}, {(item.Skills).split(",")[2]}, {(item.Skills).split(",")[3]}</span></p>
+                        {/* <p className="ratingText">rating</p> */}
                         {/* <a href="#">Chat</a> <a href="#">hire</a> */}
                       </div>
                     </div>

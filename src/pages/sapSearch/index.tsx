@@ -14,7 +14,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import axios from 'axios';
-import { DEV_PUBLIC_SAPURL } from '../../../configs/auth';
+import { DEV_PUBLIC_SAPURL, DEV_PUBLIC_URL } from '../../../configs/auth';
 import Navbar from '@/components/molecules/navbar';
 import FotterComponent from '@/components/molecules/Fotter';
 import { useRouter } from 'next/router';
@@ -68,6 +68,9 @@ const SapSearch = () => {
   const [sortOption, setSortOption] = useState("");
   const [selectAll, setSelectAll] = useState(false);
   const [allCandidates, setALLCandidates] = useState<Response[]>([]);
+  const [skillSuggestions, setSkillSuggesions] = useState([]);
+  const [primaryskillSuggestions, setPrimarySkillSuggesions] = useState([]);
+  const [secondaryskillSuggestions, setSecondarySkillSuggesions] = useState([]);
   const handleSelectAll = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectAll(e.target.checked);
     const allIDs = allCandidates.map((item) => item.id);
@@ -84,14 +87,17 @@ const SapSearch = () => {
   const handleChangeKeyword = (ele: any) => {
     console.log(ele.target.value);
     setProfile({ ...profiles, keyword: ele.target.value });
+    setDynamicSkill(ele.target.value);
   }
   const handleChangePrimary = (ele: any) => {
     console.log(ele.target.value);
     setProfile({ ...profiles, primary_module: ele.target.value });
+    setDynamicPrimarySkill(ele.target.value);
   }
   const handleChangeSecondary = (ele: any) => {
     console.log(ele.target.value);
     setProfile({ ...profiles, secondary_module: ele.target.value });
+    setDynamicSecondarySkill(ele.target.value);
   }
   const handleChangeRoleType = (ele: any) => {
     console.log(ele.target.value);
@@ -112,8 +118,8 @@ const SapSearch = () => {
     setProfile({ ...profiles, experience: ele.target.value });
   }
   useEffect(() => {
-    console.log("lll", candidates);
-  }, [candidates])
+    console.log("lll", profiles);
+  }, [profiles])
   const handleSubmit = async () => {
     try {
       console.log(profiles);
@@ -148,6 +154,62 @@ const SapSearch = () => {
     } catch (err) {
       console.log(err);
     }
+  }
+  const [inputValue, setInputValue] = useState('');
+  const [value, setValue] = useState({});
+  const [dynamicSkill, setDynamicSkill] = useState("");
+  const [dynamicPrimarySkill,setDynamicPrimarySkill] = useState("");
+  const [dynamicSecondarySkill,setDynamicSecondarySkill] = useState("");
+  const handleClickKeyword = (event: any) => {
+    console.log('CLICK--->', event);
+
+    let ele = event.target;
+    let elem = document.getElementById('first') as HTMLInputElement;
+    console.log("ooooooooooooooo", event.target)
+    if (elem) {
+      elem.value = ele.textContent;
+      setInputValue(elem.value)
+      setProfile({ ...profiles, keyword: elem.value });
+    } else {
+      console.error("Element with id 'first' not found.");
+    }
+
+    setValue({ ...value, Skill_Set: ele.textContent });
+    setDynamicSkill("");
+  }
+  const handleClickPrimary = (event: any) => {
+    console.log('CLICK--->', event);
+
+    let ele = event.target;
+    let elem = document.getElementById('second') as HTMLInputElement;
+    console.log("ooooooooooooooo", event.target)
+    if (elem) {
+      elem.value = ele.textContent;
+      setInputValue(elem.value);
+      setProfile({ ...profiles, primary_module: elem.value });
+    } else {
+      console.error("Element with id 'first' not found.");
+    }
+
+    setValue({ ...value, Skill_Set: ele.textContent });
+    setDynamicPrimarySkill("");
+  }
+  const handleClickSecondary = (event: any) => {
+    console.log('CLICK--->', event);
+
+    let ele = event.target;
+    let elem = document.getElementById('third') as HTMLInputElement;
+    console.log("ooooooooooooooo", event.target)
+    if (elem) {
+      elem.value = ele.textContent;
+      setInputValue(elem.value);
+      setProfile({ ...profiles, secondary_module: elem.value });
+    } else {
+      console.error("Element with id 'first' not found.");
+    }
+
+    setValue({ ...value, Skill_Set: ele.textContent });
+    setDynamicSecondarySkill("");
   }
   useEffect(() => {
     console.log("object", allCandidates)
@@ -220,11 +282,77 @@ const SapSearch = () => {
   const router = useRouter();
   const handleMeetButton = () => {
     localStorage.setItem("selectedId", JSON.stringify({ selectedId }));
+    localStorage.setItem("meeting", "true");
+    router.push(`/subreqMeeting`);
+  };
+  const handleSubreqButton = () => {
+    localStorage.setItem("selectedId", JSON.stringify({ selectedId }));
+
     router.push(`/subreq`);
   };
   useEffect(() => {
     console.log("ids", selectedId)
   }, [selectedId])
+  useEffect(() => {
+    const fetchData = async () => {
+      if (dynamicSkill.length > 0) {
+        try {
+          const response = await axios.post(
+            `${DEV_PUBLIC_URL}searchbar/candidates`,
+            { search: dynamicSkill }
+          );
+          let data = response.data.data;
+          console.log("resp", data);
+          setSkillSuggesions(data);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      } else {
+        setSkillSuggesions([]);
+      }
+    };
+    fetchData();
+  }, [dynamicSkill]);
+  useEffect(() => {
+    const fetchData = async () => {
+      if (dynamicPrimarySkill.length > 0) {
+        try {
+          const response = await axios.post(
+            `${DEV_PUBLIC_URL}searchbar/candidates`,
+            { search: dynamicPrimarySkill }
+          );
+          let data = response.data.data;
+          console.log("resp", data);
+          setPrimarySkillSuggesions(data);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      } else {
+        setPrimarySkillSuggesions([]);
+      }
+    };
+    fetchData();
+  }, [dynamicPrimarySkill]);
+  useEffect(() => {
+    const fetchData = async () => {
+      if (dynamicSecondarySkill.length > 0) {
+        try {
+          const response = await axios.post(
+            `${DEV_PUBLIC_URL}searchbar/candidates`,
+            { search: dynamicSecondarySkill }
+          );
+          let data = response.data.data;
+          console.log("resp", data);
+          setSecondarySkillSuggesions(data);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      } else {
+        setSecondarySkillSuggesions([]);
+      }
+    };
+    fetchData();
+  }, [dynamicSecondarySkill]);
   return (
     <>
       {
@@ -248,16 +376,52 @@ const SapSearch = () => {
                             <div className="specificSearchForm">
                               <div className="oneCol">
                                 <label>Key word</label>
-                                <input type="text" className="form-control" id="" onChange={(ele: any) => handleChangeKeyword(ele)} />
+                                <input type="text" id="first" className="form-control" onChange={(ele: any) => handleChangeKeyword(ele)} />
+                                {skillSuggestions.length > 0 &&
+                                  <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
+                                    {
+                                      skillSuggestions.map((ele: any, idx: any) => (
+                                        <ul key={idx} className="suggestionPoints">
+                                          <li style={{ cursor: "pointer", margin: "5px 0px", padding: "10px 5px 5px 10px" }} onClick={handleClickKeyword}>{ele}</li>
+                                        </ul>
+                                        // <option value="" onClick={handleClick1}>{ele}</option>
+                                      ))
+                                    }
+                                  </div>
+                                }
                               </div>
                               <div className="twoCol">
                                 <div className="leftCol">
                                   <label>Primary Module</label>
-                                  <input type="text" className="form-control" id="" onChange={(ele: any) => handleChangePrimary(ele)} />
+                                  <input type="text" className="form-control" id="second" onChange={(ele: any) => handleChangePrimary(ele)} />
+                                  {primaryskillSuggestions.length > 0 &&
+                                  <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
+                                    {
+                                      primaryskillSuggestions.map((ele: any, idx: any) => (
+                                        <ul key={idx} className="suggestionPoints">
+                                          <li style={{ cursor: "pointer", margin: "5px 0px", padding: "10px 5px 5px 10px" }} onClick={handleClickPrimary}>{ele}</li>
+                                        </ul>
+                                        // <option value="" onClick={handleClick1}>{ele}</option>
+                                      ))
+                                    }
+                                  </div>
+                                }
                                 </div>
                                 <div className="rightCol">
                                   <label>Secondary Module</label>
-                                  <input type="text" className="form-control" id="" onChange={(ele: any) => handleChangeSecondary(ele)} />
+                                  <input type="text" className="form-control" id="third" onChange={(ele: any) => handleChangeSecondary(ele)} />
+                                  {secondaryskillSuggestions.length > 0 &&
+                                  <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
+                                    {
+                                      secondaryskillSuggestions.map((ele: any, idx: any) => (
+                                        <ul key={idx} className="suggestionPoints">
+                                          <li style={{ cursor: "pointer", margin: "5px 0px", padding: "10px 5px 5px 10px" }} onClick={handleClickSecondary}>{ele}</li>
+                                        </ul>
+                                        // <option value="" onClick={handleClick1}>{ele}</option>
+                                      ))
+                                    }
+                                  </div>
+                                }
                                 </div>
                                 <div className="clear"></div>
                               </div>
@@ -505,7 +669,7 @@ const SapSearch = () => {
                                   <div className="resultSection">
                                     <div className="resultCont">
                                       <ul>
-                                        {pageMap[pageNoDisplay].map((ele, idx) => (
+                                        {pageMap[pageNoDisplay]?.map((ele, idx) => (
                                           <li className="listingPanel" key={idx}>
                                             <div className="listTopSection">
                                               <div className="selectOption">
@@ -552,20 +716,20 @@ const SapSearch = () => {
                                       <li className="page-item">
                                         <button
                                           className="page-link"
-                                          onClick={handlePrevPage} disabled={disableBackward} 
+                                          onClick={handlePrevPage} disabled={disableBackward}
                                         >
                                           Previous
                                         </button>
                                       </li>
                                       <li className="page-item" aria-current="page">
-                                        <a className="page-link" href="#" onClick={()=>handleNextPage(pageNoDisplay>5?pageNoDisplay-5:1)}>{pageNoDisplay>5?pageNoDisplay-5:1}</a>
+                                        <a className="page-link" href="#" onClick={() => handleNextPage(pageNoDisplay > 5 ? pageNoDisplay - 5 : 1)}>{pageNoDisplay > 5 ? pageNoDisplay - 5 : 1}</a>
                                       </li>
-                                      <li className="page-item"><a className="page-link" href="#" onClick={()=>handleNextPage(pageNoDisplay>5?pageNoDisplay-4:2)}>{pageNoDisplay>5?pageNoDisplay-4:2}</a></li>
-                                      <li className="page-item"><a className="page-link" href="#" onClick={()=>handleNextPage(pageNoDisplay>5?pageNoDisplay-3:3)}>{pageNoDisplay>5?pageNoDisplay-3:3}</a></li>
-                                      <li className="page-item"><a className="page-link" href="#" onClick={()=>handleNextPage(pageNoDisplay>5?pageNoDisplay-2:4)}>{pageNoDisplay>5?pageNoDisplay-2:4}</a></li>
-                                      <li className="page-item"><a className="page-link" href="#" onClick={()=>handleNextPage(pageNoDisplay>5?pageNoDisplay-1:5)}>{pageNoDisplay>5?pageNoDisplay-1:5}</a></li>
+                                      <li className="page-item"><a className="page-link" href="#" onClick={() => handleNextPage(pageNoDisplay > 5 ? pageNoDisplay - 4 : 2)}>{pageNoDisplay > 5 ? pageNoDisplay - 4 : 2}</a></li>
+                                      <li className="page-item"><a className="page-link" href="#" onClick={() => handleNextPage(pageNoDisplay > 5 ? pageNoDisplay - 3 : 3)}>{pageNoDisplay > 5 ? pageNoDisplay - 3 : 3}</a></li>
+                                      <li className="page-item"><a className="page-link" href="#" onClick={() => handleNextPage(pageNoDisplay > 5 ? pageNoDisplay - 2 : 4)}>{pageNoDisplay > 5 ? pageNoDisplay - 2 : 4}</a></li>
+                                      <li className="page-item"><a className="page-link" href="#" onClick={() => handleNextPage(pageNoDisplay > 5 ? pageNoDisplay - 1 : 5)}>{pageNoDisplay > 5 ? pageNoDisplay - 1 : 5}</a></li>
                                       <li className="page-item">
-                                        <button className="page-link" onClick={()=>handleNextPage(null)} disabled={disableForward}>Next</button>
+                                        <button className="page-link" onClick={() => handleNextPage(null)} disabled={disableForward}>Next</button>
                                       </li>
                                     </ul>
                                   </div>
@@ -573,6 +737,15 @@ const SapSearch = () => {
 
                               </div>
                               <div style={{ textAlign: "center", marginBottom: "100px" }}>
+                                <button
+                                  type="button"
+                                  className="btn btn-primary btn-lg"
+                                  onClick={handleSubreqButton}
+                                  disabled={selectedId.length === 0}
+                                  style={{ marginRight: "10px" }}
+                                >
+                                  Submit Requirement
+                                </button>
                                 <button
                                   type="button"
                                   className="btn btn-primary btn-lg"

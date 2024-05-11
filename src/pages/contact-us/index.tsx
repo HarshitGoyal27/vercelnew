@@ -46,137 +46,240 @@ const Contact = () => {
     return (
         <div>
             <Navbar />
-            {/* <div className={style.step2container}>
+            <div className="wrapper contactus">
+                {/* <!-- welcome Section  --> */}
+                <div className="aboutusSection ">
+                    <section className="container mt-4 ">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h2>Contact US</h2>
 
-            <div className={style.step2innercontainer}>
-                <div className={style.leftContainet} >
-                    <div className={style.heading}>Lets get in touch</div>
-                    <div className={style.coninfo}>
-                        <div className={style.flex}><LocationOnIcon/> {FooterPageText.address1} {FooterPageText.address2}</div>
-                        <div className={style.flex}><EmailIcon/> {FooterPageText.email}</div>
-                       
-                    </div>
-                    <div  className={style.coninfo2}>
-                        <a href="#" className={css.socialIcon}>
-                            <TwitterIcon sx={{ color: "black" }} />
-                        </a>
-                        <a href="#" className={css.socialIcon}>
-                            <FacebookIcon sx={{ color: "black" }} />
-                        </a>
-                        <a href="#" className={css.socialIcon}>
-                            <InstagramIcon sx={{ color: "black" }} />
-                        </a>
-                        <a href="https://www.linkedin.com/company/skillscapital/" target="_blank" className={css.socialIcon}>
-                            <LinkedInIcon sx={{ color: "black" }} />
-                        </a>
-                        
-                    </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <div className={css.fieldcontainer}>
-                    <div className={css.fieldinnercontainer}>
-                        <div className={css.enterdetails} >Enter Details</div>
-                        <div>
-                            <div className={css.namecontainer}>Name*</div>
-                            <TextField
-                                placeholder="Enter Your Name"
-                                name="Name"
-                                sx={{ width: "300px" }}
-                            
-                            />
+                {/* <!-- contact Section  --> */}
+                <div className="contactSection ">
+                    <section className="container mt-4 ">
+                        <div className="row">
+                            <div className="col-md-6 contactForm">
+                                <h2>LET&apos;S TALK </h2>
+                                <h4>Get in touch with us today to explore how our specialized tech ecosystem platform can elevate your business</h4>
+                                <div className="contactCont">
+                                    <form>
+                                        <div className="form-group">
+                                            {/* <!--  <label for="firstName">First Name</label> --> */}
+                                            <input type="text" className="form-control" id="firstName" placeholder="First Name" />
+                                        </div>
+                                        <div className="form-group">
+                                            {/* <!--<label for="lastName">Last Name</label> --> */}
+                                            <input type="text" className="form-control" id="lastName" placeholder="Last Name" />
+                                        </div>
+                                        <div className="form-group">
+                                            {/* <!--<label for="email">Email Address</label> --> */}
+                                            <input type="email" className="form-control" id="email" placeholder="Email" />
+                                        </div>
+                                        <div className="form-group">
+                                            {/* <!--<label for="phone">Phone Number</label> --> */}
+                                            <input type="tel" className="form-control" id="phone" placeholder="Phone" />
+                                        </div>
+                                        <div className="form-group">
+                                            {/* <!--<label for="message">Message</label> --> */}
+                                            <textarea className="form-control" id="message" rows={5} placeholder="Message"></textarea>
+                                        </div>
+                                        <button type="submit" className="btn btn-primary">Submit</button>
+                                    </form>
+
+
+                                </div>
+                            </div>
+                            <div className="col-md-6 contactsection">
+                                <h2>Connect with us </h2>
+                                <div className="row">
+                                    <div className="col-md-6 ">
+                                        <h3>Email</h3>
+                                    </div>
+                                    <div className="col-md-6 ">
+                                        <h3>Whatapp</h3>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
                         </div>
-                        <div>
-                            <div className={css.namecontainer}>Email*</div>
-                            <TextField
-                                placeholder="Enter Your Email"
-                                name="Email"
-                                sx={{ width: "300px" }}
-                            
-                               onChange={handleInputChange}
-                            
-                            />
-                        </div>
-                        <div>
-                            <div className={css.namecontainer}>Message*</div>
-                            <TextField
-                                placeholder="Message"
-                                name="message"
-                                sx={{ width: "300px" }}
-                            
-                               onChange={handleBody}
-                            
-                            />
-                            
-                        </div>
-                        <Button
-                            onClick={onSendMail} 
-                            style={{ width: "190px", padding: "15px 15px", borderRadius: "45px" }}
-                            variant="contained">
-                            send
-                        </Button>
-                    </div>
+                    </section>
                 </div>
+
+                <div className="officeSection ">
+                    <section className="container mt-4 ">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h2>Our Offices</h2>
+                            </div>
+                            <div className="col-md-4 ">
+                                <div className="officeAddress">
+                                    <h4>US OFFICE</h4>
+                                    <p >5580 Merlin Court<br />Avila Beach. CA 93424<br />California, United States</p>
+                                </div>
+                            </div>
+                            <div className="col-md-4 ">
+                                <div className="officeAddress">
+                                    <h4>UK OFFICE</h4>
+                                    <p >145-157 St John Street,<br />London, EC1V 4PY<br />United Kingdom</p>
+                                </div>
+                            </div>
+
+                            <div className="col-md-4 ">
+                                <div className="officeAddress">
+                                    <h4>GERMANY OFFICE</h4>
+                                    <p >Griebenowstr. 10-11<br />10435 Berlin<br />Germany</p>
+                                </div>
+                            </div>
+                            <div className="col-md-4 ">
+                                <div className="officeAddress">
+                                    <h4>BELGIUM OFFICE</h4>
+                                    <p >Stoachup<br />Rue du Stampia 35<br />5310 Eghezée<br />Belgium</p>
+                                </div>
+                            </div>
+                            <div className="col-md-4 ">
+                                <div className="officeAddress">
+                                    <h4>BRAZIL OFFICE</h4>
+                                    <p >Rua Theodoro Makiolka, 1239<br />Stanta Cândida<br />82640-010 Curitiba, Paraná<br />Brazil</p>
+                                </div>
+                            </div>
+                            <div className="col-md-4 ">
+                                <div className="officeAddress">
+                                    <h4>INDIA OFFICE</h4>
+                                    <p >B1/H3, Mohan Estate,<br />Industrial Area,<br />New Delhi - 110044<br />India</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </section>
+                </div>
+
+
+
+
+
+                {/* <!-- client Section  --> */}
+                <div className="clientCont mediaCont">
+                    <section className="container mt-4 ">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h2>Our Coverage by Leading Media</h2>
+                                <h4>SkillsCapital Revolutionizes SAP and Specialized Talent Landscape</h4>
+                            </div>
+
+                        </div>
+                        <div className="row">
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/media01.png" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/media02.png" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/media03.png" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/media04.png" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/media05.png" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/media06.png" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/media07.png" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/media08.png" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+
+
+
+                {/* <!-- client Section  --> */}
+                <div className="clientCont">
+                    <section className="container mt-4 ">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h2>Our Leadership&apos;s Client Work<br />A Chronicle of Success</h2>
+                            </div>
+
+                        </div>
+                        <div className="row">
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/logo01.jpg" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/logo02.jpg" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/logo03.jpg" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/logo04.jpg" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/logo05.jpg" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/logo06.jpg" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/logo07.jpg" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                            <div className="col-md-3">
+                                <div className="logoCont">
+                                    <img src="images/logo08.jpg" alt="logo" className="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
             </div>
-        </div> */}
-            <Letstalk />
-
-            <section className={style.addressMostOuter} >
-                <div style={{fontSize:"32px",fontWeight:"600"}}>Our Offices</div>
-                <div className={style.addressOuter}>
-                    <div className={style.eachaddress}>
-                        <div style={{fontSize:"25px",fontWeight:"600",color:"#2871FF"}}>US OFFICE</div>
-                        <div>
-                            <div>5580 Merlin Court</div>
-                            <div>Avila Beach. CA 93424</div>
-                            <div>California, United States</div>
-                        </div>
-                    </div>
-                    <div className={style.eachaddress}>
-                        <div style={{fontSize:"25px",fontWeight:"600",color:"#2871FF"}}>UK OFFICE</div>
-                        <div>
-                            <div>145-157 St John Street,</div>
-                            <div>London, EC1V 4PY</div>
-                            <div>United Kingdom</div>
-                        </div>
-                    </div>
-                    <div className={style.eachaddress}>
-                        <div style={{fontSize:"25px",fontWeight:"600",color:"#2871FF"}}>GERMANY OFFICE</div>
-                        <div>
-                            <div>Griebenowstr. 10-11</div>
-                            <div>10435 Berlin</div>
-                            <div>Germany</div>
-                        </div>
-                    </div>
-                </div>
-                <div className={style.addressOuter}>
-                    <div className={style.eachaddress}>
-                        <div style={{fontSize:"25px",fontWeight:"600",color:"#2871FF"}}>BELGIUM OFFICE</div>
-                        <div>
-                            <div>Stoachup</div>
-                            <div>Rue du Stampia 35</div>
-                            <div>5310 Eghezée</div>
-                            <div>Belgium</div>
-                        </div>
-                    </div>
-                    <div className={style.eachaddress}>
-                        <div style={{fontSize:"25px",fontWeight:"600",color:"#2871FF"}}>BRAZIL OFFICE</div>
-                        <div>
-                            <div>Rua Theodoro Makiolka, 1239</div>
-                            <div>Stanta Cândida</div>
-                            <div>82640-010 Curitiba, Paraná</div>
-                            <div>Brazil</div>
-                        </div>
-                    </div>
-                    <div className={style.eachaddress}>
-                        <div style={{fontSize:"25px",fontWeight:"600",color:"#2871FF"}}>INDIA OFFICE</div>
-                        <div>
-                            <div>B1/H3, Mohan Estate,</div>
-                            <div>Industrial Area,</div>
-                            <div>New Delhi - 110044</div>
-                            <div>India</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <div>
                 <FotterComponent />
             </div>
