@@ -45,6 +45,7 @@ interface CustomAutocompleteProps {
   setSelectedValue: Function;
   touched: boolean;
   handleSubmit: Function;
+  profiles:Profile;
 }
 interface RecentSearchItem {
   Skill_Set: string;
@@ -53,7 +54,7 @@ interface RecentSearchItem {
   maxExp: string;
 }
 
-function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit }: CustomAutocompleteProps) {
+function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }: CustomAutocompleteProps) {
   const [dynamicSkill, setDynamicSkill] = useState("");
   const [skillSuggestions, setSkillSuggesions] = useState([]);
   const [locationSuggestions, setLocationSuggetions] = useState([]);
@@ -117,17 +118,29 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit }: CustomAut
     }
     console.log('Reached here', data);
   }, [])
+  useEffect(() => {
+    var profilesJSON = localStorage.getItem("SearchDeveloperProfiles");
+    if (profilesJSON !== null) {
+      var storedProfiles = JSON.parse(profilesJSON);
+      console.log("storedProfiles", storedProfiles.profiles);
+      setSelectedValue({ ...storedProfiles.profiles });
 
+    } else {
+      console.log("No profiles found in localStorage");
+    }
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
   const handleInputChangeSearch = (event: any) => {
+    // setProfile({ ...profiles, Skill_Set: event.target.value });
     console.log("vvv", event.target.value);
     setInputValue(event.target.value)
-    setSelectedValue({ Skill_Set: event.target.value });
+    setSelectedValue({ ...profiles, Skill_Set: event.target.value });
     setDynamicSkill(event.target.value);
   };
 
   const handleInputChangeLocation = (event: any) => {
+    // setProfile({ ...profiles, Current_Location: event.target.value });
     console.log(event.target.value);
-    // setSelectedValue({ Skill_Set: event.target.value });
+    setSelectedValue({ ...profiles, Current_Location: event.target.value });
     setDynamicLocation(event.target.value);
   };
 
@@ -227,17 +240,17 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit }: CustomAut
   const [salary, setSalary] = useState<string>();
   const [recent, setRecent] = useState(false);
   const [expandedRow, setExpandedRow] = useState(null);
-  const [profiles, setProfile] = useState<Profile>({
-    Skill_Set: "",
-    Experience_in_Years: "",
-    minExp: "",
-    maxExp: "",
-    Current_Location: "",
-    Current_Timezone: "",
-    Skill_Name_Version: "",
-    Certification: "",
-    Preferred_Industry_Domain: "",
-  });
+  // const [profiles, setProfile] = useState<Profile>({
+  //   Skill_Set: "",
+  //   Experience_in_Years: "",
+  //   minExp: "",
+  //   maxExp: "",
+  //   Current_Location: "",
+  //   Current_Timezone: "",
+  //   Skill_Name_Version: "",
+  //   Certification: "",
+  //   Preferred_Industry_Domain: "",
+  // });
   // const handleSubmit = async (e: any) => {
   //   setLoading(true);
   //   console.log("AAAA", profiles);
@@ -299,6 +312,9 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit }: CustomAut
   //     console.error("Error fetching data:", error);
   //   }
   // };
+  useEffect(()=>{
+    console.log("profiles", profiles)
+  },[profiles])
   const handleClose = (index: any) => {
     console.log('hiii')
     let data = localStorage.getItem("RecentSearch");
@@ -338,7 +354,7 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit }: CustomAut
                         <p className="leftSide keywordsText">Keywords</p>
                         <div className="rightSide booleanText ">
                           <div className="switch-field ">
-                            <input type="radio" id="keywords-one" name="keywords-one" value="yes" checked />
+                            <input type="radio" id="keywords-one"  name="keywords-one" value="yes" checked />
                             <label htmlFor="keywords-one">Yes</label>
                             <input type="radio" id="keywords-two" name="keywords-one" value="no" />
                             <label htmlFor="keywords-two">No</label>
@@ -350,7 +366,7 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit }: CustomAut
                           <input className="form-control" id="first"
                             placeholder="Enter Keywords like, designation and company"
                             onChange={handleInputChangeSearch}
-                            value={inputValue}
+                            value={profiles.Skill_Set}
                           />
                             {skillSuggestions.length > 0 &&
                               <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
@@ -532,7 +548,7 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit }: CustomAut
                         <div><CloseIcon style={{ fontSize: '16', color: 'grey', cursor: 'pointer' }} onClick={() => handleClose(idx)} /></div>
 
                         <p>{ele.Skill_Set}</p>
-                        <p><span onClick={(event) => handleClickRecent(ele)}>Fill this sreach</span><span> Sreach profiles</span></p>
+                        <p><span onClick={(event) => handleClickRecent(ele)}>Fill this sreach</span><span> Search profiles</span></p>
                       </div>
                     ))
                   }

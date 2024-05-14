@@ -2099,6 +2099,10 @@ ul.keyMetrics {
     float: left;
     width: 25%;
     text-align: right;
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
 }
 .resultSection{
     margin: 0 auto;

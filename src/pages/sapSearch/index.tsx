@@ -62,6 +62,7 @@ const SapSearch = () => {
   const [pageNoDisplay, setPageNoDisplay] = useState(1);
   const [pageNoAxios, setPageNoAxios] = useState(1);
   const [disableForward, setDisableForward] = useState(false);
+
   const [disableBackward, setDisableBackward] = useState(true);
   const [arrLoad, setArrLoad] = useState(false);
   const [pageMap, setPageMap] = useState<{ [key: number]: Response[] }>({});
@@ -71,9 +72,10 @@ const SapSearch = () => {
   const [skillSuggestions, setSkillSuggesions] = useState([]);
   const [primaryskillSuggestions, setPrimarySkillSuggesions] = useState([]);
   const [secondaryskillSuggestions, setSecondarySkillSuggesions] = useState([]);
+  const [modify, setModify] = useState(false);
   const handleSelectAll = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectAll(e.target.checked);
-    const allIDs = allCandidates.map((item) => item.id);
+    const allIDs = pageMap[pageNoDisplay].map((item) => item.id);
     if (!selectAll) {
       setSelectedId((prevSelectedId) => {
         const uniqueIDs = new Set([...prevSelectedId, ...allIDs]);
@@ -119,14 +121,16 @@ const SapSearch = () => {
   }
   useEffect(() => {
     console.log("lll", profiles);
+
   }, [profiles])
   const handleSubmit = async () => {
     try {
-      console.log(profiles);
+      console.log("profiles", profiles);
+      localStorage.setItem("profiles", JSON.stringify({ profiles }));
       setArrLoad(true);
       let resp = await axios.post(`${DEV_PUBLIC_SAPURL}sap/candidates`, { profiles, pageNoAxios });
       let { finalCandidates } = resp.data.data;
-      console.log('LENGTH OF DATA IS ', finalCandidates);
+      console.log('LENGTH OF DATA IS ', finalCandidates.length);
       if (finalCandidates.length < 10) {
         console.log('Length is less than 10');
         if (finalCandidates.length === 0) {
@@ -158,8 +162,8 @@ const SapSearch = () => {
   const [inputValue, setInputValue] = useState('');
   const [value, setValue] = useState({});
   const [dynamicSkill, setDynamicSkill] = useState("");
-  const [dynamicPrimarySkill,setDynamicPrimarySkill] = useState("");
-  const [dynamicSecondarySkill,setDynamicSecondarySkill] = useState("");
+  const [dynamicPrimarySkill, setDynamicPrimarySkill] = useState("");
+  const [dynamicSecondarySkill, setDynamicSecondarySkill] = useState("");
   const handleClickKeyword = (event: any) => {
     console.log('CLICK--->', event);
 
@@ -294,6 +298,17 @@ const SapSearch = () => {
     console.log("ids", selectedId)
   }, [selectedId])
   useEffect(() => {
+    var profilesJSON = localStorage.getItem("profiles");
+    if (profilesJSON !== null) {
+      var storedProfiles = JSON.parse(profilesJSON);
+      console.log("storedProfiles", storedProfiles.profiles);
+      setProfile({ ...storedProfiles.profiles });
+
+    } else {
+      console.log("No profiles found in localStorage");
+    }
+  }, [])
+  useEffect(() => {
     const fetchData = async () => {
       if (dynamicSkill.length > 0) {
         try {
@@ -353,6 +368,30 @@ const SapSearch = () => {
     };
     fetchData();
   }, [dynamicSecondarySkill]);
+  useEffect(() => {
+    console.log("zero", zero);
+    console.log("loading", loading);
+  }, [zero, loading])
+  const handleModify = () => {
+    setZero(false);
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    const allIDs = pageMap[pageNoDisplay]?.map((item) => item.id);
+
+    // Check if all selectedIds are present in allIDs
+    const allIdsSelected = allIDs?.every(id => selectedId.includes(id));
+    console.log("allIdsSelected", allIdsSelected)
+    console.log("selectedId", selectedId);
+    console.log("allIDs", allIDs);
+    console.log("pageMap[pageNoDisplay]", pageMap[pageNoDisplay])
+    if (allIdsSelected && allIDs !== undefined) {
+      setSelectAll(true);
+    } else {
+      setSelectAll(false);
+    }
+  }, [pageNoDisplay]) // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <>
       {
@@ -376,7 +415,7 @@ const SapSearch = () => {
                             <div className="specificSearchForm">
                               <div className="oneCol">
                                 <label>Key word</label>
-                                <input type="text" id="first" className="form-control" onChange={(ele: any) => handleChangeKeyword(ele)} />
+                                <input type="text" id="first" className="form-control" value={profiles.keyword} onChange={(ele: any) => handleChangeKeyword(ele)} />
                                 {skillSuggestions.length > 0 &&
                                   <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
                                     {
@@ -393,35 +432,35 @@ const SapSearch = () => {
                               <div className="twoCol">
                                 <div className="leftCol">
                                   <label>Primary Module</label>
-                                  <input type="text" className="form-control" id="second" onChange={(ele: any) => handleChangePrimary(ele)} />
+                                  <input type="text" className="form-control" id="second" value={profiles.primary_module} onChange={(ele: any) => handleChangePrimary(ele)} />
                                   {primaryskillSuggestions.length > 0 &&
-                                  <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
-                                    {
-                                      primaryskillSuggestions.map((ele: any, idx: any) => (
-                                        <ul key={idx} className="suggestionPoints">
-                                          <li style={{ cursor: "pointer", margin: "5px 0px", padding: "10px 5px 5px 10px" }} onClick={handleClickPrimary}>{ele}</li>
-                                        </ul>
-                                        // <option value="" onClick={handleClick1}>{ele}</option>
-                                      ))
-                                    }
-                                  </div>
-                                }
+                                    <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
+                                      {
+                                        primaryskillSuggestions.map((ele: any, idx: any) => (
+                                          <ul key={idx} className="suggestionPoints">
+                                            <li style={{ cursor: "pointer", margin: "5px 0px", padding: "10px 5px 5px 10px" }} onClick={handleClickPrimary}>{ele}</li>
+                                          </ul>
+                                          // <option value="" onClick={handleClick1}>{ele}</option>
+                                        ))
+                                      }
+                                    </div>
+                                  }
                                 </div>
                                 <div className="rightCol">
                                   <label>Secondary Module</label>
-                                  <input type="text" className="form-control" id="third" onChange={(ele: any) => handleChangeSecondary(ele)} />
+                                  <input type="text" className="form-control" id="third" value={profiles.secondary_module} onChange={(ele: any) => handleChangeSecondary(ele)} />
                                   {secondaryskillSuggestions.length > 0 &&
-                                  <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
-                                    {
-                                      secondaryskillSuggestions.map((ele: any, idx: any) => (
-                                        <ul key={idx} className="suggestionPoints">
-                                          <li style={{ cursor: "pointer", margin: "5px 0px", padding: "10px 5px 5px 10px" }} onClick={handleClickSecondary}>{ele}</li>
-                                        </ul>
-                                        // <option value="" onClick={handleClick1}>{ele}</option>
-                                      ))
-                                    }
-                                  </div>
-                                }
+                                    <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
+                                      {
+                                        secondaryskillSuggestions.map((ele: any, idx: any) => (
+                                          <ul key={idx} className="suggestionPoints">
+                                            <li style={{ cursor: "pointer", margin: "5px 0px", padding: "10px 5px 5px 10px" }} onClick={handleClickSecondary}>{ele}</li>
+                                          </ul>
+                                          // <option value="" onClick={handleClick1}>{ele}</option>
+                                        ))
+                                      }
+                                    </div>
+                                  }
                                 </div>
                                 <div className="clear"></div>
                               </div>
@@ -653,6 +692,7 @@ const SapSearch = () => {
 
                                     </div>
                                     <div className="filterBoxRight">
+                                      <div style={{ color: "#007FFF", cursor: "pointer" }} onClick={handleModify}>Modify</div>
                                       <label htmlFor="selectall">Select All: </label>
                                       <input
                                         className=""
@@ -663,7 +703,9 @@ const SapSearch = () => {
 
                                     </div>
                                     <div className="clear"></div>
+
                                   </div>
+
                                 </div>
                                 <div className="col-md-12 ">
                                   <div className="resultSection">

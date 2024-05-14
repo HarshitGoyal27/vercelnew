@@ -10,7 +10,7 @@ import {
 import Button from "@mui/material/Button";
 import axios from "axios";
 import { Box, Paper } from "@mui/material";
-import { DEV_PUBLIC_URL } from "../../../../configs/auth";
+import { DEV_PUBLIC_SAPURL, DEV_PUBLIC_URL } from "../../../../configs/auth";
 import Image from "next/image";
 import CustomAutocompleteFromAPI from "../AutoComplete";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
@@ -73,6 +73,21 @@ interface Skill_Info {
   skill_name: string;
   last_used: string;
 }
+interface Response {
+  Name: string;
+  Email: string;
+  Skills: string;
+  id: string;
+  Experience: string;
+  PreviousRole: string;
+  CurrentRole: string;
+  CandidateProfile: string;
+  Salary: string;
+  PrefferedLocation: string;
+  CurrentLocation: string;
+  MayAlsoKnow: string;
+  Education: string;
+}
 function truncateSentence(sentence: string, maxLength = 215) {
   if (sentence != undefined && sentence.length > maxLength) {
     return sentence.substring(0, maxLength) + "...";
@@ -98,6 +113,7 @@ const Form: React.FC = () => {
     last_used: "",
   });
   // const {selectedId,setSelectedId} = useGlobalContext();
+  const [pageNoDisplay, setPageNoDisplay] = useState(1);
   const [AllskillInfo, setAllSkillInfo] = useState<Skill_Info[]>([]);
   const [apiResponse, setApiResponse] = useState<Candidates[]>([]);
   const [apiDummyResponse, setApiDummyResponse] = useState<Candidates[]>([]);
@@ -121,7 +137,14 @@ const Form: React.FC = () => {
   const [recent, setRecent] = useState(false);
   const [recentSearch, setRecentSearch] = useState<RecentSearchItem[]>([]);
   const [expandedRow, setExpandedRow] = useState(null);
-
+  const [arrLoad, setArrLoad] = useState(false);
+  const [zero, setZero] = useState(false);
+  const [candidates, setCandidates] = useState<Response[]>([]);
+  const [allCandidates, setALLCandidates] = useState<Response[]>([]);
+  const [disableForward, setDisableForward] = useState(false);
+  const [pageMap, setPageMap] = useState<{ [key: number]: Response[] }>({});
+  const [pageNoAxios, setPageNoAxios] = useState(1);
+  const [disableBackward, setDisableBackward] = useState(true);
   const toggleRow = (index: any) => {
     setExpandedRow(expandedRow === index ? null : index);
   };
@@ -149,9 +172,8 @@ const Form: React.FC = () => {
       setTouched(true);
       return;
     }
-
+    localStorage.setItem("SearchDeveloperProfiles", JSON.stringify({ profiles }));
     try {
-      console.log("-------->", profiles, pageNumber);
       let localData = localStorage.getItem("RecentSearch");
       if (localData) localData = JSON.parse(localData);
       let jsonArr: any[] = [];
@@ -163,41 +185,47 @@ const Form: React.FC = () => {
       const jsonString = JSON.stringify(jsonArr);
       localStorage.setItem('RecentSearch', jsonString);
       setRecent(true);
-      const resp = await axios.post(`${DEV_PUBLIC_URL}form/candidates`, {
+      console.log("profiles", profiles);
+      // localStorage.setItem("profiles", JSON.stringify({ profiles }));
+      setArrLoad(true);
+      let resp = await axios.post(`${DEV_PUBLIC_URL}form/candidates`, {
         profiles,
-        pageNumber,
+        pageNoAxios,
       });
-      const candidates = resp.data.data.candidatesData;
-      let arr = [
-        candidates[0],
-        candidates[1],
-        candidates[2],
-        candidates[3],
-        candidates[4],
-        candidates[5],
-        candidates[6],
-        candidates[7],
-        candidates[8],
-        candidates[9]
-      ];
-      console.log("yoyo", candidates);
-      setLoading(false);
-      setEliteButtonClicked(true);
-      if (candidates.length === 0) {
-        setApiResponse([]);
-        setApiDummyResponse([]);
-      } else if (candidates.length !== 0) {
-        setApiResponse(arr);
-        setApiDummyResponse(arr);
+      let finalCandidates = resp.data.data.candidatesData;
+      console.log('LENGTH OF DATA IS ', finalCandidates);
+      if (finalCandidates.length < 10) {
+        console.log('Length is less than 10');
+        if (finalCandidates.length === 0) {
+          setZero(true);
+        } else {
+          setCandidates([...finalCandidates]);
+          setALLCandidates([...finalCandidates]);
+        }
+        setDisableForward(true);
+        setLoading(!loading);
+        setArrLoad(false);
       } else {
-        setApiResponse([]);
-        setApiDummyResponse([]);
+        console.log('Length is greated than 10');
+        let ans: { [key: number]: Response[] } = {};
+        let len = Math.ceil(finalCandidates.length / 10);
+        for (let i = 0; i < len; i++) {
+          let arr = finalCandidates.slice(10 * i, 10 * i + 10);
+          ans[i + 1] = arr;
+        }
+        console.log('ANS:===>', candidates);
+        setALLCandidates([...finalCandidates]);
+        setPageMap({ ...ans });
+        setLoading(false);
+        setArrLoad(false);
       }
-    } catch (error) {
-      console.log("object");
-      console.error("Error fetching data:", error);
+    } catch (err) {
+      console.log(err);
     }
+
+
   };
+ 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
     setProfile({ ...profiles, [name]: value });
@@ -238,38 +266,38 @@ const Form: React.FC = () => {
     setLoading(true);
     setSelectAll(false);
   };
-  useEffect(() => {
-    const nextHandle = async () => {
-      console.log("object->", profiles.Skill_Set);
-      if (profiles.Skill_Set === "") {
-        return;
-      }
-      try {
-        const resp = await axios.post(`${DEV_PUBLIC_URL}form/candidates`, {
-          profiles,
-          pageNumber,
-        });
-        const candidates = resp.data.data.candidatesData;
-        console.log("next", candidates)
-        setDisablePrevButton(false);
-        setLoading(false);
-        if (candidates === "Data not present") {
-          setApiResponse([]);
-          setApiDummyResponse([]);
-          setDisableNextButton(true);
-        } else if (candidates.length !== 0) {
-          setApiResponse(candidates);
-          setApiDummyResponse(candidates);
-        } else {
-          setApiResponse([]);
-          setApiDummyResponse([]);
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    nextHandle();
-  }, [pageNumber]); // eslint-disable-line react-hooks/exhaustive-deps
+  // useEffect(() => {
+  //   const nextHandle = async () => {
+  //     console.log("object->", profiles.Skill_Set);
+  //     if (profiles.Skill_Set === "") {
+  //       return;
+  //     }
+  //     try {
+  //       const resp = await axios.post(`${DEV_PUBLIC_URL}form/candidates`, {
+  //         profiles,
+  //         pageNumber,
+  //       });
+  //       const candidates = resp.data.data.candidatesData;
+  //       console.log("next", candidates)
+  //       setDisablePrevButton(false);
+  //       setLoading(false);
+  //       if (candidates === "Data not present") {
+  //         setApiResponse([]);
+  //         setApiDummyResponse([]);
+  //         setDisableNextButton(true);
+  //       } else if (candidates.length !== 0) {
+  //         setApiResponse(candidates);
+  //         setApiDummyResponse(candidates);
+  //       } else {
+  //         setApiResponse([]);
+  //         setApiDummyResponse([]);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
+  //   nextHandle();
+  // }, [pageNumber]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleFilter = async (
     event: React.ChangeEvent<{}>,
@@ -395,7 +423,7 @@ const Form: React.FC = () => {
 
   const handleSelectAll = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectAll(e.target.checked);
-    const allIDs = apiResponse.map((item) => item.id);
+    const allIDs = pageMap[pageNoDisplay].map((item) => item.id);
     if (!selectAll) {
       setSelectedId((prevSelectedId) => {
         const uniqueIDs = new Set([...prevSelectedId, ...allIDs]);
@@ -406,16 +434,16 @@ const Form: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', apiResponse);
-    const allIDs = apiResponse.map((item) => item.id);
-    const allNumbersPresent = allIDs.every((id) => selectedId.includes(id));
-    if (allNumbersPresent) {
-      setSelectAll(true);
-    } else {
-      setSelectAll(false);
-    }
-  }, [apiResponse, selectedId]);
+  // useEffect(() => {
+  //   console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', apiResponse);
+  //   const allIDs = apiResponse.map((item) => item.id);
+  //   const allNumbersPresent = allIDs.every((id) => selectedId.includes(id));
+  //   if (allNumbersPresent) {
+  //     setSelectAll(true);
+  //   } else {
+  //     setSelectAll(false);
+  //   }
+  // }, [apiResponse, selectedId]);
 
   useEffect(() => {
     console.log("profiles--->", selectedId);
@@ -423,7 +451,8 @@ const Form: React.FC = () => {
 
   const handleMeetButton = () => {
     localStorage.setItem("selectedId", JSON.stringify({ selectedId }));
-    router.push(`/subreq`);
+    localStorage.setItem("meeting", "true");
+    router.push(`/subreqMeeting`);
   };
   const handleYouSelect = () => {
     setShowAskClient(false);
@@ -516,7 +545,11 @@ const Form: React.FC = () => {
     //   }
     // }
   }
+  const handleSubreqButton = () => {
+    localStorage.setItem("selectedId", JSON.stringify({ selectedId }));
 
+    router.push(`/subreq`);
+  };
   const handleClose = (index: any) => {
     console.log('hiii')
     let data = localStorage.getItem("RecentSearch");
@@ -528,8 +561,56 @@ const Form: React.FC = () => {
       setRecentSearch(arr);
     }
   }
+  const handleNextPage = async (pageNo: number | null) => {
+    try {
+      if (pageNo === null) {
+        const len_of_next_page = pageMap[pageNoDisplay + 1] ? pageMap[pageNoDisplay + 1].length : 0;
+        let obj = pageMap;
+        if (len_of_next_page < 10) {
+          const resp = await axios.post(`${DEV_PUBLIC_SAPURL}sap/candidates`, { profiles, pageNoAxios });
+          const { finalCandidates } = resp.data.data;
+        } else {
+          setPageNoDisplay(pageNoDisplay + 1);
+          setDisableBackward(false);
+        }
+      } else {
+        const len_of_next_page = pageMap[pageNo] ? pageMap[pageNo].length : 0;
+        let obj = pageMap;
+        if (len_of_next_page < 10) {
+          const resp = await axios.post(`${DEV_PUBLIC_SAPURL}sap/candidates`, { profiles, pageNoAxios });
+          const { finalCandidates } = resp.data.data;
+        } else {
+          setPageNoDisplay(pageNo);
+          setDisableBackward(false);
+        }
+      }
 
+    }
+    catch (err) {
+      console.log('errrrr');
+    }
+  }
+  const handlePrevPage = async () => {
+    if (pageNoDisplay === 2) {
+      setDisableBackward(true);
+    }
+    setPageNoDisplay(pageNoDisplay - 1);
+  }
+  useEffect(() => {
+    const allIDs = pageMap[pageNoDisplay]?.map((item) => item.id);
 
+    // Check if all selectedIds are present in allIDs
+    const allIdsSelected = allIDs?.every(id => selectedId.includes(id));
+    console.log("allIdsSelected", allIdsSelected)
+    console.log("selectedId", selectedId);
+    console.log("allIDs", allIDs);
+    console.log("pageMap[pageNoDisplay]", pageMap[pageNoDisplay])
+    if (allIdsSelected && allIDs !== undefined) {
+      setSelectAll(true);
+    } else {
+      setSelectAll(false);
+    }
+  }, [pageNoDisplay]) // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <>
       {!getAllCandidate && (
@@ -540,7 +621,8 @@ const Form: React.FC = () => {
           <CustomAutocompleteFromAPI
             setSelectedValue={setProfile}
             touched={touched}
-            handleSubmit = {handleSubmit}
+            profiles={profiles}
+            handleSubmit={handleSubmit}
           />
           {/* </div> */}
           {/* <div style={{ width: '30%', height: '70vh', backgroundColor: '#f7f7f7', marginRight: '2%', padding: '1.2vw', overflow: 'auto' }}>
@@ -652,6 +734,7 @@ const Form: React.FC = () => {
 
                       </div>
                       <div className="filterBoxRight">
+                      <div style={{color:"#007FFF", cursor:"pointer"}}>Modify</div>
                         <label htmlFor="selectall">Select All: </label>
                         <input
                           className=""
@@ -678,15 +761,15 @@ const Form: React.FC = () => {
                             >
                               <CircularProgress />
                             </Box>
-                          ) : apiDummyResponse.length !== 0 ? (
-                            apiDummyResponse.map((profile, index) => (
+                          ) :
+                            pageMap[pageNoDisplay]?.map((profile, index) => (
                               <li className="listingPanel" key={index}>
                                 <div className="listTopSection">
                                   <div className="selectOption">
                                     <input
                                       className=""
                                       type="checkbox"
-                                      // value={profile.id}
+                                      value={profile.id}
                                       checked={selectedId.includes(profile.id)}
                                       onChange={handleCheckBox}
                                     />
@@ -713,9 +796,7 @@ const Form: React.FC = () => {
                                 </div>
                               </li>
                             ))
-                          ) : (
-                            "No candidate found"
-                          )}
+                          }
 
 
                           {/* <li className="listingPanel">
@@ -803,35 +884,39 @@ const Form: React.FC = () => {
                   <div className="col-md-12 ">
                     <div className="paginationSection">
                       <ul className="pagination">
-                        <li className="page-item disabled">
+                        <li className="page-item">
                           <button
                             className="page-link"
-                            disabled={disablePrevButton}
-                            onClick={prevHandle}
+                            onClick={handlePrevPage} disabled={disableBackward}
                           >
                             Previous
                           </button>
                         </li>
-                        <li className="page-item active" aria-current="page">
-                          <a className="page-link" href="#">{pageNumber} </a>
+                        <li className="page-item" aria-current="page">
+                          <a className="page-link" href="#" onClick={() => handleNextPage(pageNoDisplay > 5 ? pageNoDisplay - 5 : 1)}>{pageNoDisplay > 5 ? pageNoDisplay - 5 : 1}</a>
                         </li>
-                        {/* <li className="page-item"><a className="page-link" href="#">2</a></li>
-                        <li className="page-item"><a className="page-link" href="#">3</a></li>
-                        <li className="page-item"><a className="page-link" href="#">4</a></li>
-                        <li className="page-item"><a className="page-link" href="#">5</a></li> */}
+                        <li className="page-item"><a className="page-link" href="#" onClick={() => handleNextPage(pageNoDisplay > 5 ? pageNoDisplay - 4 : 2)}>{pageNoDisplay > 5 ? pageNoDisplay - 4 : 2}</a></li>
+                        <li className="page-item"><a className="page-link" href="#" onClick={() => handleNextPage(pageNoDisplay > 5 ? pageNoDisplay - 3 : 3)}>{pageNoDisplay > 5 ? pageNoDisplay - 3 : 3}</a></li>
+                        <li className="page-item"><a className="page-link" href="#" onClick={() => handleNextPage(pageNoDisplay > 5 ? pageNoDisplay - 2 : 4)}>{pageNoDisplay > 5 ? pageNoDisplay - 2 : 4}</a></li>
+                        <li className="page-item"><a className="page-link" href="#" onClick={() => handleNextPage(pageNoDisplay > 5 ? pageNoDisplay - 1 : 5)}>{pageNoDisplay > 5 ? pageNoDisplay - 1 : 5}</a></li>
                         <li className="page-item">
-                          <button className="page-link" disabled={disableNextButton}
-                            onClick={nextFun}>Next</button>
+                          <button className="page-link" onClick={() => handleNextPage(null)} disabled={disableForward}>Next</button>
                         </li>
                       </ul>
-
                     </div>
-
-
                   </div>
 
                 </div>
                 <div style={{ textAlign: "center", marginBottom: "100px" }}>
+                  <button
+                    type="button"
+                    className="btn btn-primary btn-lg"
+                    onClick={handleSubreqButton}
+                    disabled={selectedId.length === 0}
+                    style={{ marginRight: "10px" }}
+                  >
+                    Submit Requirement
+                  </button>
                   <button
                     type="button"
                     className="btn btn-primary btn-lg"

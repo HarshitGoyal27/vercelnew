@@ -189,7 +189,7 @@ export default function Home({ allData }: { allData: any }) {
       <link href="css/reset.css" rel="stylesheet" />
       <link href="css/style.css" rel="stylesheet" />
       <link href="css/responsive.css" rel="stylesheet" />
-      <Navbar/>
+      <Navbar />
 
       <div className="wrapper">
         {/* <!-- capabilitiesSection --> */}
@@ -687,8 +687,14 @@ export default function Home({ allData }: { allData: any }) {
             <div className="col-md-12   ">
               <h2>Best Developers</h2>
               <h4>They are some of the best developers we have and they have tested and worked with several client</h4>
+              <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", gap: "20px" }}>
+                <div style={{ display: "flex", gap: "10px" }}>
+                  <button type="button" className="btn btn-outline-primary" onClick={() => { setSkills("data") }}>SAP Professionals</button>
+                  <button type="button" className="btn btn-outline-primary" onClick={() => { setSkills("AWS") }}>Specialized Tech Experts</button>
+                </div>
+              </div>
               <Slider {...setting} className="searchSlider">
-                {(apiResponse === undefined) ? ("loading...") : (CandidateProfileData.data.map((item: any, index: any) => (
+                {(CandidateProfileData[skills as keyof typeof CandidateProfileData].map((item: any, index: any) => (
                   <div className="slide " key={index}>
                     <div className="slideCont">
                       <div className="SlideImg"><img src="images/dummyImage.jpg" alt="name" /></div>
@@ -708,16 +714,16 @@ export default function Home({ allData }: { allData: any }) {
                 )))}
               </Slider>
             </div>
-            <div style={{display:"flex",justifyContent:"center"}}>
-            <div className="hireSap"><a className="hire" href="hire-sap-talent">Explore Talent Pool</a><a className="hire"
-                    href="hire-specialized-talent">Hire Elite Talent</a></div>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <div className="hireSap"><a className="hire" href="hire-sap-talent">Explore Talent Pool</a><a className="hire"
+                href="hire-specialized-talent">Hire Elite Talent</a></div>
             </div>
-            
+
           </div>
         </section>
       </div>
       {/* <ProfileCorousel/> */}
-      <FotterComponent/>
+      <FotterComponent />
     </>
   );
 }
