@@ -701,8 +701,8 @@ const HireSpecializedTalentPage = () => {
                                     </div>}
                                     {profileType === "AI/ML" && <div style={{ display: "flex", gap: "10px" }}>
                                         <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("Generative_AI") }}>Generative AI</button>
-                                        {/* <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("Predictive AI") }}>Predictive AI</button>
-                                        <button type="button" className="btn btn-outline-primary btn-sm" onClick={() => { setSkills("Interactive AI") }}>Interactive AI</button> */}
+                                        <button type="button" className="btn btn-outline-primary btn-sm" >Predictive AI</button>
+                                        <button type="button" className="btn btn-outline-primary btn-sm" >Interactive AI</button>
                                     </div>}
                                 </div>
 
