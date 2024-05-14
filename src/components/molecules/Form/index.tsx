@@ -596,6 +596,11 @@ const Form: React.FC = () => {
     }
     setPageNoDisplay(pageNoDisplay - 1);
   }
+  const handleModify = () => {
+    setGetAllCandidate(false);
+    setYouSelect(false);
+    
+  }
   useEffect(() => {
     const allIDs = pageMap[pageNoDisplay]?.map((item) => item.id);
 
@@ -734,7 +739,7 @@ const Form: React.FC = () => {
 
                       </div>
                       <div className="filterBoxRight">
-                      <div style={{color:"#007FFF", cursor:"pointer"}}>Modify</div>
+                      <div style={{color:"#007FFF", cursor:"pointer"}} onClick={handleModify}>Modify</div>
                         <label htmlFor="selectall">Select All: </label>
                         <input
                           className=""
