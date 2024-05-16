@@ -354,7 +354,7 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
           <section className="container mt-4 ">
             <div className="row">
               <div className="col-md-12">
-                <h2>Standard Search Form</h2>
+                <h2>Search Elite Developers</h2>
               </div>
             </div>
             <div className="row">
