@@ -11,7 +11,6 @@ body {
 
 
 
-
 /* ############################################# */
 /* ################## Common ################### */
 /* ############################################# */
@@ -38,6 +37,7 @@ body {
 .uppercase {
     text-transform: uppercase;
 }
+
 
 .tal { text-align: left; }
 .tac { text-align: center; }
@@ -89,18 +89,17 @@ a {
 .homesapExpertise h2{
     font-size: 54px;
     line-height: 72px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     margin-bottom: 8px;
-     font-family: 'Roboto', sans-serif;
 }
 .hireSapTalent .homesapExpertise h2{
    margin-bottom: 28px;
 }
 .homesapExpertise h2 span{
-    color: #2871ff;
+    color: #b0d5f5;
  }
 .homesapExpertise h3{
-    color: #FFA107;
+    color: #ff5b99;
     margin-bottom: 34px;
     font-size: 24px;
 }
@@ -114,7 +113,7 @@ a {
     
 }
 .hireSap a.hire{
-    background: #2871ff;
+    background: #09514d;
     color: #ffffff;
     padding: 10px 25px;
     border: none;
@@ -132,7 +131,7 @@ a {
     
 }
 .hireSap a.hire:hover{
-     background: #0840ad;
+     background: #44a39e;
 }
 .deepVetted{
     font-family: 'Oswald', sans-serif;
@@ -140,7 +139,7 @@ a {
     padding: 28px 0;
 }
 .deepVetted span{
-    margin-right: 42px;
+    margin-right: 76px;
     position: relative;
     padding-left: 56px;
 }
@@ -184,7 +183,7 @@ a {
     left: 50%;
     text-align: center;
     padding: 10px;
-    background: #2871ff;
+    background: #09514d;
     border-radius: 50%;
     margin-left: -54px;
     font-family: 'Oswald', sans-serif;
@@ -201,7 +200,7 @@ a {
     text-transform: capitalize;
     padding-top: 24px;
     margin-bottom: 10px;
-    border-bottom: 2px solid #2871ff;
+    border-bottom: 2px solid #888787;
     padding-bottom: 12px;
 }
 .specializedCont {text-align: center}
@@ -239,7 +238,7 @@ a {
     background: rgb(255, 255, 255);
     color: #09514d;
     padding: 5px 12px;
-    border: 1px solid #2871ff;
+    border: 1px solid #09514d;
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease 0s;
@@ -251,7 +250,7 @@ a {
 }
 .preBoxExplore a:hover{
     text-decoration: none;
-    background: #2871ff;
+    background: #09514d;
     color: #ffffff;
 }
 .boxExploreImg{
@@ -260,11 +259,11 @@ a {
 }
 .elitesapSection{
     padding: 80px 0;
-    background: #2871ff;
+    background: #44a39e;
     background-size: cover;
 }
 .elitesapSection section{
-     background: url(../images/globe.png) no-repeat right 35px;
+     background: url(../images/globe02.png) no-repeat center right;
 }
 .elitesapSection h2{
     text-align: left;
@@ -274,11 +273,10 @@ a {
     font-family: 'pelita_stdbold';
     font-weight: 300;
     color: #ffffff;
-    margin-bottom: 24px;
 }
 .elitesapSection h4{
     text-align: left;
-    color: #ffffff;
+    color: #44a39e;
     margin-bottom: 50px;
     
     padding-bottom: 10px;
@@ -291,9 +289,9 @@ a {
     
 .hireTalent a{
     background: rgb(255, 255, 255);
-    color: #0840ad;
+    color: #09514d;
     padding: 5px 12px;
-    border: 1px solid #0840ad;
+    border: 1px solid #09514d;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease 0s;
@@ -306,7 +304,7 @@ a {
 }
 .hireTalent a:hover{
     text-decoration: none;
-    background: #0840ad;
+    background: #09514d;
     color: #ffffff;
 }
 .eliteCont h2{
@@ -470,7 +468,6 @@ ul.keyMetrics {
 .demandSection h2 {
     font-size: 34px;
     line-height: 48px;
-    padding-right: 60px;
     
     font-weight: 300;
     margin-bottom: 40px;
@@ -481,7 +478,7 @@ ul.keyMetrics {
     text-align: justify;
     line-height: 24px;
     font-size: 16px;
-    padding-right: 70px;
+    
     color: #888787;
 }
 .demandSection h4 {
@@ -499,14 +496,14 @@ ul.keyMetrics {
     padding-top: 20px;
 }
 .demandInitiatives li{
-    padding-bottom: 68px;
+    padding-bottom: 40px;
     position: relative;
- 
-    padding-left: 180px;
+    padding-left:86px;
+        padding-left: 122px;
 }
 .demandInitiatives li span.imgCont{
     position:absolute;
-    left: 52px;
+    left: 0px;
     top: 10px;
     
 }
@@ -526,7 +523,6 @@ ul.keyMetrics {
     font-size: 16px;
    
 }
-.demandSection .hireSap a{margin-left: 0px;}
 .turnacoundCont{
     padding: 0 50px;
 }
@@ -543,7 +539,7 @@ ul.keyMetrics {
     color: #ffffff;
 }
 .turnheader{
-    background: #2871ff;
+    background: #09514d;
 }
 .TurnaroundSection h3 {
    font-family: 'Oswald', sans-serif;
@@ -571,11 +567,11 @@ ul.keyMetrics {
 .trunaroundText{
    text-align: center;
     padding: 20px 25px 80px 25px;
-    border:1px solid #2871ff;
+    border:1px solid #09514d;
     padding-top: 40px;
 }
 .clientCont{
-    background: #2871ff;
+    background: #44a39e;
     padding: 68px 0 80px;
     text-align: center;
     color: #ffffff;
@@ -587,11 +583,11 @@ ul.keyMetrics {
 }
 .facilitates li {
     list-style: none;
-    background: #2871ff;
+    background: #44a39e;
     margin-bottom: 28px;
     padding: 16px 26px;
-    border-left: 5px solid #0840ad;
-    border-right: 5px solid #0840ad;
+    border-left: 5px solid #1c6662;
+    border-right: 5px solid #1c6662;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
     font-size: 28px;
@@ -600,7 +596,7 @@ ul.keyMetrics {
 
 }
 .facilitates a.work {
-    background: #2871ff;
+    background: #09514d;
     color: #ffffff;
     padding: 10px 25px;
     border: none;
@@ -617,7 +613,7 @@ ul.keyMetrics {
     font-family: 'Pelita Std Regular';
 }
 .facilitates a.work:hover{
-     background: #0840ad;
+     background: #44a39e;
 }
 .clientCont h2{
     text-align: center;
@@ -708,10 +704,10 @@ footer a:hover{
    
 }
 .sapExpertise h2 span{
-    color: #124fc5;
+    color: #b0d5f5;
  }
 .sapExpertise h3{
-    color: #FFA107;
+    color: #ff5b99;
     margin-bottom: 50px;
     font-size: 30px;
 }
@@ -728,7 +724,7 @@ footer a:hover{
 }
 .secSection h4{
     text-align: center;
-    color: #FFA107;
+    color: #ff5b99;
     margin-bottom: 50px;
     border-bottom: 1px solid #d2d3d5;
     padding-bottom: 20px;
@@ -777,7 +773,7 @@ footer a:hover{
     font-size: 18px;
     line-height: 20px;
     text-transform: capitalize;
-    border-bottom: 2px solid #FFA107;
+    border-bottom: 2px solid #ff5b99;
     padding-bottom: 12px;
     margin-bottom: 16px;
 }
@@ -972,11 +968,11 @@ ul.keyMetrics {
     font-weight: 300;
 }
 .sixthSection h2 span {
-    color: #124fc5;
+    color: #b0d5f5;
 }
 .sixthSection h4 {
     text-align: center;
-    color: #FFA107;
+    color: #ff5b99;
     margin-bottom: 80px;
     border-bottom: 1px solid #d2d3d5;
     padding-bottom: 10px;
@@ -1150,18 +1146,18 @@ ul.keyMetrics {
     font-weight: 300;
 }
 .superchargeSection h2 span {
-    color: #2871ff;
+    color: #b0d5f5;
 }
 .superchargeSection h3 {
     text-align: center;
-    color: #FFA107;
+    color: #ff5b99;
     margin-bottom: 110px;
     border-bottom: 1px solid #d2d3d5;
     padding-bottom: 20px;
     font-size: 24px;
 }
 .superchargeHeading{
-    background: #2871ff;
+    background: #15b6d8;
     padding: 41px 20px 30px;
     font-size: 32px;
     line-height: 48px;
@@ -1206,7 +1202,7 @@ ul.keyMetrics {
 }
 .unleashingSection h4 {
    
-    color: #FFA107;
+    color: #ff5b99;
     margin-bottom: 40px;
     padding-bottom: 20px;
     font-size: 24px;
@@ -1299,7 +1295,7 @@ ul.keyMetrics {
 }
 .assessingCont{
     padding: 30px 10px;
-    background: #2871ff;
+    background: #15b6d8;
     margin-bottom: 90px;
     color: #ffffff;
     text-align: center
@@ -1357,7 +1353,7 @@ ul.keyMetrics {
     left: 50%;
     text-align: center;
     padding: 10px;
-    background: #2871ff;
+    background: #09514d;
     border-radius: 50%;
     margin-left: -54px;
     font-family: 'Oswald', sans-serif;
@@ -1403,7 +1399,7 @@ ul.keyMetrics {
     color: #ffffff;
 }
 .discoverCont h6{
-   background: #2871ff;
+   background: #15b6d8;
     font-size: 20px;
     line-height: 25px;
     text-transform: capitalize;
@@ -1501,7 +1497,7 @@ ul.keyMetrics {
 }
 .solutionsSection{
     padding: 80px 0;
-    background: #1e1e1e;
+    background: #f5f5f5;
     color: #888787;
     line-height: 24px;
     font-size: 16px;
@@ -1510,13 +1506,12 @@ ul.keyMetrics {
 .solutionsSection h2 {
    text-align: center;
     font-size: 56px;
-    line-height: 74px;
+    line-height: 52px;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     margin-bottom: 60px;
-    color: #ffffff;
-    text-align: center;
+    color: #000000;
 }
 .solutionsSection h3 {
     font-size: 28px;
@@ -1525,11 +1520,7 @@ ul.keyMetrics {
     margin-bottom: 18px;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
-    margin-top: 24px;
-   
-}
-.midHeading{
-    padding-top: 60px;
+    color: #000000;
 }
 .solutionCont{
     position: absolute;
@@ -1557,17 +1548,14 @@ ul.keyMetrics {
     text-align: left;
     cursor: pointer;
     position: relative;
-    background: #3c3b3b;
-    color: #ffffff;
-    padding: 20px;
-    border: 2px solid #e5d622;
-    text-align: center;
-    border-radius: 10px;
-    
+    padding-left: 80px;
+    padding-right: 20px;
     
 }
 .solutionText > img{
-  
+    position: absolute;
+    top: 30px;
+    left: 0px;
 }
 
 .solutionText:hover .solutionCont{
@@ -1589,7 +1577,7 @@ ul.keyMetrics {
 .quantifiedSection h3 {
    text-align: center;
    margin-bottom: 60px;
-    
+    color: #ffffff;
     padding-top: 20px;
     font-size: 18px;
         line-height: 23px;
@@ -1844,7 +1832,14 @@ ul.keyMetrics {
 .sapfico .missionSectionText{
     padding: 20px;
 }
-
+.custom-img {
+    max-width: 60%;
+    height: auto;
+}
+.custom-img2 {
+    max-width: 10%;
+    height: auto;
+}
 .searchSliderCont {
     width: 100%;
     height: auto;
@@ -1858,10 +1853,7 @@ ul.keyMetrics {
     overflow: hidden;
     cursor: grab;
     position: relative;
-   
-    border-top: 0px;
-    padding-bottom: 20px;
-    padding-top: 40px;
+    margin-top: 60px;
 }
  .searchSlider .slide {
     width: auto;
@@ -1879,10 +1871,13 @@ ul.keyMetrics {
 }
 .SlideImg{
     background: #ffd701;
+
 }
 .SlideImg img{
     width: 100%;
     height: auto;
+    /* height: 80%; */
+    object-fit: cover;
 }
  .searchSlider .slide .slideCont .slideText{
     
@@ -1909,8 +1904,8 @@ ul.keyMetrics {
     position: absolute;
     top: 50%;
     display: block;
-    width: 24px;
-    height: 42px;
+    width: 40px;
+    height: 70px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
@@ -1919,20 +1914,19 @@ ul.keyMetrics {
     color: transparent;
     border: none;
     outline: none;
-    background: #20c0de;
+    background: rgba(0, 0, 0,0.6);
     background-repeat: no-repeat;
     background-position: center;
-    outline: 0px;
 }
 .slick-prev {
-    background-image: url(../images/arrow-left.png);
+    /* background-image: url(../images/arrow-left.png); */
     background-size: 100% auto;
 }
 .slick-prev {
     left: 0px;
 }
 .slick-next {
-    background-image: url(../images/arrow-right.png);
+    /* background-image: url(../images/arrow-right.png); */
     background-size: 100% auto;
 }
 .slick-next {
@@ -2100,6 +2094,7 @@ ul.keyMetrics {
 .filterBoxLeft{
     float: left;
     width: 75%;
+    display: flex;
 }
 .filterBoxRight{
     float: left;
@@ -2202,7 +2197,7 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
 }
 .pagination-container {
       
-    }
+}
 .globalElasticTeam .sapExpertise h2
 {
     font-size: 54px;
@@ -2225,7 +2220,7 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
     right: 0%;
     text-align: center;
     padding: 6px 20px;
-    background: #2871ff;
+    background: #44a39e;
     font-family: 'Oswald', sans-serif;
     color: #ffffff;
     font-size: 28px;
@@ -2250,7 +2245,7 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
     text-transform: uppercase;
 }
 .venturCont h3 {
-    color: #FFA107;
+    color: #ff5b99;
     margin-bottom: 50px;
     font-size: 24px;
 }
@@ -2260,7 +2255,7 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
     margin-bottom: 20px;
 }
 .venturCont a.contButton {
-    background: #2871ff;
+    background: #09514d;
     color: #ffffff;
     padding: 10px 25px;
     border: none;
@@ -2277,7 +2272,7 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
     font-family: 'Pelita Std Regular';
 }
 .venturCont a.contButton:hover{
-     background: #124fc5;
+     background: #44a39e;
 }
 
 .booleanText{
@@ -2520,7 +2515,7 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
     margin: 0px 0 0;
     padding: 40px 30px 40px;
 }
-.selfModel ul li, .assistedModel ul li{
+.modelchioce ul li{
     padding-left: 20px;
     background: url(../images/greencheck02.png) 0px 6px no-repeat;
     margin-bottom: 8px;
@@ -2701,6 +2696,7 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
 .sapSearchBtn{
     text-align: center;
 }
+
 .modelTabSection{
     padding-left: 0px;
     padding-right: 0px;
