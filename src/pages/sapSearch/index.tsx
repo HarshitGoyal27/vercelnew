@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ChangeEvent } from 'react'
+import React, { useState, useEffect, ChangeEvent, useRef } from 'react'
 import css1 from "../../styles/sapSearchStyle.module.css";
 import css2 from "../../styles/search.module.css";
 import CustomAutocompleteFromAPI from '@/components/molecules/AutoComplete';
@@ -23,10 +23,18 @@ interface Profile {
   keyword: string;
   primary_module: string;
   secondary_module: string;
-  role_type: string;
+  functional_expertise: string;
   technical_skills: string;
-  country: string;
-  experience: string;
+  role_type: string;
+  position_type: string;
+  sap_project: string;
+  sap_certified: boolean;
+  minExperience: string;
+  maxExperience: string;
+  project_type: string;
+  description: string;
+  hana:boolean;
+  ecc:boolean;
 }
 
 interface Response {
@@ -43,16 +51,25 @@ interface Response {
   CurrentLocation: string;
   MayAlsoKnow: string;
   Education: string;
+  
 }
 const SapSearch = () => {
   const [profiles, setProfile] = useState<Profile>({
-    keyword: '',
-    primary_module: '',
-    secondary_module: '',
-    role_type: '',
-    technical_skills: '',
-    country: '',
-    experience: ''
+    keyword: "",
+    primary_module: "",
+    secondary_module: "",
+    functional_expertise: "",
+    technical_skills: "",
+    role_type: "",
+    position_type: "",
+    sap_project: "",
+    sap_certified: false,
+    minExperience: "",
+    maxExperience: "",
+    project_type: "",
+    description: "",
+    hana:false,
+    ecc:false
   });
   const [selectedId, setSelectedId] = useState<string[]>([]);
   const [candidates, setCandidates] = useState<Response[]>([]);
@@ -62,7 +79,7 @@ const SapSearch = () => {
   const [pageNoDisplay, setPageNoDisplay] = useState(1);
   const [pageNoAxios, setPageNoAxios] = useState(1);
   const [disableForward, setDisableForward] = useState(false);
-
+  const [filterOption, setFilterOption] = useState("");
   const [disableBackward, setDisableBackward] = useState(true);
   const [arrLoad, setArrLoad] = useState(false);
   const [pageMap, setPageMap] = useState<{ [key: number]: Response[] }>({});
@@ -72,6 +89,7 @@ const SapSearch = () => {
   const [skillSuggestions, setSkillSuggesions] = useState([]);
   const [primaryskillSuggestions, setPrimarySkillSuggesions] = useState([]);
   const [secondaryskillSuggestions, setSecondarySkillSuggesions] = useState([]);
+  const [locationSuggestion, setLocationSuggestion] = useState([]);
   const [modify, setModify] = useState(false);
   const handleSelectAll = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectAll(e.target.checked);
@@ -86,6 +104,24 @@ const SapSearch = () => {
     }
   };
 
+  const handleChangeProfile = (ele: any)=>{
+    // console.log(ele)
+    const name = ele.target.name;
+    setProfile({ ...profiles, [name]: ele.target.value });
+  }
+  const handleRadio = (ele:any)=>{
+    const name = ele.target.name;
+    if(name==="hana"){
+      setProfile({ ...profiles, "hana": true, "ecc":false });
+    }else{
+      setProfile({ ...profiles, "hana": false, "ecc":true });
+    }
+  }
+  const handleChangeDesc = (name:any,ele: any)=>{
+    // console.log(ele)
+    // const name = ele.target.name;
+    setProfile({ ...profiles, [name]: ele });
+  }
   const handleChangeKeyword = (ele: any) => {
     console.log(ele.target.value);
     setProfile({ ...profiles, keyword: ele.target.value });
@@ -101,6 +137,11 @@ const SapSearch = () => {
     setProfile({ ...profiles, secondary_module: ele.target.value });
     setDynamicSecondarySkill(ele.target.value);
   }
+  const handleChangeLocation = (ele: any) => {
+    console.log(ele.target.value);
+    // setProfile({ ...profiles, loca: ele.target.value });
+    setDynamicSecondarySkill(ele.target.value);
+  }
   const handleChangeRoleType = (ele: any) => {
     console.log(ele.target.value);
     setProfile({ ...profiles, role_type: ele.target.value });
@@ -109,16 +150,19 @@ const SapSearch = () => {
     console.log(ele.target.value);
     setProfile({ ...profiles, technical_skills: ele.target.value });
   }
-  const handleOption1 = (ele: any) => {
-    console.log(ele);
-    setProfile({ ...profiles, role_type: ele });
-  }
-  const handleCountry = (ele: any) => {
-    setProfile({ ...profiles, country: ele.target.value });
-  }
-  const handleExperience = (ele: any) => {
-    setProfile({ ...profiles, experience: ele.target.value });
-  }
+  // const handleOption1 = (ele: any) => {
+  //   console.log(ele);
+  //   setProfile({ ...profiles, role_type: ele });
+  // }
+  // const handleCountry = (ele: any) => {
+  //   setProfile({ ...profiles, country: ele.target.value });
+  // }
+  // const handleExperience = (ele: any) => {
+  //   setProfile({ ...profiles, experience: ele.target.value });
+  // }
+  // const handleChange = (ele: any) => {
+  //     // setProfile({ ...profiles, country: ele.target.value });
+  //   }
   useEffect(() => {
     console.log("lll", profiles);
 
@@ -164,6 +208,7 @@ const SapSearch = () => {
   const [dynamicSkill, setDynamicSkill] = useState("");
   const [dynamicPrimarySkill, setDynamicPrimarySkill] = useState("");
   const [dynamicSecondarySkill, setDynamicSecondarySkill] = useState("");
+  const [dynamicLocation, setDynamicLocation] = useState("");
   const handleClickKeyword = (event: any) => {
     console.log('CLICK--->', event);
 
@@ -198,6 +243,23 @@ const SapSearch = () => {
     setValue({ ...value, Skill_Set: ele.textContent });
     setDynamicPrimarySkill("");
   }
+  const handleLocationAutocomplete = (event: any) => {
+    // console.log('CLICK--->', event);
+
+    // let ele = event.target;
+    // let elem = document.getElementById('location') as HTMLInputElement;
+    // console.log("ooooooooooooooo", event.target)
+    // if (elem) {
+    //   elem.value = ele.textContent;
+    //   setInputValue(elem.value);
+    //   setProfile({ ...profiles, primary_module: elem.value });
+    // } else {
+    //   console.error("Element with id 'first' not found.");
+    // }
+
+    // setValue({ ...value, Skill_Set: ele.textContent });
+    // setDynamicLocation("");
+  }
   const handleClickSecondary = (event: any) => {
     console.log('CLICK--->', event);
 
@@ -216,7 +278,7 @@ const SapSearch = () => {
     setDynamicSecondarySkill("");
   }
   useEffect(() => {
-    console.log("object", allCandidates)
+    console.log("allCandidates", allCandidates)
   }, [allCandidates])
   const handleNextPage = async (pageNo: number | null) => {
     try {
@@ -286,12 +348,16 @@ const SapSearch = () => {
   const router = useRouter();
   const handleMeetButton = () => {
     localStorage.setItem("selectedId", JSON.stringify({ selectedId }));
-    localStorage.setItem("meeting", "true");
+    const selectedProfiles = allCandidates?.filter(item => selectedId.includes(item.id));
+    console.log("selectedProfiles", selectedProfiles)
+    localStorage.setItem("selectedProfiles", JSON.stringify({ selectedProfiles }));
     router.push(`/subreqMeeting`);
   };
   const handleSubreqButton = () => {
     localStorage.setItem("selectedId", JSON.stringify({ selectedId }));
-
+    const selectedProfiles = allCandidates?.filter(item => selectedId.includes(item.id));
+    console.log("selectedProfiles", selectedProfiles)
+    localStorage.setItem("selectedProfiles", JSON.stringify({ selectedProfiles }));
     router.push(`/subreq`);
   };
   useEffect(() => {
@@ -299,6 +365,7 @@ const SapSearch = () => {
   }, [selectedId])
   useEffect(() => {
     var profilesJSON = localStorage.getItem("profiles");
+    // localStorage.clear();
     if (profilesJSON !== null) {
       var storedProfiles = JSON.parse(profilesJSON);
       console.log("storedProfiles", storedProfiles.profiles);
@@ -369,6 +436,26 @@ const SapSearch = () => {
     fetchData();
   }, [dynamicSecondarySkill]);
   useEffect(() => {
+    const fetchData = async () => {
+      if (dynamicLocation.length > 0) {
+        try {
+          const response = await axios.post(
+            `${DEV_PUBLIC_URL}location/candidates`,
+            { search: dynamicLocation }
+          );
+          let data = response.data.data;
+          console.log("resp", data);
+          setLocationSuggestion(data);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      } else {
+        setSecondarySkillSuggesions([]);
+      }
+    };
+    fetchData();
+  }, [dynamicLocation]);
+  useEffect(() => {
     console.log("zero", zero);
     console.log("loading", loading);
   }, [zero, loading])
@@ -392,6 +479,48 @@ const SapSearch = () => {
       setSelectAll(false);
     }
   }, [pageNoDisplay]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const suggestionsRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (suggestionsRef.current && !suggestionsRef.current.contains(event.target as Node)) {
+        setSkillSuggesions([]);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [suggestionsRef]);
+  const primarySuggestionsRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (primarySuggestionsRef.current && !primarySuggestionsRef.current.contains(event.target as Node)) {
+        setPrimarySkillSuggesions([]);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [primarySuggestionsRef]);
+
+  const secondarySuggestionsRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (secondarySuggestionsRef.current && !secondarySuggestionsRef.current.contains(event.target as Node)) {
+        setSecondarySkillSuggesions([]);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [secondarySuggestionsRef]);
+
   return (
     <>
       {
@@ -414,10 +543,10 @@ const SapSearch = () => {
                           <div className="col-md-12">
                             <div className="specificSearchForm">
                               <div className="oneCol">
-                                <label>Key word</label>
+                                <label>Keywords</label>
                                 <input type="text" id="first" className="form-control" value={profiles.keyword} onChange={(ele: any) => handleChangeKeyword(ele)} />
                                 {skillSuggestions.length > 0 &&
-                                  <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
+                                  <div ref={suggestionsRef} style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
                                     {
                                       skillSuggestions.map((ele: any, idx: any) => (
                                         <ul key={idx} className="suggestionPoints">
@@ -431,10 +560,10 @@ const SapSearch = () => {
                               </div>
                               <div className="twoCol">
                                 <div className="leftCol">
-                                  <label>Primary Module</label>
+                                  <label>Primary SAP Module</label>
                                   <input type="text" className="form-control" id="second" value={profiles.primary_module} onChange={(ele: any) => handleChangePrimary(ele)} />
                                   {primaryskillSuggestions.length > 0 &&
-                                    <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
+                                    <div ref={primarySuggestionsRef} style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
                                       {
                                         primaryskillSuggestions.map((ele: any, idx: any) => (
                                           <ul key={idx} className="suggestionPoints">
@@ -447,10 +576,10 @@ const SapSearch = () => {
                                   }
                                 </div>
                                 <div className="rightCol">
-                                  <label>Secondary Module</label>
+                                  <label>Secondary SAP Module</label>
                                   <input type="text" className="form-control" id="third" value={profiles.secondary_module} onChange={(ele: any) => handleChangeSecondary(ele)} />
                                   {secondaryskillSuggestions.length > 0 &&
-                                    <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
+                                    <div ref={secondarySuggestionsRef} style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
                                       {
                                         secondaryskillSuggestions.map((ele: any, idx: any) => (
                                           <ul key={idx} className="suggestionPoints">
@@ -466,16 +595,11 @@ const SapSearch = () => {
                               </div>
                               <div className="twoCol">
                                 <div className="leftCol">
-                                  <label>Role Type</label>
-                                  <select name="" id="" onChange={(e) => handleOption1(e.target.value)}>
-                                    <option >Select an option</option>
-                                    <option value="Technical">Technical</option>
-                                    <option value="Functional">Functional</option>
-                                    <option value="Techno-Functional">Techno-Functional</option>
-                                  </select>
+                                  <label>Functional Expertise</label>
+                                  <input type="text" name="functional_expertise" className="form-control" id="" onChange={(ele: any) => handleChangeProfile(ele)}/>
                                 </div>
                                 <div className="rightCol">
-                                  <label>Technical Skills</label>
+                                  <label>Technical / Integration Skills</label>
                                   <input type="text" className="form-control" id="" onChange={(ele: any) => handleChangeTechnical(ele)} />
                                 </div>
                                 <div className="clear"></div>
@@ -485,36 +609,72 @@ const SapSearch = () => {
                             <div className="specificSearchForm">
                               <div className="twoCol">
                                 <div className="leftCol">
-                                  <label>Functional Experties</label>
-                                  <input type="text" className="form-control" id="" />
+                                  <label>Role Type</label>
+                                  <select name="role_type" id="" onChange={(e) => handleChangeProfile(e)}>
+                                    <option >Select an option</option>
+                                    <option value="Technical">Technical</option>
+                                    <option value="Functional">Functional</option>
+                                    <option value="Techno-Functional">Techno-Functional</option>
+                                  </select>
                                 </div>
                                 <div className="rightCol">
-                                  <label>Integration Skills</label>
-                                  <input type="text" className="form-control" id="" />
+                                  <label>Position Type</label>
+                                  <select name="position_type" id="" onChange={(e) => handleChangeProfile(e)}>
+                                    <option >Select an option</option>
+                                    <option value="Consultant">Consultant</option>
+                                    <option value="Developer">Developer</option>
+                                    <option value="Architect">Architect</option>
+                                    <option value="Manager">Manager</option>
+                                    <option value="Support">Support</option>
+                                    <option value="Tester">Tester</option>
+                                  </select>
                                 </div>
                                 <div className="clear"></div>
                               </div>
                               <div className="twoCol">
                                 <div className="leftCol">
-                                  <label>SAP S/4HANA Experties</label>
-                                  <input type="text" className="form-control" id="" />
+                                  <label>SAP Project:</label>
+                                  <div className="form-check">
+                                    <input className="form-check-input" type="radio" name="hana" id="flexRadioDefault1" checked={profiles.hana} onChange={(e) => handleRadio(e)}/>
+                                    <label className="form-check-label" htmlFor="flexRadioDefault1">
+                                      S/4 Hana
+                                    </label>
+                                  </div>
+                                  <div className="form-check">
+                                    <input className="form-check-input" type="radio" name="ecc" id="flexRadioDefault2" checked={profiles.ecc} onChange={(e) => handleRadio(e)}/>
+                                    <label className="form-check-label" htmlFor="flexRadioDefault2">
+                                      ECC 6
+                                    </label>
+                                  </div>
                                 </div>
                                 <div className="rightCol">
-                                  <label>Certifications</label>
-                                  <input type="text" className="form-control" id="" />
+                                  <div className="form-check form-switch">
+                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="sap_certified"  onChange={(e) => handleChangeProfile(e)}/>
+                                    <label className="form-check-label" htmlFor="flexSwitchCheckChecked">SAP Certified </label>
+                                  </div>
                                 </div>
                                 <div className="clear"></div>
                               </div>
-                              <div className="oneCol">
+                              {/* <div className="oneCol">
                                 <label>Version-Specific Experties</label>
                                 <input type="text" className="form-control" id="" />
-                              </div>
+                              </div> */}
                             </div>
                             <div className="specificSearchForm">
                               <div className="twoCol">
+                                {/* <p>Experience</p> */}
                                 <div className="leftCol">
+                                  <label htmlFor="Experience">Experience</label>
+                                  <div className="candidateExpbox">
+                                    <input type="text" className="form-control " id="" placeholder="Min" name='minExperience' onChange={(e) => handleChangeProfile(e)} />
+                                    <span>to</span>
+                                    <input type="text" className="form-control " id="" placeholder="Max" name='maxExperience' onChange={(e) => handleChangeProfile(e)}/>
+                                    <span>Years</span>
+                                  </div>
+                                </div>
+                                <div className="rightCol">
                                   <label>Project Type</label>
-                                  <select name="" id="">
+                                  <select name="project_type" id="" onChange={(e) => handleChangeProfile(e)}>
                                     <option >Select an option</option>
                                     <option value="Implementation">Implementation</option>
                                     <option value="Enhancement">Enhancement</option>
@@ -525,6 +685,21 @@ const SapSearch = () => {
                                     <option value="Hypercare">Hypercare</option>
                                     <option value="AMS">AMS</option>
                                   </select>
+                                </div>
+                              </div>
+                              <div className="oneCol">
+                                <label htmlFor="Description">Description</label>
+                                <textarea className="form-control" id="message" rows={5} placeholder="Write description" name='description' onChange={(e) => handleChangeProfile(e)}></textarea>
+                              </div>
+                              {/* <div className="twoCol">
+                                <div className="leftCol">
+                                  <p>Experience</p>
+                                  <div className="candidateExpbox">
+                                    <input type="text" className="form-control " id="" placeholder="Min Experience" />
+                                    <span>to</span>
+                                    <input type="text" className="form-control " id="" placeholder="Max Experience" />
+                                    <span>Years</span>
+                                  </div>
                                 </div>
                                 <div className="rightCol">
                                   <label>Position Type</label>
@@ -539,8 +714,8 @@ const SapSearch = () => {
                                   </select>
                                 </div>
                                 <div className="clear"></div>
-                              </div>
-                              <div className="twoCol">
+                              </div> */}
+                              {/* <div className="twoCol">
                                 <div className="leftCol">
                                   <label>Industry-Specific Solution</label>
                                   <input type="text" className="form-control" id="" />
@@ -550,10 +725,10 @@ const SapSearch = () => {
                                   <input type="text" className="form-control" id="" onChange={(e: any) => handleExperience(e)} />
                                 </div>
                                 <div className="clear"></div>
-                              </div>
+                              </div> */}
 
                             </div>
-                            <div className="specificSearchForm">
+                            {/* <div className="specificSearchForm">
                               <div className="twoCol">
                                 <div className="leftCol">
                                   <label>Country</label>
@@ -594,9 +769,9 @@ const SapSearch = () => {
                                 <div className="clear"></div>
                               </div>
 
-                            </div>
+                            </div> */}
                             <div className="sapSearchBtn">
-                              <button className="searchBtn" onClick={handleSubmit}>Click Me</button>
+                              <button className="searchBtn" onClick={handleSubmit}>Search</button>
 
                             </div>
 
@@ -638,8 +813,8 @@ const SapSearch = () => {
                                       <select
                                         id="filterby"
                                         name=""
-                                      //   value={filterOption}
-                                      //   onChange={handleChangefilter}
+                                        value={filterOption}
+                                        onChange={(e) => setFilterOption(e.target.value)}
                                       >
                                         <option value="volvo">Filter By</option>
                                         <option value="searchLocation">Location</option>
@@ -648,35 +823,40 @@ const SapSearch = () => {
                                         <option value="Company">Company</option>
                                         <option value="None">None</option>
                                       </select>
-                                      {/* {filterOption && filterOption === "searchLocation" && (
-                          <select
-                            id="filterby"
-                            name=""
-                            value={filterOption}
-                            onChange={handleChangefilter}
-                          >
-                            <option value="volvo">Filter By</option>
-                            <option value="searchLocation">Location</option>
-                            <option value="Current_Timezone">TimeZone</option>
-                            <option value="College">College</option>
-                            <option value="Company">Company</option>
-                            <option value="None">None</option>
-                          </select>
-                        )}
-                        {filterOption && filterOption === "Company" && (
-                          <SmallAutocompleteFromAPI
-                            handleFilter={handleFilter}
-                            setAllSkills={null}
-                            setFinalTotalSkills={null}
-                            widtha="200px"
-                            name="Company Name"
-                            imageurl=""
-                            fieldName="CompanyName"
-                            setSelectedValue={setSkillInfo}
-                            url={`${DEV_PUBLIC_URL}searchbar/candidates`}
-                          />
-                        )}
-                        {filterOption && filterOption === "College" && (
+                                      {filterOption && filterOption === "searchLocation" && (
+                                        <div className="twoCol">
+                                          <div className="leftCol">
+                                            {/* <label>Primary Module</label> */}
+                                            <input type="text" id="location" onChange={(ele: any) => handleChangePrimary(ele)} />
+                                            {locationSuggestion.length > 0 &&
+                                              <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
+                                                {
+                                                  locationSuggestion.map((ele: any, idx: any) => (
+                                                    <ul key={idx} className="suggestionPoints">
+                                                      <li style={{ cursor: "pointer", margin: "5px 0px", padding: "10px 5px 5px 10px" }} onClick={handleLocationAutocomplete}>{ele}</li>
+                                                    </ul>
+                                                    // <option value="" onClick={handleClick1}>{ele}</option>
+                                                  ))
+                                                }
+                                              </div>
+                                            }
+                                          </div>
+                                        </div>
+                                      )}
+                                      {/* {filterOption && filterOption === "Company" && (
+                                        <SmallAutocompleteFromAPI
+                                          handleFilter={handleFilter}
+                                          setAllSkills={null}
+                                          setFinalTotalSkills={null}
+                                          widtha="200px"
+                                          name="Company Name"
+                                          imageurl=""
+                                          fieldName="CompanyName"
+                                          setSelectedValue={setSkillInfo}
+                                          url={`${DEV_PUBLIC_URL}searchbar/candidates`}
+                                        />
+                                      )} */}
+                                      {/* {filterOption && filterOption === "College" && (
                           <SmallAutocompleteFromAPI
                             handleFilter={handleFilter}
                             setAllSkills={null}
@@ -728,15 +908,15 @@ const SapSearch = () => {
                                                 <img src="images/avatar1.png" alt="avatar1" />
                                               </div>
                                               <div className="listDecs">
-                                                <h3 className="listName">{ele.Name}</h3>
+                                                <h3 className="listName">{(ele.Name).split(" ")[0]} {(ele.Name).split(" ")[0][0]}</h3>
                                                 <h4 className="currentLocation">{ele.CurrentLocation}</h4>
-                                                <h5><span>Years of Exp : {ele.Experience}</span> <strong>| </strong> <span>Current Salary : {ele.Salary}</span></h5>
+                                                <h5><span>Years of Exp : {ele.Experience}</span> <strong>| </strong> <span>{ele.CurrentRole&&(ele.CurrentRole).split(" at ")[0]}</span></h5>
                                                 <h6 className="listTitle"></h6>
                                               </div>
                                               <div className="otherDesc">
                                                 <p>{ele.CandidateProfile}</p>
-                                                <p><span>Current Position </span>{ele.CurrentRole}</p>
-                                                <p><span>Current Company </span>Larsen &amp; Toubro InfoTech Limited</p>
+                                                <p><span>Current Title </span>{ele.CurrentRole&&(ele.CurrentRole).split(" at ")[0]}</p>
+                                                <p><span>Past Title </span>{ele.PreviousRole&&(ele.PreviousRole).split(" at ")[0]}</p>
                                                 <p><span>Education </span>{ele.Education}</p>
                                                 <p><span>Key Skills: </span>{ele.Skills}</p>
                                               </div>

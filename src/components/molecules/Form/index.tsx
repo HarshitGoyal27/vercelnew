@@ -225,7 +225,7 @@ const Form: React.FC = () => {
 
 
   };
- 
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
     setProfile({ ...profiles, [name]: value });
@@ -599,7 +599,7 @@ const Form: React.FC = () => {
   const handleModify = () => {
     setGetAllCandidate(false);
     setYouSelect(false);
-    
+
   }
   useEffect(() => {
     const allIDs = pageMap[pageNoDisplay]?.map((item) => item.id);
@@ -710,7 +710,7 @@ const Form: React.FC = () => {
                             <option value="None">None</option>
                           </select>
                         )}
-                        {filterOption && filterOption === "Company" && (
+                        {/* {filterOption && filterOption === "Company" && (
                           <SmallAutocompleteFromAPI
                             handleFilter={handleFilter}
                             setAllSkills={null}
@@ -722,7 +722,7 @@ const Form: React.FC = () => {
                             setSelectedValue={setSkillInfo}
                             url={`${DEV_PUBLIC_URL}searchbar/candidates`}
                           />
-                        )}
+                        )} */}
                         {/* {filterOption && filterOption === "College" && (
                           <SmallAutocompleteFromAPI
                             handleFilter={handleFilter}
@@ -739,7 +739,7 @@ const Form: React.FC = () => {
 
                       </div>
                       <div className="filterBoxRight">
-                      <div style={{color:"#007FFF", cursor:"pointer"}} onClick={handleModify}>Modify</div>
+                        <div style={{ color: "#007FFF", cursor: "pointer" }} onClick={handleModify}>Modify</div>
                         <label htmlFor="selectall">Select All: </label>
                         <input
                           className=""
@@ -784,15 +784,15 @@ const Form: React.FC = () => {
                                     <img src="images/avatar1.png" alt="avatar1" />
                                   </div>
                                   <div className="listDecs">
-                                    <h3 className="listName">{profile.Name}</h3>
+                                    <h3 className="listName">{(profile.Name).split(" ")[0]} {(profile.Name).split(" ")[0][0]}</h3>
                                     <h4 className="currentLocation">{profile.CurrentLocation}</h4>
-                                    <h5><span>Years of Exp : {profile.Experience}</span> <strong>| </strong> <span>Current Salary : {profile.Salary}</span></h5>
+                                    <h5><span>Years of Exp : {profile.Experience}</span> <strong>| </strong> <span>{profile.CurrentRole && (profile.CurrentRole).split(" at ")[0]}</span></h5>
                                     <h6 className="listTitle"></h6>
                                   </div>
                                   <div className="otherDesc">
                                     <p>{profile.CandidateProfile}</p>
-                                    <p><span>Current Position </span>{profile.CurrentRole}</p>
-                                    <p><span>Current Company </span>Larsen &amp; Toubro InfoTech Limited</p>
+                                    <p><span>Current Title </span>{profile.CurrentRole && (profile.CurrentRole).split(" at ")[0]}</p>
+                                    {profile.PreviousRole &&<p><span>Past Title </span>{ (profile.PreviousRole).split(" at ")[0]}</p>}
                                     <p><span>Education </span>{profile.Education}</p>
                                     <p><span>Key Skills: </span>{profile.Skills}</p>
                                   </div>

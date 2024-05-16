@@ -2094,6 +2094,7 @@ ul.keyMetrics {
 .filterBoxLeft{
     float: left;
     width: 75%;
+    display: flex;
 }
 .filterBoxRight{
     float: left;

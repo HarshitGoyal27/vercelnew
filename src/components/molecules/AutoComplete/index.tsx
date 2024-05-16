@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { TextField, Select, MenuItem, InputLabel } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -312,6 +312,19 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
   //     console.error("Error fetching data:", error);
   //   }
   // };
+  const suggestionsRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (suggestionsRef.current && !suggestionsRef.current.contains(event.target as Node)) {
+        setSkillSuggesions([]);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [suggestionsRef]);
   useEffect(()=>{
     console.log("profiles", profiles)
   },[profiles])
@@ -369,7 +382,7 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                             value={profiles.Skill_Set}
                           />
                             {skillSuggestions.length > 0 &&
-                              <div style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
+                              <div ref={suggestionsRef} style={{ backgroundColor: '#f7f7f7', borderRadius: '5px', boxShadow: 'rgba(0, 0, 0, 0.2) 0px 7px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px' }}>
                                 {
                                   skillSuggestions.map((ele: any, idx: any) => (
                                     <ul key={idx} className="suggestionPoints">
@@ -431,14 +444,14 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                         <div className="candidatesalaryBox">
                           <select name="" id="">
                             <option value="INR">INR</option>
-                            <option value="">option 01</option>
-                            <option value="">option 02</option>
-                            <option value="">option 03</option>
+                            <option value="">USD</option>
+                            <option value="">EUR</option>
+                            {/* <option value="">option 03</option> */}
                           </select>
                           <input type="text" className="form-control " id="" placeholder="Min Salary" />
                           <span>to</span>
                           <input type="text" className="form-control " id="" placeholder="Max Salary" />
-                          <span>Years</span>
+                          
                         </div>
                         <div><input type="checkbox" /> <label>Include candidates who did not mention their current
                           salary</label></div>
@@ -451,7 +464,7 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                         <p>Industry</p>
                         <input type="text" className="form-control " id="" placeholder="Add Industry" />
                       </li>
-                      <li className="keywordBox">
+                      {/* <li className="keywordBox">
                         <p className="leftSide keywordsText">Company</p>
                         <div className="rightSide booleanText ">
                           <div className="switch-field ">
@@ -473,7 +486,7 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                             <option value="">option 03</option>
                           </select>
                         </div>
-                      </li>
+                      </li> */}
                       <li>
                         <input type="text" className="form-control excludeKeywords" id="" placeholder="+ Add Exclude Company" />
                       </li>
@@ -492,18 +505,18 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                         <div className="">
                           <input type="text" className="form-control" id="" placeholder="Add designation " />
                           <br />
-                          <select name="" id="">
+                          {/* <select name="" id="">
                             <option value="0">Search in Current designation</option>
                             <option value="">option 01</option>
                             <option value="">option 02</option>
                             <option value="">option 03</option>
-                          </select>
+                          </select> */}
                         </div>
                       </li>
-                      <li>
+                      {/* <li>
                         <h3>Work details</h3>
-                      </li>
-                      <li>
+                      </li> */}
+                      {/* <li>
                         <p>Show candidates seeking</p>
                         <div className="jobtypeBox">
                           <select name="" id="">
@@ -524,7 +537,7 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                       <li className="">
                         <p>Work permit for</p>
                         <input type="text" className="form-control " id="" placeholder="Choose category" />
-                      </li>
+                      </li> */}
 
                       <li>
                         <button className="searchBtn" onClick={(e) => handleSubmit(e)}>Get elite candidates now</button>
