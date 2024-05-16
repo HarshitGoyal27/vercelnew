@@ -39,7 +39,7 @@ const Vetting = () => {
                   <h3>Our Unique Combination of AI, EI and HI Ensures Ideal Candidate Matches Every Time</h3>
                   <p>Experience unparalleled accuracy in candidate selection through our unique blend of cutting-edge AI technology, rigorous external assessments, and invaluable human insights. Our meticulous vetting process guarantees that you&apos;re presented with candidates perfectly tailored to your project requirements.</p>
 
-                  <div className="hireSap"><a className="hire" href="#">Hire Elite Talent</a><a className="hire" href="#">Explore Talent Pool</a></div>
+                  <div className="hireSap"><a className="hire" href="/sapSearch">Hire Elite Talent</a><a className="hire" href="/sap-talent-pool">Explore Talent Pool</a></div>
                   <div className="deepVetted"><span><img src="images/icon03.jpg" alt="Deep Vetted" />Advanced AI</span><span><img src="images/icon02.jpg" alt="Culturally Fit" />Integrated Assessments</span><span><img src="images/icon01.jpg" alt="Deploy Ready" />Automated Insights</span></div>
                 </div>
 
@@ -243,7 +243,7 @@ const Vetting = () => {
                           </div>
                         </div>
                         <div className="col-md-12 hireNow">
-                          <a className="hire" href="#">Hire Now</a>
+                          <a className="hire" href="/search-developers">Hire Now</a>
                         </div>
                       </div>
                     </section>

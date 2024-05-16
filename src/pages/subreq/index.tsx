@@ -25,6 +25,7 @@ interface ClientInfo {
     Role_Title: string;
     Designation: string;
     Current_Timezone: string | null;
+    duration:string;
 }
 const SubreqPage = () => {
     // const {selectedId,setSelectedId} = useGlobalContext();
@@ -41,15 +42,16 @@ const SubreqPage = () => {
         Budget: "",
         Openings: "",
         Role_Title: "",
-        Designation: ""
+        Designation: "",
+        duration:""
     })
     const [errors, setErrors] = useState({
         workEmail: '',
         contact_number: '',
         Email: ''
     });
-    
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+
+    const handleInputChange = (e: any): void => {
         const { name, value } = e.target;
         setClientData({ ...ClientData, [name]: value });
         console.log("profiles->", ClientData);
@@ -77,7 +79,7 @@ const SubreqPage = () => {
 
         setErrors({ ...errors, [fieldName]: errorMessage });
     };
-    
+
     const handleTimeZone = (e: ChangeEvent<HTMLSelectElement>) => {
         if (e.target.value === "none") {
             setClientData({ ...ClientData, Current_Timezone: "" });
@@ -223,35 +225,42 @@ const SubreqPage = () => {
                                                     <input type="text" className="form-control" id="" name="Budget" onChange={handleInputChange} />
                                                 </div>
                                                 <div className="rightCol">
-                                                    <label>Timezone</label>
-                                                    <select  id="" name="Current_Timezone" onChange={handleTimeZone}>
+                                                    <label>Duration</label>
+                                                    <select id="" name="duration" onChange={handleInputChange} >
                                                         <option >Select an option</option>
-                                                        <option value="IST">IST</option>
-                                                        <option value="CET">CET</option>
-                                                        <option value="ET">ET</option>
-                                                        <option value="none">none</option>
+                                                        <option value="3">3 Months</option>
+                                                        <option value="6">6 Months</option>
+                                                        <option value="12">12 Months</option>
+                                                        {/* <option value="none">Indian Time</option> */}
                                                     </select>
                                                 </div>
                                                 <div className="clear"></div>
                                             </div>
                                             <div className="leftCol">
-                                                <label>Job Description</label>
-                                                <input type="text" className="form-control" id="" name="Job_Description" onChange={handleInputChange} />
+                                                <label>Timezone</label>
+                                                <select id="" name="Current_Timezone" onChange={handleTimeZone}>
+                                                    <option >Select an option</option>
+                                                    <option value="IST">European Time</option>
+                                                    <option value="CET">Eastern Time</option>
+                                                    <option value="ET">Central Time</option>
+                                                    <option value="none">Indian Time</option>
+                                                </select>
                                             </div>
                                             <div className="rightCol">
                                                 <label>Start Date</label>
                                                 <input className="form-control" id="" type="date" name="Start_Date" onChange={handleInputChange} />
                                             </div>
+                                            <div className="oneCol">
+                                                <label htmlFor="Description">Job Description</label>
+                                                <textarea className="form-control" id="message" rows={5} placeholder="Write description" name='description' onChange={handleInputChange}></textarea>
+                                            </div>
                                             <div className="clear"></div>
                                         </div>
 
-
                                         <div className="sapSearchBtn">
-                                            <button className="searchBtn" onClick={handleClick}>Click Me</button>
+                                            <button className="searchBtn" onClick={handleClick}>Submit</button>
 
                                         </div>
-
-
                                     </div>
 
                                 </div>

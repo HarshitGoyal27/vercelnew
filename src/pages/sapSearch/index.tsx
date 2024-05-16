@@ -536,7 +536,7 @@ const SapSearch = () => {
                       <section className="container mt-4 ">
                         <div className="row">
                           <div className="col-md-12">
-                            <h2>SAP Specific Search Form</h2>
+                            <h2>Search sap talent</h2>
                           </div>
                         </div>
                         <div className="row">

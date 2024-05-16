@@ -529,8 +529,8 @@ const SapTalentPool = () => {
                             </Slider>
                         </div>
                         <div style={{ display: "flex", justifyContent: "center" }}>
-                            <div className="hireSap"><a className="hire" href="hire-sap-talent">Explore Talent Pool</a><a className="hire"
-                                href="hire-specialized-talent">Hire Elite Talent</a></div>
+                            <div className="hireSap"><a className="hire" href="/sap-talent-pool">Explore Talent Pool</a><a className="hire"
+                                href="/sapSearch">Hire Elite Talent</a></div>
                         </div>
 
                     </div>

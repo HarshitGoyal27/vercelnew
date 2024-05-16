@@ -190,7 +190,7 @@ const Hire = () => {
 
                   <p>AI-Vetted Expertise, Unmatched Quality for Your Project&apos;s Success Swiftly Connect with On-Demand, Top-Tier SAP Talent Tailored to Your Project&apos;s Urgent and Specific Needs</p>
 
-                  <div className="hireSap"><a className="hire" href="/sapSearch">Search SAP Talent</a><a className="hire" href="#">Explore Talent Pool</a></div>
+                  <div className="hireSap"><a className="hire" href="/sapSearch">Search SAP Talent</a><a className="hire" href="/sap-talent-pool">Explore Talent Pool</a></div>
                 </div>
                 <div className="row">
                   <div className="col-md-4 vettedCont">
@@ -568,8 +568,8 @@ const Hire = () => {
               </div>
 
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <div className="hireSap"><a className="hire" href="hire-sap-talent.html">Explore Talent Pool</a><a className="hire"
-                  href="hire-specialized-tech-talent.html">Hire Elite Talent</a></div>
+                <div className="hireSap"><a className="hire" href="/sap-talent-pool">Explore Talent Pool</a><a className="hire"
+                  href="/sapSearch">Hire Elite Talent</a></div>
               </div>
             </div>
           </section>

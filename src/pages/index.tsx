@@ -716,7 +716,7 @@ export default function Home({ allData }: { allData: any }) {
             </div>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <div className="hireSap"><a className="hire" href="hire-sap-talent">Explore Talent Pool</a><a className="hire"
-                href="hire-specialized-talent">Hire Elite Talent</a></div>
+                href="/sapSearch">Hire Elite Talent</a></div>
             </div>
 
           </div>

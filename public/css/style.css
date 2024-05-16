@@ -11,6 +11,7 @@ body {
 
 
 
+
 /* ############################################# */
 /* ################## Common ################### */
 /* ############################################# */
@@ -37,7 +38,6 @@ body {
 .uppercase {
     text-transform: uppercase;
 }
-
 
 .tal { text-align: left; }
 .tac { text-align: center; }
@@ -89,17 +89,18 @@ a {
 .homesapExpertise h2{
     font-size: 54px;
     line-height: 72px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin-bottom: 8px;
+     font-family: 'Roboto', sans-serif;
 }
 .hireSapTalent .homesapExpertise h2{
    margin-bottom: 28px;
 }
 .homesapExpertise h2 span{
-    color: #b0d5f5;
+    color: #2871ff;
  }
 .homesapExpertise h3{
-    color: #ff5b99;
+    color: #FFA107;
     margin-bottom: 34px;
     font-size: 24px;
 }
@@ -113,7 +114,7 @@ a {
     
 }
 .hireSap a.hire{
-    background: #09514d;
+    background: #2871ff;
     color: #ffffff;
     padding: 10px 25px;
     border: none;
@@ -131,7 +132,7 @@ a {
     
 }
 .hireSap a.hire:hover{
-     background: #44a39e;
+     background: #0840ad;
 }
 .deepVetted{
     font-family: 'Oswald', sans-serif;
@@ -139,7 +140,7 @@ a {
     padding: 28px 0;
 }
 .deepVetted span{
-    margin-right: 76px;
+    margin-right: 42px;
     position: relative;
     padding-left: 56px;
 }
@@ -183,7 +184,7 @@ a {
     left: 50%;
     text-align: center;
     padding: 10px;
-    background: #09514d;
+    background: #2871ff;
     border-radius: 50%;
     margin-left: -54px;
     font-family: 'Oswald', sans-serif;
@@ -200,7 +201,7 @@ a {
     text-transform: capitalize;
     padding-top: 24px;
     margin-bottom: 10px;
-    border-bottom: 2px solid #888787;
+    border-bottom: 2px solid #2871ff;
     padding-bottom: 12px;
 }
 .specializedCont {text-align: center}
@@ -238,7 +239,7 @@ a {
     background: rgb(255, 255, 255);
     color: #09514d;
     padding: 5px 12px;
-    border: 1px solid #09514d;
+    border: 1px solid #2871ff;
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease 0s;
@@ -250,7 +251,7 @@ a {
 }
 .preBoxExplore a:hover{
     text-decoration: none;
-    background: #09514d;
+    background: #2871ff;
     color: #ffffff;
 }
 .boxExploreImg{
@@ -259,11 +260,11 @@ a {
 }
 .elitesapSection{
     padding: 80px 0;
-    background: #44a39e;
+    background: #2871ff;
     background-size: cover;
 }
 .elitesapSection section{
-     background: url(../images/globe02.png) no-repeat center right;
+     background: url(../images/globe.png) no-repeat right 35px;
 }
 .elitesapSection h2{
     text-align: left;
@@ -273,10 +274,11 @@ a {
     font-family: 'pelita_stdbold';
     font-weight: 300;
     color: #ffffff;
+    margin-bottom: 24px;
 }
 .elitesapSection h4{
     text-align: left;
-    color: #44a39e;
+    color: #ffffff;
     margin-bottom: 50px;
     
     padding-bottom: 10px;
@@ -289,9 +291,9 @@ a {
     
 .hireTalent a{
     background: rgb(255, 255, 255);
-    color: #09514d;
+    color: #0840ad;
     padding: 5px 12px;
-    border: 1px solid #09514d;
+    border: 1px solid #0840ad;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease 0s;
@@ -304,7 +306,7 @@ a {
 }
 .hireTalent a:hover{
     text-decoration: none;
-    background: #09514d;
+    background: #0840ad;
     color: #ffffff;
 }
 .eliteCont h2{
@@ -468,6 +470,7 @@ ul.keyMetrics {
 .demandSection h2 {
     font-size: 34px;
     line-height: 48px;
+    padding-right: 60px;
     
     font-weight: 300;
     margin-bottom: 40px;
@@ -478,7 +481,7 @@ ul.keyMetrics {
     text-align: justify;
     line-height: 24px;
     font-size: 16px;
-    
+    padding-right: 70px;
     color: #888787;
 }
 .demandSection h4 {
@@ -496,14 +499,14 @@ ul.keyMetrics {
     padding-top: 20px;
 }
 .demandInitiatives li{
-    padding-bottom: 40px;
+    padding-bottom: 68px;
     position: relative;
-    padding-left:86px;
-        padding-left: 122px;
+ 
+    padding-left: 180px;
 }
 .demandInitiatives li span.imgCont{
     position:absolute;
-    left: 0px;
+    left: 52px;
     top: 10px;
     
 }
@@ -523,6 +526,7 @@ ul.keyMetrics {
     font-size: 16px;
    
 }
+.demandSection .hireSap a{margin-left: 0px;}
 .turnacoundCont{
     padding: 0 50px;
 }
@@ -539,7 +543,7 @@ ul.keyMetrics {
     color: #ffffff;
 }
 .turnheader{
-    background: #09514d;
+    background: #2871ff;
 }
 .TurnaroundSection h3 {
    font-family: 'Oswald', sans-serif;
@@ -567,11 +571,11 @@ ul.keyMetrics {
 .trunaroundText{
    text-align: center;
     padding: 20px 25px 80px 25px;
-    border:1px solid #09514d;
+    border:1px solid #2871ff;
     padding-top: 40px;
 }
 .clientCont{
-    background: #44a39e;
+    background: #2871ff;
     padding: 68px 0 80px;
     text-align: center;
     color: #ffffff;
@@ -583,11 +587,11 @@ ul.keyMetrics {
 }
 .facilitates li {
     list-style: none;
-    background: #44a39e;
+    background: #2871ff;
     margin-bottom: 28px;
     padding: 16px 26px;
-    border-left: 5px solid #1c6662;
-    border-right: 5px solid #1c6662;
+    border-left: 5px solid #0840ad;
+    border-right: 5px solid #0840ad;
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
     font-size: 28px;
@@ -596,7 +600,7 @@ ul.keyMetrics {
 
 }
 .facilitates a.work {
-    background: #09514d;
+    background: #2871ff;
     color: #ffffff;
     padding: 10px 25px;
     border: none;
@@ -613,7 +617,7 @@ ul.keyMetrics {
     font-family: 'Pelita Std Regular';
 }
 .facilitates a.work:hover{
-     background: #44a39e;
+     background: #0840ad;
 }
 .clientCont h2{
     text-align: center;
@@ -704,10 +708,10 @@ footer a:hover{
    
 }
 .sapExpertise h2 span{
-    color: #b0d5f5;
+    color: #124fc5;
  }
 .sapExpertise h3{
-    color: #ff5b99;
+    color: #FFA107;
     margin-bottom: 50px;
     font-size: 30px;
 }
@@ -724,7 +728,7 @@ footer a:hover{
 }
 .secSection h4{
     text-align: center;
-    color: #ff5b99;
+    color: #FFA107;
     margin-bottom: 50px;
     border-bottom: 1px solid #d2d3d5;
     padding-bottom: 20px;
@@ -773,7 +777,7 @@ footer a:hover{
     font-size: 18px;
     line-height: 20px;
     text-transform: capitalize;
-    border-bottom: 2px solid #ff5b99;
+    border-bottom: 2px solid #FFA107;
     padding-bottom: 12px;
     margin-bottom: 16px;
 }
@@ -968,11 +972,11 @@ ul.keyMetrics {
     font-weight: 300;
 }
 .sixthSection h2 span {
-    color: #b0d5f5;
+    color: #124fc5;
 }
 .sixthSection h4 {
     text-align: center;
-    color: #ff5b99;
+    color: #FFA107;
     margin-bottom: 80px;
     border-bottom: 1px solid #d2d3d5;
     padding-bottom: 10px;
@@ -1146,18 +1150,18 @@ ul.keyMetrics {
     font-weight: 300;
 }
 .superchargeSection h2 span {
-    color: #b0d5f5;
+    color: #2871ff;
 }
 .superchargeSection h3 {
     text-align: center;
-    color: #ff5b99;
+    color: #FFA107;
     margin-bottom: 110px;
     border-bottom: 1px solid #d2d3d5;
     padding-bottom: 20px;
     font-size: 24px;
 }
 .superchargeHeading{
-    background: #15b6d8;
+    background: #2871ff;
     padding: 41px 20px 30px;
     font-size: 32px;
     line-height: 48px;
@@ -1202,7 +1206,7 @@ ul.keyMetrics {
 }
 .unleashingSection h4 {
    
-    color: #ff5b99;
+    color: #FFA107;
     margin-bottom: 40px;
     padding-bottom: 20px;
     font-size: 24px;
@@ -1295,7 +1299,7 @@ ul.keyMetrics {
 }
 .assessingCont{
     padding: 30px 10px;
-    background: #15b6d8;
+    background: #2871ff;
     margin-bottom: 90px;
     color: #ffffff;
     text-align: center
@@ -1353,7 +1357,7 @@ ul.keyMetrics {
     left: 50%;
     text-align: center;
     padding: 10px;
-    background: #09514d;
+    background: #2871ff;
     border-radius: 50%;
     margin-left: -54px;
     font-family: 'Oswald', sans-serif;
@@ -1399,7 +1403,7 @@ ul.keyMetrics {
     color: #ffffff;
 }
 .discoverCont h6{
-   background: #15b6d8;
+   background: #2871ff;
     font-size: 20px;
     line-height: 25px;
     text-transform: capitalize;
@@ -1497,7 +1501,7 @@ ul.keyMetrics {
 }
 .solutionsSection{
     padding: 80px 0;
-    background: #f5f5f5;
+    background: #1e1e1e;
     color: #888787;
     line-height: 24px;
     font-size: 16px;
@@ -1506,12 +1510,13 @@ ul.keyMetrics {
 .solutionsSection h2 {
    text-align: center;
     font-size: 56px;
-    line-height: 52px;
+    line-height: 74px;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     margin-bottom: 60px;
-    color: #000000;
+    color: #ffffff;
+    text-align: center;
 }
 .solutionsSection h3 {
     font-size: 28px;
@@ -1520,7 +1525,11 @@ ul.keyMetrics {
     margin-bottom: 18px;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
-    color: #000000;
+    margin-top: 24px;
+   
+}
+.midHeading{
+    padding-top: 60px;
 }
 .solutionCont{
     position: absolute;
@@ -1548,14 +1557,17 @@ ul.keyMetrics {
     text-align: left;
     cursor: pointer;
     position: relative;
-    padding-left: 80px;
-    padding-right: 20px;
+    background: #3c3b3b;
+    color: #ffffff;
+    padding: 20px;
+    border: 2px solid #e5d622;
+    text-align: center;
+    border-radius: 10px;
+    
     
 }
 .solutionText > img{
-    position: absolute;
-    top: 30px;
-    left: 0px;
+  
 }
 
 .solutionText:hover .solutionCont{
@@ -1577,7 +1589,7 @@ ul.keyMetrics {
 .quantifiedSection h3 {
    text-align: center;
    margin-bottom: 60px;
-    color: #ffffff;
+    
     padding-top: 20px;
     font-size: 18px;
         line-height: 23px;
@@ -1832,14 +1844,7 @@ ul.keyMetrics {
 .sapfico .missionSectionText{
     padding: 20px;
 }
-.custom-img {
-    max-width: 60%;
-    height: auto;
-}
-.custom-img2 {
-    max-width: 10%;
-    height: auto;
-}
+
 .searchSliderCont {
     width: 100%;
     height: auto;
@@ -1853,7 +1858,10 @@ ul.keyMetrics {
     overflow: hidden;
     cursor: grab;
     position: relative;
-    margin-top: 60px;
+   
+    border-top: 0px;
+    padding-bottom: 20px;
+    padding-top: 40px;
 }
  .searchSlider .slide {
     width: auto;
@@ -1871,13 +1879,10 @@ ul.keyMetrics {
 }
 .SlideImg{
     background: #ffd701;
-
 }
 .SlideImg img{
     width: 100%;
     height: auto;
-    /* height: 80%; */
-    object-fit: cover;
 }
  .searchSlider .slide .slideCont .slideText{
     
@@ -1904,8 +1909,8 @@ ul.keyMetrics {
     position: absolute;
     top: 50%;
     display: block;
-    width: 40px;
-    height: 70px;
+    width: 24px;
+    height: 42px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
@@ -1914,19 +1919,20 @@ ul.keyMetrics {
     color: transparent;
     border: none;
     outline: none;
-    background: rgba(0, 0, 0,0.6);
+    background: #20c0de;
     background-repeat: no-repeat;
     background-position: center;
+    outline: 0px;
 }
 .slick-prev {
-    /* background-image: url(../images/arrow-left.png); */
+    background-image: url(../images/arrow-left.png);
     background-size: 100% auto;
 }
 .slick-prev {
     left: 0px;
 }
 .slick-next {
-    /* background-image: url(../images/arrow-right.png); */
+    background-image: url(../images/arrow-right.png);
     background-size: 100% auto;
 }
 .slick-next {
@@ -2094,7 +2100,6 @@ ul.keyMetrics {
 .filterBoxLeft{
     float: left;
     width: 75%;
-    display: flex;
 }
 .filterBoxRight{
     float: left;
@@ -2197,7 +2202,7 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
 }
 .pagination-container {
       
-}
+    }
 .globalElasticTeam .sapExpertise h2
 {
     font-size: 54px;
@@ -2220,7 +2225,7 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
     right: 0%;
     text-align: center;
     padding: 6px 20px;
-    background: #44a39e;
+    background: #2871ff;
     font-family: 'Oswald', sans-serif;
     color: #ffffff;
     font-size: 28px;
@@ -2245,7 +2250,7 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
     text-transform: uppercase;
 }
 .venturCont h3 {
-    color: #ff5b99;
+    color: #FFA107;
     margin-bottom: 50px;
     font-size: 24px;
 }
@@ -2255,7 +2260,7 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
     margin-bottom: 20px;
 }
 .venturCont a.contButton {
-    background: #09514d;
+    background: #2871ff;
     color: #ffffff;
     padding: 10px 25px;
     border: none;
@@ -2272,7 +2277,7 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
     font-family: 'Pelita Std Regular';
 }
 .venturCont a.contButton:hover{
-     background: #44a39e;
+     background: #124fc5;
 }
 
 .booleanText{
@@ -2515,7 +2520,7 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
     margin: 0px 0 0;
     padding: 40px 30px 40px;
 }
-.modelchioce ul li{
+.selfModel ul li, .assistedModel ul li{
     padding-left: 20px;
     background: url(../images/greencheck02.png) 0px 6px no-repeat;
     margin-bottom: 8px;
@@ -2695,4 +2700,1017 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
 }
 .sapSearchBtn{
     text-align: center;
+}
+.modelTabSection{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.modelTab{}
+.modelTabHead{}
+.modelTabHead > ul > li{float:left; color:#29282f; font-size:17px; text-transform:uppercase;  cursor:pointer; padding: 20px 20px;}
+.modelTabHead > ul > li.selfServiceHead{background: #F0FFF9}
+.modelTabHead > ul > li.assistedServiceHead{background: #FFF0F0}
+.modelTabHead > ul > li.active, .modelTabHead ul li:hover {}
+.modelTabBody > ul > li{display:none;}
+.modelTabBody > ul > li.active{display:block;}
+.modelTabBody > ul > li.selfServiceBody{background:#F0FFF9 }
+.modelTabBody > ul > li.assistedServiceBody{background:#FFF0F0 }
+.serviceModeSection .modelTabHead h3{margin-bottom: 0px;}
+.modelTabBody > ul > li{
+    padding: 80px 30px 80px;
+}
+
+
+
+.selfTabHead > ul{   display: FLEX;  JUSTIFY-CONTENT: space-between; position: RELATIVE;    Z-INDEX: 3;}
+.selfTabHead > ul > li{ color:#ffd701; font-size:30px; text-transform:uppercase;  cursor:pointer; padding: 20px 24px; 
+    BORDER-RADIUS: 50%; background: #09514d;    font-family: 'Oswald', sans-serif; position:relative}
+.selfTabHead > ul > li strong{position: absolute;bottom: -10px;
+    left: 43%;
+    font-size: 18px;
+    color: #44a39e;
+    display:none;
+}
+.selfTabHead > ul > li.active strong{
+    display:block;
+}
+
+.selfTabHead > ul > li.active, .selfTabHead ul li:hover {background: #44a39e;    color: #ffffff;}
+.selfTabBody{    padding:40px 30px 40px 30px ;}
+.selfTabBody > ul > li{display:none;}
+.selfTabBody > ul > li.active{display:block;}
+
+.assistedTabHead > ul{   display: FLEX;  JUSTIFY-CONTENT: space-between; position: RELATIVE;    Z-INDEX: 3;}
+.assistedTabHead > ul > li{ color:#ffd701; font-size:30px; text-transform:uppercase;  cursor:pointer; padding: 20px 24px; 
+    BORDER-RADIUS: 50%; background: #09514d;    font-family: 'Oswald', sans-serif; position:relative}
+
+.assistedTabHead > ul > li.active, .assistedTabHead ul li:hover {background: #44a39e;    color: #ffffff;}
+.assistedTabBody{    padding:40px 30px 40px 30px ;}
+.assistedTabBody > ul > li{display:none;}
+
+.assistedTabHead > ul > li strong{position: absolute;bottom: -11px;
+    left: 43%;
+    font-size: 18px;
+    color: #44a39e;
+    display:none;
+}
+.assistedTabHead > ul > li.active strong{
+    display:block;
+}
+
+
+.assistedTabBody > ul > li.active{display:block;}
+.selfTabHead, .assistedTabHead{ position:relative; }
+.selfTabHead > span, .assistedTabHead > span{height:2px; width:100%; background:#44a39e; position:absolute; z-index:2; top:50%}
+
+
+.web3Tech{
+     font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.transformSection{
+    padding: 120px 0 80px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.web3Tech h2{
+    font-size: 32px;
+    line-height: 34px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+.web3Tech h5{
+    font-size: 18px;
+}
+.web3Tech h3{
+    font-size: 32px;
+    margin-bottom: 21px;
+}
+.web3Tech p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.col-md-4.transformHeadCont{
+    padding-right: 0px;
+}
+.transformCont{
+    margin-top: 40px;
+}
+.transformBodyCont{
+    border-left: 1px solid #CBCBCB;
+}
+
+.transformHead ul li{
+    border-bottom: 1px solid #CBCBCB;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+.transformHead ul li.active, .transformHead ul li:hover {
+    border-bottom: 1px solid #44a39e;
+    color: #44a39e;
+}
+.transformBody{
+        padding: 60px 80px 80px 60px;
+}
+.transformBody ul li{
+    display: none;
+}
+.transformBody ul li.active{
+    display: block;
+}
+.blockchainSection {
+    background: #f5f5f5;
+    padding: 80px 0;
+}
+.blockchainHead{
+    border-bottom: 1px solid #CBCBCB;
+    padding-bottom: 24px;
+}
+.blockchainHead ul {
+    display: flex;
+    justify-content: space-around;
+}
+.blockchainHead ul li{
+    cursor: pointer;
+    
+}
+.blockchainHead ul li.active, .blockchainHead ul li:hover{
+   color:#44a39e;
+}
+.blockchainBody {
+    padding: 80px 40px 80px;
+}
+.blockchainBody ul li{
+    display: none;
+  
+}
+
+.blockchainBody ul li.active{
+    display: block;
+}
+.leftSide{
+    float: left;
+    width: 40%
+}
+.rightSide{
+    float: left;
+    width: 60%;
+    margin-top: 40px;
+        
+}
+
+.web3Tech a {
+    background: #09514d;
+    color: #ffffff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    font-size: 18px;
+    font-family: Poppins;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Pelita Std Regular';
+}
+.web3Tech a:hover {
+    background: #44a39e;
+}
+.web3Tech .demandSection h2{
+    text-align: left;
+}
+.web3Tech .unleashingSection h4{
+    text-align: center;
+    color: #888787;
+    max-width: 700px;
+    margin: 0 auto;
+    border-bottom: 1px solid #d2d3d5;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+.web3Tech .unleashing {
+    text-align: center;
+}
+.web3Tech .quantifiedCont h5{
+    color: #ffffff;
+}
+.web3Tech  .quantifiedSection{
+    background: #212d2f;
+}
+.web3Tech .discoverSection h5 span{
+    color: #ff5b99;
+}
+.web3Tech .discoverCont{
+    background: #ffffff;
+    text-align: center;
+    padding: 0 10px 30px;
+    margin-top: 40px;
+
+}
+.web3Tech .discoverSection li{
+    background:#e6e3e3;
+    padding:6px  0px;
+    font-size: 14px;
+}
+.web3Tech .searchSliderCont{
+    padding: 80px 40px;
+}
+.web3Tech .searchSliderCont h4{
+    color: #ff5b99;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.web3Tech .searchSlider .slide .slideCont{
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    border: 0px;
+    box-shadow: unset;
+    width: 100%;
+    text-align: center;
+    padding: 00px 120px;
+}
+.web3Tech .searchSlider{
+    margin-top: 20px;
+}
+.web3Tech .imgCont{
+    margin-bottom:18px;
+}
+.web3Tech .searchSliderCont h2{
+    border-bottom: 1px solid #d2d3d5;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+}
+.web3Tech .slick-prev, .web3Tech .slick-next{
+    width: 30px;
+    height: 30px;
+    border-radius: 16px;
+}
+.web3Tech .slick-next{
+    right: 30px;
+}
+
+.web3Tech .specializedCont{
+    padding-top: 80px;
+}
+.web3Tech .preBoxExplore{
+    margin-top: 40px;
+    padding-top: 18px;
+}
+.web3Tech .empowerSection h4{
+    max-width: 800px;
+    margin: 0 auto 24px;
+}
+.web3Tech .specializedCont h5{
+    background: #212d2f;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+.hjd{
+    font-size: 16px;
+    line-height: 24px;
+    color: #888787;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.hjd h2{
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.hjd h3 {
+    font-size: 24px;
+    margin:10px 0  16px;
+}
+.hjd h4 {
+    font-size:21px;
+     margin:10px 0  18px;
+}
+.hjd h5 {
+    font-size: 18px;
+     margin:10px 0  16px;
+}
+.hjd .hireSap a.hire{
+    margin-left: 0px;
+}
+.hjd ul{
+    margin-bottom: 28px;
+}
+.hjd ul li{
+    margin-left: 32px;
+    display: list-item;
+    margin-bottom: 8px;
+    list-style: disc;
+}
+.jobDescCtaBtnFrame{
+    display: flex;
+    justify-content: space-between;
+    gap: 2.4rem;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #b0d5f5;
+    padding: 24px 32px;
+    color: #ffffff;
+    
+}
+
+.jobDescCtaBtnFrame  a {
+    background: #09514d;
+    color: #ffffff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    
+   justify-content: center;
+    align-items: center;
+   
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Pelita Std Regular';
+}
+.jobDescCtaBtnFrame a:hover{
+     background: #44a39e;
+}
+
+
+.jobDescSlider {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    cursor: grab;
+    position: relative;
+    background: #ffffff;
+    padding:30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    
+}
+.jobDescSlider .slide {
+    width: auto;
+    float: left;
+    display: inline-block;
+    padding: 0 30px;
+}
+.jobDescSlider .slide .slideCont {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+   
+}
+
+.jobDescSlider .imgCont img{
+    overflow: hidden;
+    border-radius:50px;
+}
+.hjd .jobDescSlider h5{
+    font-size: 14px;
+    color: #9f9d9d;
+    margin-top: 0px;
+}
+.hjd .jobDescSlider h4{
+   margin-bottom: 6px;
+}
+.jobDescSlider .slick-prev,  .jobDescSlider .slick-next {
+    top: 30%;
+    display: block;
+    width: 16px;
+    height: 30px;
+    background: none;
+    border: 0;
+    outline: 0px;
+}
+
+
+.jobDescSlider .slick-prev {
+    background-image: url(../images/black-arrow-left.png);
+    background-size: 100% auto;
+    left: 24px;
+}
+.jobDescSlider .slick-next {
+    background-image: url(../images/black-arrow-right.png);
+    background-size: 100% auto;
+    right: 24px;
+}
+
+
+
+.font16{
+    font-size: 16px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.clientlogo img{
+    width: 100px; height: auto;
+    margin-right: 16px;
+    margin-bottom: 10px;
+    
+}
+.clientlogoText{
+    margin-top:48px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.JobDescriptionSection{
+    background: #f5f5f5;
+    padding: 60px 0;
+    margin:40px 0 60px;
+}
+.jobDescCont{
+    padding-right: 40px;
+}
+.skillList{
+    display: flex;
+    flex-wrap: wrap;
+}
+.hjd ul.skillList li{
+    list-style: none;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+.hjd ul.skillList li a{
+    background: #ffffff;
+    display: inline-block;
+    padding: 4px 8px;
+    color: #888787;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #ffffff;
+}
+.hjd ul.skillList li a:hover{
+    border: 1px solid #b0d5f5;
+}
+
+.hjd ul.skillList li img{
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+}
+.hjd .superchargeSection h2{
+    margin-bottom: 100px;
+}
+.hjd .superchargeSection h3{
+    color: #ffffff;
+    border: 0px;
+    padding-bottom: 0px;
+}
+.hjd .superchargeText {
+    min-height: 140px;
+    font-size: 16px;
+}
+.hjd .superchargeSection .applyNow{
+    text-align: center;
+    margin: 20px 0;
+}
+.hjd .applyNow a {
+    background: #09514d;
+    color: #ffffff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Pelita Std Regular';
+}
+.hjd .superchargeSection .applyNow a:hover {
+    background: #44a39e;
+}
+.workFullTimeSection{
+    background: #484747;
+    text-align: center;
+    color: #ffffff;
+    padding: 60px 0;
+}
+.workFullTimeSection .applyNow{
+    margin-top: 30px;
+}
+
+.hjdBottomSlider {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    cursor: grab;
+    position: relative;
+    background: #ffffff;
+    padding: 30px 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+.hjdBottomSlider .slide {
+    width: auto;
+    float: left;
+    display: inline-block;
+    padding: 0 80px;
+}
+.hjdBottomSlider .slide .slideCont {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+.hjdBottomSlider .slick-prev, .hjdBottomSlider .slick-next {
+    top: 40%;
+    display: block;
+    width: 16px;
+    height: 30px;
+    background: none;
+    border: 0;
+    outline: 0px;
+}
+.hjdBottomSlider .slick-prev {
+    background-image: url(../images/black-arrow-left.png);
+    background-size: 100% auto;
+    left: 24px;
+}
+.hjdBottomSlider .slick-next {
+    background-image: url(../images/black-arrow-right.png);
+    background-size: 100% auto;
+    right: 24px;
+}
+.hjdBottomSlider h2{
+    margin-bottom: 0px;
+}
+.bottomSearchSkillSection{
+    background: #f5f5f5;
+    padding: 60px 0 60px;
+}
+.hjd .bottomSearchSkillSection ul{
+    margin-bottom: 16px;
+}
+.bottomSearchSkillSection .baseSection{
+    margin-bottom: 42px;
+}
+.hjd .bottomSearchSkillSection ul.skillList li{
+    margin-bottom: 18px;
+}
+.hjd ul.skillList li i {
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    color: #b0d5f5;
+}
+.remoteDeveloperSection{
+    padding: 20px 0 120px;
+}
+.remoteDeveloperSection h2{
+    text-align: center;
+}
+.remotedeveloperCont{
+    padding: 20px 30px;
+     border: 1px solid #eee;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+.remotedeveloperCont h3{
+    margin-bottom: 28px;
+}
+.remotedeveloperCont h3 i{
+    padding: 4px;
+    background: #15b6d8;
+    color: #ffffff;
+    border-radius:4px;
+    font-size: 18px;
+    margin-right: 8px;
+}
+.remotedeveloperCont p{
+    margin-bottom: 10px;
+}
+.employeesNumber{
+    margin-top: 10px;
+    font-size: 13px;
+}
+.employeesNumber span{
+    margin-left: 8px;
+}
+.employeesNumber {}
+.skillCard{
+    margin-top: 14px;
+}
+.skillCard span{
+    border: 1px solid #ccc;
+    padding: 6px;
+    font-size: 12px;
+    margin-right: 8px;
+    margin-top: 8px;
+    display: inline-block;
+    line-height: 12px;
+        
+}
+.remoteDeveloperSection .applyNow{
+    text-align: center;
+    margin-top: 40px;
+}
+.hjd .latestpostSection{
+     background: #f5f5f5;
+    padding-top: 60px;
+}
+.hjd .latestpostSection h2{
+    text-align: center;
+}
+.latestpostSlider {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    cursor: grab;
+    position: relative;
+    
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.latestpostSlider .slide {
+    width: auto;
+    float: left;
+    display: inline-block;
+    padding: 0 20px;
+}
+.latestpostSlider .slide .slideCont {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #ffffff;
+}
+.latestpostSlider .slick-prev, .latestpostSlider .slick-next {
+    top: 30%;
+    display: block;
+    width: 16px;
+    height: 30px;
+    background: none;
+    border: 0;
+    outline: 0px;
+    display: none !important;
+}
+.latestpostSlider .slick-prev {
+    background-image: url(../images/black-arrow-left.png);
+    background-size: 100% auto;
+    left: 24px;
+}
+.latestpostSlider .slick-next {
+    background-image: url(../images/black-arrow-right.png);
+    background-size: 100% auto;
+    right: 24px;
+}
+.latestpostSlider .readmore
+{
+    margin-top: 10px;
+}
+.latestpostSlider .readmore a{
+    text-align: center;
+    margin-top: 40px;
+    padding: 8px;
+    border: 1px solid #15b6d8;
+    color: #888787;
+    font-size: 14px;
+    text-decoration: none;
+}
+.latestpostSlider .readmore a:hover{
+    background: #15b6d8;
+    color: #ffffff;
+}
+.hjd .latestpostSlider ul{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.hjd .latestpostSlider ul li{
+    list-style: none;
+    display: inline;
+    margin: 0 6px;
+}
+.hjd .latestpostSlider ul li button{
+    border: 0px;
+    border-radius: 8px;
+    outline: 0px;
+}
+.faqSection{
+    padding: 50px 0 60px;
+}
+.faqSection ul li{
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    padding-bottom: 24px;
+    padding-left: 20px;
+    position: relative;
+}
+.faqSection ul li h5{
+    cursor: pointer;
+}
+.faqSection ul li h5:hover{
+    color: #44a39e;
+}
+.faqSection ul li p{
+    display: none
+}
+.faqSection ul li span{
+    position: absolute; 
+    left: 0px;
+    top:8px;
+    transition: transform 0.3s ease; 
+}
+
+.faqSection ul li span.rotate {
+      transform: rotate(180deg); /* Rotate arrow when the collapse is expanded */
+}
+.perfectResumeSection{
+    background: #f5f5f5;
+    padding-top: 90px;
+}
+.perfectResumeSection .venturCont p{
+    margin-bottom: 40px;
+}
+.devCat{
+    margin:16px 0px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+}
+.davMainCat{
+    display: flex;
+    background: #ededed;
+    border-bottom: solid 2px #20c0de;
+    
+     
+}
+.davSubCat{
+     display: flex;
+    background: #f7f7f7;
+    border-bottom: solid 1px #d1d1d1;
+   
+}
+.filtreText{
+    margin-bottom: 9px;
+}
+.devCat button{
+    color: #545454;
+    background: #d9d9d9;
+   
+    border: 0px;
+    padding: 14px 14px;
+    outline: 0px;
+}
+.devCat button:hover, .devCat button.active {
+    background: #20c0de;
+    color: #ffffff;
+}
+
+.davSubCat button{
+    border: 0px;
+    padding: 18px 14px;
+    outline: 0px;
+    font-size: 13px;
+}
+.davSubCat button:hover, .devCat button.active {
+    background: #20c0de;
+    color: #ffffff;
+}
+
+.serviceOffering .hireSap a.hire{
+    margin: 0px 30px 0 0px
+    
+}
+.ventureSection h2 {
+    text-align: center;
+    font-size: 40px;
+    line-height: 52px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.ventureSection h3 {
+    text-align: center;
+    color: #FFA107;
+    margin-bottom: 80px;
+    border-bottom: 1px solid #d2d3d5;
+    padding-bottom: 20px;
+    font-size: 24px;
+}
+.serviceOffering .ventureSection {
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+.serviceOffering .venturCont{
+    padding: 40px;
+}
+.serviceOffering .transformSection{
+    background: #f5f5f5;
+    padding: 60px 0 80px;
+}
+.serviceOffering .transformSection h2 {
+    font-size: 32px;
+    line-height: 34px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+.serviceOffering .transformSection h5 {
+    font-size: 18px;
+}
+.serviceOffering .transformSection h3 {
+    font-size: 32px;
+    margin-bottom: 21px;
+}
+.serviceOffering .transformSection p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.serviceOffering .transformSection a {
+    background: #09514d;
+    color: #ffffff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    font-size: 18px;
+    font-family: Poppins;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Pelita Std Regular';
+}
+
+.serviceOffering .empowerSection h4 {
+    max-width: 800px;
+    margin: 0 auto 24px;
+}
+.serviceOffering .preBoxExplore {
+    margin-top: 40px;
+    padding-top: 18px;
+   
+}
+.serviceOffering .specializedCont h5 {
+    background: #212d2f;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+.serviceOffering .unleashing {
+    padding: 30px;
+    border-bottom: 16px solid #44a39e;
+}
+.advSapSection.sixthSection h2{
+    text-align: left;
+}
+.advSapSection.sixthSection h4{
+    text-align: left;
+    margin-bottom: 20px;
+       
+}
+.advSapSection .Initiatives{
+    text-align: left;
+    margin-bottom: 0px;
+    padding: 10px 0px;
+}
+.advSapSection .Initiatives h5{
+    font-family: 'Roboto', sans-serif;
+    color: #44a39e;
+    font-size: 24px;
+    margin-top: 10px;
+}
+.advSapImg{
+    padding: 20px 30px 0;
+}
+
+.thankyouSection{
+    padding: 40px 0;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 60px;
+}
+
+
+
+.thankyou{
+     font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.thankyou h2{
+    font-size: 32px;
+    line-height: 34px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+.thankyou h5{
+    font-size: 18px;
+}
+.thankyou h4{
+    font-size: 24px;
+    color: #58b7e8;
+}
+.thankyou h3{
+    font-size: 32px;
+    margin-bottom: 21px;
+}
+.thankyou p{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.thankyouCont img{
+    margin-bottom: 30px;
+}
+.keeptouchSection{
+    text-align: center;
+        background: #44a39e;
+    padding: 40px 0 60px;
+    color: #ffffff;
+}
+.keeptouchSection  p{
+    margin-bottom: 48px;
+}
+.keeptouchSection a {
+    background: #09514d;
+    color: #ffffff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    font-size: 18px;
+    font-family: Poppins;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Pelita Std Regular';
+}
+.keeptouchSection a:hover{
+    background: #ffffff;
+    color: #09514d;
+}
+.nextStepSection {
+    padding: 20px 0 120px;
+    margin-top: 40px;
+}
+.nextStepCont {
+    padding: 30px 30px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+.nextStepCont h4{
+    margin-bottom: 14px;
+        font-size: 21px;
+}
+.thankyou .nextStepCont p {
+    font-size: 14px;
+}
+.submitCont{
+    padding: 40px;
+    background: #f5f5f5;
+    border-radius:10px;
+}
+.submitContIng{
+    padding: 0 20px;
+}
+.submitText{
+    padding-top: 30px;
 }

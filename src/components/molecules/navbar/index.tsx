@@ -106,7 +106,7 @@ const Navbar: React.FC = () => {
       <header className="navbar navbar-expand-lg navbar-light ">
         <div className="container">
           {/* <!-- Logo --> */}
-          <a className="navbar-brand" href="index.html">
+          <a className="navbar-brand" href="/">
             <img src="/images/SkillsCapitalLogo.png" alt="skillCapital" height="50" />
           </a>
 
@@ -134,10 +134,10 @@ const Navbar: React.FC = () => {
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" aria-haspopup="true" aria-expanded="false">SAP Talent Solutions</a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-                  <a className="dropdown-item" href="hire-sap-talent">Hire Top SAP Talent</a>
+                  <a className="dropdown-item" href="/sapSearch">Search Sap Talent</a>
                   <a className="dropdown-item" href="sap-talent-pool">SAP Talent Pool</a>
-                  <a className="dropdown-item" href="#">SAP Custom Solutions</a>
-                  <a className="dropdown-item" href="#">SAP Elite Consulting</a>
+                  {/* <a className="dropdown-item" href="#">SAP Custom Solutions</a> */}
+                  <a className="dropdown-item" href="/sap-elite-consulting">SAP Elite Consulting</a>
                   <a className="dropdown-item" href="sap-portal-hub">SAP Portal Hub</a>
                 </div>
               </li>

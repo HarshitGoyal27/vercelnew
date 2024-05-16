@@ -727,8 +727,8 @@ const HireSpecializedTalentPage = () => {
                                 </Slider>
                             </div>
                             <div style={{ display: "flex", justifyContent: "center" }}>
-                                <div className="hireSap"><a className="hire" href="hire-sap-talent.html">Explore Talent Pool</a><a className="hire"
-                                    href="hire-specialized-tech-talent.html">Hire Elite Talent</a></div>
+                                <div className="hireSap"><a className="hire" href="/sap-talent-pool">Explore Talent Pool</a><a className="hire"
+                                    href="/search-developers">Hire Elite Talent</a></div>
                             </div>
                         </div>
                     </section>
