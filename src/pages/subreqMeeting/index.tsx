@@ -26,6 +26,7 @@ interface ClientInfo {
     Designation: string;
     Current_Timezone: string | null;
     meetingDate:string|null;
+    duration:string;
 }
 const SubreqMeetingPage = () => {
     // const {selectedId,setSelectedId} = useGlobalContext();
@@ -43,7 +44,8 @@ const SubreqMeetingPage = () => {
         Openings: "",
         Role_Title: "",
         Designation: "",
-        meetingDate:""
+        meetingDate:"",
+        duration:""
     })
     const [errors, setErrors] = useState({
         workEmail: '',
@@ -201,7 +203,7 @@ const SubreqMeetingPage = () => {
                                         <div className="specificSearchForm">
                                             <div className="oneCol">
                                                 <label>Name</label>
-                                                <input type="text" className="form-control" id="" name="Name" onChange={handleInputChange} />
+                                                <input type="text" className="form-control" id="" name="Name" onChange={handleInputChange} required/>
                                             </div>
                                             <div className="twoCol">
                                                 <div className="leftCol">
@@ -278,7 +280,7 @@ const SubreqMeetingPage = () => {
                                         </div>
 
                                         <div className="sapSearchBtn">
-                                            <button className="searchBtn" onClick={handleClick}>Submit</button>
+                                            <button className="searchBtn" disabled={!ClientData.Name || !ClientData.Email|| !ClientData.contact_number|| !ClientData.Company_name|| !ClientData.Designation } onClick={handleClick}>Submit</button>
 
                                         </div>
 

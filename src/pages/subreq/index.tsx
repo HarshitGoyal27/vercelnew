@@ -258,7 +258,7 @@ const SubreqPage = () => {
                                         </div>
 
                                         <div className="sapSearchBtn">
-                                            <button className="searchBtn" onClick={handleClick}>Submit</button>
+                                            <button className="searchBtn" onClick={handleClick} disabled={!ClientData.Name || !ClientData.Email|| !ClientData.contact_number|| !ClientData.Company_name|| !ClientData.Designation }>Submit</button>
 
                                         </div>
                                     </div>

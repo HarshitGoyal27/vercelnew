@@ -23,7 +23,7 @@ const SapEliteConsultingPage = () => {
                                     <div className="homesapExpertise">
                                         <h2>SAP Consulting<br />Services</h2>
                                         <p>Transforming Enterprise Systems with AI-Driven Solutions</p>
-                                        <div className="hireSap"><a className="hire" href="#">Book a Free Consultation</a><a className="hire" href="#">Learn
+                                        <div className="hireSap"><a className="hire" href="/contact-us">Book a Free Consultation</a><a className="hire" href="/about">Learn
                                             More</a></div>
                                     </div>
                                 </div>
@@ -104,24 +104,24 @@ const SapEliteConsultingPage = () => {
                                                 <h3>SAP Implementation</h3>
                                                 <p>Deploy the latest SAP solutions with confidence. Tailored implementation plans that align with your
                                                     business objectives.</p>
-                                                <p><a href="#">Read More</a></p>
+                                                <p><a href="/about">Read More</a></p>
                                             </li>
                                             <li className={select==="cus"?"active":""}>
                                                 <h3>SAP Customization and Configuration</h3>
                                                 <p>Customize and configure SAP solutions to fit your business perfectly, enhancing functionality and
                                                     user experience.</p>
-                                                <p><a href="#">Read More</a></p>
+                                                <p><a href="/about">Read More</a></p>
                                             </li>
                                             <li className={select==="int"?"active":""}>
                                                 <h3>SAP Integration</h3>
                                                 <p>Seamlessly integrate SAP with other systems and data sources to create a cohesive IT environment.
                                                 </p>
-                                                <p><a href="#">Read More</a></p>
+                                                <p><a href="/about">Read More</a></p>
                                             </li>
                                             <li className={select==="up"?"active":""}>
                                                 <h3>SAP Upgrade and Migration</h3>
                                                 <p>Ensure your SAP environments stay up-to-date with the latest features and enhancements.</p>
-                                                <p><a href="#">Read More</a></p>
+                                                <p><a href="/about">Read More</a></p>
                                             </li>
                                             <li className={select==="tra"?"active":""}>
                                                 <h3>SAP Training and Support</h3>
