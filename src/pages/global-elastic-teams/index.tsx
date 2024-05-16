@@ -152,7 +152,7 @@ const GlobalElasticTeamsPage = () => {
                                     <h2>Engage Our Global Elastic Teams for Your Next Venture</h2>
                                     <h3>Start a Conversation, Build a Solution</h3>
                                     <p>Reach out to explore how our Global Elastic Teams can transform your SAP and specialized tech projects. From strategic planning to execution, we are here to drive your global ambitions to success.</p>
-                                    <div ><a href="contact-us.html" className="contButton">Contant US</a></div>
+                                    <div ><a href="/contact-us" className="contButton">Contant US</a></div>
                                 </div>
                             </div>
                             <div className="col-md-5">
