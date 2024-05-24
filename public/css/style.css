@@ -3061,9 +3061,12 @@ li.listingPanel:nth-child(even) { background: #f9f9ff; }
     padding: 0 30px;
 }
 .jobDescSlider .slide .slideCont {
-    display: inline-block;
+    /* display: inline-block; */
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
    
 }
 
