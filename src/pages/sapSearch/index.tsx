@@ -28,13 +28,13 @@ interface Profile {
   role_type: string;
   position_type: string;
   sap_project: string;
-  sap_certified: boolean;
+  Certified: boolean;
   minExperience: string;
   maxExperience: string;
   project_type: string;
   description: string;
-  hana:boolean;
-  ecc:boolean;
+  HANAECC:string;
+  // ecc:boolean;
 }
 
 interface Response {
@@ -63,13 +63,13 @@ const SapSearch = () => {
     role_type: "",
     position_type: "",
     sap_project: "",
-    sap_certified: false,
+    Certified: false,
     minExperience: "",
     maxExperience: "",
     project_type: "",
     description: "",
-    hana:false,
-    ecc:false
+    HANAECC:"",
+    // ecc:false
   });
   const [selectedId, setSelectedId] = useState<string[]>([]);
   const [candidates, setCandidates] = useState<Response[]>([]);
@@ -107,14 +107,24 @@ const SapSearch = () => {
   const handleChangeProfile = (ele: any)=>{
     // console.log(ele)
     const name = ele.target.name;
-    setProfile({ ...profiles, [name]: ele.target.value });
+    // setProfile({ ...profiles, [name]: ele.target.value });
+    if(name==="Certified"){
+      if(ele.target.value==="on"){
+        setProfile({ ...profiles, [name]: true });
+      }else{
+        setProfile({ ...profiles, [name]: false });
+      }
+      
+    }else{
+      setProfile({ ...profiles, [name]: ele.target.value });
+    }
   }
   const handleRadio = (ele:any)=>{
     const name = ele.target.name;
     if(name==="hana"){
-      setProfile({ ...profiles, "hana": true, "ecc":false });
+      setProfile({ ...profiles,HANAECC:"HANA" });
     }else{
-      setProfile({ ...profiles, "hana": false, "ecc":true });
+      setProfile({ ...profiles, HANAECC:"ECC" });
     }
   }
   const handleChangeDesc = (name:any,ele: any)=>{
@@ -170,7 +180,7 @@ const SapSearch = () => {
   const handleSubmit = async () => {
     try {
       console.log("profiles", profiles);
-      localStorage.setItem("profiles", JSON.stringify({ profiles }));
+      // localStorage.setItem("profiles", JSON.stringify({ profiles }));
       setArrLoad(true);
       let resp = await axios.post(`${DEV_PUBLIC_SAPURL}sap/candidates`, { profiles, pageNoAxios });
       let { finalCandidates } = resp.data.data;
@@ -366,14 +376,14 @@ const SapSearch = () => {
   useEffect(() => {
     var profilesJSON = localStorage.getItem("profiles");
     // localStorage.clear();
-    if (profilesJSON !== null) {
-      var storedProfiles = JSON.parse(profilesJSON);
-      console.log("storedProfiles", storedProfiles.profiles);
-      setProfile({ ...storedProfiles.profiles });
+    // if (profilesJSON !== null) {
+    //   var storedProfiles = JSON.parse(profilesJSON);
+    //   console.log("storedProfiles", storedProfiles.profiles);
+    //   setProfile({ ...storedProfiles.profiles });
 
-    } else {
-      console.log("No profiles found in localStorage");
-    }
+    // } else {
+    //   console.log("No profiles found in localStorage");
+    // }
   }, [])
   useEffect(() => {
     const fetchData = async () => {
@@ -635,13 +645,13 @@ const SapSearch = () => {
                                 <div className="leftCol">
                                   <label>SAP Project:</label>
                                   <div className="form-check">
-                                    <input className="form-check-input" type="radio" name="hana" id="flexRadioDefault1" checked={profiles.hana} onChange={(e) => handleRadio(e)}/>
+                                    <input className="form-check-input" type="radio" name="hana" id="flexRadioDefault1" checked={profiles.HANAECC==="HANA"} onChange={(e) => handleRadio(e)}/>
                                     <label className="form-check-label" htmlFor="flexRadioDefault1">
                                       S/4 Hana
                                     </label>
                                   </div>
                                   <div className="form-check">
-                                    <input className="form-check-input" type="radio" name="ecc" id="flexRadioDefault2" checked={profiles.ecc} onChange={(e) => handleRadio(e)}/>
+                                    <input className="form-check-input" type="radio" name="ecc" id="flexRadioDefault2" checked={profiles.HANAECC==="ECC"} onChange={(e) => handleRadio(e)}/>
                                     <label className="form-check-label" htmlFor="flexRadioDefault2">
                                       ECC 6
                                     </label>
@@ -649,7 +659,7 @@ const SapSearch = () => {
                                 </div>
                                 <div className="rightCol">
                                   <div className="form-check form-switch">
-                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="sap_certified"  onChange={(e) => handleChangeProfile(e)}/>
+                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="Certified"  onChange={(e) => handleChangeProfile(e)}/>
                                     <label className="form-check-label" htmlFor="flexSwitchCheckChecked">SAP Certified </label>
                                   </div>
                                 </div>

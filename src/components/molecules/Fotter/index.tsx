@@ -129,10 +129,10 @@ const FotterComponent = () => {
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
       <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
-      <link href="css/fonts.css" rel="stylesheet" />
-      <link href="css/reset.css" rel="stylesheet" />
-      <link href="css/style.css" rel="stylesheet" />
-      <link href="css/responsive.css" rel="stylesheet" />
+      <link href="/css/fonts.css" rel="stylesheet" />
+      <link href="/css/reset.css" rel="stylesheet" />
+      <link href="/css/style.css" rel="stylesheet" />
+      <link href="/css/responsive.css" rel="stylesheet" />
       <footer className="footer">
             <div className="container">
               <div className="row">

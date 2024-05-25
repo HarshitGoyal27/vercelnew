@@ -4,7 +4,11 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import FotterComponent from '@/components/molecules/Fotter';
-const RemotejsDevPage = () => {
+import { DEV_PUBLIC_APIURL } from '../../../../configs/auth';
+import axios from 'axios';
+const RemotejsDevPage = ({props}:any) => {
+  const  page_data  = props!==undefined?props.page_data:null;
+
   const setting = {
     dots: false,
     infinite: true,
@@ -63,10 +67,10 @@ const RemotejsDevPage = () => {
   return (
     <div>
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/fonts.css" rel="stylesheet"/>
-    <link href="css/reset.css" rel="stylesheet"/>
-    <link href="css/style.css" rel="stylesheet"/>
-    <link href="css/responsive.css" rel="stylesheet"/>
+    <link href="/css/fonts.css" rel="stylesheet"/>
+    <link href="/css/reset.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link href="/css/responsive.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
       <Navbar/>
       <div className="wrapper hjd">
@@ -77,14 +81,14 @@ const RemotejsDevPage = () => {
               <div className="col-md-8">
                 <div className="homesapExpertise" >
                   <h2>Remote <span>JavaScript developer</span> jobs with US companies</h2>
-                  <p>Work from home as a JavaScript developer with top US companies and earn in USD. We at Turing are looking for experienced JavaScript developers who can implement JavaScript applications with an emphasis on optimization, API design, and architecture.</p>
+                  <p>{page_data?.Description}</p>
                   <div className="hireSap"><a className="hire" href="#">Apply as JavaScript developer</a></div>
                   <div className="font16">Check out the best jobs for May 2024 <a href="#">here</a></div>
                 </div>
               </div>
               <div className="col-md-4">
                 <div className="bannerImg">
-                  <img src="images/banner02.png" alt="ELEVATE YOUR TECH CAPABILITIES" className="img-fluid" />
+                  <img src="/images/banner02.png" alt="ELEVATE YOUR TECH CAPABILITIES" className="img-fluid" />
 
                 </div>
               </div>
@@ -92,7 +96,7 @@ const RemotejsDevPage = () => {
             <div className="row">
               <div className="col-md-12">
                 <div className="clientlogoText">Find remote software jobs with hundreds of Turing clients</div>
-                <div className="clientlogo"><img src="images/logo01.jpg" alt="logo" className="img-fluid" /> <img src="images/logo02.jpg" alt="logo" className="img-fluid" /> <img src="images/logo03.jpg" alt="logo" className="img-fluid" /> <img src="images/logo04.jpg" alt="logo" className="img-fluid" /> <img src="images/logo05.jpg" alt="logo" className="img-fluid" /> </div>
+                <div className="clientlogo"><img src="/images/logo01.jpg" alt="logo" className="img-fluid" /> <img src="/images/logo02.jpg" alt="logo" className="img-fluid" /> <img src="/images/logo03.jpg" alt="logo" className="img-fluid" /> <img src="/images/logo04.jpg" alt="logo" className="img-fluid" /> <img src="/images/logo05.jpg" alt="logo" className="img-fluid" /> </div>
 
               </div>
             </div>
@@ -107,29 +111,43 @@ const RemotejsDevPage = () => {
                   <h2>Job description</h2>
                   <h3>Job responsibilities</h3>
                   <ul>
-                    <li>Review existing designs and modify features accordingly</li>
-                    <li>Enhance applications performance, speed, and scalability</li>
+                    <li>{page_data?.Roles[0]}</li>
+                    <li>{page_data?.Roles[1]}</li>
+                    <li>{page_data?.Roles[2]}</li>
+                    <li>{page_data?.Roles[3]}</li>
+                    <li>{page_data?.Roles[4]}</li>
+                    {/* <li>Enhance applications performance, speed, and scalability</li>
                     <li>Perform code analysis, requirements analysis, and software reliability analysis</li>
                     <li>Coordinate with UI/UX designers to ensure technical feasibility</li>
-                    <li>Collaborate with other team members and stakeholders</li>
+                    <li>Collaborate with other team members and stakeholders</li> */}
 
                   </ul>
                   <h3>Minimum requirements</h3>
                   <ul>
-                    <li>Bachelor’s/Master’s degree in Computer Science (or equivalent experience)</li>
+                  <li>{page_data?.Requirements[0]}</li>
+                    <li>{page_data?.Requirements[1]}</li>
+                    <li>{page_data?.Requirements[2]}</li>
+                    <li>{page_data?.Requirements[3]}</li>
+                    <li>{page_data?.Requirements[4]}</li>
+                    {/* <li>Bachelor’s/Master’s degree in Computer Science (or equivalent experience)</li>
                     <li>3+ years of experience as a JavaScript Developer (rare exceptions for highly skilled developers)</li>
                     <li>Experience with other JS libraries like Backbone.js, Angular.js, Node.js, and other frameworks</li>
                     <li>Familiar with web development tools, Git, jQuery, and Bootstrap</li>
                     <li>Familiar with JavaScript module loaders, such as Require.js and AMD</li>
-                    <li>Proficient with HTML5 and CSS3</li>
+                    <li>Proficient with HTML5 and CSS3</li> */}
                   </ul>
                   <h3>Preferred skills</h3>
                   <ul>
-                    <li>Experience with asynchronous request handling, partial page updates, and AJAX</li>
+                  <li>{page_data?.Preferred_Skills[0]}</li>
+                    <li>{page_data?.Preferred_Skills[1]}</li>
+                    <li>{page_data?.Preferred_Skills[2]}</li>
+                    <li>{page_data?.Preferred_Skills[3]}</li>
+                    <li>{page_data?.Preferred_Skills[4]}</li>
+                    {/* <li>Experience with asynchronous request handling, partial page updates, and AJAX</li>
                     <li>Familiar with browser rendering behavior and performance</li>
                     <li>Experience with responsive designs for desktop/mobile</li>
                     <li>Ability to function individually and in a team</li>
-                    <li>In-depth understanding of the entire web development process</li>
+                    <li>In-depth understanding of the entire web development process</li> */}
 
                   </ul>
                   <div className="jobDescCtaBtnFrame">
@@ -148,7 +166,7 @@ const RemotejsDevPage = () => {
                   <Slider {...setting} className=" jobDescSlider ">
                     <div className="slide ">
                       <div className="slideCont">
-                        <div className="imgCont"><img src="images/avatar1.png" alt="avatar" className="img-fluid" /></div>
+                        <div className="imgCont"><img src="/images/avatar1.png" alt="avatar" className="img-fluid" /></div>
                         <h4>Ermal Kosovo</h4>
                         <h5>JavaScript developer </h5>
                         <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -158,7 +176,7 @@ const RemotejsDevPage = () => {
                     </div>
                     <div className="slide ">
                       <div className="slideCont">
-                        <div className="imgCont"><img src="images/avatar1.png" alt="avatar" className="img-fluid" /></div>
+                        <div className="imgCont"><img src="/images/avatar1.png" alt="avatar" className="img-fluid" /></div>
                         <h4>Ermal Kosovo</h4>
                         <h5>JavaScript developer </h5>
                         <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -168,7 +186,7 @@ const RemotejsDevPage = () => {
                     </div>
                     <div className="slide ">
                       <div className="slideCont">
-                        <div className="imgCont"><img src="images/avatar1.png" alt="avatar" className="img-fluid" /></div>
+                        <div className="imgCont"><img src="/images/avatar1.png" alt="avatar" className="img-fluid" /></div>
                         <h4>Ermal Kosovo</h4>
                         <h5>JavaScript developer </h5>
                         <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -183,25 +201,25 @@ const RemotejsDevPage = () => {
                       <h4>Based on your skills</h4>
                       <ul className="skillList">
                         <li>
-                          <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Angular</span></a>
+                          <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Angular</span></a>
                         </li>
                         <li>
-                          <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>React Native</span></a>
+                          <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>React Native</span></a>
                         </li>
                         <li>
-                          <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>HTML</span></a>
+                          <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>HTML</span></a>
                         </li>
                         <li>
-                          <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>React/Node</span></a>
+                          <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>React/Node</span></a>
                         </li>
                         <li>
-                          <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Bootstrap</span></a>
+                          <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Bootstrap</span></a>
                         </li>
                         <li>
-                          <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
+                          <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
                         </li>
                         <li>
-                          <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
+                          <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
                         </li>
                       </ul>
                     </div>
@@ -209,10 +227,10 @@ const RemotejsDevPage = () => {
                       <h4>Based on your role</h4>
                       <ul className="skillList">
                         <li>
-                          <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Mobile </span></a>
+                          <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Mobile </span></a>
                         </li>
                         <li>
-                          <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Data Scientist</span></a>
+                          <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Data Scientist</span></a>
                         </li>
                       </ul>
                     </div>
@@ -220,13 +238,13 @@ const RemotejsDevPage = () => {
                       <h4>Based on your skills</h4>
                       <ul className="skillList">
                         <li>
-                          <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Sr. Full-stack Developer</span></a>
+                          <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Sr. Full-stack Developer</span></a>
                         </li>
                         <li>
-                          <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Sr. Software Developer</span></a>
+                          <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Sr. Software Developer</span></a>
                         </li>
                         <li>
-                          <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Sr. Java Developer</span></a>
+                          <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Sr. Java Developer</span></a>
                         </li>
 
                       </ul>
@@ -286,7 +304,7 @@ const RemotejsDevPage = () => {
                 <Slider {...settingTwo} className="  latestpostSlider ">
                   <div className="slide ">
                     <div className="slideCont">
-                      <div className="imgCont"><img src="images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
+                      <div className="imgCont"><img src="/images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
                       <h5>Six Popular JavaScript Frameworks</h5>
                       <p >This post lists the best JavaScript frameworks to help you make the best choice for your project. Read more to..</p>
                       <div className="readmore"><a href="">Read More</a></div>
@@ -294,7 +312,7 @@ const RemotejsDevPage = () => {
                   </div>
                   <div className="slide ">
                     <div className="slideCont">
-                      <div className="imgCont"><img src="images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
+                      <div className="imgCont"><img src="/images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
                       <h5>Six Popular JavaScript Frameworks</h5>
                       <p >This post lists the best JavaScript frameworks to help you make the best choice for your project. Read more to..</p>
                       <div className="readmore"><a href="">Read More</a></div>
@@ -302,7 +320,7 @@ const RemotejsDevPage = () => {
                   </div>
                   <div className="slide ">
                     <div className="slideCont">
-                      <div className="imgCont"><img src="images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
+                      <div className="imgCont"><img src="/images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
                       <h5>Six Popular JavaScript Frameworks</h5>
                       <p >This post lists the best JavaScript frameworks to help you make the best choice for your project. Read more to..</p>
                       <div className="readmore"><a href="">Read More</a></div>
@@ -310,7 +328,7 @@ const RemotejsDevPage = () => {
                   </div>
                   <div className="slide ">
                     <div className="slideCont">
-                      <div className="imgCont"><img src="images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
+                      <div className="imgCont"><img src="/images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
                       <h5>Six Popular JavaScript Frameworks</h5>
                       <p >This post lists the best JavaScript frameworks to help you make the best choice for your project. Read more to..</p>
                       <div className="readmore"><a href="">Read More</a></div>
@@ -389,7 +407,7 @@ const RemotejsDevPage = () => {
               </div>
               <div className="col-md-5">
                 <div className="bannerImg">
-                  <img src="images/ventre-img.png" alt="Next Venture" className="img-fluid" />
+                  <img src="/images/ventre-img.png" alt="Next Venture" className="img-fluid" />
 
                 </div>
               </div>
@@ -488,7 +506,7 @@ const RemotejsDevPage = () => {
                 <Slider {...settingTwo} className="  latestpostSlider ">
                   <div className="slide ">
                     <div className="slideCont">
-                      <div className="imgCont"><img src="images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
+                      <div className="imgCont"><img src="/images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
                       <h5>Six Popular JavaScript Frameworks</h5>
                       <p >This post lists the best JavaScript frameworks to help you make the best choice for your project. Read more to..</p>
                       <div className="readmore"><a href="">Read More</a></div>
@@ -496,7 +514,7 @@ const RemotejsDevPage = () => {
                   </div>
                   <div className="slide ">
                     <div className="slideCont">
-                      <div className="imgCont"><img src="images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
+                      <div className="imgCont"><img src="/images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
                       <h5>Six Popular JavaScript Frameworks</h5>
                       <p >This post lists the best JavaScript frameworks to help you make the best choice for your project. Read more to..</p>
                       <div className="readmore"><a href="">Read More</a></div>
@@ -504,7 +522,7 @@ const RemotejsDevPage = () => {
                   </div>
                   <div className="slide ">
                     <div className="slideCont">
-                      <div className="imgCont"><img src="images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
+                      <div className="imgCont"><img src="/images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
                       <h5>Six Popular JavaScript Frameworks</h5>
                       <p >This post lists the best JavaScript frameworks to help you make the best choice for your project. Read more to..</p>
                       <div className="readmore"><a href="">Read More</a></div>
@@ -512,7 +530,7 @@ const RemotejsDevPage = () => {
                   </div>
                   <div className="slide ">
                     <div className="slideCont">
-                      <div className="imgCont"><img src="images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
+                      <div className="imgCont"><img src="/images/post01.jpg" alt="Six Popular JavaScript Frameworks" className="img-fluid" /></div>
                       <h5>Six Popular JavaScript Frameworks</h5>
                       <p >This post lists the best JavaScript frameworks to help you make the best choice for your project. Read more to..</p>
                       <div className="readmore"><a href="">Read More</a></div>
@@ -569,46 +587,46 @@ const RemotejsDevPage = () => {
                   <h4>Based on your skills</h4>
                   <ul className="skillList">
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Angular</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Angular</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>React Native</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>React Native</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>HTML</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>HTML</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>React/Node</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>React/Node</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Bootstrap</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Bootstrap</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Angular</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Angular</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>React Native</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>React Native</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>HTML</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>HTML</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>React/Node</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>React/Node</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Bootstrap</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Bootstrap</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
                     </li>
                   </ul>
                   <div ><a href="">+ See more skills</a></div>
@@ -617,25 +635,25 @@ const RemotejsDevPage = () => {
                   <h4>Based on your role</h4>
                   <ul className="skillList">
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Angular</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Angular</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>React Native</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>React Native</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>HTML</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>HTML</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>React/Node</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>React/Node</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Bootstrap</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Bootstrap</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
                     </li>
                     <li>
-                      <a href="#"> <img src="images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
+                      <a href="#"> <img src="/images/skill-icon01.png" alt="Angular" /><span>Angular/Node</span></a>
                     </li>
                   </ul>
                 </div>
@@ -719,7 +737,7 @@ const RemotejsDevPage = () => {
                 <p>Create your profile, pass Skill India Tests and get job offers as early as 2 weeks.</p>
                 <div className="applyNow">
                   <a href="#" className="">Apply now</a>
-                </div>
+                </div> 
               </div>
             </div>
           </section>
@@ -730,4 +748,25 @@ const RemotejsDevPage = () => {
   )
 }
 
+
+export async function getServerSideProps(context:any){
+  console.log("getServerSideProps called with context:", context.query);
+  
+  try {
+    const response = await axios.get(`${DEV_PUBLIC_APIURL}${context.query.skills}`);
+    const page_data = response.data.data;
+    
+    console.log("API response received:", page_data);
+    
+    return {
+      props: { page_data },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+
+    return {
+      props: { page_data: null },
+    };
+  }
+}
 export default RemotejsDevPage
