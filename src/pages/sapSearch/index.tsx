@@ -33,7 +33,7 @@ interface Profile {
   maxExperience: string;
   project_type: string;
   description: string;
-  HANAECC:string;
+  HANAECC: string;
   // ecc:boolean;
 }
 
@@ -51,7 +51,7 @@ interface Response {
   CurrentLocation: string;
   MayAlsoKnow: string;
   Education: string;
-  
+
 }
 const SapSearch = () => {
   const [profiles, setProfile] = useState<Profile>({
@@ -68,7 +68,7 @@ const SapSearch = () => {
     maxExperience: "",
     project_type: "",
     description: "",
-    HANAECC:"",
+    HANAECC: "",
     // ecc:false
   });
   const [selectedId, setSelectedId] = useState<string[]>([]);
@@ -104,30 +104,30 @@ const SapSearch = () => {
     }
   };
 
-  const handleChangeProfile = (ele: any)=>{
+  const handleChangeProfile = (ele: any) => {
     // console.log(ele)
     const name = ele.target.name;
     // setProfile({ ...profiles, [name]: ele.target.value });
-    if(name==="Certified"){
-      if(ele.target.value==="on"){
+    if (name === "Certified") {
+      if (ele.target.value === "on") {
         setProfile({ ...profiles, [name]: true });
-      }else{
+      } else {
         setProfile({ ...profiles, [name]: false });
       }
-      
-    }else{
+
+    } else {
       setProfile({ ...profiles, [name]: ele.target.value });
     }
   }
-  const handleRadio = (ele:any)=>{
+  const handleRadio = (ele: any) => {
     const name = ele.target.name;
-    if(name==="hana"){
-      setProfile({ ...profiles,HANAECC:"HANA" });
-    }else{
-      setProfile({ ...profiles, HANAECC:"ECC" });
+    if (name === "hana") {
+      setProfile({ ...profiles, HANAECC: "HANA" });
+    } else {
+      setProfile({ ...profiles, HANAECC: "ECC" });
     }
   }
-  const handleChangeDesc = (name:any,ele: any)=>{
+  const handleChangeDesc = (name: any, ele: any) => {
     // console.log(ele)
     // const name = ele.target.name;
     setProfile({ ...profiles, [name]: ele });
@@ -180,7 +180,7 @@ const SapSearch = () => {
   const handleSubmit = async () => {
     try {
       console.log("profiles", profiles);
-      // localStorage.setItem("profiles", JSON.stringify({ profiles }));
+      localStorage.setItem("profiles", JSON.stringify({ profiles }));
       setArrLoad(true);
       let resp = await axios.post(`${DEV_PUBLIC_SAPURL}sap/candidates`, { profiles, pageNoAxios });
       let { finalCandidates } = resp.data.data;
@@ -192,6 +192,14 @@ const SapSearch = () => {
         } else {
           setCandidates([...finalCandidates]);
           setALLCandidates([...finalCandidates]);
+          let ans: { [key: number]: Response[] } = {};
+          let len = Math.ceil(finalCandidates.length / 10);
+          for (let i = 0; i < len; i++) {
+            let arr = finalCandidates.slice(10 * i, 10 * i + 10);
+            ans[i + 1] = arr;
+          }
+          console.log('ANS:===>', candidates);
+          setPageMap({ ...ans });
         }
         setDisableForward(true);
         setLoading(!loading);
@@ -376,14 +384,14 @@ const SapSearch = () => {
   useEffect(() => {
     var profilesJSON = localStorage.getItem("profiles");
     // localStorage.clear();
-    // if (profilesJSON !== null) {
-    //   var storedProfiles = JSON.parse(profilesJSON);
-    //   console.log("storedProfiles", storedProfiles.profiles);
-    //   setProfile({ ...storedProfiles.profiles });
+    if (profilesJSON !== null) {
+      var storedProfiles = JSON.parse(profilesJSON);
+      console.log("storedProfiles", storedProfiles.profiles);
+      setProfile({ ...storedProfiles.profiles });
 
-    // } else {
-    //   console.log("No profiles found in localStorage");
-    // }
+    } else {
+      console.log("No profiles found in localStorage");
+    }
   }, [])
   useEffect(() => {
     const fetchData = async () => {
@@ -606,7 +614,7 @@ const SapSearch = () => {
                               <div className="twoCol">
                                 <div className="leftCol">
                                   <label>Functional Expertise</label>
-                                  <input type="text" name="functional_expertise" className="form-control" id="" onChange={(ele: any) => handleChangeProfile(ele)}/>
+                                  <input type="text" name="functional_expertise" className="form-control" id="" onChange={(ele: any) => handleChangeProfile(ele)} />
                                 </div>
                                 <div className="rightCol">
                                   <label>Technical / Integration Skills</label>
@@ -645,13 +653,13 @@ const SapSearch = () => {
                                 <div className="leftCol">
                                   <label>SAP Project:</label>
                                   <div className="form-check">
-                                    <input className="form-check-input" type="radio" name="hana" id="flexRadioDefault1" checked={profiles.HANAECC==="HANA"} onChange={(e) => handleRadio(e)}/>
+                                    <input className="form-check-input" type="radio" name="hana" id="flexRadioDefault1" checked={profiles.HANAECC === "HANA"} onChange={(e) => handleRadio(e)} />
                                     <label className="form-check-label" htmlFor="flexRadioDefault1">
                                       S/4 Hana
                                     </label>
                                   </div>
                                   <div className="form-check">
-                                    <input className="form-check-input" type="radio" name="ecc" id="flexRadioDefault2" checked={profiles.HANAECC==="ECC"} onChange={(e) => handleRadio(e)}/>
+                                    <input className="form-check-input" type="radio" name="ecc" id="flexRadioDefault2" checked={profiles.HANAECC === "ECC"} onChange={(e) => handleRadio(e)} />
                                     <label className="form-check-label" htmlFor="flexRadioDefault2">
                                       ECC 6
                                     </label>
@@ -659,7 +667,7 @@ const SapSearch = () => {
                                 </div>
                                 <div className="rightCol">
                                   <div className="form-check form-switch">
-                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="Certified"  onChange={(e) => handleChangeProfile(e)}/>
+                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="Certified" onChange={(e) => handleChangeProfile(e)} />
                                     <label className="form-check-label" htmlFor="flexSwitchCheckChecked">SAP Certified </label>
                                   </div>
                                 </div>
@@ -678,7 +686,7 @@ const SapSearch = () => {
                                   <div className="candidateExpbox">
                                     <input type="text" className="form-control " id="" placeholder="Min" name='minExperience' onChange={(e) => handleChangeProfile(e)} />
                                     <span>to</span>
-                                    <input type="text" className="form-control " id="" placeholder="Max" name='maxExperience' onChange={(e) => handleChangeProfile(e)}/>
+                                    <input type="text" className="form-control " id="" placeholder="Max" name='maxExperience' onChange={(e) => handleChangeProfile(e)} />
                                     <span>Years</span>
                                   </div>
                                 </div>
@@ -920,13 +928,13 @@ const SapSearch = () => {
                                               <div className="listDecs">
                                                 <h3 className="listName">{(ele.Name).split(" ")[0]} {(ele.Name).split(" ")[0][0]}</h3>
                                                 <h4 className="currentLocation">{ele.CurrentLocation}</h4>
-                                                <h5><span>Years of Exp : {ele.Experience}</span> <strong>| </strong> <span>{ele.CurrentRole&&(ele.CurrentRole).split(" at ")[0]}</span></h5>
+                                                <h5><span>Years of Exp : {ele.Experience}</span> <strong>| </strong> <span>{ele.CurrentRole && (ele.CurrentRole).split(" at ")[0]}</span></h5>
                                                 <h6 className="listTitle"></h6>
                                               </div>
                                               <div className="otherDesc">
                                                 <p>{ele.CandidateProfile}</p>
-                                                <p><span>Current Title </span>{ele.CurrentRole&&(ele.CurrentRole).split(" at ")[0]}</p>
-                                                <p><span>Past Title </span>{ele.PreviousRole&&(ele.PreviousRole).split(" at ")[0]}</p>
+                                                <p><span>Current Title </span>{ele.CurrentRole && (ele.CurrentRole).split(" at ")[0]}</p>
+                                                <p><span>Past Title </span>{ele.PreviousRole && (ele.PreviousRole).split(" at ")[0]}</p>
                                                 <p><span>Education </span>{ele.Education}</p>
                                                 <p><span>Key Skills: </span>{ele.Skills}</p>
                                               </div>
