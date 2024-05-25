@@ -1,14 +1,16 @@
 import Navbar from '@/components/molecules/navbar'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import FotterComponent from '@/components/molecules/Fotter';
 import { DEV_PUBLIC_APIURL } from '../../../../configs/auth';
 import axios from 'axios';
-const RemotejsDevPage = ({props}:any) => {
-  const  page_data  = props!==undefined?props.page_data:null;
-
+const RemotejsDevPage = (props:any) => {
+  const {page_data}  = props;
+useEffect(()=>{
+  console.log("hi",props);
+},[]);
   const setting = {
     dots: false,
     infinite: true,
@@ -80,8 +82,8 @@ const RemotejsDevPage = ({props}:any) => {
             <div className="row">
               <div className="col-md-8">
                 <div className="homesapExpertise" >
-                  <h2>Remote <span>JavaScript developer</span> jobs with US companies</h2>
-                  <p>{page_data?.Description}</p>
+                  <h2>Remote <span>{page_data.Skill} developer</span> jobs with US companies</h2>
+                  <p>{page_data.Description}</p>
                   <div className="hireSap"><a className="hire" href="#">Apply as JavaScript developer</a></div>
                   <div className="font16">Check out the best jobs for May 2024 <a href="#">here</a></div>
                 </div>
@@ -111,11 +113,11 @@ const RemotejsDevPage = ({props}:any) => {
                   <h2>Job description</h2>
                   <h3>Job responsibilities</h3>
                   <ul>
-                    <li>{page_data?.Roles[0]}</li>
-                    <li>{page_data?.Roles[1]}</li>
-                    <li>{page_data?.Roles[2]}</li>
-                    <li>{page_data?.Roles[3]}</li>
-                    <li>{page_data?.Roles[4]}</li>
+                    <li>{page_data?.Roles[0].slice(3)}</li>
+                    <li>{page_data?.Roles[1].slice(3)}</li>
+                    <li>{page_data?.Roles[2].slice(3)}</li>
+                    <li>{page_data?.Roles[3].slice(3)}</li>
+                    <li>{page_data?.Roles[4].slice(3)}</li>
                     {/* <li>Enhance applications performance, speed, and scalability</li>
                     <li>Perform code analysis, requirements analysis, and software reliability analysis</li>
                     <li>Coordinate with UI/UX designers to ensure technical feasibility</li>
@@ -124,11 +126,11 @@ const RemotejsDevPage = ({props}:any) => {
                   </ul>
                   <h3>Minimum requirements</h3>
                   <ul>
-                  <li>{page_data?.Requirements[0]}</li>
-                    <li>{page_data?.Requirements[1]}</li>
-                    <li>{page_data?.Requirements[2]}</li>
-                    <li>{page_data?.Requirements[3]}</li>
-                    <li>{page_data?.Requirements[4]}</li>
+                  <li>{page_data?.Requirements[0].slice(3)}</li>
+                    <li>{page_data?.Requirements[1].slice(3)}</li>
+                    <li>{page_data?.Requirements[2].slice(3)}</li>
+                    <li>{page_data?.Requirements[3].slice(3)}</li>
+                    <li>{page_data?.Requirements[4].slice(3)}</li>
                     {/* <li>Bachelor’s/Master’s degree in Computer Science (or equivalent experience)</li>
                     <li>3+ years of experience as a JavaScript Developer (rare exceptions for highly skilled developers)</li>
                     <li>Experience with other JS libraries like Backbone.js, Angular.js, Node.js, and other frameworks</li>
@@ -138,11 +140,11 @@ const RemotejsDevPage = ({props}:any) => {
                   </ul>
                   <h3>Preferred skills</h3>
                   <ul>
-                  <li>{page_data?.Preferred_Skills[0]}</li>
-                    <li>{page_data?.Preferred_Skills[1]}</li>
-                    <li>{page_data?.Preferred_Skills[2]}</li>
-                    <li>{page_data?.Preferred_Skills[3]}</li>
-                    <li>{page_data?.Preferred_Skills[4]}</li>
+                  <li>{page_data?.Preferred_Skills[0].slice(3)}</li>
+                    <li>{page_data?.Preferred_Skills[1].slice(3)}</li>
+                    <li>{page_data?.Preferred_Skills[2].slice(3)}</li>
+                    <li>{page_data?.Preferred_Skills[3].slice(3)}</li>
+                    <li>{page_data?.Preferred_Skills[4].slice(3)}</li>
                     {/* <li>Experience with asynchronous request handling, partial page updates, and AJAX</li>
                     <li>Familiar with browser rendering behavior and performance</li>
                     <li>Experience with responsive designs for desktop/mobile</li>
@@ -750,23 +752,13 @@ const RemotejsDevPage = ({props}:any) => {
 
 
 export async function getServerSideProps(context:any){
-  console.log("getServerSideProps called with context:", context.query);
-  
-  try {
-    const response = await axios.get(`${DEV_PUBLIC_APIURL}${context.query.skills}`);
-    const page_data = response.data.data;
-    
-    console.log("API response received:", page_data);
-    
+      const responseData = await axios.get(`${DEV_PUBLIC_APIURL}${context.query.skills}`)
+      
+      const page_data = responseData.data.data;
+      console.log(page_data);
     return {
-      props: { page_data },
-    };
-  } catch (error) {
-    console.error("Error fetching data:", error);
-
-    return {
-      props: { page_data: null },
-    };
-  }
+        props:{page_data},
+    }
 }
 export default RemotejsDevPage
+ 
