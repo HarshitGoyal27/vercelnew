@@ -8,9 +8,7 @@ import { DEV_PUBLIC_APIURL } from '../../../../configs/auth';
 import axios from 'axios';
 const RemotejsDevPage = (props:any) => {
   const {page_data}  = props;
-useEffect(()=>{
-  console.log("hi",props);
-},[]);
+
   const setting = {
     dots: false,
     infinite: true,

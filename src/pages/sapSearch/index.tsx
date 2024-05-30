@@ -926,7 +926,7 @@ const SapSearch = () => {
                                                 <img src="images/avatar1.png" alt="avatar1" />
                                               </div>
                                               <div className="listDecs">
-                                                <h3 className="listName">{(ele.Name).split(" ")[0]} {(ele.Name).split(" ")[0][0]}</h3>
+                                                <h3 className="listName">{(ele.Name).split(" ")[0]} {(ele.Name).split(" ")[1]&&(ele.Name).split(" ")[1][0]}</h3>
                                                 <h4 className="currentLocation">{ele.CurrentLocation}</h4>
                                                 <h5><span>Years of Exp : {ele.Experience}</span> <strong>| </strong> <span>{ele.CurrentRole && (ele.CurrentRole).split(" at ")[0]}</span></h5>
                                                 <h6 className="listTitle"></h6>
