@@ -193,7 +193,7 @@ const Form: React.FC = () => {
         pageNoAxios,
       });
       let finalCandidates = resp.data.data.candidatesData;
-      console.log('LENGTH OF DATA IS ', finalCandidates);
+      console.log('LENGTH OF DATA IS xyz', finalCandidates);
       if (finalCandidates.length < 10) {
         console.log('Length is less than 10');
         if (finalCandidates.length === 0) {

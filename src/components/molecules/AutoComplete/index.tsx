@@ -375,7 +375,7 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                           </div>
                         </div>
                         <div className="clear"></div>
-                        <div className="">
+                        <div>
                           <input className="form-control" id="first"
                             placeholder="Enter Keywords like, designation and company"
                             onChange={handleInputChangeSearch}
@@ -399,7 +399,7 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                           <input type="checkbox" /> <label>Mark all keywords as mandatory</label>
                         </div>
                         <div className="rightSide resumeSelect">
-                          <select name="" id="">
+                          <select name="">
                             <option value="Search keyword in Entire resume">Search keyword in Entire resume</option>
                             <option value="">option 01</option>
                             <option value="">option 02</option>
@@ -414,7 +414,7 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
 
                       </li>
                       <li>
-                        <input type="text" className="form-control excludeKeywords" id="" placeholder="+ Add Exclude Keywords" />
+                        <input type="text" className="form-control excludeKeywords" placeholder="+ Add Exclude Keywords" />
                       </li>
                       <li>
                         <input type="text" className="form-control excludeKeywords" id="keywords" placeholder="+ Add IT Skills" />
@@ -422,15 +422,15 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                       <li>
                         <p>Experience</p>
                         <div className="candidateExpbox">
-                          <input type="text" className="form-control " id="" placeholder="Min Experience" onChange={handleInputChangeMinExp} />
+                          <input type="text" className="form-control " placeholder="Min Experience" onChange={handleInputChangeMinExp} />
                           <span>to</span>
-                          <input type="text" className="form-control " id="" placeholder="Max Experience" onChange={handleInputChangeMaxExp} />
+                          <input type="text" className="form-control " placeholder="Max Experience" onChange={handleInputChangeMaxExp} />
                           <span>Years</span>
                         </div>
                       </li>
                       <li className="candidateLocation">
                         <p>Current location of candidate</p>
-                        <input type="text" className="form-control " id="" placeholder="Add location" />
+                        <input type="text" className="form-control " placeholder="Add location" />
                         <div>
                           <input type="checkbox" /> <label>Include Candidates who prefer to relocate to above
                             location</label><span className="blueColor">Change preferred location</span>
@@ -442,27 +442,27 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                       <li>
                         <p>Annual Salary</p>
                         <div className="candidatesalaryBox">
-                          <select name="" id="">
+                          <select>
                             <option value="INR">INR</option>
-                            <option value="">USD</option>
-                            <option value="">EUR</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
                             {/* <option value="">option 03</option> */}
                           </select>
-                          <input type="text" className="form-control " id="" placeholder="Min Salary" />
+                          <input type="text" className="form-control" placeholder="Min Salary" />
                           <span>to</span>
-                          <input type="text" className="form-control " id="" placeholder="Max Salary" />
+                          <input type="text" className="form-control" placeholder="Max Salary" />
                           
                         </div>
                         <div><input type="checkbox" /> <label>Include candidates who did not mention their current
                           salary</label></div>
                       </li>
-                      <li className="">
+                      <li>
                         <p>Department and Role</p>
-                        <input type="text" className="form-control " id="" placeholder="Add Department/Role" />
+                        <input type="text" className="form-control" placeholder="Add Department/Role" />
                       </li>
-                      <li className="">
+                      <li>
                         <p>Industry</p>
-                        <input type="text" className="form-control " id="" placeholder="Add Industry" />
+                        <input type="text" className="form-control" placeholder="Add Industry" />
                       </li>
                       {/* <li className="keywordBox">
                         <p className="leftSide keywordsText">Company</p>
@@ -476,10 +476,10 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                           </div>
                         </div>
                         <div className="clear"></div>
-                        <div className="">
-                          <input type="text" className="form-control" id="" placeholder="Add company name " />
+                        <div>
+                          <input type="text" className="form-control" placeholder="Add company name " />
                           <br />
-                          <select name="" id="">
+                          <select name="">
                             <option value="0">Search in Current company</option>
                             <option value="">option 01</option>
                             <option value="">option 02</option>
@@ -488,7 +488,7 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                         </div>
                       </li> */}
                       <li>
-                        <input type="text" className="form-control excludeKeywords" id="" placeholder="+ Add Exclude Company" />
+                        <input type="text" className="form-control excludeKeywords" placeholder="+ Add Exclude Company" />
                       </li>
                       <li className="keywordBox">
                         <p className="leftSide keywordsText">Designation </p>
@@ -502,10 +502,10 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                           </div>
                         </div>
                         <div className="clear"></div>
-                        <div className="">
-                          <input type="text" className="form-control" id="" placeholder="Add designation " />
+                        <div>
+                          <input type="text" className="form-control" placeholder="Add designation " />
                           <br />
-                          {/* <select name="" id="">
+                          {/* <select name="">
                             <option value="0">Search in Current designation</option>
                             <option value="">option 01</option>
                             <option value="">option 02</option>
@@ -519,13 +519,13 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                       {/* <li>
                         <p>Show candidates seeking</p>
                         <div className="jobtypeBox">
-                          <select name="" id="">
+                          <select name="">
                             <option value="INR">Job Type</option>
                             <option value="">option 01</option>
                             <option value="">option 02</option>
                             <option value="">option 03</option>
                           </select>
-                          <select name="" id="">
+                          <select name="">
                             <option value="INR">Employment type</option>
                             <option value="">option 01</option>
                             <option value="">option 02</option>
@@ -534,9 +534,9 @@ function CustomAutocompleteFromAPI({ setSelectedValue, handleSubmit, profiles }:
                         </div>
 
                       </li>
-                      <li className="">
+                      <li>
                         <p>Work permit for</p>
-                        <input type="text" className="form-control " id="" placeholder="Choose category" />
+                        <input type="text" className="form-control " placeholder="Choose category" />
                       </li> */}
 
                       <li>

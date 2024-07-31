@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import FotterComponent from '@/components/molecules/Fotter';
 import { DEV_PUBLIC_APIURL } from '../../../../configs/auth';
 import axios from 'axios';
+
 const RemotejsDevPage = (props:any) => {
   const {page_data}  = props;
 
@@ -36,7 +37,6 @@ const RemotejsDevPage = (props:any) => {
       }
     ]
   }
-
   const settingTwo = {
     dots: false,
     infinite: true,
@@ -64,6 +64,7 @@ const RemotejsDevPage = (props:any) => {
       }
     ]
   }
+  console.log('ABCDEFG',page_data);
   return (
     <div>
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
@@ -748,15 +749,15 @@ const RemotejsDevPage = (props:any) => {
   )
 }
 
-
 export async function getServerSideProps(context:any){
       const responseData = await axios.get(`${DEV_PUBLIC_APIURL}${context.query.skills}`)
-      
       const page_data = responseData.data.data;
       console.log(page_data);
     return {
         props:{page_data},
     }
 }
+
 export default RemotejsDevPage
+
  

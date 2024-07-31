@@ -177,7 +177,8 @@ const SapSearch = () => {
     console.log("lll", profiles);
 
   }, [profiles])
-  const handleSubmit = async () => {
+
+  const FF = async () => {
     try {
       console.log("profiles", profiles);
       localStorage.setItem("profiles", JSON.stringify({ profiles }));
@@ -789,7 +790,7 @@ const SapSearch = () => {
 
                             </div> */}
                             <div className="sapSearchBtn">
-                              <button className="searchBtn" onClick={handleSubmit}>Search</button>
+                              <button className="searchBtn" onClick={FF}>Search</button>
 
                             </div>
 
@@ -928,13 +929,13 @@ const SapSearch = () => {
                                               <div className="listDecs">
                                                 <h3 className="listName">{(ele.Name).split(" ")[0]} {(ele.Name).split(" ")[1]&&(ele.Name).split(" ")[1][0]}</h3>
                                                 <h4 className="currentLocation">{ele.CurrentLocation}</h4>
-                                                <h5><span>Years of Exp : {ele.Experience}</span> <strong>| </strong> <span>{ele.CurrentRole && (ele.CurrentRole).split(" at ")[0]}</span></h5>
+                                                <h5><span>Years of Exp : {ele.Experience}</span> <strong>| </strong> <span>{ele.CurrentRole}</span></h5>
                                                 <h6 className="listTitle"></h6>
                                               </div>
                                               <div className="otherDesc">
                                                 <p>{ele.CandidateProfile}</p>
-                                                <p><span>Current Title </span>{ele.CurrentRole && (ele.CurrentRole).split(" at ")[0]}</p>
-                                                <p><span>Past Title </span>{ele.PreviousRole && (ele.PreviousRole).split(" at ")[0]}</p>
+                                                <p><span>Current Title </span>{ele.CurrentRole}</p>
+                                                <p><span>Past Title </span>{ele.PreviousRole}</p>
                                                 <p><span>Education </span>{ele.Education}</p>
                                                 <p><span>Key Skills: </span>{ele.Skills}</p>
                                               </div>
